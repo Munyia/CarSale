@@ -4,6 +4,7 @@ import Header from '../components/Header'
 import Carousel from '../components/Carousel';
 
 
+
 const Home = () => {
 
   const slides = [
@@ -29,6 +30,30 @@ const Home = () => {
     },
   ];
 
+  const testimonials = [
+    {
+      id: 1,
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIIMMldOlpbQdpdCg5w4vw51dtL-AniDd_NA&s",
+      quote: `"I found the perfect car at an amazing price. The installment plans made it possible!"`,
+      name: "Jane Doe",
+      location: "London",
+    },
+    {
+      id: 2,
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7-HFWDRQBJD0DeUsks2YCJdpTn2sg6RTcYg&s",
+      quote: `"Excellent service! I love my new car and the support team was great."`,
+      name: "John Smith",
+      location: "New York",
+    },
+    {
+      id: 3,
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrCmFiqgVlrgZwsUtwtzdO3QK-aspi1psEQA&s",
+      quote: `"Highly recommend this platform. The range of cars and the payment options are unmatched."`,
+      name: "Sarah Lee",
+      location: "China",
+    },
+  ];
+
   return (
     <div>
       <Header />
@@ -47,10 +72,10 @@ const Home = () => {
                       </h1>
                       <p className="text-white text-lg mb-6">{slide.subtext}</p>
                       <div className="space-x-4">
-                        <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">
+                        <button className="bg-but text-white px-6 py-3 rounded-lg hover:bg-body  hover:text-but">
                           Shop Now
                         </button>
-                        <button className="bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-orange-600">
+                        <button className="bg-but text-white px-6 py-3 rounded-lg hover:bg-body  hover:text-but">
                           Explore Offers
                         </button>
                       </div>
@@ -60,11 +85,12 @@ const Home = () => {
               </Carousel>
             </div>
           </div>
-
-<section className="bg-gray-100 py-8">
+          <section className="bg-body py-8">
   <div className="max-w-7xl mx-auto text-center">
-    <h2 className="text-3xl font-bold mb-4">Find Your Perfect Car</h2>
-    <form className="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+    <h2 className="text-3xl font-bold text-but mb-4">Find Your Perfect Car</h2>
+    
+    {/* Search Bar */}
+    <form className="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-4xl mx-auto mb-8">
       <input type="text" placeholder="Search by Model" className="px-4 py-2 rounded-lg border" />
       <select className="px-4 py-2 rounded-lg border">
         <option>All Brands</option>
@@ -78,41 +104,53 @@ const Home = () => {
         <option>$20,000 - $40,000</option>
         <option>Above $40,000</option>
       </select>
-      <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">Search</button>
+      <button className="bg-but text-white px-6 py-2 rounded-lg hover:bg-white hover:text-but">Search</button>
     </form>
-  </div>
-</section>
 
-
-<section className="py-12 bg-white">
-  <div className="max-w-7xl mx-auto text-center">
-    <h2 className="text-3xl font-bold mb-8">Browse by Category</h2>
-    <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-      <div className="category-card bg-gray-100 p-6 rounded-xl">
-        <img src="sedan-category.jpg" alt="Sedans" className="w-full rounded-lg mb-4" />
-        <h3 className="text-xl font-semibold">Sedans</h3>
-        <p className="text-gray-600">Comfort and affordability for your daily drive.</p>
-        <a href="/category/sedans" className="text-blue-600 hover:underline mt-4 block">Explore Sedans</a>
+    {/* Car Categories */}
+    <h2 className="text-3xl text-but font-bold mb-3 mt-8">Browse by Category</h2>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="category-card bg-white p-6 rounded-lg shadow hover:shadow-lg">
+        <h3 className="text-xl font-semibold text-but mb-4">Sedans</h3>
+        <p className="text-gray-600 mb-4">Comfort and affordability for your daily drive.</p>
+        <a href="/category/sedans" className="bg-but text-white px-4 py-2 rounded-lg hover:bg-white hover:text-but inline-block">Explore Sedans</a>
       </div>
-    
+      <div className="category-card bg-white p-6 rounded-lg shadow hover:shadow-lg">
+        <h3 className="text-xl font-semibold text-but mb-4">SUVs</h3>
+        <p className="text-gray-600 mb-4">Powerful and versatile for any terrain.</p>
+        <a href="/category/suvs" className="bg-but text-white px-4 py-2 rounded-lg hover:bg-white hover:text-but inline-block">Explore SUVs</a>
+      </div>
+      <div className="category-card bg-white p-6 rounded-lg shadow hover:shadow-lg">
+        <h3 className="text-xl font-semibold text-but mb-4">Electric Cars</h3>
+        <p className="text-gray-600 mb-4">Eco-friendly and cost-efficient electric vehicles.</p>
+        <a href="/category/electric" className="bg-but text-white px-4 py-2 rounded-lg hover:bg-white hover:text-but inline-block">Explore Electric Cars</a>
+      </div>
     </div>
   </div>
 </section>
 
+<section className="bg-body py-12">
+      <div className="max-w-7xl mx-auto text-center">
+        <h2 className="text-3xl font-bold text-but mb-8">What Our Customers Say</h2>
 
-<section className="bg-blue-50 py-12">
-  <div className="max-w-7xl mx-auto text-center">
-    <h2 className="text-3xl font-bold mb-8">What Our Customers Say</h2>
-    <div className="testimonial-slider">
-      <div className="testimonial-item text-center">
-        <img src="customer1.jpg" alt="Customer" className="w-16 h-16 rounded-full mx-auto mb-4" />
-        <p className="text-lg italic">"I found the perfect car at an amazing price. The installment plans made it possible!"</p>
-        <p className="font-semibold mt-2">- Jane Doe, New York</p>
+        {/* Testimonial Carousel */}
+        <div className="w-full">
+          <Carousel autoslide={true} autoslideinterval={7000}>
+            {testimonials.map((testimonial) => (
+              <div key={testimonial.id} className="flex flex-col items-center">
+                <img
+                  src={testimonial.image}
+                  alt={`Customer ${testimonial.name}`}
+                  className="w-16 rounded-full mb-4 shadow-md"
+                />
+                <p className="text-lg italic text-black">"{testimonial.quote}"</p>
+                <p className="font-semibold  text-but">{testimonial.name}, {testimonial.location}</p>
+              </div>
+            ))}
+          </Carousel>
+        </div>
       </div>
-      
-    </div>
-  </div>
-</section>
+    </section>
 
 
       <Footer/>

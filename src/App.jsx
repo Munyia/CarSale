@@ -12,6 +12,7 @@ import Contact from './assets/pages/Contact'
 import CheckOut from './assets/pages/checkOut'
 import FAQ from './assets/pages/FAQ'
 import CarListing from './assets/pages/CarListing'
+import CarDetail from './assets/components/CarDetail'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -31,6 +32,7 @@ function App() {
         <Route path="/contact" element={<Contact/>} />
         <Route path="/faq" element={<FAQ/>} />
         <Route path="/carlisting" element={<CarListing/>} />
+        <Route path="/cardetail" element={<CarDetail/>} />
  </Routes>
  </BrowserRouter>
     </>

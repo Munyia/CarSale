@@ -9,11 +9,11 @@ const Register = () => {
           <h1 className="text-2xl font-bold text-but mb-1 text-center">
             Register
           </h1>
-          <div class="w-full max-w-full justify-center items-center px-3 mx-auto mt-0 md:flex-0 shrink-0">
-            <div class="relative z-0 flex flex-col min-w-0 break-words border-0 shadow-soft-xl rounded-2xl bg-clip-border">
-              <div class="flex flex-wrap px-3 -mx-3 sm:px-6 xl:px-12">
-                <div class="  px-1 flex-0">
-                  <a class="social-icon inline-block w-full px-4 py-2 mb-1 font-bold text-center text-gray-200 uppercase align-middle transition-all transform duration-300 ease-in-out bg-transparent border border-black border-solid rounded-lg shadow-none cursor-pointer hover:scale-110 hover:z-10 hover:shadow-xl group-hover:blur-sm hover:!blur-none">
+          <div className="w-full max-w-full justify-center items-center px-3 mx-auto mt-0 md:flex-0 shrink-0">
+            <div className="relative z-0 flex flex-col min-w-0 break-words border-0 shadow-soft-xl rounded-2xl bg-clip-border">
+              <div className="flex flex-wrap px-3 -mx-3 sm:px-6 xl:px-12">
+                <div className="  px-1 flex-0">
+                  <Link className="social-icon inline-block w-full px-4 py-2 mb-1 font-bold text-center text-gray-200 uppercase align-middle transition-all transform duration-300 ease-in-out bg-transparent border border-black border-solid rounded-lg shadow-none cursor-pointer hover:scale-110 hover:z-10 hover:shadow-xl group-hover:blur-sm hover:!blur-none">
                     <svg
                       xmlns:xlink="http://www.w3.org/1999/xlink"
                       xmlns="http://www.w3.org/2000/svg"
@@ -51,10 +51,10 @@ const Register = () => {
                         </g>
                       </g>
                     </svg>
-                  </a>
+                  </Link>
                 </div>
-                <div class="  px-1 ml-auto flex-0">
-                  <a class="social-icon inline-block w-full px-4 py-2 mb-1 font-bold text-center text-gray-200 uppercase align-middle transition-all transform duration-300 ease-in-out bg-transparent border border-black border-solid rounded-lg shadow-none cursor-pointer hover:scale-110 hover:z-10 hover:shadow-xl group-hover:blur-sm hover:!blur-none">
+                <div className="  px-1 ml-auto flex-0">
+                  <Link className="social-icon inline-block w-full px-4 py-2 mb-1 font-bold text-center text-gray-200 uppercase align-middle transition-all transform duration-300 ease-in-out bg-transparent border border-black border-solid rounded-lg shadow-none cursor-pointer hover:scale-110 hover:z-10 hover:shadow-xl group-hover:blur-sm hover:!blur-none">
                     <svg
                       xmlns:xlink="http://www.w3.org/1999/xlink"
                       xmlns="http://www.w3.org/2000/svg"
@@ -78,7 +78,7 @@ const Register = () => {
                         </g>
                       </g>
                     </svg>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -87,7 +87,7 @@ const Register = () => {
             <div>
               <label
                 htmlFor="fullname"
-                className="font-semibold text-sm text-gray-600 pb-1 block"
+                className="font-semibold text-sm  text-but pb-1 block"
               >
                 Full Name
               </label>
@@ -103,7 +103,7 @@ const Register = () => {
             <div>
               <label
                 htmlFor="email"
-                className="font-semibold text-sm text-gray-600 pb-1 block"
+                className="font-semibold text-sm  text-but pb-1 block"
               >
                 Email
               </label>
@@ -120,7 +120,7 @@ const Register = () => {
             <div>
               <label
                 htmlFor="password"
-                className="font-semibold text-sm text-gray-600 pb-1 block"
+                className="font-semibold text-sm  text-but pb-1 block"
               >
                 Password
               </label>
@@ -136,7 +136,7 @@ const Register = () => {
             <div>
               <label
                 htmlFor="confirmpassword"
-                className="font-semibold text-sm text-gray-600 pb-1 block"
+                className="font-semibold text-sm  text-but pb-1 block"
               >
                 Confirm Password
               </label>
@@ -152,7 +152,7 @@ const Register = () => {
             <div>
               <label
                 htmlFor="dob"
-                className="font-semibold text-sm text-gray-600 pb-1 block"
+                className="font-semibold text-sm  text-but pb-1 block"
               >
                 Date of Birth
               </label>
@@ -168,7 +168,7 @@ const Register = () => {
             <div>
               <label
                 htmlFor="phonenumber"
-                className="font-semibold text-sm text-gray-600 pb-1 block"
+                className="font-semibold text-sm  text-but pb-1 block"
               >
                 Phone Number
               </label>
@@ -184,7 +184,7 @@ const Register = () => {
             <div>
               <label
                 htmlFor="address"
-                className="font-semibold text-sm text-gray-600 pb-1 block"
+                className="font-semibold text-sm  text-but pb-1 block"
               >
                 Address
               </label>
@@ -200,19 +200,19 @@ const Register = () => {
             <div className="">
               <label
                 htmlFor="country"
-                className="font-semibold text-sm text-gray-600 pb-1 block"
+                className="font-semibold text-sm  text-but pb-1 block"
               >
                 Country
               </label>
-              <select className="border rounded-lg px-3 py-2 mt-1 mb-2 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-blue-500">
+              <select className="border rounded-lg px-3 py-2 mt-1 mb-2 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-but">
                 <option value="">Select your country</option>
                 <option value="nigeria">Nigeria</option>
                 <option value="usa">USA</option>
                 <option value="canada">Canada</option>
               </select>
             </div>
-            <div className="gender-box mb-1 col-span-2 ">
-              <label className="block justify-center text-center">Gender</label>
+            <div className="gender-box  mb-1 col-span-2 ">
+              <label className="block  text-but justify-center text-center">Gender</label>
               <div className="flex justify-center gap-4 mt-1">
                 <div className="">
                   <input
@@ -259,10 +259,10 @@ const Register = () => {
             </div>
             <div className="col-span-2 flex items-center justify-between mt-4">
               <span className="w-1/5 border-b dark:border-gray-600 md:w-1/4"></span>
-              <p className="text-xs text-black uppercase dark:text-gray-500 ">
+              <p className="text-xs  uppercase  text-but dark:text-gray-500 ">
                 Have an account?
                 <Link
-                  className=" flex hover:underline hover:text-blue-700 justify-center text-center items-center"
+                  className=" flex hover:underline hover:text-black justify-center text-center items-center"
                   to="/login"
                 >
                   {" "}

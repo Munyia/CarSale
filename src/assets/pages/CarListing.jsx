@@ -13,6 +13,7 @@ const CarListing = () => {
       fuelType: 'Petrol',
       condition: 'New',
       installmentPlans: ['12 months - $2,083/month', '24 months - $1,042/month'],
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL-eWM8Si9XLBKzZRdWDc_fxi4SXCvWu4xsg&s',
     },
     {
       id: 2,
@@ -23,6 +24,7 @@ const CarListing = () => {
       fuelType: 'Diesel',
       condition: 'New',
       installmentPlans: ['12 months - $1,833/month', '24 months - $917/month'],
+      image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnjmpP36L0r0Swrfcc4PCiJpzuYxEVXfktLg&s'
     },
     {
       id: 3,
@@ -33,6 +35,7 @@ const CarListing = () => {
       fuelType: 'Petrol',
       condition: 'Used',
       installmentPlans: ['12 months - $2,500/month', '24 months - $1,250/month'],
+       image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMTyr_4oPJUzqL-0MpDMICAY6zSw7-Fhheqw&s'
     },
     {
       id: 4,
@@ -43,6 +46,7 @@ const CarListing = () => {
       fuelType: 'Petrol',
       condition: 'Used',
       installmentPlans: ['12 months - $10,500/month', '8 months - $1,250/month'],
+       image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUSxXu8ogj81ZsYA404CxiS-ATB_2jW5UIfQ&s'
     },
     {
       id: 5,
@@ -53,6 +57,7 @@ const CarListing = () => {
       fuelType: 'Petrol',
       condition: 'Used',
       installmentPlans: ['10 months - $3,500/month', '4 months - $1,250/month'],
+       image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkTyyAuoTUQfBQveMwScPGtgPTam-8k2BNLg&s'
     },
     {
       id: 6,
@@ -63,6 +68,7 @@ const CarListing = () => {
       fuelType: 'Diesel',
       condition: 'Used',
       installmentPlans: ['12 months - $2,500/month', '24 months - $1,250/month'],
+       image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLzVP0r6KyOW0dbvIQnmDU--z1JHnHz2ml4w&s'
     }
   ]);
 
@@ -115,26 +121,26 @@ const CarListing = () => {
   const totalPages = Math.ceil(sortedCars.length / carsPerPage);
 
   return (
-    <div className="p-5 bg-gray-100">
-      <h1 className="text-3xl font-bold text-center mb-6">Car Listings</h1>
+    <div className="p-5 bg-body">
+      <h1 className="text-3xl text-but font-bold text-center mb-6">Car Listings</h1>
 
       {/* Filters */}
-      <div className="mb-4  bg-white p-4 rounded-lg shadow-md">
+      <div className="mb-4 shadow-2xl shadow-slate-500  bg-white p-4 rounded-2xl ">
         <h2 className="text-xl font-semibold mb-4">Filters</h2>
-        <div className="mb-4 justify-center text-center bg-white p-4 rounded-lg shadow-md flex gap-4 flex-wrap">
+        <div className="mb-4 justify-center text-center bg-body p-4 rounded-2xl shadow-2xl shadow-slate-900  flex gap-4 flex-wrap">
           {/* Brand Filter */}
-          <div className="relative group w-48">
-            <button className="w-full text-sm font-semibold text-gray-700 bg-gray-200 p-3 rounded-lg focus:outline-none">
+          <div className="relative group bg-white w-48">
+            <button className="w-full text-sm font-semibold hover:rounded-lg hover:bg-white hover:text-but text-white bg-but p-3 rounded-lg focus:outline-none">
               Brand
             </button>
-            <div className="absolute top-full left-0 mt-2 w-full bg-white border border-gray-300 rounded-lg shadow-lg transition-transform transform scale-0 group-hover:scale-100 group-hover:translate-y-1">
+            <div className="absolute top-full left-0 mt-2 w-full bg-white  border border-gray-300 rounded-lg shadow-lg transition-transform transform scale-0 group-hover:scale-100 group-hover:translate-y-1">
               <ul className="p-2">
-                <li><button onClick={() => setFilters({ ...filters, brand: '' })} className="block w-full text-left px-4 py-2 hover:bg-gray-200">All Brands</button></li>
+                <li><button onClick={() => setFilters({ ...filters, brand: '' })} className="block  w-full text-left px-4 py-2 hover:bg-gray-200">All Brands</button></li>
                 {brands.map(brand => (
                   <li key={brand}>
                     <button
                       onClick={() => setFilters({ ...filters, brand })}
-                      className="block w-full text-left px-4 py-2 hover:bg-gray-200"
+                      className="block w-full text-left px-4 py-2 hover:bg-but hover:text-white"
                     >
                       {brand}
                     </button>
@@ -146,7 +152,7 @@ const CarListing = () => {
 
           {/* Model Filter */}
           <div className="relative group w-48">
-            <button className="w-full text-sm font-semibold text-gray-700 bg-gray-200 p-3 rounded-lg focus:outline-none">
+          <button className="w-full text-sm font-semibold hover:rounded-lg hover:bg-white hover:text-but text-white bg-but p-3 rounded-lg focus:outline-none">
               Model
             </button>
             <div className="absolute top-full left-0 mt-2 w-full bg-white border border-gray-300 rounded-lg shadow-lg transition-transform transform scale-0 group-hover:scale-100 group-hover:translate-y-1">
@@ -162,7 +168,7 @@ const CarListing = () => {
 
           {/* Price Range Filter */}
           <div className="relative group w-48">
-            <button className="w-full text-sm font-semibold text-gray-700 bg-gray-200 p-3 rounded-lg focus:outline-none">
+          <button className="w-full text-sm font-semibold hover:rounded-lg hover:bg-white hover:text-but text-white bg-but p-3 rounded-lg focus:outline-none">
               Price Range
             </button>
             <div className="absolute top-full left-0 mt-2 w-full bg-white border border-gray-300 rounded-lg shadow-lg transition-transform transform scale-0 group-hover:scale-100 group-hover:translate-y-1">
@@ -172,14 +178,14 @@ const CarListing = () => {
                   placeholder="Min Price"
                   value={filters.minPrice}
                   onChange={(e) => setFilters({ ...filters, minPrice: parseFloat(e.target.value) || 0 })}
-                  className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm mb-2"
+                  className="w-full border hover:bg-but hover:text-white border-gray-300 rounded-lg px-3 py-2 text-sm mb-2"
                 />
                 <input
                   type="number"
                   placeholder="Max Price"
                   value={filters.maxPrice}
                   onChange={(e) => setFilters({ ...filters, maxPrice: parseFloat(e.target.value) || 50000 })}
-                  className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm"
+                  className="w-full border hover:bg-but hover:text-white border-gray-300 rounded-lg px-3 py-2 text-sm"
                 />
               </div>
             </div>
@@ -187,7 +193,7 @@ const CarListing = () => {
 
           {/* Fuel Type Filter */}
           <div className="relative group w-48">
-            <button className="w-full text-sm font-semibold text-gray-700 bg-gray-200 p-3 rounded-lg focus:outline-none">
+          <button className="w-full text-sm font-semibold hover:rounded-lg hover:bg-white hover:text-but text-white bg-but p-3 rounded-lg focus:outline-none">
               Fuel Type
             </button>
             <div className="absolute top-full left-0 mt-2 w-full bg-white border border-gray-300 rounded-lg shadow-lg transition-transform transform scale-0 group-hover:scale-100 group-hover:translate-y-1">
@@ -197,7 +203,7 @@ const CarListing = () => {
                   <li key={fuelType}>
                     <button
                       onClick={() => setFilters({ ...filters, fuelType })}
-                      className="block w-full text-left px-4 py-2 hover:bg-gray-200"
+                      className="block w-full text-left px-4 py-2  hover:bg-but hover:text-white"
                     >
                       {fuelType}
                     </button>
@@ -209,7 +215,7 @@ const CarListing = () => {
 
           {/* Condition Filter */}
           <div className="relative group w-48">
-            <button className="w-full text-sm font-semibold text-gray-700 bg-gray-200 p-3 rounded-lg focus:outline-none">
+          <button className="w-full text-sm font-semibold hover:rounded-lg hover:bg-white hover:text-but text-white bg-but p-3 rounded-lg focus:outline-none">
               Condition
             </button>
             <div className="absolute top-full left-0 mt-2 w-full bg-white border border-gray-300 rounded-lg shadow-lg transition-transform transform scale-0 group-hover:scale-100 group-hover:translate-y-1">
@@ -219,7 +225,7 @@ const CarListing = () => {
                   <li key={condition}>
                     <button
                       onClick={() => setFilters({ ...filters, condition })}
-                      className="block w-full text-left px-4 py-2 hover:bg-gray-200"
+                      className="block w-full text-left px-4 py-2 hover:bg-but hover:text-white"
                     >
                       {condition.charAt(0).toUpperCase() + condition.slice(1)}
                     </button>
@@ -237,33 +243,33 @@ const CarListing = () => {
           id="sort"
           value={sortOption}
           onChange={(e) => setSortOption(e.target.value)}
-          className="p-2 border border-gray-300 rounded"
+          className="p-2 border  border-gray-300 rounded-lg"
         >
           <option value="price">Price</option>
-          <option value="popularity">Popularity</option>
-          <option value="newest">Newest Arrival</option>
+          <option className=' hover:bg-but hover:text-white' value="popularity">Popularity</option>
+          <option className=' hover:bg-but hover:text-white' value="newest">Newest Arrival</option>
         </select>
       </div>
 
       {/* Car Listings */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 ">
         {currentCars.map(car => (
-          <div key={car.id} className="bg-white border rounded-lg shadow-md overflow-hidden">
+          <div key={car.id} className="bg-white border rounded-2xl shadow-2xl shadow-slate-900 overflow-hidden">
             {/* Placeholder image source */}
-            <img src="https://via.placeholder.com/400x300" alt={`${car.make} ${car.model}`} className="w-full h-48 object-cover"/>
+            <img src={car.image} alt={`${car.make} ${car.model}`} className="w-full bg-white h-48 object-cover"/>
             <div className="p-4">
-              <h2 className="text-xl font-semibold">{car.make} {car.model}</h2>
+              <h2 className="text-xl text-but font-semibold">{car.make} {car.model}</h2>
               <p className="text-gray-600">Year: {car.year}</p>
               <p className="text-gray-800 font-bold mt-2">{car.price}</p>
               <div className="mt-4">
-                <h3 className="font-semibold">Installment Plans:</h3>
+                <h3 className="font-semibold text-but">Installment Plans:</h3>
                 <ul className="list-disc pl-5">
                   {car.installmentPlans.map((plan, index) => (
-                    <li key={index} className="text-gray-700">{plan}</li>
+                    <li key={index} className="text-black">{plan}</li>
                   ))}
                 </ul>
               </div>
-              <Link to={`/${car.id}`} className="block text-blue-500 mt-4 hover:underline">View Details</Link>
+              <Link to={`cardetail/${car.id}`} className="block text-but mt-4 hover:underline">View Details</Link>
             </div>
           </div>
         ))}
@@ -274,7 +280,7 @@ const CarListing = () => {
         <button
           onClick={() => setCurrentPage(Math.max(currentPage - 1, 1))}
           disabled={currentPage === 1}
-          className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50"
+          className="px-4 py-2 bg-but text-white rounded-lg hover:text-black hover:bg-blue-700 disabled:opacity-50"
         >
           Previous
         </button>
@@ -282,7 +288,7 @@ const CarListing = () => {
         <button
           onClick={() => setCurrentPage(Math.min(currentPage + 1, totalPages))}
           disabled={currentPage === totalPages}
-          className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50"
+          className="px-4 py-2  bg-but text-white rounded-lg hover:text-black hover:bg-blue-700 disabled:opacity-50"
         >
           Next
         </button>

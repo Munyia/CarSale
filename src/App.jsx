@@ -15,6 +15,7 @@ import CarDetail from './assets/components/CarDetail'
 import CheckOut from './assets/pages/CheckOut'
 import Header from './assets/components/Header'
 import Footer from './assets/components/Footer'
+import UserProfile from './assets/pages/UserProfile'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -37,6 +38,7 @@ function App() {
         <Route path="/cardetail" element={<CarDetail/>} />
         <Route path="/header" element={<Header/>} />
         <Route path="/footer" element={<Footer/>} />
+        <Route path="/userprofile" element={<UserProfile/>} />
  </Routes>
  </BrowserRouter>
     </>

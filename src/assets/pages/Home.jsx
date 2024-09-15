@@ -133,7 +133,7 @@ const Home = () => {
       <div className="max-w-7xl mx-auto text-center">
         <h2 className="text-3xl font-bold text-but mb-8">What Our Customers Say</h2>
 
-        {/* Testimonial Carousel */}
+      
         <div className="w-full">
           <Carousel autoslide={true} autoslideinterval={7000}>
             {testimonials.map((testimonial) => (

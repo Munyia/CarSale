@@ -215,7 +215,7 @@ const CheckOut = () => {
       </form>
 
       {/* Order Summary */}
-      <div className="mt-8 p-4 bg-gray-100 rounded-lg shadow">
+      <div className="mt-8 p-4 shadow-2xl  bg-white shadow-slate-900 rounded-2xl ">
         <h2 className="text-xl font-bold text-but mb-4">Order Summary</h2>
         <p className="text-black"><strong>Total Cost:</strong> ${totalCost.toLocaleString()}</p>
         {installmentPlan && (

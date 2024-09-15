@@ -16,11 +16,11 @@ const CheckOut = () => {
     }
   }
   return (
-    <div className="max-w-lg my-3 mx-auto p-6 shadow-2xl  bg-white shadow-slate-900 rounded-3xl">
-      <h1 className="text-2xl font-bold justify-center text-center mb-6 text-gray-800">CheckOut Form</h1>
+    <div className="max-w-lg my-3 mx-auto p-6 shadow-2xl  bg-body shadow-slate-900 rounded-3xl">
+      <h1 className="text-2xl font-bold justify-center text-center mb-6 text-but">CheckOut Form</h1>
       <form className="space-y-4">
         <div>
-          <label htmlFor="fullname" className="block text-sm font-semibold text-gray-700 mb-2">Full Name</label>
+          <label htmlFor="fullname" className="block text-sm font-semibold text-but mb-2">Full Name</label>
           <input
             type="text"
             id="fullname"
@@ -30,7 +30,7 @@ const CheckOut = () => {
         </div>
 
         <div>
-          <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">Email</label>
+          <label htmlFor="email" className="block text-sm font-semibold text-but mb-2">Email</label>
           <input
             type="email"
             id="email"
@@ -39,7 +39,7 @@ const CheckOut = () => {
           />
         </div>
         <div>
-          <label htmlFor="password" className="block text-sm font-semibold text-gray-700 mb-2">Password</label>
+          <label htmlFor="password" className="block text-sm font-semibold text-but mb-2">Password</label>
           <input
             type="password"
             id="password"
@@ -49,7 +49,7 @@ const CheckOut = () => {
         </div>
 
         <div>
-          <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">Phone Number</label>
+          <label htmlFor="phone" className="block text-sm font-semibold text-but mb-2">Phone Number</label>
           <input
             type="tel"
             id="phone"
@@ -59,7 +59,7 @@ const CheckOut = () => {
         </div>
 
         <div>
-          <label htmlFor="address" className="block text-sm font-semibold text-gray-700 mb-2">Address</label>
+          <label htmlFor="address" className="block text-sm font-semibold text-but mb-2">Address</label>
           <input
             type="text"
             id="address"
@@ -68,7 +68,7 @@ const CheckOut = () => {
           />
         </div>
         <div>
-          <label htmlFor="country" className="block text-sm font-semibold text-gray-700 mb-2">Country</label>
+          <label htmlFor="country" className="block text-sm font-semibold text-but mb-2">Country</label>
           <select
             id="country"
             className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -82,21 +82,11 @@ const CheckOut = () => {
           </select>
         </div>
         <div className="mt-6">
-          <div className="text-lg font-semibold text-gray-800">Payment Method</div>
-          {/* <div className="mt-6 border-t border-gray-300 pt-4">
-          <div className="text-lg font-semibold text-gray-800 mb-2">Down Payment</div>
-          <input
-            type="number"
-            id="downPayment"
-            className="w-full border border-blue-500 rounded-lg px-3 py-2 text-sm bg-blue-50 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            placeholder="Enter down payment amount"
-       
-          />
-        </div> */}
+          <p className="text-lg font-semibold text-black">Payment Method</p>
           </div>
 
           <div>
-          <label htmlFor="installment" className="block text-gray-700">Installment Plan</label>
+          <label htmlFor="installment" className="block text-but">Installment Plan</label>
           <select
             id="installment"
             name="installment"
@@ -119,7 +109,7 @@ const CheckOut = () => {
         {/* Conditionally show Down Payment only when an installment plan is selected */}
         {installmentPlan && (
           <div>
-            <label htmlFor="downPayment" className="block text-sm font-semibold text-gray-700 mb-2">Down Payment</label>
+            <label htmlFor="downPayment" className="block text-sm font-semibold text-but mb-2">Down Payment</label>
             <input
               type="number"
               id="downPayment"
@@ -134,7 +124,6 @@ const CheckOut = () => {
           </div>
         )}
         <div className="mt-6">
-          <div className="text-lg font-semibold text-gray-800">Payment Method</div>
           <div className="mt-4 space-y-4">
             <div className="flex items-center">
               <input
@@ -187,7 +176,7 @@ const CheckOut = () => {
           </div>
         </div>
         <div>
-          <label htmlFor="deliveryOption" className="block text-gray-700">Delivery Option</label>
+          <label htmlFor="deliveryOption" className="block text-but">Delivery Option</label>
           <div className="mt-4 space-y-4">
             <div className="flex items-center">
               <input
@@ -218,7 +207,7 @@ const CheckOut = () => {
         <div>
           <button
             type="submit"
-            className="w-full py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full py-2 bg-but text-white rounded-lg hover:bg-blue-700 hover:text-black focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
             Submit
           </button>
@@ -227,17 +216,17 @@ const CheckOut = () => {
 
       {/* Order Summary */}
       <div className="mt-8 p-4 bg-gray-100 rounded-lg shadow">
-        <h2 className="text-xl font-bold text-gray-800 mb-4">Order Summary</h2>
-        <p className="text-gray-700"><strong>Total Cost:</strong> ${totalCost.toLocaleString()}</p>
+        <h2 className="text-xl font-bold text-but mb-4">Order Summary</h2>
+        <p className="text-black"><strong>Total Cost:</strong> ${totalCost.toLocaleString()}</p>
         {installmentPlan && (
           <>
-            <p className="text-gray-700"><strong>Down Payment:</strong> ${parseFloat(downPayment).toLocaleString()}</p>
-            <p className="text-gray-700"><strong>Installment Plan:</strong> {installmentPlan || 'N/A'} months</p>
-            <p className="text-gray-700"><strong>Monthly Installment:</strong> ${monthlyInstallment.toLocaleString()}</p>
+            <p className="text-black"><strong>Down Payment:</strong> ${parseFloat(downPayment).toLocaleString()}</p>
+            <p className="text-black"><strong>Installment Plan:</strong> {installmentPlan || 'N/A'} months</p>
+            <p className="text-black"><strong>Monthly Installment:</strong> ${monthlyInstallment.toLocaleString()}</p>
           </>
         )}
-        <p className="text-gray-700"><strong>Delivery Option:</strong> {deliveryOption || 'N/A'}</p>
-        <p className="text-gray-700"><strong>Payment Method:</strong> {paymentMethod || 'N/A'}</p>
+        <p className="text-black"><strong>Delivery Option:</strong> {deliveryOption || 'N/A'}</p>
+        <p className="text-black"><strong>Payment Method:</strong> {paymentMethod || 'N/A'}</p>
       </div>
     </div>
   );

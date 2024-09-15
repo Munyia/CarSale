@@ -2,7 +2,7 @@ import React from 'react';
 
 const Request = () => {
   return (
-    <div className="max-w-md mx-auto p-6 bg-white shadow-md rounded-lg">
+    <div className="max-w-md mx-auto p-5 bg-body shadow-2xl rounded-lg">
       <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">Request Form</h2>
       <form className="space-y-6">
         <div>

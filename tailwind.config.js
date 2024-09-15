@@ -7,8 +7,9 @@ export default {
   theme: {
     extend: {
       colors:{
-        'pry': '#cfbcab',
-        'sec': '#afafaf',
+        'body': '#ddd',
+        'but': '#673de6',
+        
       }
     },
   },

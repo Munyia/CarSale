@@ -1,15 +1,8 @@
 import React from 'react';
 
 const CheckOut = () => {
-  document.getElementById('togglePassword').addEventListener('click', function () {
-    const passwordInput = document.getElementById('password');
-    const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-    passwordInput.setAttribute('type', type);
-    this.classList.toggle('text-gray-500');
-    this.classList.toggle('text-blue-500');
-  });
   return (
-    <div className="max-w-lg mx-auto p-6 bg-white shadow-2xl shadow-slate-900 rounded-lg">
+    <div className="max-w-lg my-3 mx-auto p-6 shadow-2xl  bg-white shadow-slate-900 rounded-3xl">
       <h1 className="text-2xl font-bold justify-center text-center mb-6 text-gray-800">CheckOut Form</h1>
       <form className="space-y-4">
         <div>
@@ -31,7 +24,7 @@ const CheckOut = () => {
             required
           />
         </div>
-        {/* <div>
+        <div>
           <label htmlFor="password" className="block text-sm font-semibold text-gray-700 mb-2">Password</label>
           <input
             type="password"
@@ -39,39 +32,7 @@ const CheckOut = () => {
             className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
           />
-        </div> */}
-
-
-<div class="relative">
-  <label htmlFor="password" className="block text-sm font-semibold text-gray-700 mb-2">Password</label>
-  <input
-    type="password"
-    id="password"
-    className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 pr-10"
-    required
-  />
-  <button
-    type="button"
-    className="absolute inset-y-0 right-0 px-3 flex items-center text-gray-500"
-    id="togglePassword"
-  >
-    <svg
-      className="w-5 h-5"
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
-    >
-      <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        d="M12 3C6.48 3 2 7.48 2 12s4.48 9 10 9 10-4.48 10-9S17.52 3 12 3zM12 19a7 7 0 0 1-7-7 7 7 0 0 1 7-7 7 7 0 0 1 7 7 7 7 0 0 1-7 7zM12 5a7 7 0 0 0-7 7 7 7 0 0 0 7 7 7 7 0 0 0 7-7 7 7 0 0 0-7-7z"
-      />
-    </svg>
-  </button>
-</div>
-
+        </div>
 
         <div>
           <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">Phone Number</label>

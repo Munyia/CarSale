@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 
 const Register = () => {
   return (
-    <div className="w-full min-h-screen flex items-center justify-center bg-sec py-3">
-      <div className="relative bg-pry px-4 py-1 bg--600 mx-8 md:mx-0 shadow-2xl shadow-slate-900 rounded-3xl sm:p-10 sm:max-w-xl">
+    <div className="w-full min-h-screen flex items-center justify-center  py-3">
+      <div className="relative bg-pry px-4 py-1 bg--600 mx-8 md:mx-0 bg-body shadow-2xl shadow-slate-900 rounded-3xl sm:p-10 sm:max-w-xl">
         <div className="max-w-md mx-auto">
-          <h1 className="text-2xl font-bold text-gray-800 mb-1 text-center">
+          <h1 className="text-2xl font-bold text-but mb-1 text-center">
             Register
           </h1>
           <div class="w-full max-w-full justify-center items-center px-3 mx-auto mt-0 md:flex-0 shrink-0">
@@ -251,7 +251,7 @@ const Register = () => {
             </div>
             <div className="col-span-2 mt-2">
               <button
-                className="py-1 px-2 bg-blue-900 hover:bg-blue-500 focus:ring-blue-200 focus:ring-offset-blue-400 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
+                className="py-1 px-2 bg-but hover:bg-blue-500 focus:ring-blue-200 focus:ring-offset-blue-400 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
                 type="submit"
               >
                 Sign up

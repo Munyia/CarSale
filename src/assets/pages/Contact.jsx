@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Contact = () => {
   return (
-    <div className="max-w-lg mx-auto p-6 bg-white shadow-md rounded-lg">
-      <h1 className="text-2xl font-bold mb-6 text-gray-800">Contact Us</h1>
+    <div className="max-w-lg my-3 mx-auto p-6 shadow-2xl bg-white shadow-slate-900 rounded-3xl">
+      <h1 className="text-2xl font-bold text-center mb-6 text-gray-800">Contact Form</h1>
       <form className="space-y-4">
         <div>
           <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">Name</label>
@@ -45,23 +46,24 @@ const Contact = () => {
           ></textarea>
         </div>
 
-        {/* <div className="mt-6 border-t border-gray-300 pt-4">
-          <div className="text-lg font-semibold text-gray-800">Support Options</div>
+        <div className="mt-6 border-t border-gray-300 pt-4">
+          <div className="text-lg font-semibold text-gray-800">Contact our support team</div>
           <div className="mt-4 space-y-4">
             <div className="flex items-center">
               <span className="text-gray-700 font-semibold mr-2">Customer Support:</span>
-              <a href="tel:+1234567890" className="text-blue-600 hover:underline">+1 (234) 567-890</a>
+              <Link to={""} className="text-blue-600 hover:underline">+1 **********</Link>
             </div>
             <div className="flex items-center">
               <span className="text-gray-700 font-semibold mr-2">Email:</span>
-              <a href="mailto:support@example.com" className="text-blue-600 hover:underline">support@example.com</a>
+              <Link to={""} className="text-blue-600 hover:underline">support@example.com</Link>
             </div>
             <div className="flex items-center">
               <span className="text-gray-700 font-semibold mr-2">Live Chat:</span>
-              <a href="/live-chat" className="text-blue-600 hover:underline">Start Live Chat</a>
+              <Link to ={""} className="text-blue-600 hover:underline">Start Live Chat</Link>
+
             </div>
           </div>
-        </div> */}
+        </div>
 
         <div>
           <button

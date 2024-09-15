@@ -10,6 +10,8 @@ import Confirmation from './assets/components/Confirmation'
 import PaymentFailure from './assets/components/PaymentFailure'
 import Contact from './assets/pages/Contact'
 import CheckOut from './assets/pages/checkOut'
+import FAQ from './assets/pages/FAQ'
+import CarListing from './assets/pages/CarListing'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -27,6 +29,8 @@ function App() {
         <Route path="/confirmation" element={<Confirmation/>} />
         <Route path="/paymentfailure" element={<PaymentFailure/>} />
         <Route path="/contact" element={<Contact/>} />
+        <Route path="/faq" element={<FAQ/>} />
+        <Route path="/carlisting" element={<CarListing/>} />
  </Routes>
  </BrowserRouter>
     </>

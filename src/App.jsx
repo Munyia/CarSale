@@ -9,10 +9,12 @@ import Request from './assets/pages/Request'
 import Confirmation from './assets/components/Confirmation'
 import PaymentFailure from './assets/components/PaymentFailure'
 import Contact from './assets/pages/Contact'
-import CheckOut from './assets/pages/checkOut'
 import FAQ from './assets/pages/FAQ'
 import CarListing from './assets/pages/CarListing'
 import CarDetail from './assets/components/CarDetail'
+import CheckOut from './assets/pages/CheckOut'
+import Header from './assets/components/Header'
+import Footer from './assets/components/Footer'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -33,6 +35,8 @@ function App() {
         <Route path="/faq" element={<FAQ/>} />
         <Route path="/carlisting" element={<CarListing/>} />
         <Route path="/cardetail" element={<CarDetail/>} />
+        <Route path="/header" element={<Header/>} />
+        <Route path="/footer" element={<Footer/>} />
  </Routes>
  </BrowserRouter>
     </>

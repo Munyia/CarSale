@@ -26,10 +26,10 @@ const UserProfile = () => {
   });
 
   useEffect(() => {
-    // Simulate fetching data from the API
+
     setTimeout(() => {
       setUserData(data);
-    }, 1000); // Simulate a network delay
+    }, 1000); 
   }, []);
 
   return (
@@ -45,8 +45,8 @@ const UserProfile = () => {
             />
           </div>
           <div>
-            <h1 className="text-3xl font-bold text-gray-800">Welcome, {userData.name}</h1>
-            <p className="text-gray-600">Your account summary and details</p>
+            <h1 className="text-3xl font-bold text-but">Welcome, {userData.name}</h1>
+            <p className="text-black">Your account summary and details</p>
           </div>
         </div>
         
@@ -54,14 +54,14 @@ const UserProfile = () => {
         <div className="grid shadow-2xl shadow-slate-900  grid-cols-1 md:grid-cols-3 gap-6">
           {/* Ongoing Installment Plans */}
           <div className="bg-white shadow-2xl shadow-slate-900  p-6 rounded-lg ">
-            <h2 className="text-xl font-semibold mb-4 text-gray-800 flex items-center">
+            <h2 className="text-xl font-semibold mb-4 text-black flex items-center">
               <FaCalendarAlt className="text-but mr-2" />
               Ongoing Installment Plans
             </h2>
             <ul className="space-y-4">
               {userData.installmentPlans.map((plan, index) => (
-                <li key={index} className="flex justify-between items-center border-b border-gray-200 pb-2">
-                  <span className="text-gray-700">{plan.car}</span>
+                <li key={index} className="flex justify-between items-center border-b border-gray-500 pb-2">
+                  <span className="text-black">{plan.car}</span>
                   <span className="text-gray-500">Monthly: {plan.monthly}</span>
                 </li>
               ))}
@@ -76,8 +76,8 @@ const UserProfile = () => {
             </h2>
             <ul className="space-y-4">
               {userData.orderHistory.map((order, index) => (
-                <li key={index} className="flex justify-between items-center border-b border-gray-200 pb-2">
-                  <span className="text-gray-700">Purchased: {order.car}</span>
+                <li key={index} className="flex justify-between items-center border-b border-gray-500 pb-2">
+                  <span className="text-black">Purchased: {order.car}</span>
                   <span className="text-gray-500">Date: {order.date}</span>
                 </li>
               ))}
@@ -87,13 +87,13 @@ const UserProfile = () => {
           {/* Saved Cars */}
           <div className="bg-white p-6 rounded-lg shadow-2xl shadow-slate-900 ">
             <h2 className="text-xl font-semibold mb-4 text-gray-800 flex items-center">
-              <FaHeart className="text-red-500 mr-2" />
+              <FaHeart className="text-red-700 mr-2" />
               Saved Cars
             </h2>
             <ul className="space-y-4">
               {userData.savedCars.map((car, index) => (
-                <li key={index} className="flex justify-between items-center border-b border-gray-200 pb-2">
-                  <span className="text-gray-700">{car.car}</span>
+                <li key={index} className="flex justify-between items-center border-b border-gray-500 pb-2">
+                  <span className="v">{car.car}</span>
                   <span className="text-gray-500">Price: {car.price}</span>
                 </li>
               ))}

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
@@ -131,7 +131,7 @@ const CarListing = () => {
       <div className="mb-4  shadow-2xl shadow-slate-500  bg-white p-4 rounded-2xl ">
         <div className='flex justify-between'>     
         <h2 className="text-xl font-semibold mb-4">Filters</h2>
-        <h2 className="text-xl text-but font-semibold mb-4">Car Listing</h2>
+        <h2 className="text-xl font-semibold mb-4">Car Listing</h2>
         </div>
         <div className="mb-4 justify-center text-center bg-body p-4 rounded-2xl shadow-2xl shadow-slate-900  flex gap-4 flex-wrap">
           {/* Brand Filter */}

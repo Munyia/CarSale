@@ -32,7 +32,7 @@ const Header = () => {
           
           {/* Profile and Login */}
           <div className="flex items-center space-x-7">
-            <Link to="/profile" className="text-black hover:text-but transition duration-300 relative">
+            <Link to="/userprofile" className="text-black hover:text-but transition duration-300 relative">
               <FaUserCircle className="text-2xl" />
               {/* Optional: Add dropdown menu here */}
             </Link>

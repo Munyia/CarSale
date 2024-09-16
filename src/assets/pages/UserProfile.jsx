@@ -37,7 +37,6 @@ const UserProfile = () => {
   return (
       <div>
     <div className="bg-body min-h-screen py-12 px-4 sm:px-6 lg:px-8">
-      <Header/>
       <div className="max-w-4xl bg--600 bg-pry shadow-2xl shadow-slate-900 mx-auto bg-white rounded-lg p-6">
         {/* Home Link */}
         <div className="mb-8 flex items-center">

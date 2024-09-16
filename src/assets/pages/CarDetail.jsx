@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import Header from '../components/Header';
 
 const CarDetail = () => {
   const { id } = useParams();
@@ -42,7 +43,9 @@ const CarDetail = () => {
   };
 
   return (
-    <div className=" bg-body">
+    <div>
+      <Header/>
+        <div className=" bg-body">
       <div className=" shadow-3xl py-5 bg-white px-10 shadow-slate-900 grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Image Gallery */}
         <div className="relative">
@@ -116,6 +119,7 @@ const CarDetail = () => {
 
       {/* Related Cars */}
      
+    </div>
     </div>
   );
 };

@@ -39,6 +39,7 @@ function App() {
         <Route path="/header" element={<Header/>} />
         <Route path="/footer" element={<Footer/>} />
         <Route path="/userprofile" element={<UserProfile/>} />
+        {/* <Route path="/cars/:id" element={<CarDetail />} /> */}
  </Routes>
  </BrowserRouter>
     </>

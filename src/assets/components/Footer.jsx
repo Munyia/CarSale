@@ -1,15 +1,29 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import {
-  FaFacebookF,
-  FaTwitter,
-  FaInstagram,
-  FaLinkedin,
-  FaEnvelope,
-  FaPhone,
-} from "react-icons/fa";
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedin, FaEnvelope, FaPhone,} from 'react-icons/fa';
+import axios from 'axios';
+
+const mockContactInfo = {
+  phone: '+1 *****',
+  email: 'info@carsale.com',
+  address: 'New York, USA'
+};
 
 const Footer = () => {
+  const [contactInfo, setContactInfo] = useState(null); // Initialize with null
+
+  useEffect(() => {
+    // Simulate data fetching with mock data
+    setTimeout(() => {
+      setContactInfo(mockContactInfo);
+    }, 1000); // Simulate network delay
+  }, []);
+
+  // Handle case where contactInfo is not yet available
+  if (!contactInfo) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <footer className="bg-but text-white py-4">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -57,13 +71,13 @@ const Footer = () => {
             <ul className="space-y-2">
               <li className="flex items-center space-x-2 hover:text-black">
                 <FaPhone className="text-xl" />
-                <span>+1 ********</span>
+                <span>{contactInfo.phone}</span>
               </li>
               <li className="flex items-center space-x-2 hover:text-black">
                 <FaEnvelope className="text-xl" />
-                <span>info@carsale.com</span>
+                <span>{contactInfo.email}</span>
               </li>
-              <li className="text-white">New York, USA</li>
+              <li className="text-white">{contactInfo.address}</li>
             </ul>
           </div>
 

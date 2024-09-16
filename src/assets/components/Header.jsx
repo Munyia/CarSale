@@ -13,7 +13,7 @@ const Header = () => {
 
         <div className="hidden md:flex space-x-12">
           <NavLink to="/" className="text-but text-lg font-semibold hover:text-black transition duration-300">Home</NavLink>
-          <Link to="/categories" className="text-but text-lg font-semibold hover:text-black transition duration-300">Car Categories</Link>
+          <Link to="/carlisting" className="text-but text-lg font-semibold hover:text-black transition duration-300">Car Listing</Link>
           <Link to="/faq" className="text-but text-lg font-semibold hover:text-black transition duration-300">FAQ</Link>
           <Link to="/contact" className="text-but text-lg font-semibold hover:text-black transition duration-300">Contact</Link>
         </div>
@@ -32,7 +32,7 @@ const Header = () => {
           
           {/* Profile and Login */}
           <div className="flex items-center space-x-7">
-            <Link to="/userprofile" className="text-black hover:text-but transition duration-300 relative">
+            <Link to="/profile" className="text-black hover:text-but transition duration-300 relative">
               <FaUserCircle className="text-2xl" />
               {/* Optional: Add dropdown menu here */}
             </Link>

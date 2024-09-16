@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Footer from '../components/Footer';
+import Header from '../components/Header';
 
 const CarListing = () => {
   // Sample car data
@@ -121,12 +123,16 @@ const CarListing = () => {
   const totalPages = Math.ceil(sortedCars.length / carsPerPage);
 
   return (
-    <div className="p-5 bg-body">
-      <h1 className="text-3xl text-but font-bold text-center mb-6">Car Listings</h1>
+    <div className=" bg-body">
+      <Header/>
+      {/* <h1 className="text-3xl text-but bg-white font-bold text-center mb-6">Car Listings</h1> */}
 
       {/* Filters */}
-      <div className="mb-4 shadow-2xl shadow-slate-500  bg-white p-4 rounded-2xl ">
+      <div className="mb-4  shadow-2xl shadow-slate-500  bg-white p-4 rounded-2xl ">
+        <div className='flex justify-between'>     
         <h2 className="text-xl font-semibold mb-4">Filters</h2>
+        <h2 className="text-xl text-but font-semibold mb-4">Car Listing</h2>
+        </div>
         <div className="mb-4 justify-center text-center bg-body p-4 rounded-2xl shadow-2xl shadow-slate-900  flex gap-4 flex-wrap">
           {/* Brand Filter */}
           <div className="relative group bg-white w-48">
@@ -237,7 +243,7 @@ const CarListing = () => {
         </div>
       </div>
       {/* Sorting Options */}
-      <div className="mb-4">
+      <div className="mb-4 px-4">
         <label htmlFor="sort" className="mr-2 font-semibold">Sort By:</label>
         <select
           id="sort"
@@ -252,7 +258,7 @@ const CarListing = () => {
       </div>
 
       {/* Car Listings */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 ">
+      <div className="grid px-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 ">
         {currentCars.map(car => (
           <div key={car.id} className="bg-white border rounded-2xl shadow-2xl shadow-slate-900 overflow-hidden">
             {/* Placeholder image source */}
@@ -276,7 +282,7 @@ const CarListing = () => {
       </div>
 
       {/* Pagination */}
-      <div className="mt-6 flex justify-between">
+      <div className="my-6 px-4 flex justify-between">
         <button
           onClick={() => setCurrentPage(Math.max(currentPage - 1, 1))}
           disabled={currentPage === 1}
@@ -293,6 +299,7 @@ const CarListing = () => {
           Next
         </button>
       </div>
+      <Footer/>
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Header from '../components/Header';
 
 const CheckOut = () => {
   const [totalCost, setTotalCost] = useState(10000); // Assume the total cost is 10,000
@@ -16,6 +17,8 @@ const CheckOut = () => {
     }
   }
   return (
+   <div>
+      <Header/>
     <div className="max-w-lg my-3 mx-auto p-6 shadow-2xl  bg-body shadow-slate-900 rounded-3xl">
       <h1 className="text-2xl font-bold justify-center text-center mb-6 text-but">CheckOut Form</h1>
       <form className="space-y-4">
@@ -228,6 +231,7 @@ const CheckOut = () => {
         <p className="text-black"><strong>Delivery Option:</strong> {deliveryOption || 'N/A'}</p>
         <p className="text-black"><strong>Payment Method:</strong> {paymentMethod || 'N/A'}</p>
       </div>
+    </div>
     </div>
   );
 };

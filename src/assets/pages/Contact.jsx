@@ -1,9 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Header from '../components/Header';
 
 const Contact = () => {
   return (
+    <div>
+  <Header/>
     <div className="max-w-lg my-3 mx-auto p-6 shadow-2xl bg-body shadow-slate-900 rounded-3xl">
+      <div></div>
       <h1 className="text-2xl font-bold text-center mb-6 text-but">Contact Form</h1>
       <form className="space-y-4">
         <div>
@@ -74,6 +78,7 @@ const Contact = () => {
           </button>
         </div>
       </form>
+    </div>
     </div>
   );
 };

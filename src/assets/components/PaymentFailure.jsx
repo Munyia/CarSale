@@ -1,52 +1,55 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
-const CarListing = () => {
-  const cars = [
-    {
-      id: 1,
-      make: 'Toyota',
-      model: 'Camry',
-      year: 2022,
-      price: '$25,000',
-      image: ''
-    },
-    {
-      id: 2,
-      make: 'Honda',
-      model: 'Civic',
-      year: 2023,
-      price: '$22,000',
-      image: ''
-    },
-    {
-      id: 3,
-      make: 'Ford',
-      model: 'Mustang',
-      year: 2021,
-      price: '$30,000',
-      image: ''
-    }
-  ];
-
+const PaymentFailure = () => {
   return (
-    <div className="p-5 bg-gray-100">
-      <h1 className="text-3xl font-bold text-center mb-6">Car Listings</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        {cars.map(car => (
-          <div key={car.id} className="bg-white border rounded-lg shadow-md overflow-hidden">
-            <img src={car.image} alt={`${car.make} ${car.model}`} className="w-full h-48 object-cover"/>
-            <div className="p-4">
-              <h2 className="text-xl font-semibold">{car.make} {car.model}</h2>
-              <p className="text-gray-600">Year: {car.year}</p>
-              <p className="text-gray-800 font-bold mt-2">{car.price}</p>
-              <Link to={`/cardetails/${car.id}`} className="block text-blue-500 mt-4 hover:underline">View Details</Link>
-            </div>
-          </div>
-        ))}
+    <div className="min-h-screen flex items-center justify-center bg-body p-2">
+      <div className="relative shadow-md shadow-slate-900 bg-pry px-3 py-3 max-w-xs w-full mx-auto rounded-3xl sm:px-4 sm:py-4">
+        <h1 className="text-lg font-bold text-red-600 mb-2 text-center">
+          Payment Failed
+        </h1>
+        <p className="text-sm font-normal mb-2 text-center text-red-500">
+          Unfortunately, your payment could not be processed. Please try again.
+        </p>
+        
+        <div className="mb-2">
+          <h2 className="text-sm font-semibold text-but mb-1">Order Summary</h2>
+          <p><strong>Order Number:</strong> #123456789</p>
+          <p><strong>Date of Attempt:</strong> Sep 16, 2024</p>
+          <p><strong>Total Amount:</strong> $25,000.00</p>
+        </div>
+
+        <div className="mb-2">
+          <h2 className="text-sm font-semibold text-but mb-1">Payment Details</h2>
+          <p><strong>Payment Method:</strong> Credit Card</p>
+          <p><strong>Transaction ID:</strong> N/A</p>
+        </div>
+
+        <div className="mb-2">
+          <h2 className="text-sm font-semibold text-but mb-1">Next Steps</h2>
+          <p>Please check your payment details and try again. If the problem persists, contact our support team.</p>
+          <button className="mt-1 py-1 px-3 bg-red-500 hover:text-black hover:bg-red-600 focus:ring-red-200 focus:ring-offset-red-400 text-white transition ease-in duration-150 text-center text-sm font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-md">
+            Retry Payment
+          </button>
+        </div>
+
+        <div className="flex flex-col sm:flex-row justify-between mt-3">
+          <Link
+            to="/"
+            className="py-1 px-3 bg-but hover:text-black hover:bg-blue-500 text-white transition ease-in duration-150 text-center text-sm font-semibold rounded-md mb-2 sm:mb-0"
+          >
+            Return to Home
+          </Link>
+          <Link
+            to="/support"
+            className="py-1 px-3 bg-but hover:text-black hover:bg-blue-500 text-white transition ease-in duration-150 text-center text-sm font-semibold rounded-md"
+          >
+            Contact Support
+          </Link>
+        </div>
       </div>
     </div>
   );
-}
+};
 
-export default CarListing;
+export default PaymentFailure;

@@ -19,7 +19,7 @@ const CheckOut = () => {
   return (
    <div>
       <Header/>
-    <div className="max-w-lg my-3 mx-auto p-6 shadow-2xl  bg-body shadow-slate-900 rounded-3xl">
+    <div className="max-w-lg my-3 mx-auto p-6 shadow-2xl bg--600 bg-body shadow-slate-900 rounded-3xl">
       <h1 className="text-2xl font-bold justify-center text-center mb-6 text-but">CheckOut Form</h1>
       <form className="space-y-4">
         <div>

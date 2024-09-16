@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 const Confirmation = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-body p-2">
-      <div className="relative shadow-md shadow-slate-700 bg-pry px-4 py-3 max-w-md w-full mx-auto rounded-3xl sm:px-4 sm:py-4">
+    <div className="min-h-screen  flex items-center justify-center bg-body p-2">
+      <div className="relative bg--600  shadow-md shadow-slate-700 bg-pry px-4 py-3 max-w-md w-full mx-auto rounded-3xl sm:px-4 sm:py-4">
         <h1 className="text-lg font-bold text-but mb-2 text-center">
           Payment Confirmation
         </h1>

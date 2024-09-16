@@ -3,7 +3,7 @@ import React from 'react';
 const Request = () => {
   return (
     <div className="max-w-md mx-auto p-5 bg-body shadow-2xl rounded-lg">
-      <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">Request Form</h2>
+      <h2 className="text-2xl font-bold bg--600 bg-pry mb-6 text-center text-gray-800">Request Form</h2>
       <form className="space-y-6">
         <div>
           <label htmlFor="fullname" className="block text-gray-700">Full Name</label>

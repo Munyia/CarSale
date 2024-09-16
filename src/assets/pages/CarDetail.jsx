@@ -46,7 +46,7 @@ const CarDetail = () => {
     <div>
       <Header/>
         <div className=" bg-body">
-      <div className=" shadow-3xl py-5 bg-white px-10 shadow-slate-900 grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div className=" shadow-3xl py-5 bg-white px-10 bg--600  shadow-slate-900 grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Image Gallery */}
         <div className="relative">
           <img

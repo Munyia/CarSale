@@ -38,7 +38,7 @@ const UserProfile = () => {
       <div>
     <div className="bg-body min-h-screen py-12 px-4 sm:px-6 lg:px-8">
       <Header/>
-      <div className="max-w-4xl shadow-2xl shadow-slate-900 mx-auto bg-white rounded-lg p-6">
+      <div className="max-w-4xl bg--600 bg-pry shadow-2xl shadow-slate-900 mx-auto bg-white rounded-lg p-6">
         {/* Home Link */}
         <div className="mb-8 flex items-center">
           <Link to="/" className="text-but text-lg hover:text-black transition duration-300">

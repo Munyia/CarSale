@@ -89,7 +89,7 @@ const CarDetail = () => {
             {/* Buttons */}
             <div className="mt-6 flex gap-4">
               <button className="px-4 py-2 bg-but hover:text-black text-white rounded-lg">Add to Cart</button>
-              <Link to="/request-info" className="px-4 py-2 bg-but hover:text-black text-white rounded-lg">Request More Info</Link>
+              <Link to="/request" className="px-4 py-2 bg-but hover:text-black text-white rounded-lg">Request More Info</Link>
             </div>
           </div>
         </div>

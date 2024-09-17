@@ -1,9 +1,12 @@
 import { Link, NavLink } from 'react-router-dom';
 import { FaUserCircle, FaSearch } from 'react-icons/fa';
+import { useCart } from '../context/CartContext';
+
 
 const Header = () => {
+  const { getItemCount } = useCart(); 
   return (
-    <nav className="bg-body  sticky top-0 z-50">
+    <nav className="bg-white  sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
         
         <div className="flex-shrink-0 ">
@@ -25,16 +28,23 @@ const Header = () => {
             <input
               type="text"
               placeholder="Search by model, brand..."
-              className="px-4 py-2 rounded-lg border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-but pl-10"
+              className="px-4 py-2 rounded-lg border  border-gray-700 bg-gray-800 text-white placeholder-gray-400 shadow-sm focus:outline-none focus:ring-2 focus:ring-but pl-10"
             />
-            <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500" />
+            <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-200" />
           </div>
           
           {/* Profile and Login */}
           <div className="flex items-center space-x-7">
             <Link to="/userprofile" className="text-black hover:text-but transition duration-300 relative">
               <FaUserCircle className="text-2xl" />
-              {/* Optional: Add dropdown menu here */}
+              <Link to="/cart" className="text-black hover:text-but transition duration-300 relative">
+              Cart
+              {getItemCount() > 0 && (
+                <span className="absolute top-0 right-0 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">
+                  {getItemCount()}
+                </span>
+              )}
+            </Link>
             </Link>
             <Link to="/login" className="bg-but text-white px-4 py-2 rounded-lg shadow-md hover:bg-white hover:text-but transition duration-300">
               Login

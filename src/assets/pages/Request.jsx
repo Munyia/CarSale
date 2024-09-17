@@ -1,8 +1,11 @@
 import React from "react";
+import Header from "../components/Header";
 
 const Request = () => {
   return (
-    <div className="w-full min-h-screen flex items-center justify-center bg-body py-3">
+    <div>
+      <Header/>
+        <div className="w-full min-h-screen flex items-center justify-center bg-body py-3">
       <div className="relative w-1/3 shadow-2xl shadow-slate-900 bg-pry px-4 py-3 bg--600 mx-8 md:mx-0 rounded-3xl sm:p-10 sm:max-w-1/2">
         <div className="max-w-md mx-auto">
           <h2 className="text-2xl font-bold text-but mb-6 text-center">
@@ -72,6 +75,7 @@ const Request = () => {
           </form>
         </div>
       </div>
+    </div>
     </div>
   );
 };

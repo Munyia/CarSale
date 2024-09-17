@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import Header from '../components/Header';
-import cars from '../pages/carData'; // Import the car data
+import cars from '../data/carData'; // Import the car data
+import { useCart } from '../context/CartContext'; // Adjust the path as needed
+
 
 const CarDetail = () => {
   const { carId } = useParams(); // Get the car ID from the URL
   console.log("Car ID from URL:", carId); // Log carId to check its value
+  const { addToCart } = useCart();
 
   const car = cars.find(c => c.id === parseInt(carId, 10)); // Find the car based on the ID
   console.log("Found Car:", car); // Log car to check if it's found
@@ -13,6 +16,9 @@ const CarDetail = () => {
   if (!car) {
     return <div>Car not found</div>; // Handle the case when the car is not found
   }
+  const handleAddToCart = () => {
+    addToCart(car);
+  };
 
   const [currentImage, setCurrentImage] = useState(0);
   const [installmentMonths, setInstallmentMonths] = useState(12);
@@ -87,22 +93,43 @@ const CarDetail = () => {
             </div>
 
             {/* Buttons */}
-            <div className="mt-6 flex gap-4">
-              <button className="px-4 py-2 bg-but hover:text-black text-white rounded-lg">Add to Cart</button>
+            {/* <div className="mt-6 flex items-center gap-4">
+              <div>
+            <h1>{car.make} {car.model}</h1>
+            <button className="px-4 py-2 bg-but hover:text-black text-white rounded-lg" onClick={handleAddToCart}>Add to Cart</button>
+              </div>
               <Link to="/request" className="px-4 py-2 bg-but hover:text-black text-white rounded-lg">Request More Info</Link>
-            </div>
+            </div> */}
+
+            <div className="mt-6 flex gap-4 items-center">
+  <div className="flex flex-grow items-center">
+    <h1 className="text-xl font-bold">{car.make} {car.model}</h1>
+  </div>
+  <button className="px-4 py-2 bg-but hover:text-black text-white rounded-lg flex items-center justify-center"  onClick={handleAddToCart}>
+    Add to Cart
+  </button>
+  <Link to="/request" className="px-4 py-2 bg-but hover:text-black text-white rounded-lg flex items-center justify-center">
+    Request More Info
+  </Link>
+</div>
+
           </div>
         </div>
 
         {/* Related Cars */}
-        <div className="mt-8">
-          <h2 className="text-2xl text-but font-semibold mb-4">Related Cars</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="mt-2 mb-4 px-4">
+          <h2 className="text-2xl text-but font-semibold mb-2">Related Cars</h2>
+          <div className="grid grid-cols-1 md:grid-cols-6 gap-6">
             {relatedCars.map((relatedCar) => (
-              <div key={relatedCar.id} className="bg-white p-4 rounded-2xl shadow-2xl shadow-slate-900">
+              <div key={relatedCar.id} className="bg-white p-4 rounded-2xl shadow-2xl shadow-slate-900 flex flex-col items-center">
+                <img
+                  src={relatedCar.images[0]} // Use the first image for the related car
+                  alt={`Car ${relatedCar.make} ${relatedCar.model}`}
+                  className="w-full h-15 shadow-2xl shadow-slate-900 object-cover rounded-3xl mb-2"
+                />
                 <h3 className="text-lg font-semibold">{relatedCar.make} {relatedCar.model} ({relatedCar.year})</h3>
                 <p>Price: ${relatedCar.price.toLocaleString()}</p>
-                <Link to={`/cars/${relatedCar.id}`} className="text-but hover:underline mt-2 block">View Details</Link>
+                <Link to={`/cars/${relatedCar.id}`} className="text-but hover:underline mt-1 block">View Details</Link>
               </div>
             ))}
           </div>

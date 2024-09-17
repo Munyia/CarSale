@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import Register from './assets/pages/Register'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { CartProvider } from './assets/context/CartContext.jsx';
 import Home from './assets/pages/Home'
 import Login from './assets/pages/Login'
 import ForgotPassword from './assets/components/ForgotPassword'
@@ -16,12 +17,14 @@ import CheckOut from './assets/pages/CheckOut'
 import Header from './assets/components/Header'
 import Footer from './assets/components/Footer'
 import UserProfile from './assets/pages/UserProfile'
+import Cart from './assets/components/Cart'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+ <CartProvider>
  <BrowserRouter>
  <Routes>
    <Route path="/" element={<Home/>} />
@@ -40,8 +43,10 @@ function App() {
         <Route path="/header" element={<Header/>} />
         <Route path="/footer" element={<Footer/>} />
         <Route path="/userprofile" element={<UserProfile/>} />
+        <Route path="/cart" element={<Cart/>} />
  </Routes>
  </BrowserRouter>
+ </CartProvider>
     </>
   )
 }

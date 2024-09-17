@@ -34,12 +34,12 @@ function App() {
         <Route path="/paymentfailure" element={<PaymentFailure/>} />
         <Route path="/contact" element={<Contact/>} />
         <Route path="/faq" element={<FAQ/>} />
-        <Route path="/carlisting" element={<CarListing/>} />
-        <Route path="/cardetail" element={<CarDetail/>} />
+        <Route path="/carlisting/cardetail/:carId" element={<CarDetail />} />
+        <Route path="/carlisting" element={<CarListing />} />
+        <Route path="/cars/:carId" element={<CarDetail />} />
         <Route path="/header" element={<Header/>} />
         <Route path="/footer" element={<Footer/>} />
         <Route path="/userprofile" element={<UserProfile/>} />
-        {/* <Route path="/cars/:id" element={<CarDetail />} /> */}
  </Routes>
  </BrowserRouter>
     </>

@@ -40,14 +40,14 @@ const CarDetail = () => {
   return (
     <div>
       <Header />
-      <div className="bg-body">
-        <div className="shadow-3xl py-5 bg-white px-10 bg--600 shadow-slate-900 grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div className="bg-white ">
+        <div className="shadow-3xl py-4 bg-body  px-10 bg--600 shadow-slate-900 grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* Image Gallery */}
           <div className="relative">
             <img
               src={car.images[currentImage]}
               alt={`Car ${car.make} ${car.model}`}
-              className="w-full h-50 object-cover shadow-2xl shadow-slate-900 rounded-2xl"
+              className="w-full  object-cover shadow-2xl shadow-slate-900 rounded-2xl"
             />
             <button onClick={handlePrevImage} className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-but hover:bg-white px-2 py-1 rounded-full">
               &#8249;
@@ -58,11 +58,11 @@ const CarDetail = () => {
           </div>
 
           {/* Car Specifications */}
-          <div className="bg-body p-6 shadow-2xl shadow-slate-900 rounded-3xl ">
+          <div className="bg-body p-3 shadow-2xl shadow-slate-900 rounded-3xl ">
             <h1 className="text-lg font-bold mb-4">
               {car.make} {car.model} ({car.year})
             </h1>
-            <ul className="space-y-2">
+            <ul className="space-y-1">
               <li><strong>Price:</strong> ${car.price.toLocaleString()}</li>
               <li><strong>Mileage:</strong> {car.mileage}</li>
               <li><strong>Engine Type:</strong> {car.engineType}</li>
@@ -73,7 +73,7 @@ const CarDetail = () => {
 
             {/* Installment Calculator */}
             <div className="mt-6">
-              <h2 className="text-lg font-semibold mb-2">Installment Calculator</h2>
+              <h2 className="text-lg font-semibold mb-1">Installment Calculator</h2>
               <label htmlFor="months" className="block mb-1">Select Installment Plan (Months):</label>
               <select
                 id="months"
@@ -92,15 +92,6 @@ const CarDetail = () => {
               </p>
             </div>
 
-            {/* Buttons */}
-            {/* <div className="mt-6 flex items-center gap-4">
-              <div>
-            <h1>{car.make} {car.model}</h1>
-            <button className="px-4 py-2 bg-but hover:text-black text-white rounded-lg" onClick={handleAddToCart}>Add to Cart</button>
-              </div>
-              <Link to="/request" className="px-4 py-2 bg-but hover:text-black text-white rounded-lg">Request More Info</Link>
-            </div> */}
-
             <div className="mt-6 flex gap-4 items-center">
   <div className="flex flex-grow items-center">
     <h1 className="text-xl font-bold">{car.make} {car.model}</h1>
@@ -117,11 +108,11 @@ const CarDetail = () => {
         </div>
 
         {/* Related Cars */}
-        <div className="mt-2 mb-4 px-4">
-          <h2 className="text-2xl text-but font-semibold mb-2">Related Cars</h2>
+        <div className="mt-2  py-4 px-4  bg-but">
+          <h2 className="text-2xl text-white font-semibold mb-2">Related Cars</h2>
           <div className="grid grid-cols-1 md:grid-cols-6 gap-6">
             {relatedCars.map((relatedCar) => (
-              <div key={relatedCar.id} className="bg-white p-4 rounded-2xl shadow-2xl shadow-slate-900 flex flex-col items-center">
+              <div key={relatedCar.id} className="bg-body p-4 rounded-2xl shadow-2xl shadow-slate-900 flex flex-col items-center">
                 <img
                   src={relatedCar.images[0]} // Use the first image for the related car
                   alt={`Car ${relatedCar.make} ${relatedCar.model}`}

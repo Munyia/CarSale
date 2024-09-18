@@ -18,6 +18,7 @@ import Header from './assets/components/Header'
 import Footer from './assets/components/Footer'
 import UserProfile from './assets/pages/UserProfile'
 import Cart from './assets/components/Cart'
+import Auction from './assets/pages/Auction.jsx';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -44,6 +45,7 @@ function App() {
         <Route path="/footer" element={<Footer/>} />
         <Route path="/userprofile" element={<UserProfile/>} />
         <Route path="/cart" element={<Cart/>} />
+        <Route path="/auction" element={<Auction/>} />
  </Routes>
  </BrowserRouter>
  </CartProvider>

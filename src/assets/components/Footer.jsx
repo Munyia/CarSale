@@ -90,24 +90,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div>
-            <h4 className="text-lg text-white font-bold mb-4">
-              Subscribe to Our Newsletter
-            </h4>
-            <form className="flex flex-col md:flex-row items-center">
-              <input
-                type="email"
-                placeholder="Your Email"
-                className="px-4 py-2 rounded-lg mb-2 md:mb-0 md:mr-2 w-full border border-gray-700 bg-gray-800 text-white placeholder-gray-400"
-              />
-              <button className="bg-white text-but px-4 py-2 rounded-lg font-semibold hover:bg-black hover:text-white transition duration-300">
-                Subscribe
-              </button>
-            </form>
-          </div>
-        </div>
-
-        <div className="text-center mb-6">
+             <div className="text-center mb-6">
           <h4 className="text-lg text-white font-bold mb-4">Follow Us</h4>
           <div className="flex justify-center space-x-4">
             <Link
@@ -136,6 +119,9 @@ const Footer = () => {
             </Link>
           </div>
         </div>
+        </div>
+
+     
 
         <div className="text-center text-gray-300">
           <p>&copy; {new Date().getFullYear()} CarSale. All rights reserved.</p>

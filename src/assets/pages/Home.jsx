@@ -2,6 +2,7 @@ import React from 'react'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import Carousel from '../components/Carousel';
+import { Link } from 'react-router-dom';
 
 
 
@@ -59,7 +60,7 @@ const Home = () => {
       <Header />
       <div className="flex w-full h-screen overflow-hidden object-cover relative">
             <div className="w-full m-0 p-0 flex h-auto ">
-              <Carousel autoslide={true} autoslideinterval={7000}>
+              <Carousel autoslide={true} autoslideinterval={5000}>
                 {slides.map((slide, index) => (
                   <div
                     key={index}
@@ -72,12 +73,12 @@ const Home = () => {
                       </h1>
                       <p className="text-white text-lg mb-6">{slide.subtext}</p>
                       <div className="space-x-4">
-                        <button className="bg-but text-white px-6 py-3 rounded-lg hover:bg-body  hover:text-but">
+                        <Link to={'/carlisting'} className="bg-but text-white px-6 py-3 rounded-lg hover:bg-body  hover:text-but">
                           Shop Now
-                        </button>
-                        <button className="bg-but text-white px-6 py-3 rounded-lg hover:bg-body  hover:text-but">
-                          Explore Offers
-                        </button>
+                        </Link>
+                        <Link to={'/auction'} className="bg-but text-white px-6 py-3 rounded-lg hover:bg-body  hover:text-but">
+                         Auctions
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -135,16 +136,16 @@ const Home = () => {
 
       
         <div className="w-full">
-          <Carousel autoslide={true} autoslideinterval={7000}>
+          <Carousel autoslide={true} autoslideinterval={5000}>
             {testimonials.map((testimonial) => (
               <div key={testimonial.id} className="flex flex-col items-center">
                 <img
                   src={testimonial.image}
                   alt={`Customer ${testimonial.name}`}
-                  className="w-16 rounded-full mb-4 shadow-md"
+                  className="w-16 h-16 object-cover overflow-hidden rounded-full mb-4 shadow-md"
                 />
                 <p className="text-lg italic text-black">"{testimonial.quote}"</p>
-                <p className="font-semibold  text-but">{testimonial.name}, {testimonial.location}</p>
+                <p className="font-semibold pb-10 text-but">{testimonial.name}, {testimonial.location}</p>
               </div>
             ))}
           </Carousel>

@@ -69,6 +69,8 @@ const CarDetail = () => {
               <li><strong>Fuel Type:</strong> {car.fuelType}</li>
               <li><strong>Transmission:</strong> {car.transmission}</li>
               <li><strong>Seating Capacity:</strong> {car.seatingCapacity}</li>
+              <li><strong>Condition :</strong> {car.condition}</li>
+             
             </ul>
 
             {/* Installment Calculator */}

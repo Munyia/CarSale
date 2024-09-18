@@ -76,8 +76,7 @@ const CarListing = () => {
 
   // Distinct values for filters
   const brands = [...new Set(cars.map(car => car.make.toLowerCase()))];
-  const fuelTypes = [...new Set(cars.map(car => car.fuelType.toLowerCase()))];
-  const conditions = [...new Set(cars.map(car => car.condition.toLowerCase()))];
+
 
   // Filter and sorting states
   const [filters, setFilters] = useState({
@@ -95,17 +94,13 @@ const CarListing = () => {
   // Filter and sorting logic
   const filteredCars = cars.filter(car => {
     const normalizedBrand = car.make.toLowerCase();
-    const normalizedFuelType = car.fuelType.toLowerCase();
-    const normalizedCondition = car.condition.toLowerCase();
     const normalizedModel = car.model.toLowerCase();
     const normalizedPrice = parseFloat(car.price.replace(/[^0-9.-]+/g, ""));
 
     return (
         (filters.brand === '' || normalizedBrand === filters.brand.toLowerCase()) &&
         (filters.model === '' || normalizedModel.includes(filters.model.toLowerCase())) &&
-        (normalizedPrice >= filters.minPrice && normalizedPrice <= filters.maxPrice) &&
-        (filters.fuelType === '' || normalizedFuelType === filters.fuelType.toLowerCase()) &&
-        (filters.condition === '' || normalizedCondition === filters.condition.toLowerCase())
+        (normalizedPrice >= filters.minPrice && normalizedPrice <= filters.maxPrice)
     );
   });
 
@@ -129,11 +124,12 @@ const CarListing = () => {
 
       {/* Filters */}
       <div className="mb-4  shadow-2xl bg--600 shadow-slate-500  bg-white p-4 rounded-2xl ">
-        <div className='flex justify-between'>     
-        <h2 className="text-xl font-semibold mb-4">Filters</h2>
+        <div className='flex justify-center text-center bg-body '>     
         <h2 className="text-xl font-semibold mb-4">Car Listing</h2>
         </div>
+        {/* <h2 className="text-xl justify-center text-center font-semibold mb-4">Filter By</h2> */}
         <div className="mb-4 justify-center text-center bg-body p-4 rounded-2xl shadow-2xl shadow-slate-900  flex gap-4 flex-wrap">
+       
           {/* Brand Filter */}
           <div className="relative group bg-white w-48">
             <button className="w-full text-sm font-semibold hover:rounded-lg hover:bg-white hover:text-but text-white bg-but p-3 rounded-lg focus:outline-none">
@@ -196,50 +192,6 @@ const CarListing = () => {
               </div>
             </div>
           </div>
-
-          {/* Fuel Type Filter */}
-          <div className="relative group w-48">
-          <button className="w-full text-sm font-semibold hover:rounded-lg hover:bg-white hover:text-but text-white bg-but p-3 rounded-lg focus:outline-none">
-              Fuel Type
-            </button>
-            <div className="absolute top-full left-0 mt-2 w-full bg-white border border-gray-300 rounded-lg shadow-lg transition-transform transform scale-0 group-hover:scale-100 group-hover:translate-y-1">
-              <ul className="p-2">
-                <li><button onClick={() => setFilters({ ...filters, fuelType: '' })} className="block w-full text-left px-4 py-2 hover:bg-gray-200">All Fuel Types</button></li>
-                {fuelTypes.map(fuelType => (
-                  <li key={fuelType}>
-                    <button
-                      onClick={() => setFilters({ ...filters, fuelType })}
-                      className="block w-full text-left px-4 py-2  hover:bg-but hover:text-white"
-                    >
-                      {fuelType}
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          {/* Condition Filter */}
-          <div className="relative group w-48">
-          <button className="w-full text-sm font-semibold hover:rounded-lg hover:bg-white hover:text-but text-white bg-but p-3 rounded-lg focus:outline-none">
-              Condition
-            </button>
-            <div className="absolute top-full left-0 mt-2 w-full bg-white border border-gray-300 rounded-lg shadow-lg transition-transform transform scale-0 group-hover:scale-100 group-hover:translate-y-1">
-              <ul className="p-2">
-                <li><button onClick={() => setFilters({ ...filters, condition: '' })} className="block w-full text-left px-4 py-2 hover:bg-gray-200">All Conditions</button></li>
-                {conditions.map(condition => (
-                  <li key={condition}>
-                    <button
-                      onClick={() => setFilters({ ...filters, condition })}
-                      className="block w-full text-left px-4 py-2 hover:bg-but hover:text-white"
-                    >
-                      {condition.charAt(0).toUpperCase() + condition.slice(1)}
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
         </div>
       </div>
       {/* Sorting Options */}
@@ -260,6 +212,7 @@ const CarListing = () => {
       {/* Car Listings */}
       <div className="grid px-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 ">
         {currentCars.map(car => (
+            <Link to={`cardetail/${car.id}`}>
           <div key={car.id} className="bg-white border rounded-2xl shadow-2xl shadow-slate-900 overflow-hidden">
             {/* Placeholder image source */}
             <img src={car.image} alt={`${car.make} ${car.model}`} className="w-full bg-white h-48 object-cover"/>
@@ -277,7 +230,8 @@ const CarListing = () => {
               </div>
               <Link to={`cardetail/${car.id}`} className="block text-but mt-4 hover:underline">View Details</Link>
             </div>
-          </div>
+            </div>
+          </Link>
         ))}
       </div>
 

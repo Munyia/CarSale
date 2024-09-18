@@ -24,17 +24,7 @@ const Cart = () => {
       prevLikes.includes(itemId) ? prevLikes.filter((id) => id !== itemId) : [...prevLikes, itemId]
     );
   };
-  // Function to handle removal of selected quantities
-  // const handleRemove = (itemId) => {
-  //   const quantity = parseInt(removeQuantities[itemId], 10) || 0;
-  //   if (quantity > 0) {
-  //     removeFromCart(itemId, quantity);
-  //     setRemoveQuantities((prev) => ({
-  //       ...prev,
-  //       [itemId]: '', // Reset the quantity input after removal
-  //     }));
-  //   }
-  // };
+
   const handleRemove = (itemId) => {
     const quantity = removeQuantities[itemId] || 1;
     removeFromCart(itemId, quantity); // Pass quantity to removeFromCart
@@ -127,19 +117,12 @@ const Cart = () => {
 
                         {/* Remove button */}
                         <div className="flex items-center space-x-2">
-                          {/* <button
-                            onClick={() => handleRemove(car?.id)}
+                          <button
+                            onClick={() => handleRemove(item.id)}
                             className="text-red-500 hover:text-red-700 transition"
                           >
                             <FaTrashAlt className="text-2xl" />
-                          </button> */}
-
-                          <button
-                    onClick={() => handleRemove(item.id)}
-                    className="text-red-500 hover:text-red-700 transition"
-                  >
-                    <FaTrashAlt className="text-2xl" />
-                  </button>
+                          </button>
                         </div>
 
                         {/* Select for checkout */}
@@ -163,7 +146,14 @@ const Cart = () => {
               <h2 className="text-xl font-semibold mb-4">Payment Summary</h2>
               <p className="text-gray-700">Total Amount: ${totalAmount.toLocaleString()}</p>
               <p className="text-gray-700">Total Selected Amount: ${totalSelectedAmount.toLocaleString()}</p>
-              <Link to="/checkout" className="block mt-4 text-center text-but hover:underline">
+              <Link
+                to="/checkout"
+                state={{
+                  totalCost: totalSelectedAmount,
+                  selectedItems: Object.keys(selectedItems),
+                }}
+                className="block mt-4 text-center text-but hover:underline"
+              >
                 Proceed to Checkout
               </Link>
             </div>

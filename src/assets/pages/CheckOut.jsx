@@ -219,15 +219,12 @@ const CheckOut = () => {
             </button>
           </div>
         </form>
-
-
-
         
-        {/* <div>
-          <Link to={'/cart'}>
+        <div className='my-3 justify-center text-center'>
+          <Link className='w-full justify-center text-center px-5 py-2 bg-red-700 text-white rounded-lg hover:bg-but hover:text-black focus:outline-none focus:ring-2 focus:ring-blue-500' to={'/cart'}>
           Cancel
           </Link>
-        </div> */}
+        </div>
 
         {/* Order Summary */}
         <div className="mt-8 p-4 shadow-2xl  bg-white shadow-slate-900 rounded-2xl">

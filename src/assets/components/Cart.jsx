@@ -68,6 +68,7 @@ const Cart = () => {
     <div className='bg-body h-[100vh]'>
       <Header />
       <div className="w-full md:w-[75%] mx-auto p-6 bg-white mt-5 rounded-xl shadow-lg">
+        
         <h1 className="text-3xl font-semibold text-center mb-6">Your Cart</h1>
         {Object.keys(cartSummary).length === 0 ? (
           <p className="text-center text-gray-500 text-lg">Your cart is empty</p>

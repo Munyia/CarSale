@@ -1,10 +1,11 @@
 import { Link, NavLink } from 'react-router-dom';
 import { FaUserCircle, FaSearch, FaShoppingCart } from 'react-icons/fa'; // Import the FaShoppingCart icon
 import { useCart } from '../context/CartContext';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 const Header = ({ title }) => {
   const { getItemCount } = useCart();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   // Set document title
   useEffect(() => {
@@ -23,16 +24,22 @@ const Header = ({ title }) => {
           />
         </div>
 
-        {/* Mobile Menu Button */}
-        <div className="md:hidden">
-          <button className="text-gray-800 focus:outline-none">
+        
+        <div className="md:hidden flex items-center space-x-4">
+          <Link to="/login" className="bg-but text-white px-4 py-2 rounded-lg shadow-md hover:bg-white hover:text-but transition duration-300">
+            Login
+          </Link>
+          <button 
+            className="text-gray-800 focus:outline-none" 
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </button>
         </div>
 
-        {/* Navigation Links */}
+        {/* Navigation Links -  */}
         <div className="hidden md:flex space-x-12">
           <NavLink to="/" className="text-black text-lg font-semibold hover:text-but transition duration-300">Home</NavLink>
           <Link to="/carlisting" className="text-black text-lg font-semibold hover:text-but transition duration-300">Car Listing</Link>
@@ -40,20 +47,10 @@ const Header = ({ title }) => {
           <Link to="/contact" className="text-black text-lg font-semibold hover:text-but transition duration-300">Contact</Link>
         </div>
 
-        {/* Mobile Dropdown */}
-        <div className="md:hidden absolute top-16 left-0 w-full bg-white shadow-md">
-          <ul className="space-y-4 p-4">
-            <li><NavLink to="/" className="text-black text-lg font-semibold hover:text-but transition duration-300">Home</NavLink></li>
-            <li><Link to="/carlisting" className="text-black text-lg font-semibold hover:text-but transition duration-300">Car Listing</Link></li>
-            <li><Link to="/faq" className="text-black text-lg font-semibold hover:text-but transition duration-300">FAQ</Link></li>
-            <li><Link to="/contact" className="text-black text-lg font-semibold hover:text-but transition duration-300">Contact</Link></li>
-          </ul>
-        </div>
-        
         {/* Search and Profile */}
-        <div className="flex items-center space-x-4">
+        <div className="hidden md:flex items-center space-x-4">
           {/* Search Bar */}
-          <div className="relative hidden sm:block">
+          <div className="relative">
             <input
               type="text"
               placeholder="Search by model, brand..."
@@ -80,6 +77,18 @@ const Header = ({ title }) => {
             </Link>
           </div>
         </div>
+
+        {/* Mobile Dropdown Menu */}
+        {isMenuOpen && (
+          <div className="absolute top-16 right-0 w-full bg-white shadow-md md:hidden">
+            <ul className="space-y-4 p-4">
+              <li><NavLink to="/" className="text-black text-lg font-semibold hover:text-but transition duration-300">Home</NavLink></li>
+              <li><Link to="/carlisting" className="text-black text-lg font-semibold hover:text-but transition duration-300">Car Listing</Link></li>
+              <li><Link to="/faq" className="text-black text-lg font-semibold hover:text-but transition duration-300">FAQ</Link></li>
+              <li><Link to="/contact" className="text-black text-lg font-semibold hover:text-but transition duration-300">Contact</Link></li>
+            </ul>
+          </div>
+        )}
       </div>
     </nav>
   );

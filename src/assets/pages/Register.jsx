@@ -81,7 +81,7 @@ const Register = () => {
               </div>
             </div>
           </div>
-          <form className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <form className="grid grid-cols-1 sm:grid-cols-1 gap-4">
             <div>
               <label htmlFor="fullname" className="font-semibold text-sm text-but pb-1 block">Full Name</label>
               <input className="border rounded-lg px-3 py-2 mt-1 mb-2 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-blue-500" type="text" id="fullname" name="fullName" required placeholder="Enter your name" />

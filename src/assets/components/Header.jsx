@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react';
 const Header = ({ title }) => {
   const { getItemCount } = useCart();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false); // State for mobile search bar
 
   // Set document title
   useEffect(() => {
@@ -27,9 +28,11 @@ const Header = ({ title }) => {
 
         {/* Mobile Menu and Icons */}
         <div className="md:hidden flex items-center space-x-4">
-          {/* Search Icon */}
-          <FaSearch className="text-xl text-gray-800" />
-          
+          {/* Toggle Search Icon */}
+          <button onClick={() => setIsSearchOpen(!isSearchOpen)}>
+            <FaSearch className="text-xl text-gray-800" />
+          </button>
+
           {/* Profile Icon */}
           <Link to="/userprofile" className="text-black hover:text-but transition duration-300">
             <FaUserCircle className="text-2xl" />
@@ -55,6 +58,17 @@ const Header = ({ title }) => {
             </svg>
           </button>
         </div>
+
+        {/* Search Bar for Mobile (Visible when isSearchOpen is true) */}
+        {isSearchOpen && (
+          <div className="absolute top-16 left-0 w-full bg-white shadow-md p-4 md:hidden">
+            <input
+              type="text"
+              placeholder="Search by model, brand..."
+              className="w-full px-4 py-2 rounded-lg border border-gray-700 bg-gray-800 text-white placeholder-gray-400 shadow-sm focus:outline-none focus:ring-2 focus:ring-but"
+            />
+          </div>
+        )}
 
         {/* Navigation Links for Larger Screens */}
         <div className="hidden md:flex space-x-12">

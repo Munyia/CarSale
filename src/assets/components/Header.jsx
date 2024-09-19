@@ -17,13 +17,13 @@ const Header = ({ title }) => {
     <nav className="bg-white sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
         {/* Logo */}
-        <div className="flex-shrink-0">
+        <Link to={'/'} className="flex-shrink-0">
           <img
             src="https://media.istockphoto.com/id/1408605259/vector/auto-sports-vehicle-silhouette.jpg?s=612x612&w=0&k=20&c=--lwIV-ayDVrjistgR22-B9xFic1xsAusMxxzu6Mjhw="
             alt="CarSale"
             className="h-12 rounded-full"
           />
-        </div>
+        </Link>
 
         {/* Mobile Menu and Icons */}
         <div className="md:hidden flex items-center space-x-4">

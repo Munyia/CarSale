@@ -72,8 +72,8 @@ const Login = () => {
             </div>
 
             <div className="flex items-center justify-between mt-4">
-              <span className="w-3/5 border-b dark:border-gray-900 md:w-1/4"></span>
-              <p className="text-xs text-but uppercase dark:text-gray-900">
+              <span className="w-4/5 border-b dark:border-gray-900 md:w-1/4"></span>
+              <p className="text-xs px-2 text-but uppercase dark:text-gray-900">
                 Don’t have an account yet?
                 <Link
                   className="flex hover:underline hover:text-black justify-center text-center items-center"
@@ -82,7 +82,7 @@ const Login = () => {
                   {" "}SignUp
                 </Link>
               </p>
-              <span className="w-3/5 border-b dark:border-black md:w-1/4"></span>
+              <span className="w-4/5 border-b dark:border-black md:w-1/4"></span>
             </div>
           </form>
         </div>

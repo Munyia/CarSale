@@ -222,12 +222,12 @@ const Register = () => {
 
   {/* Login Link */}
   <div className="flex items-center justify-between mt-4">
-    <span className="w-1/5 border-b dark:border-gray-600 md:w-1/4"></span>
-    <p className="text-xs uppercase text-but dark:text-black">
+    <span className="w-1/5 border-b border-gray-500 md:w-1/4"></span>
+    <p className="text-xs uppercase text-bu text-black">
       Have an account?
       <Link className="flex hover:underline hover:text-black justify-center text-center items-center" to="/login"> Login</Link>
     </p>
-    <span className="w-1/5 border-b dark:border-black md:w-1/4"></span>
+    <span className="w-1/5 border-b  border-gray-500 md:w-1/4"></span>
   </div>
 </form>
         </div>

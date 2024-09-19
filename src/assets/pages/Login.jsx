@@ -8,7 +8,7 @@ const Login = () => {
 
   return (
     <div className="w-full h-screen flex items-center justify-center bg-body py-3">
-      <div className="relative shadow-2xl shadow-slate-900 bg-pry px-4 py-3 mx-4 md:mx-0 rounded-3xl sm:p-10 sm:max-w-xl" style={{ width: '90%', height: '70%' }}>
+      <div className="relative shadow-2xl shadow-slate-900 bg-pry px-4 py-3 mx-4 md:mx-0 rounded-3xl sm:p-10 sm:max-w-xl" style={{ width: '70%', height: '70%' }}>
         <div className="max-w-md mx-auto h-full">
           <h1 className="text-2xl font-bold text-but mb-6 text-center">
             Welcome back
@@ -72,8 +72,8 @@ const Login = () => {
             </div>
 
             <div className="flex items-center justify-between mt-4">
-              <span className="w-1/5 border-b dark:border-gray-600 md:w-1/4"></span>
-              <p className="text-xs text-but uppercase dark:text-gray-500">
+              <span className="w-1/5 border-b dark:border-gray-900 md:w-1/4"></span>
+              <p className="text-xs text-but uppercase dark:text-gray-900">
                 Don’t have an account yet?
                 <Link
                   className="flex hover:underline hover:text-black justify-center text-center items-center"

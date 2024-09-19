@@ -8,7 +8,7 @@ const Register = () => {
 
   return (
     <div className="w-full min-h-screen flex items-center justify-center bg-body py-3">
-      <div className="relative shadow-2xl bg--600 shadow-slate-900 bg-pry px-4 py-3 mx-8 md:mx-0 rounded-3xl sm:p-10 sm:max-w-xl">
+         <div className="relative shadow-2xl shadow-slate-900 bg-pry px-4 py-3 mx-4 md:mx-0 rounded-3xl sm:p-10 sm:max-w-xl" style={{ width: '70%', height: '70%' }}>
         <div className="max-w-md rounded-2xl mx-auto">
           <h1 className="text-2xl font-bold text-but mb-1 text-center">Register</h1>
           <div className="w-full max-w-full justify-center items-center px-3 mx-auto mt-0 md:flex-0 shrink-0">
@@ -223,18 +223,13 @@ const Register = () => {
   {/* Login Link */}
   <div className="flex items-center justify-between mt-4">
     <span className="w-1/5 border-b dark:border-gray-600 md:w-1/4"></span>
-    <p className="text-xs uppercase text-but dark:text-gray-500">
+    <p className="text-xs uppercase text-but dark:text-black">
       Have an account?
       <Link className="flex hover:underline hover:text-black justify-center text-center items-center" to="/login"> Login</Link>
     </p>
     <span className="w-1/5 border-b dark:border-black md:w-1/4"></span>
   </div>
 </form>
-
-
-
-
-
         </div>
       </div>
     </div>

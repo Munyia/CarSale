@@ -4,17 +4,15 @@ import { Link } from "react-router-dom";
 const Register = () => {
   return (
     <div className="w-full min-h-screen flex items-center justify-center bg-body py-3">
-    <div className="relative shadow-2xl bg--600  shadow-slate-900 bg-pry px-4 py-3 bg--600 mx-8 md:mx-0 rounded-3xl sm:p-10 sm:max-w-xl">
-       <div className="max-w-md rounded-2xl mx-auto">
-          <h1 className="text-2xl font-bold text-but mb-1 text-center">
-            Register
-          </h1>
+      <div className="relative shadow-2xl bg--600 shadow-slate-900 bg-pry px-4 py-3 mx-8 md:mx-0 rounded-3xl sm:p-10 sm:max-w-xl">
+        <div className="max-w-md rounded-2xl mx-auto">
+          <h1 className="text-2xl font-bold text-but mb-1 text-center">Register</h1>
           <div className="w-full max-w-full justify-center items-center px-3 mx-auto mt-0 md:flex-0 shrink-0">
             <div className="relative z-0 flex flex-col min-w-0 break-words border-0 shadow-soft-xl rounded-2xl bg-clip-border">
               <div className="flex flex-wrap px-3 -mx-3 sm:px-6 xl:px-12">
-                <div className="  px-1 flex-0">
+                <div className="px-1 flex-0">
                   <Link className="social-icon inline-block w-full px-4 py-2 mb-1 font-bold text-center text-gray-200 uppercase align-middle transition-all transform duration-300 ease-in-out bg-transparent border border-black border-solid rounded-lg shadow-none cursor-pointer hover:scale-110 hover:z-10 hover:shadow-xl group-hover:blur-sm hover:!blur-none">
-                    <svg
+                  <svg
                       xmlns:xlink="http://www.w3.org/1999/xlink"
                       xmlns="http://www.w3.org/2000/svg"
                       version="1.1"
@@ -53,9 +51,9 @@ const Register = () => {
                     </svg>
                   </Link>
                 </div>
-                <div className="  px-1 ml-auto flex-0">
+                <div className="px-1 ml-auto flex-0">
                   <Link className="social-icon inline-block w-full px-4 py-2 mb-1 font-bold text-center text-gray-200 uppercase align-middle transition-all transform duration-300 ease-in-out bg-transparent border border-black border-solid rounded-lg shadow-none cursor-pointer hover:scale-110 hover:z-10 hover:shadow-xl group-hover:blur-sm hover:!blur-none">
-                    <svg
+                  <svg
                       xmlns:xlink="http://www.w3.org/1999/xlink"
                       xmlns="http://www.w3.org/2000/svg"
                       version="1.1"
@@ -83,127 +81,37 @@ const Register = () => {
               </div>
             </div>
           </div>
-          <form className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+          <form className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label
-                htmlFor="fullname"
-                className="font-semibold text-sm  text-but pb-1 block"
-              >
-                Full Name
-              </label>
-              <input
-                className="border rounded-lg px-3 py-2 mt-1 mb-2 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
-                type="text"
-                id="fullname"
-                name="fullName"
-                required
-                placeholder="Enter your name"
-              />
+              <label htmlFor="fullname" className="font-semibold text-sm text-but pb-1 block">Full Name</label>
+              <input className="border rounded-lg px-3 py-2 mt-1 mb-2 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-blue-500" type="text" id="fullname" name="fullName" required placeholder="Enter your name" />
             </div>
             <div>
-              <label
-                htmlFor="email"
-                className="font-semibold text-sm  text-but pb-1 block"
-              >
-                Email
-              </label>
-              <input
-                className="border rounded-lg px-3 py-2 mt-1 mb-2 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
-                type="email"
-                id="email"
-                name="email"
-                required
-                placeholder="Enter your email"
-              />
-            </div>
-
-            <div>
-              <label
-                htmlFor="password"
-                className="font-semibold text-sm  text-but pb-1 block"
-              >
-                Password
-              </label>
-              <input
-                className="border rounded-lg px-3 py-2 mt-1 mb-2 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
-                type="password"
-                id="password"
-                name="password"
-                required
-                placeholder="Enter your password"
-              />
+              <label htmlFor="email" className="font-semibold text-sm text-but pb-1 block">Email</label>
+              <input className="border rounded-lg px-3 py-2 mt-1 mb-2 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-blue-500" type="email" id="email" name="email" required placeholder="Enter your email" />
             </div>
             <div>
-              <label
-                htmlFor="confirmpassword"
-                className="font-semibold text-sm  text-but pb-1 block"
-              >
-                Confirm Password
-              </label>
-              <input
-                className="border rounded-lg px-3 py-2 mt-1 mb-2 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
-                type="password"
-                id="confirmpassword"
-                name="Confirmpassword"
-                required
-                placeholder="Confirmpassword"
-              />
+              <label htmlFor="password" className="font-semibold text-sm text-but pb-1 block">Password</label>
+              <input className="border rounded-lg px-3 py-2 mt-1 mb-2 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-blue-500" type="password" id="password" name="password" required placeholder="Enter your password" />
             </div>
             <div>
-              <label
-                htmlFor="dob"
-                className="font-semibold text-sm  text-but pb-1 block"
-              >
-                Date of Birth
-              </label>
-              <input
-                className="border rounded-lg px-3 py-2 mt-1 mb-2 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
-                type="date"
-                id="dob"
-                name="dob"
-                required
-                placeholder="Enter your date of birth"
-              />
+              <label htmlFor="confirmpassword" className="font-semibold text-sm text-but pb-1 block">Confirm Password</label>
+              <input className="border rounded-lg px-3 py-2 mt-1 mb-2 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-blue-500" type="password" id="confirmpassword" name="Confirmpassword" required placeholder="Confirm password" />
             </div>
             <div>
-              <label
-                htmlFor="phonenumber"
-                className="font-semibold text-sm  text-but pb-1 block"
-              >
-                Phone Number
-              </label>
-              <input
-                className="border rounded-lg px-3 py-2 mt-1 mb-2 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
-                type="number"
-                id="phonenumber"
-                name="phonenumber"
-                required
-                placeholder="Enter your Phone Number"
-              />
+              <label htmlFor="dob" className="font-semibold text-sm text-but pb-1 block">Date of Birth</label>
+              <input className="border rounded-lg px-3 py-2 mt-1 mb-2 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-blue-500" type="date" id="dob" name="dob" required />
             </div>
             <div>
-              <label
-                htmlFor="address"
-                className="font-semibold text-sm  text-but pb-1 block"
-              >
-                Address
-              </label>
-              <input
-                className="border rounded-lg px-3 py-2 mt-1 mb-2 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
-                type="text"
-                id="address"
-                name="address"
-                required
-                placeholder="Enter your Address"
-              />
+              <label htmlFor="phonenumber" className="font-semibold text-sm text-but pb-1 block">Phone Number</label>
+              <input className="border rounded-lg px-3 py-2 mt-1 mb-2 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-blue-500" type="tel" id="phonenumber" name="phonenumber" required placeholder="Enter your Phone Number" />
+            </div>
+            <div>
+              <label htmlFor="address" className="font-semibold text-sm text-but pb-1 block">Address</label>
+              <input className="border rounded-lg px-3 py-2 mt-1 mb-2 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-blue-500" type="text" id="address" name="address" required placeholder="Enter your Address" />
             </div>
             <div className="">
-              <label
-                htmlFor="country"
-                className="font-semibold text-sm  text-but pb-1 block"
-              >
-                Country
-              </label>
+              <label htmlFor="country" className="font-semibold text-sm text-but pb-1 block">Country</label>
               <select className="border rounded-lg px-3 py-2 mt-1 mb-2 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-but">
                 <option value="">Select your country</option>
                 <option value="nigeria">Nigeria</option>
@@ -211,63 +119,31 @@ const Register = () => {
                 <option value="canada">Canada</option>
               </select>
             </div>
-            <div className="gender-box  mb-1 col-span-2 ">
-              <label className="block  text-but justify-center text-center">Gender</label>
+            <div className="gender-box mb-1 col-span-2">
+              <label className="block text-but justify-center text-center">Gender</label>
               <div className="flex justify-center gap-4 mt-1">
                 <div className="">
-                  <input
-                    type="radio"
-                    name="gender"
-                    id="male"
-                    className="cursor-pointer"
-                  />
-                  <label htmlFor="male" className="ml-1">
-                    Male
-                  </label>
+                  <input type="radio" name="gender" id="male" className="cursor-pointer" />
+                  <label htmlFor="male" className="ml-1">Male</label>
                 </div>
                 <div className="">
-                  <input
-                    type="radio"
-                    name="gender"
-                    id="female"
-                    className="cursor-pointer"
-                  />
-                  <label htmlFor="female" className="ml-1">
-                    Female
-                  </label>
+                  <input type="radio" name="gender" id="female" className="cursor-pointer" />
+                  <label htmlFor="female" className="ml-1">Female</label>
                 </div>
                 <div className="">
-                  <input
-                    type="radio"
-                    name="gender"
-                    id="other"
-                    className="cursor-pointer"
-                  />
-                  <label htmlFor="other" className="ml-1">
-                    Other
-                  </label>
+                  <input type="radio" name="gender" id="other" className="cursor-pointer" />
+                  <label htmlFor="other" className="ml-1">Other</label>
                 </div>
               </div>
             </div>
             <div className="col-span-2 mt-2">
-              <button
-                className="py-1 px-2 hover:text-black bg-but hover:bg-blue-500 focus:ring-blue-200 focus:ring-offset-blue-400 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
-                type="submit"
-              >
-                Sign up
-              </button>
+              <button className="py-1 px-2 hover:text-black bg-but hover:bg-blue-500 focus:ring-blue-200 focus:ring-offset-blue-400 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg" type="submit">Sign up</button>
             </div>
             <div className="col-span-2 flex items-center justify-between mt-4">
               <span className="w-1/5 border-b dark:border-gray-600 md:w-1/4"></span>
-              <p className="text-xs  uppercase  text-but dark:text-gray-500 ">
+              <p className="text-xs uppercase text-but dark:text-gray-500">
                 Have an account?
-                <Link
-                  className=" flex hover:underline hover:text-black justify-center text-center items-center"
-                  to="/login"
-                >
-                  {" "}
-                  Login
-                </Link>
+                <Link className="flex hover:underline hover:text-black justify-center text-center items-center" to="/login"> Login</Link>
               </p>
               <span className="w-1/5 border-b dark:border-black md:w-1/4"></span>
             </div>

@@ -4,7 +4,7 @@ import Header from '../components/Header';
 
 const Contact = () => {
   return (
-    <div>
+    <div className='bg-body'>
   <Header/>
     <div className="max-w-lg my-3 mx-auto bg--600 bg-pry p-6 shadow-2xl bg-body shadow-slate-900 rounded-3xl">
       <h1 className="text-2xl font-bold text-center mb-6 text-but">Contact Form</h1>

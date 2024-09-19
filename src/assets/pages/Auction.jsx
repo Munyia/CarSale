@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import cars from '../data/cars'; // Import the mock data
@@ -8,6 +8,11 @@ const Auction = () => {
   const [bidAmount, setBidAmount] = useState('');
   const [error, setError] = useState('');
   const [message, setMessage] = useState('');
+
+  // Set document title
+  useEffect(() => {
+    document.title = 'Car Auctions'; // Set the title to "Car Auctions"
+  }, []);
 
   const handleBidClick = (car) => {
     setSelectedCar(car);
@@ -27,29 +32,27 @@ const Auction = () => {
     setTimeout(() => {
       setMessage('Bid placed successfully!');
       setError('');
-      // Optionally update car data to reflect new bid
-    
       setSelectedCar(null);
+
       // Update the currentBid (in a real scenario, this would come from the backend)
-      const updatedCars = cars.map(car =>
+      cars.map(car =>
         car.id === selectedCar.id
           ? { ...car, currentBid: Number(bidAmount) }
           : car
       );
-     
     }, 1000);
   };
 
   return (
     <div>
       <Header />
-      <section className="bg-body py-12 px-4 md:px-8">
+      <section className="bg-body py-5 px-4 md:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-but mb-8">Car Auctions</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {cars.map((car) => (
-              <div key={car.id} className="bg-white p-6 rounded-lg shadow hover:shadow-lg">
+              <div key={car.id} className="bg-white p-6 rounded-3xl shadow hover:shadow-lg">
                 <img 
                   src={car.image} 
                   alt={`${car.make} ${car.model}`} 
@@ -61,7 +64,7 @@ const Auction = () => {
                 <p className="text-gray-700 mb-4">Current Bid: ${car.currentBid}</p>
                 <p className="text-gray-700 mb-4">Time Remaining: {car.timeRemaining}</p>
                 <button 
-                  className="bg-but text-white px-6 py-2 rounded-lg hover:bg-white hover:text-but"
+                  className="bg-but text-white px-6 py-2 rounded-lg  hover:bg-white hover:text-but transition duration-300"
                   onClick={() => handleBidClick(car)}
                 >
                   Place Bid
@@ -73,9 +76,11 @@ const Auction = () => {
       </section>
 
       {selectedCar && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
           <div className="bg-white p-6 rounded-lg max-w-sm w-full">
-            <h3 className="text-xl font-semibold mb-4">Place Your Bid for {selectedCar.make} {selectedCar.model}</h3>
+            <h3 className="text-xl font-semibold mb-4">
+              Place Your Bid for {selectedCar.make} {selectedCar.model}
+            </h3>
             <input 
               type="number" 
               placeholder="Enter bid amount" 

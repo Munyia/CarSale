@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useCart } from '../context/CartContext'; // Corrected path
 import cars from '../data/carData'; // Car data import
 import { Link } from 'react-router-dom';
@@ -18,6 +18,11 @@ const Cart = () => {
   // State to track selected items and their quantities for checkout
   const [selectedItems, setSelectedItems] = useState({});
 
+  // Set document title
+  useEffect(() => {
+    document.title = 'Your Cart | CarSale';
+  }, []);
+
   // Function to toggle like status
   const toggleLike = (itemId) => {
     setLikedItems((prevLikes) =>
@@ -25,9 +30,18 @@ const Cart = () => {
     );
   };
 
+  // Function to handle car removal
   const handleRemove = (itemId) => {
+    console.log(`Removing item with ID: ${itemId}`);
     const quantity = removeQuantities[itemId] || 1;
-    removeFromCart(itemId, quantity); // Pass quantity to removeFromCart
+    console.log(`Removing quantity: ${quantity} for item ID: ${itemId}`);
+    
+    // Remove the car from the cart
+    removeFromCart(itemId, quantity);
+    
+    // Log after removal
+    console.log(`Item with ID: ${itemId} removed.`);
+    
     setRemoveQuantities((prev) => {
       const { [itemId]: _, ...rest } = prev;
       return rest;
@@ -65,7 +79,7 @@ const Cart = () => {
   }, 0);
 
   return (
-    <div className='bg-body h-[100vh]'>
+    <div className="bg-body h-[100vh]">
       <Header />
       <div className="w-full md:w-[75%] mx-auto p-6 bg-white mt-5 rounded-xl shadow-lg">
         
@@ -119,7 +133,7 @@ const Cart = () => {
                         {/* Remove button */}
                         <div className="flex items-center space-x-2">
                           <button
-                            onClick={() => handleRemove(item.id)}
+                            onClick={() => handleRemove(itemId)}
                             className="text-red-500 hover:text-red-700 transition"
                           >
                             <FaTrashAlt className="text-2xl" />
@@ -143,7 +157,7 @@ const Cart = () => {
             </div>
 
             {/* Payment Section */}
-            <div className="bg-white p-4 rounded-lg shadow-lg mt-6 md:mt-0 flex-shrink-0">
+            <div className="bg-white p-4 rounded-lg shadow-lg mt-6 md:mt-0 flex-shrink-0 w-full md:w-1/3">
               <h2 className="text-xl font-semibold mb-4">Payment Summary</h2>
               <p className="text-gray-700">Total Amount: ${totalAmount.toLocaleString()}</p>
               <p className="text-gray-700">Total Selected Amount: ${totalSelectedAmount.toLocaleString()}</p>

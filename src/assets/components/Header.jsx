@@ -16,6 +16,7 @@ const Header = ({ title }) => {
     <nav className="bg-white sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
         
+        {/* Logo */}
         <div className="flex-shrink-0">
           <img
             src="https://media.istockphoto.com/id/1408605259/vector/auto-sports-vehicle-silhouette.jpg?s=612x612&w=0&k=20&c=--lwIV-ayDVrjistgR22-B9xFic1xsAusMxxzu6Mjhw="
@@ -24,11 +25,27 @@ const Header = ({ title }) => {
           />
         </div>
 
-        
+        {/* Mobile Menu and Icons */}
         <div className="md:hidden flex items-center space-x-4">
-          <Link to="/login" className="bg-but text-white px-4 py-2 rounded-lg shadow-md hover:bg-white hover:text-but transition duration-300">
-            Login
+          {/* Search Icon */}
+          <FaSearch className="text-xl text-gray-800" />
+          
+          {/* Profile Icon */}
+          <Link to="/userprofile" className="text-black hover:text-but transition duration-300">
+            <FaUserCircle className="text-2xl" />
           </Link>
+
+          {/* Cart Icon */}
+          <Link to="/cart" className="relative flex items-center">
+            <FaShoppingCart className="text-2xl" />
+            {getItemCount() > 0 && (
+              <span className="absolute bottom-4 left-4 bg-red-500 text-white rounded-full w-4 h-4 flex items-center justify-center text-xs">
+                {getItemCount()}
+              </span>
+            )}
+          </Link>
+
+          {/* Hamburger Menu */}
           <button 
             className="text-gray-800 focus:outline-none" 
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -39,7 +56,7 @@ const Header = ({ title }) => {
           </button>
         </div>
 
-        {/* Navigation Links -  */}
+        {/* Navigation Links for Larger Screens */}
         <div className="hidden md:flex space-x-12">
           <NavLink to="/" className="text-black text-lg font-semibold hover:text-but transition duration-300">Home</NavLink>
           <Link to="/carlisting" className="text-black text-lg font-semibold hover:text-but transition duration-300">Car Listing</Link>
@@ -47,9 +64,8 @@ const Header = ({ title }) => {
           <Link to="/contact" className="text-black text-lg font-semibold hover:text-but transition duration-300">Contact</Link>
         </div>
 
-        {/* Search and Profile */}
+        {/* Search, Profile, Cart Icons for Larger Screens */}
         <div className="hidden md:flex items-center space-x-4">
-          {/* Search Bar */}
           <div className="relative">
             <input
               type="text"
@@ -58,8 +74,7 @@ const Header = ({ title }) => {
             />
             <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-200" />
           </div>
-          
-          {/* Profile and Cart */}
+
           <div className="flex items-center space-x-7">
             <Link to="/userprofile" className="text-black hover:text-but transition duration-300">
               <FaUserCircle className="text-2xl" />

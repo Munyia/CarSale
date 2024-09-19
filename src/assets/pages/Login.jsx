@@ -82,7 +82,7 @@ const Login = () => {
                   {" "}SignUp
                 </Link>
               </p>
-              <span className="w-4/5 border-b dark:border-black md:w-1/4"></span>
+              <span className="w-2/5 border-b dark:border-black md:w-1/4"></span>
             </div>
           </form>
         </div>

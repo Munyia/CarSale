@@ -1,7 +1,11 @@
-import React from "react";
+import React, {  useEffect } from 'react';
 import { Link } from "react-router-dom";
 
 const Register = () => {
+  useEffect(() => {
+    document.title = 'Registration';
+  }, []);
+
   return (
     <div className="w-full min-h-screen flex items-center justify-center bg-body py-3">
       <div className="relative shadow-2xl bg--600 shadow-slate-900 bg-pry px-4 py-3 mx-8 md:mx-0 rounded-3xl sm:p-10 sm:max-w-xl">
@@ -81,7 +85,7 @@ const Register = () => {
               </div>
             </div>
           </div>
-          <form className="flex flex-col space-y-4">
+          <form className="flex flex-col space-y-4 px-4 sm:px-6 md:px-0">
   {/* Row 1 */}
   <div className="flex flex-col md:flex-row md:space-x-4">
     <div className="flex-1">
@@ -226,6 +230,8 @@ const Register = () => {
     <span className="w-1/5 border-b dark:border-black md:w-1/4"></span>
   </div>
 </form>
+
+
 
 
 

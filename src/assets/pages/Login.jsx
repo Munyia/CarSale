@@ -1,14 +1,15 @@
-import React, {  useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Link } from "react-router-dom";
 
 const Login = () => {
   useEffect(() => {
     document.title = 'Login';
   }, []);
+
   return (
-    <div className="w-full min-h-screen flex items-center justify-center bg-body py-3">
-      <div className="relative shadow-2xl shadow-slate-900 bg-pry px-4 py-3 bg--600 mx-8 md:mx-0 rounded-3xl sm:p-10 sm:max-w-xl">
-        <div className="max-w-md mx-auto">
+    <div className="w-full h-screen flex items-center justify-center bg-body py-3">
+      <div className="relative shadow-2xl shadow-slate-900 bg-pry px-4 py-3 mx-4 md:mx-0 rounded-3xl sm:p-10 sm:max-w-xl" style={{ width: '90%', height: '70%' }}>
+        <div className="max-w-md mx-auto h-full">
           <h1 className="text-2xl font-bold text-but mb-6 text-center">
             Welcome back
           </h1>
@@ -52,9 +53,9 @@ const Login = () => {
               </div>
             </div>
 
-            <div className="mt-5">
+            <div className="mt-5 justify-center items-center text-center ">
               <button
-                className="py-2 px-4 bg-but hover:text-black hover:bg-blue-500 focus:ring-blue-200 focus:ring-offset-blue-400 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
+                className="py-2 px-4  justify-center bg-but hover:text-black hover:bg-blue-500 focus:ring-blue-200 focus:ring-offset-blue-400 text-white transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
                 type="submit"
               >
                 Login
@@ -64,7 +65,7 @@ const Login = () => {
             <div className="mt-5 text-center">
               <Link
                 to="/forgotpassword"
-                className="py-2 px-4 text-but hover:bg-but hover:text-white focus:ring-blue-200 focus:ring-offset-blue-400 transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
+                className="py-2 px-4 bg-but text-white hover:text-black hover:bg-blue-500 focus:ring-blue-200 focus:ring-offset-blue-400 transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
               >
                 Forgot your password?
               </Link>
@@ -78,8 +79,7 @@ const Login = () => {
                   className="flex hover:underline hover:text-black justify-center text-center items-center"
                   to="/register"
                 >
-                  {" "}
-                  SignUp
+                  {" "}SignUp
                 </Link>
               </p>
               <span className="w-1/5 border-b dark:border-black md:w-1/4"></span>

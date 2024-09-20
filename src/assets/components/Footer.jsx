@@ -8,7 +8,9 @@ import {
   FaEnvelope,
   FaPhone,
 } from "react-icons/fa";
+import Loader from './Loader'; // Adjust the import path as needed
 
+// Mock contact information for demonstration
 const mockContactInfo = {
   phone: "+1 *****",
   email: "info@carsale.com",
@@ -16,25 +18,27 @@ const mockContactInfo = {
 };
 
 const Footer = () => {
+  // State to hold contact information
   const [contactInfo, setContactInfo] = useState(null); // Initialize with null
 
+  // Effect to simulate data fetching
   useEffect(() => {
-    // Simulate data fetching with mock data
+    // Simulate network delay with setTimeout
     setTimeout(() => {
-      setContactInfo(mockContactInfo);
-    }, 1000); // Simulate network delay
+      setContactInfo(mockContactInfo); // Set the contact info after 1 second
+    }, 1000);
   }, []);
 
-  // Handle case where contactInfo is not yet available
+  // Render loading state while fetching contact info
   if (!contactInfo) {
-    return <div>Loading...</div>;
+    return <Loader />; // Show Loader component until data is fetched
   }
 
   return (
     <footer className="bg-but text-white py-4">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* Quick Links */}
+          {/* Quick Links Section */}
           <div className="flex flex-col">
             <h4 className="text-lg font-bold mb-4">Quick Links</h4>
             <ul className="space-y-2">
@@ -80,12 +84,14 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-           {/* Follow Us */}
-           <div className="flex flex-col">
+
+          {/* Follow Us Section */}
+          <div className="flex flex-col">
             <h4 className="text-lg font-bold mb-4 text-center lg:text-left">
               Follow Us
             </h4>
             <div className="flex justify-center lg:justify-start space-x-4">
+              {/* Social media icons */}
               <Link
                 to="#"
                 className="text-black hover:text-white transition duration-300"
@@ -113,7 +119,7 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Contact Us */}
+          {/* Contact Us Section */}
           <div className="flex flex-col">
             <h4 className="text-lg font-bold mb-4">Contact Us</h4>
             <ul className="space-y-2">
@@ -128,11 +134,9 @@ const Footer = () => {
               <li>{contactInfo.address}</li>
             </ul>
           </div>
-
-         
         </div>
 
-        {/* Footer Bottom */}
+        {/* Footer Bottom Section */}
         <div className="mt-6 text-center text-gray-300">
           <p>&copy; {new Date().getFullYear()} CarSale. All rights reserved.</p>
         </div>

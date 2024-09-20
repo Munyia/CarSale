@@ -1,17 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+// The Confirmation component displays a payment confirmation page after a successful purchase.
 const Confirmation = () => {
   return (
-    <div className="min-h-screen  flex items-center justify-center bg-body p-2">
-      <div className="relative bg--600  shadow-md shadow-slate-700 bg-pry px-4 py-3 max-w-md w-full mx-auto rounded-3xl sm:px-4 sm:py-4">
+    <div className="min-h-screen flex items-center justify-center bg-body p-2">
+      {/* Main container for the confirmation content, with styling for background, shadow, and padding */}
+      <div className="relative bg--600 shadow-md shadow-slate-700 bg-pry px-4 py-3 max-w-md w-full mx-auto rounded-3xl sm:px-4 sm:py-4">
+        
+        {/* Title for the confirmation page */}
         <h1 className="text-lg font-bold text-but mb-2 text-center">
           Payment Confirmation
         </h1>
+        
+        {/* Message thanking the user for their purchase */}
         <p className="text-sm font-normal mb-2 text-center">
           Thank you for your purchase!
         </p>
-        
+
+        {/* Section displaying the order summary */}
         <div className="mb-3">
           <h2 className="text-sm font-semibold text-but mb-1">Order Summary</h2>
           <p><strong>Order Number:</strong> #123456789</p>
@@ -19,12 +26,14 @@ const Confirmation = () => {
           <p><strong>Total Amount:</strong> $25,000.00</p>
         </div>
 
+        {/* Section displaying the payment details */}
         <div className="mb-3">
           <h2 className="text-sm font-semibold text-but mb-1">Payment Details</h2>
           <p><strong>Payment Method:</strong> Credit Card</p>
           <p><strong>Transaction ID:</strong> 9876543210</p>
         </div>
 
+        {/* Section displaying customer information */}
         <div className="mb-3">
           <h2 className="text-sm font-semibold text-but mb-1">Customer Information</h2>
           <p><strong>Name:</strong> John Doe</p>
@@ -32,20 +41,25 @@ const Confirmation = () => {
           <p><strong>Phone:</strong> (123) 456-7890</p>
         </div>
 
+        {/* Section displaying shipping information */}
         <div className="mb-3">
           <h2 className="text-sm font-semibold text-but mb-1">Shipping Information</h2>
-          <p><strong>Address:</strong> *****</p>
+          <p><strong>Address:</strong> *****</p> {/* Masked address for privacy */}
           <p><strong>Delivery:</strong> Standard Shipping</p>
         </div>
 
+        {/* Section displaying next steps after purchase */}
         <div className="mb-3">
           <h2 className="text-sm font-semibold text-but mb-1">Next Steps</h2>
           <p>Your order is being processed. You will receive updates via email.</p>
+          
+          {/* Button to download the invoice */}
           <button className="mt-1 py-1 px-3 bg-but hover:text-black hover:bg-blue-500 focus:ring-blue-200 focus:ring-offset-blue-400 text-white transition ease-in duration-150 text-center text-sm font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-md">
             Download Invoice
           </button>
         </div>
 
+        {/* Links to return to home or view order history */}
         <div className="flex flex-col sm:flex-row justify-between mt-3">
           <Link
             to="/"

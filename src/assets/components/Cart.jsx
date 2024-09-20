@@ -1,47 +1,50 @@
 import React, { useState, useEffect } from 'react';
-import { useCart } from '../context/CartContext'; // Corrected path
-import cars from '../data/carData'; // Car data import
+import { useCart } from '../context/CartContext'; // Import context for cart operations
+import cars from '../data/carData'; // Import car data
 import { Link } from 'react-router-dom';
 import { FaTrashAlt, FaRegHandPointUp, FaHandPointUp } from 'react-icons/fa'; // Icons for like and remove
 import Header from './Header';
 
 const Cart = () => {
+  // Destructure functions from CartContext
   const { getCartItems, removeFromCart } = useCart();
   const cartItems = getCartItems();
 
-  // State to track liked items
+  // State to manage liked items
   const [likedItems, setLikedItems] = useState([]);
 
-  // State to track quantities for removal
+  // State to manage quantities for removal
   const [removeQuantities, setRemoveQuantities] = useState({});
 
-  // State to track selected items and their quantities for checkout
+  // State to manage selected items for checkout
   const [selectedItems, setSelectedItems] = useState({});
 
-  // Set document title
+  // Set the document title when component mounts
   useEffect(() => {
     document.title = 'Your Cart | CarSale';
   }, []);
 
-  // Function to toggle like status
+  // Function to toggle the like status of a car
   const toggleLike = (itemId) => {
     setLikedItems((prevLikes) =>
-      prevLikes.includes(itemId) ? prevLikes.filter((id) => id !== itemId) : [...prevLikes, itemId]
+      prevLikes.includes(itemId)
+        ? prevLikes.filter((id) => id !== itemId) // Remove from liked if already liked
+        : [...prevLikes, itemId] // Add to liked if not liked
     );
   };
 
-  // Function to handle car removal
+  // Function to handle the removal of a car from the cart
   const handleRemove = (itemId) => {
     console.log(`Removing item with ID: ${itemId}`);
-    const quantity = removeQuantities[itemId] || 1;
+    const quantity = removeQuantities[itemId] || 1; // Default to 1 if no quantity specified
     console.log(`Removing quantity: ${quantity} for item ID: ${itemId}`);
     
-    // Remove the car from the cart
-    removeFromCart(itemId, quantity);
+    removeFromCart(itemId, quantity); // Remove the item from the cart
     
-    // Log after removal
+    // Log removal
     console.log(`Item with ID: ${itemId} removed.`);
     
+    // Update removal quantities
     setRemoveQuantities((prev) => {
       const { [itemId]: _, ...rest } = prev;
       return rest;
@@ -56,20 +59,22 @@ const Cart = () => {
     }));
   };
 
-  // Find the car details by ID
+  // Function to find car details by ID
   const findCarById = (id) => cars.find((car) => car.id === id);
 
+  // Generate a summary of cart items
   const cartSummary = cartItems.reduce((acc, item) => {
     acc[item.id] = (acc[item.id] || 0) + 1;
     return acc;
   }, {});
 
-  // Calculate total amounts
+  // Calculate the total amount for all items in the cart
   const totalAmount = cartItems.reduce((acc, item) => {
     const car = findCarById(item.id);
     return acc + (car ? parseFloat(car.price.replace(/[$,]/g, '')) * (cartSummary[item.id] || 1) : 0);
   }, 0);
 
+  // Calculate the total amount for selected items
   const totalSelectedAmount = Object.entries(selectedItems).reduce((acc, [itemId, quantity]) => {
     const car = findCarById(parseInt(itemId, 10));
     if (car) {
@@ -99,13 +104,13 @@ const Cart = () => {
                       className="bg-white p-4 rounded-lg shadow flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 md:space-x-6"
                     >
                       <div className="flex items-center space-x-4">
-                        {/* Image */}
+                        {/* Image of the car */}
                         <img
-                          src={car?.images[0] || 'https://via.placeholder.com/150'} // Use the first image or fallback
+                          src={car?.images[0] || 'https://via.placeholder.com/150'} // Fallback image if car image not available
                           alt={car?.make}
                           className="w-24 h-24 object-cover rounded-lg max-w-full"
                         />
-                        {/* Car Info */}
+                        {/* Car Information */}
                         <div>
                           <Link
                             to={`/carlisting/cardetail/${car?.id}`}

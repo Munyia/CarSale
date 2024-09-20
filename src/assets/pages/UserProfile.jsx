@@ -96,10 +96,10 @@ const UserProfile = () => {
 
           {/* Saved Cars */}
           <div className="bg-white p-6 rounded-lg shadow-2xl shadow-slate-900">
-            <h2 className="text-xl font-semibold mb-4 text-gray-800 flex items-center">
+            <Link to={'/savedcars'} className="text-xl font-semibold mb-4 text-gray-800 flex items-center">
               <FaHeart className="text-red-700 mr-2" />
               Saved Cars
-            </h2>
+            </Link>
             <ul className="space-y-4">
               {userData.savedCars.map((car, index) => (
                 <li key={index} className="flex justify-between items-center border-b border-gray-500 pb-2">

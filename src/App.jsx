@@ -23,6 +23,7 @@ import Loader from './assets/components/Loader.jsx';
 import Terms from './assets/pages/Terms.jsx';
 import About from './assets/pages/About.jsx';
 import Privacy from './assets/pages/Privacy.jsx';
+import SavedCars from './assets/pages/SavedCars.jsx';
 
 
 function App() {
@@ -55,6 +56,7 @@ function App() {
         <Route path="/terms" element={<Terms/>} />
         <Route path="/about" element={<About/>} />
         <Route path="/privacy" element={<Privacy/>} />
+        <Route path="/savedcars" element={<SavedCars/>} />
  </Routes>
  </BrowserRouter>
  </CartProvider>

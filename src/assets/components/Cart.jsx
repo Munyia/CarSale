@@ -10,6 +10,7 @@ const Cart = () => {
   const { getCartItems, removeFromCart } = useCart();
   const cartItems = getCartItems();
   const [savedCars, setSavedCars] = useState([]);
+  const isSaved = savedCars.some((car) => car.id === item.id);
 
   // State to manage liked items
   const [likedItems, setLikedItems] = useState([]);
@@ -143,19 +144,17 @@ const Cart = () => {
                       <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4">
                                 {/* Save button */}
                                 <button
-                          onClick={() => toggleSave(car?.id)}
-                          className={`text-2xl transition-colors ${
-                            savedCars.includes(car?.id)
-                              ? "text-but"
-                              : "text-gray-400"
-                          }`}
-                        >
-                          {savedCars.includes(car?.id) ? (
-                            <FaBookmark />
-                          ) : (
-                            <FaRegBookmark />
-                          )}
-                        </button>
+        onClick={() => toggleSave(car)}
+        className={`text-2xl transition-colors ${
+          isSaved ? "text-but" : "text-gray-400"
+        }`}
+      >
+        {isSaved ? <FaBookmark /> : <FaRegBookmark />}
+      </button>
+
+                        <button onClick={() => toggleSave(item)}>
+        {isSaved ? 'Unsave' : 'Save'}
+      </button>
 
                         {/* Remove button */}
                         <div className="flex items-center space-x-2">

@@ -19,6 +19,11 @@ import Footer from './assets/components/Footer'
 import UserProfile from './assets/pages/UserProfile'
 import Cart from './assets/components/Cart'
 import Auction from './assets/pages/Auction.jsx';
+import Loader from './assets/components/Loader.jsx';
+import Terms from './assets/pages/Terms.jsx';
+import About from './assets/pages/About.jsx';
+import Privacy from './assets/pages/Privacy.jsx';
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -46,6 +51,10 @@ function App() {
         <Route path="/userprofile" element={<UserProfile/>} />
         <Route path="/cart" element={<Cart/>} />
         <Route path="/auction" element={<Auction/>} />
+        <Route path="/loader" element={<Loader/>} />
+        <Route path="/terms" element={<Terms/>} />
+        <Route path="/about" element={<About/>} />
+        <Route path="/privacy" element={<Privacy/>} />
  </Routes>
  </BrowserRouter>
  </CartProvider>

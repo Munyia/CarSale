@@ -5,6 +5,7 @@ import React, { createContext, useState, useContext } from "react";
 // Create a Context for the cart
 const CartContext = createContext();
 
+
 const CartProvider = ({ children }) => {
   // State to hold the cart items and saved items
   const [cartItems, setCartItems] = useState([]);
@@ -59,9 +60,9 @@ const CartProvider = ({ children }) => {
         removeFromCart,
         getItemCount,
         saveCar,
-        getSavedCars: () => savedCars,
+        getSavedCars: 
         removeSavedCar,
-        toggleSave, // Include toggleSave in context
+        toggleSave,  // Include toggleSave in context
       }}
     >
       {children} {/* Render children components */}

@@ -68,7 +68,7 @@ const Home = () => {
                     style={{ backgroundImage: `url(${slide.image})` }}
                   >
                     <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center">
-                      <h1 className="text-white text-5xl font-bold mb-4">
+                      <h1 className="text-white text-5xl font-open font-bold mb-4">
                         {slide.heading}
                       </h1>
                       <p className="text-white text-lg mb-6">{slide.subtext}</p>

@@ -84,16 +84,16 @@ const Header = ({ title }) => {
         )}
 
         {/* Navigation Links for Larger Screens */}
-        <div className="hidden md:flex space-x-12">
+        <div className="hidden font-roboto md:flex space-x-12">
           <NavLink
             to="/"
-            className="text-black text-lg font-semibold hover:text-but transition duration-300"
+            className="text-black font-roboto text-lg font-semibold hover:text-but transition duration-300"
           >
             Home
           </NavLink>
           <Link
             to="/carlisting"
-            className="text-black text-lg font-semibold hover:text-but transition duration-300"
+            className="text-black font-dm text-lg font-semibold hover:text-but transition duration-300"
           >
             Car Listing
           </Link>

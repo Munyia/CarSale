@@ -1,5 +1,6 @@
 import React, {  useEffect } from 'react';
 import { Link } from "react-router-dom";
+import Header from '../components/Header';
 
 const Register = () => {
   useEffect(() => {
@@ -8,8 +9,13 @@ const Register = () => {
 
   return (
     <div className="w-full min-h-screen flex items-center justify-center bg-body py-3">
-         <div className="relative shadow-2xl shadow-slate-900 bg-pry px-4 py-3 mx-4 md:mx-0 rounded-3xl sm:p-10 sm:max-w-xl" style={{ width: '80%', height: '70%' }}>
+         <div className="relative shadow-2xl shadow-slate-900 bg-pry px-4 py-1 mx-4 md:mx-0 rounded-3xl sm:p-10 sm:max-w-xl" style={{ width: '80%', height: '70%' }}>
         <div className="max-w-md rounded-2xl mx-auto">
+          <div className="mb-1 flex items-center">
+          <Link to="/" className="text-but text-lg hover:text-black transition duration-300">
+            &larr; Back to Home
+          </Link>
+        </div>
           <h1 className="text-2xl font-bold text-but mb-1 text-center">Register</h1>
           <div className="w-full max-w-full justify-center items-center px-3 mx-auto mt-0 md:flex-0 shrink-0">
             <div className="relative z-0 flex flex-col min-w-0 break-words border-0 shadow-soft-xl rounded-2xl bg-clip-border">
@@ -223,7 +229,7 @@ const Register = () => {
   {/* Login Link */}
   <div className="flex items-center justify-between mt-4">
     <span className="w-1/5 border-b border-gray-500 md:w-1/4"></span>
-    <p className="text-xs uppercase text-bu text-black">
+    <p className="text-xs px-2 text-but justify-center items-center text-center uppercase dark:text-gray-900">
       Have an account?
       <Link className="flex hover:underline hover:text-black justify-center text-center items-center" to="/login"> Login</Link>
     </p>

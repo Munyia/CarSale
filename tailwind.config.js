@@ -9,7 +9,11 @@ export default {
       colors:{
         'body': '#ddd',
         'but': '#673de6',
-        
+        fontFamily: {
+          roboto: ['Roboto', 'sans-serif'],
+          dm: ['DM Sans', 'sans-serif'],
+          open: ['Open Sans', 'sans-serif'],
+        },
       }
     },
   },

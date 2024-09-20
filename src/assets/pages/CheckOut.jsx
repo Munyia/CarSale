@@ -23,6 +23,15 @@ const CheckOut = () => {
     }
   };
 
+  const handlePayment = () => {
+    const paymentSuccess = true; 
+
+    if (paymentSuccess) {
+      navigate('/confirmation'); 
+    } else {
+      navigate('/payment-failure'); 
+    }
+  };
   return (
     <div className='bg-body'>
       <Header />
@@ -221,11 +230,13 @@ const CheckOut = () => {
           )}
 
           <div className="mt-6 flex justify-center">
-            <Link to="/" className="text-but font-bold">
-              <button className="px-6 py-2 bg-blue-600 text-white rounded-lg">
-                Confirm Order
-              </button>
-            </Link>
+          <button
+              type="button"
+              onClick={handlePayment} 
+              className="px-6 py-2 bg-blue-600 text-white rounded-lg"
+            >
+              Confirm Order
+            </button>
           </div>
         </form>
       </div>

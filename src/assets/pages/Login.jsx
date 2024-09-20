@@ -10,6 +10,11 @@ const Login = () => {
     <div className="w-full h-screen flex items-center justify-center bg-body py-3">
       <div className="relative shadow-2xl shadow-slate-900 bg-pry px-4 py-3 mx-4 md:mx-0 rounded-3xl sm:p-10 sm:max-w-xl" style={{ width: '80%', height: '70%' }}>
         <div className="max-w-md mx-auto h-full">
+        <div className="mb-1 flex items-center">
+          <Link to="/" className="text-but text-lg hover:text-black transition duration-300">
+            &larr; Back to Home
+          </Link>
+        </div>
           <h1 className="text-2xl font-bold text-but mb-6 text-center">
             Welcome back
           </h1>

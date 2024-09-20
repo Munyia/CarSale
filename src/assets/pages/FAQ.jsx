@@ -1,77 +1,103 @@
-import React, { useState, useEffect } from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import React, { useState, useEffect } from "react";
+import Header from "../components/Header"; // Importing Header component
+import Footer from "../components/Footer"; // Importing Footer component
 
 const FAQ = () => {
+  // State to keep track of which FAQ is open
   const [openIndex, setOpenIndex] = useState(null);
 
+  // Effect to set the document title when the component mounts
   useEffect(() => {
-    document.title = "FAQ - Your Company Name";
+    document.title = "FAQ - Your Company Name"; // Update the page title
   }, []);
 
+  // Array of FAQ items
   const faqs = [
     {
       question: "What is your return policy?",
-      answer: "We offer a 30-day return policy. If you are not satisfied with your purchase, you can return it within 30 days for a full refund.",
+      answer:
+        "We offer a 30-day return policy. If you are not satisfied with your purchase, you can return it within 30 days for a full refund.",
     },
     {
       question: "How do I track my order?",
-      answer: "Once your order is shipped, we will send you a tracking number via email. You can use this number to track your order on our website.",
+      answer:
+        "Once your order is shipped, we will send you a tracking number via email. You can use this number to track your order on our website.",
     },
     {
       question: "What payment methods do you accept?",
-      answer: "We accept credit cards, PayPal, bank transfers, and cryptocurrency as valid payment methods.",
+      answer:
+        "We accept credit cards, PayPal, bank transfers, and cryptocurrency as valid payment methods.",
     },
     {
       question: "Do you offer international shipping?",
-      answer: "Yes, we ship to many countries worldwide. Shipping costs and times may vary depending on the destination.",
+      answer:
+        "Yes, we ship to many countries worldwide. Shipping costs and times may vary depending on the destination.",
     },
     {
       question: "How do I contact customer support?",
-      answer: "You can contact our customer support team via email at support@company.com or by phone at (123) 456-7890.",
+      answer:
+        "You can contact our customer support team via email at support@company.com or by phone at (123) 456-7890.",
     },
   ];
 
+  // Function to toggle the visibility of the answer
   const toggleAnswer = (index) => {
-    setOpenIndex(index === openIndex ? null : index);
+    setOpenIndex(index === openIndex ? null : index); // Close if already open, otherwise open the selected one
   };
 
   return (
     <div className="bg-body min-h-screen">
-      <Header />
+      {" "}
+      {/* Main container with a background and full height */}
+      <Header /> {/* Header component for the page */}
       <div className="max-w-4xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
-        <h1 className="text-3xl sm:text-4xl font-bold text-center mb-5 text-but">Frequently Asked Questions</h1>
+        {" "}
+        {/* Container for FAQs */}
+        <h1 className="text-3xl sm:text-4xl font-bold text-center mb-5 text-but">
+          Frequently Asked Questions
+        </h1>{" "}
+        {/* FAQ title */}
         <div className="space-y-6">
+          {" "}
+          {/* Space between each FAQ item */}
           {faqs.map((faq, index) => (
             <div
-              key={index}
-              className="bg-body shadow-2xl shadow-slate-900 rounded-3xl p-5 transition-all duration-300"
+              key={index} // Unique key for each FAQ item
+              className="bg-body shadow-2xl shadow-slate-900 rounded-3xl p-5 transition-all duration-300" // Container for individual FAQ
             >
               <div
-                className="flex justify-between items-center cursor-pointer"
-                onClick={() => toggleAnswer(index)}
+                className="flex justify-between items-center cursor-pointer" // Flexbox for question and toggle icon
+                onClick={() => toggleAnswer(index)} // Click event to toggle answer
               >
-                <h2 className="text-lg sm:text-xl font-medium text-black">{faq.question}</h2>
+                <h2 className="text-lg sm:text-xl font-medium text-black">
+                  {faq.question}
+                </h2>{" "}
+                {/* FAQ question */}
                 <span className="text-xl sm:text-2xl text-but">
-                  {openIndex === index ? '-' : '+'}
+                  {openIndex === index ? "-" : "+"}{" "}
+                  {/* Toggle icon for open/close state */}
                 </span>
               </div>
               <div
                 className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                  openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-                }`}
+                  openIndex === index
+                    ? "max-h-96 opacity-100"
+                    : "max-h-0 opacity-0"
+                }`} // Transition for the answer visibility
               >
                 <div className="mt-3 text-gray-700">
-                  <p>{faq.answer}</p>
+                  {" "}
+                  {/* Answer container */}
+                  <p>{faq.answer}</p> {/* FAQ answer */}
                 </div>
               </div>
             </div>
           ))}
         </div>
       </div>
-      <Footer/>
+      <Footer /> {/* Footer component for the page */}
     </div>
   );
 };
 
-export default FAQ;
+export default FAQ; // Exporting the FAQ component

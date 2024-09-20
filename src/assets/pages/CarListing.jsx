@@ -1,112 +1,135 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import Footer from '../components/Footer';
-import Header from '../components/Header';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 const CarListing = () => {
   // Sample car data
   const [cars] = useState([
     {
       id: 1,
-      make: 'Toyota',
-      model: 'Camry',
+      make: "Toyota",
+      model: "Camry",
       year: 2022,
-      price: '$25,000',
-      fuelType: 'Petrol',
-      condition: 'New',
-      installmentPlans: ['12 months - $2,083/month', '24 months - $1,042/month'],
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL-eWM8Si9XLBKzZRdWDc_fxi4SXCvWu4xsg&s',
+      price: "$25,000",
+      fuelType: "Petrol",
+      condition: "New",
+      installmentPlans: [
+        "12 months - $2,083/month",
+        "24 months - $1,042/month",
+      ],
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL-eWM8Si9XLBKzZRdWDc_fxi4SXCvWu4xsg&s",
     },
     {
       id: 2,
-      make: 'Honda',
-      model: 'Civic',
+      make: "Honda",
+      model: "Civic",
       year: 2023,
-      price: '$22,000',
-      fuelType: 'Diesel',
-      condition: 'New',
-      installmentPlans: ['12 months - $1,833/month', '24 months - $917/month'],
-      image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnjmpP36L0r0Swrfcc4PCiJpzuYxEVXfktLg&s'
+      price: "$22,000",
+      fuelType: "Diesel",
+      condition: "New",
+      installmentPlans: ["12 months - $1,833/month", "24 months - $917/month"],
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnjmpP36L0r0Swrfcc4PCiJpzuYxEVXfktLg&s",
     },
     {
       id: 3,
-      make: 'Ford',
-      model: 'Mustang',
+      make: "Ford",
+      model: "Mustang",
       year: 2021,
-      price: '$30,000',
-      fuelType: 'Petrol',
-      condition: 'Used',
-      installmentPlans: ['12 months - $2,500/month', '24 months - $1,250/month'],
-       image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMTyr_4oPJUzqL-0MpDMICAY6zSw7-Fhheqw&s'
+      price: "$30,000",
+      fuelType: "Petrol",
+      condition: "Used",
+      installmentPlans: [
+        "12 months - $2,500/month",
+        "24 months - $1,250/month",
+      ],
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMTyr_4oPJUzqL-0MpDMICAY6zSw7-Fhheqw&s",
     },
     {
       id: 4,
-      make: 'Lexus',
-      model: 'Mustang',
+      make: "Lexus",
+      model: "Mustang",
       year: 2024,
-      price: '$50,000',
-      fuelType: 'Petrol',
-      condition: 'Used',
-      installmentPlans: ['12 months - $10,500/month', '8 months - $1,250/month'],
-       image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUSxXu8ogj81ZsYA404CxiS-ATB_2jW5UIfQ&s'
+      price: "$50,000",
+      fuelType: "Petrol",
+      condition: "Used",
+      installmentPlans: [
+        "12 months - $10,500/month",
+        "8 months - $1,250/month",
+      ],
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUSxXu8ogj81ZsYA404CxiS-ATB_2jW5UIfQ&s",
     },
     {
       id: 5,
-      make: 'Lexus',
-      model: 'Mustang',
+      make: "Lexus",
+      model: "Mustang",
       year: 2020,
-      price: '$30,000',
-      fuelType: 'Petrol',
-      condition: 'Used',
-      installmentPlans: ['10 months - $3,500/month', '4 months - $1,250/month'],
-       image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkTyyAuoTUQfBQveMwScPGtgPTam-8k2BNLg&s'
+      price: "$30,000",
+      fuelType: "Petrol",
+      condition: "Used",
+      installmentPlans: ["10 months - $3,500/month", "4 months - $1,250/month"],
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkTyyAuoTUQfBQveMwScPGtgPTam-8k2BNLg&s",
     },
     {
       id: 6,
-      make: 'Ford',
-      model: 'Mustang',
+      make: "Ford",
+      model: "Mustang",
       year: 2022,
-      price: '$35,000',
-      fuelType: 'Diesel',
-      condition: 'Used',
-      installmentPlans: ['12 months - $2,500/month', '24 months - $1,250/month'],
-       image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLzVP0r6KyOW0dbvIQnmDU--z1JHnHz2ml4w&s'
-    }
+      price: "$35,000",
+      fuelType: "Diesel",
+      condition: "Used",
+      installmentPlans: [
+        "12 months - $2,500/month",
+        "24 months - $1,250/month",
+      ],
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLzVP0r6KyOW0dbvIQnmDU--z1JHnHz2ml4w&s",
+    },
   ]);
 
   // Distinct values for filters
-  const brands = [...new Set(cars.map(car => car.make.toLowerCase()))];
-
+  const brands = [...new Set(cars.map((car) => car.make.toLowerCase()))];
 
   // Filter and sorting states
   const [filters, setFilters] = useState({
-    brand: '',
-    model: '',
+    brand: "",
+    model: "",
     minPrice: 0,
     maxPrice: 50000,
-    fuelType: '',
-    condition: ''
+    fuelType: "",
+    condition: "",
   });
-  const [sortOption, setSortOption] = useState('price');
+  const [sortOption, setSortOption] = useState("price");
   const [currentPage, setCurrentPage] = useState(1);
   const carsPerPage = 3;
 
   // Filter and sorting logic
-  const filteredCars = cars.filter(car => {
+  const filteredCars = cars.filter((car) => {
     const normalizedBrand = car.make.toLowerCase();
     const normalizedModel = car.model.toLowerCase();
     const normalizedPrice = parseFloat(car.price.replace(/[^0-9.-]+/g, ""));
 
     return (
-        (filters.brand === '' || normalizedBrand === filters.brand.toLowerCase()) &&
-        (filters.model === '' || normalizedModel.includes(filters.model.toLowerCase())) &&
-        (normalizedPrice >= filters.minPrice && normalizedPrice <= filters.maxPrice)
+      (filters.brand === "" ||
+        normalizedBrand === filters.brand.toLowerCase()) &&
+      (filters.model === "" ||
+        normalizedModel.includes(filters.model.toLowerCase())) &&
+      normalizedPrice >= filters.minPrice &&
+      normalizedPrice <= filters.maxPrice
     );
   });
 
   const sortedCars = [...filteredCars].sort((a, b) => {
-    if (sortOption === 'price') {
-      return parseFloat(a.price.replace(/[^0-9.-]+/g, "")) - parseFloat(b.price.replace(/[^0-9.-]+/g, ""));
+    if (sortOption === "price") {
+      return (
+        parseFloat(a.price.replace(/[^0-9.-]+/g, "")) -
+        parseFloat(b.price.replace(/[^0-9.-]+/g, ""))
+      );
     }
     // Implement sorting by popularity and newest arrival as needed
     return 0;
@@ -119,17 +142,16 @@ const CarListing = () => {
 
   return (
     <div className=" bg-body">
-      <Header/>
+      <Header />
       {/* <h1 className="text-3xl text-but bg-white font-bold text-center mb-6">Car Listings</h1> */}
 
       {/* Filters */}
       <div className="mb-4  shadow-2xl bg--600 shadow-slate-500  bg-white p-4 rounded-2xl ">
-        <div className='flex justify-center text-center bg-body '>     
-        <h2 className="text-xl font-semibold mb-4">Car Listing</h2>
+        <div className="flex justify-center text-center bg-body ">
+          <h2 className="text-xl font-semibold mb-4">Car Listing</h2>
         </div>
         {/* <h2 className="text-xl justify-center text-center font-semibold mb-4">Filter By</h2> */}
         <div className="mb-4 justify-center text-center bg-body p-4 rounded-2xl shadow-2xl shadow-slate-900  flex gap-4 flex-wrap">
-       
           {/* Brand Filter */}
           <div className="relative group bg-white w-48">
             <button className="w-full text-sm font-semibold hover:rounded-lg hover:bg-white hover:text-but text-white bg-but p-3 rounded-lg focus:outline-none">
@@ -137,8 +159,15 @@ const CarListing = () => {
             </button>
             <div className="absolute top-full left-0 mt-2 w-full bg-white  border border-gray-300 rounded-lg shadow-lg transition-transform transform scale-0 group-hover:scale-100 group-hover:translate-y-1">
               <ul className="p-2">
-                <li><button onClick={() => setFilters({ ...filters, brand: '' })} className="block  w-full text-left px-4 py-2 hover:bg-gray-200">All Brands</button></li>
-                {brands.map(brand => (
+                <li>
+                  <button
+                    onClick={() => setFilters({ ...filters, brand: "" })}
+                    className="block  w-full text-left px-4 py-2 hover:bg-gray-200"
+                  >
+                    All Brands
+                  </button>
+                </li>
+                {brands.map((brand) => (
                   <li key={brand}>
                     <button
                       onClick={() => setFilters({ ...filters, brand })}
@@ -154,7 +183,7 @@ const CarListing = () => {
 
           {/* Model Filter */}
           <div className="relative group w-48">
-          <button className="w-full text-sm font-semibold hover:rounded-lg hover:bg-white hover:text-but text-white bg-but p-3 rounded-lg focus:outline-none">
+            <button className="w-full text-sm font-semibold hover:rounded-lg hover:bg-white hover:text-but text-white bg-but p-3 rounded-lg focus:outline-none">
               Model
             </button>
             <div className="absolute top-full left-0 mt-2 w-full bg-white border border-gray-300 rounded-lg shadow-lg transition-transform transform scale-0 group-hover:scale-100 group-hover:translate-y-1">
@@ -162,7 +191,9 @@ const CarListing = () => {
                 type="text"
                 placeholder="Enter model"
                 value={filters.model}
-                onChange={(e) => setFilters({ ...filters, model: e.target.value })}
+                onChange={(e) =>
+                  setFilters({ ...filters, model: e.target.value })
+                }
                 className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm"
               />
             </div>
@@ -170,7 +201,7 @@ const CarListing = () => {
 
           {/* Price Range Filter */}
           <div className="relative group w-48">
-          <button className="w-full text-sm font-semibold hover:rounded-lg hover:bg-white hover:text-but text-white bg-but p-3 rounded-lg focus:outline-none">
+            <button className="w-full text-sm font-semibold hover:rounded-lg hover:bg-white hover:text-but text-white bg-but p-3 rounded-lg focus:outline-none">
               Price Range
             </button>
             <div className="absolute top-full left-0 mt-2 w-full bg-white border border-gray-300 rounded-lg shadow-lg transition-transform transform scale-0 group-hover:scale-100 group-hover:translate-y-1">
@@ -179,14 +210,24 @@ const CarListing = () => {
                   type="number"
                   placeholder="Min Price"
                   value={filters.minPrice}
-                  onChange={(e) => setFilters({ ...filters, minPrice: parseFloat(e.target.value) || 0 })}
+                  onChange={(e) =>
+                    setFilters({
+                      ...filters,
+                      minPrice: parseFloat(e.target.value) || 0,
+                    })
+                  }
                   className="w-full border hover:bg-but hover:text-white border-gray-300 rounded-lg px-3 py-2 text-sm mb-2"
                 />
                 <input
                   type="number"
                   placeholder="Max Price"
                   value={filters.maxPrice}
-                  onChange={(e) => setFilters({ ...filters, maxPrice: parseFloat(e.target.value) || 50000 })}
+                  onChange={(e) =>
+                    setFilters({
+                      ...filters,
+                      maxPrice: parseFloat(e.target.value) || 50000,
+                    })
+                  }
                   className="w-full border hover:bg-but hover:text-white border-gray-300 rounded-lg px-3 py-2 text-sm"
                 />
               </div>
@@ -196,7 +237,9 @@ const CarListing = () => {
       </div>
       {/* Sorting Options */}
       <div className="mb-4 px-4">
-        <label htmlFor="sort" className="mr-2 font-semibold">Sort By:</label>
+        <label htmlFor="sort" className="mr-2 font-semibold">
+          Sort By:
+        </label>
         <select
           id="sort"
           value={sortOption}
@@ -204,32 +247,52 @@ const CarListing = () => {
           className="p-2 border  border-gray-300 rounded-lg"
         >
           <option value="price">Price</option>
-          <option className=' hover:bg-but hover:text-white' value="popularity">Popularity</option>
-          <option className=' hover:bg-but hover:text-white' value="newest">Newest Arrival</option>
+          <option className=" hover:bg-but hover:text-white" value="popularity">
+            Popularity
+          </option>
+          <option className=" hover:bg-but hover:text-white" value="newest">
+            Newest Arrival
+          </option>
         </select>
       </div>
 
       {/* Car Listings */}
       <div className="grid px-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 ">
-        {currentCars.map(car => (
-            <Link to={`cardetail/${car.id}`}>
-          <div key={car.id} className="bg-white border rounded-2xl shadow-2xl shadow-slate-900 overflow-hidden">
-            {/* Placeholder image source */}
-            <img src={car.image} alt={`${car.make} ${car.model}`} className="w-full bg-white h-48 object-cover"/>
-            <div className="p-4">
-              <h2 className="text-xl text-but font-semibold">{car.make} {car.model}</h2>
-              <p className="text-gray-600">Year: {car.year}</p>
-              <p className="text-gray-800 font-bold mt-2">{car.price}</p>
-              <div className="mt-4">
-                <h3 className="font-semibold text-but">Installment Plans:</h3>
-                <ul className="list-disc pl-5">
-                  {car.installmentPlans.map((plan, index) => (
-                    <li key={index} className="text-black">{plan}</li>
-                  ))}
-                </ul>
+        {currentCars.map((car) => (
+          <Link to={`cardetail/${car.id}`}>
+            <div
+              key={car.id}
+              className="bg-white border rounded-2xl shadow-2xl shadow-slate-900 overflow-hidden"
+            >
+              {/* Placeholder image source */}
+              <img
+                src={car.image}
+                alt={`${car.make} ${car.model}`}
+                className="w-full bg-white h-48 object-cover"
+              />
+              <div className="p-4">
+                <h2 className="text-xl text-but font-semibold">
+                  {car.make} {car.model}
+                </h2>
+                <p className="text-gray-600">Year: {car.year}</p>
+                <p className="text-gray-800 font-bold mt-2">{car.price}</p>
+                <div className="mt-4">
+                  <h3 className="font-semibold text-but">Installment Plans:</h3>
+                  <ul className="list-disc pl-5">
+                    {car.installmentPlans.map((plan, index) => (
+                      <li key={index} className="text-black">
+                        {plan}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <Link
+                  to={`cardetail/${car.id}`}
+                  className="block text-but mt-4 hover:underline"
+                >
+                  View Details
+                </Link>
               </div>
-              <Link to={`cardetail/${car.id}`} className="block text-but mt-4 hover:underline">View Details</Link>
-            </div>
             </div>
           </Link>
         ))}
@@ -244,7 +307,9 @@ const CarListing = () => {
         >
           Previous
         </button>
-        <span className="self-center">Page {currentPage} of {totalPages}</span>
+        <span className="self-center">
+          Page {currentPage} of {totalPages}
+        </span>
         <button
           onClick={() => setCurrentPage(Math.min(currentPage + 1, totalPages))}
           disabled={currentPage === totalPages}
@@ -253,9 +318,9 @@ const CarListing = () => {
           Next
         </button>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
-}
+};
 
 export default CarListing;

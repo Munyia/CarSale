@@ -1,24 +1,24 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useParams } from 'react-router-dom';
-import Header from '../components/Header';
-import cars from '../data/carData'; // Import the car data
-import { useCart } from '../context/CartContext'; // Import the CartContext
+import React, { useState, useEffect } from "react";
+import { Link, useParams } from "react-router-dom";
+import Header from "../components/Header";
+import cars from "../data/carData"; // Import the car data
+import { useCart } from "../context/CartContext"; // Import the CartContext
 
 const CarDetail = () => {
   const { carId } = useParams(); // Get the car ID from the URL
   const { addToCart } = useCart(); // Destructure addToCart from the CartContext
 
   // Find the car object by matching the ID from the URL
-  const car = cars.find(c => c.id === parseInt(carId, 10)); 
+  const car = cars.find((c) => c.id === parseInt(carId, 10));
 
   // Set the page title when the component mounts
   useEffect(() => {
-    document.title = 'Car Details';
+    document.title = "Car Details";
   }, []);
 
   // Render a message if the car is not found
   if (!car) {
-    return <div>Car not found</div>; 
+    return <div>Car not found</div>;
   }
 
   const handleAddToCart = () => {
@@ -43,7 +43,7 @@ const CarDetail = () => {
 
   // Find related cars based on IDs stored in the selected car's relatedCars property
   const relatedCars = car.relatedCars.map((relatedCarId) =>
-    cars.find(c => c.id === relatedCarId)
+    cars.find((c) => c.id === relatedCarId)
   );
 
   return (
@@ -59,10 +59,16 @@ const CarDetail = () => {
               className="w-full object-cover shadow-2xl shadow-slate-900 rounded-2xl"
             />
             {/* Navigation buttons for the image gallery */}
-            <button onClick={handlePrevImage} className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-but hover:bg-white px-2 py-1 rounded-full">
+            <button
+              onClick={handlePrevImage}
+              className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-but hover:bg-white px-2 py-1 rounded-full"
+            >
               &#8249; {/* Left arrow */}
             </button>
-            <button onClick={handleNextImage} className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-but hover:bg-white px-2 py-1 rounded-full">
+            <button
+              onClick={handleNextImage}
+              className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-but hover:bg-white px-2 py-1 rounded-full"
+            >
               &#8250; {/* Right arrow */}
             </button>
           </div>
@@ -73,19 +79,37 @@ const CarDetail = () => {
               {car.make} {car.model} ({car.year}) {/* Display car details */}
             </h1>
             <ul className="space-y-1">
-              <li><strong>Price:</strong> ${car.price.toLocaleString()}</li>
-              <li><strong>Mileage:</strong> {car.mileage}</li>
-              <li><strong>Engine Type:</strong> {car.engineType}</li>
-              <li><strong>Fuel Type:</strong> {car.fuelType}</li>
-              <li><strong>Transmission:</strong> {car.transmission}</li>
-              <li><strong>Seating Capacity:</strong> {car.seatingCapacity}</li>
-              <li><strong>Condition:</strong> {car.condition}</li>
+              <li>
+                <strong>Price:</strong> ${car.price.toLocaleString()}
+              </li>
+              <li>
+                <strong>Mileage:</strong> {car.mileage}
+              </li>
+              <li>
+                <strong>Engine Type:</strong> {car.engineType}
+              </li>
+              <li>
+                <strong>Fuel Type:</strong> {car.fuelType}
+              </li>
+              <li>
+                <strong>Transmission:</strong> {car.transmission}
+              </li>
+              <li>
+                <strong>Seating Capacity:</strong> {car.seatingCapacity}
+              </li>
+              <li>
+                <strong>Condition:</strong> {car.condition}
+              </li>
             </ul>
 
             {/* Installment Calculator */}
             <div className="mt-6">
-              <h2 className="text-lg font-semibold mb-1">Installment Calculator</h2>
-              <label htmlFor="months" className="block mb-1">Select Installment Plan (Months):</label>
+              <h2 className="text-lg font-semibold mb-1">
+                Installment Calculator
+              </h2>
+              <label htmlFor="months" className="block mb-1">
+                Select Installment Plan (Months):
+              </label>
               <select
                 id="months"
                 value={installmentMonths} // Controlled component for installment months
@@ -100,14 +124,18 @@ const CarDetail = () => {
               </select>
 
               <p className="mt-3 text-lg">
-                Estimated Monthly Payment: <strong>${monthlyPayment.toFixed(2)}</strong> {/* Display monthly payment */}
+                Estimated Monthly Payment:{" "}
+                <strong>${monthlyPayment.toFixed(2)}</strong>{" "}
+                {/* Display monthly payment */}
               </p>
             </div>
 
             {/* Action Buttons */}
             <div className="mt-6 flex gap-4 items-center">
               <div className="flex flex-grow items-center">
-                <h1 className="text-xl font-bold">{car.make} {car.model}</h1>
+                <h1 className="text-xl font-bold">
+                  {car.make} {car.model}
+                </h1>
               </div>
               <button
                 className="px-4 py-2 bg-but hover:text-black text-white rounded-lg flex items-center justify-center"
@@ -115,7 +143,10 @@ const CarDetail = () => {
               >
                 Add to Cart
               </button>
-              <Link to="/request" className="px-4 py-2 bg-but hover:text-black text-white rounded-lg flex items-center justify-center">
+              <Link
+                to="/request"
+                className="px-4 py-2 bg-but hover:text-black text-white rounded-lg flex items-center justify-center"
+              >
                 Request More Info
               </Link>
             </div>
@@ -124,18 +155,28 @@ const CarDetail = () => {
 
         {/* Related Cars Section */}
         <div className="mt-2 py-4 px-4 bg-but">
-          <h2 className="text-2xl text-white font-semibold mb-2">Related Cars</h2>
+          <h2 className="text-2xl text-white font-semibold mb-2">
+            Related Cars
+          </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {relatedCars.map((relatedCar) => (
-              <div key={relatedCar.id} className="bg-body p-4 rounded-2xl shadow-2xl shadow-slate-900 flex flex-col items-center">
+              <div
+                key={relatedCar.id}
+                className="bg-body p-4 rounded-2xl shadow-2xl shadow-slate-900 flex flex-col items-center"
+              >
                 <img
                   src={relatedCar.images[0]} // Display the first image of the related car
                   alt={`Car ${relatedCar.make} ${relatedCar.model}`} // Alt text for accessibility
                   className="w-full h-32 sm:h-40 md:h-48 object-cover rounded-3xl mb-2"
                 />
-                <h3 className="text-lg font-semibold">{relatedCar.make} {relatedCar.model} ({relatedCar.year})</h3>
+                <h3 className="text-lg font-semibold">
+                  {relatedCar.make} {relatedCar.model} ({relatedCar.year})
+                </h3>
                 <p>Price: ${relatedCar.price.toLocaleString()}</p>
-                <Link to={`/cars/${relatedCar.id}`} className="text-but hover:underline mt-1 block">
+                <Link
+                  to={`/cars/${relatedCar.id}`}
+                  className="text-but hover:underline mt-1 block"
+                >
                   View Details
                 </Link>
               </div>
@@ -147,4 +188,4 @@ const CarDetail = () => {
   );
 };
 
-export default CarDetail; 
+export default CarDetail;

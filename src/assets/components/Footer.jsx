@@ -8,7 +8,7 @@ import {
   FaEnvelope,
   FaPhone,
 } from "react-icons/fa";
-import Loader from './Loader'; // Adjust the import path as needed
+import Loader from "./Loader"; // Adjust the import path as needed
 
 // Mock contact information for demonstration
 const mockContactInfo = {

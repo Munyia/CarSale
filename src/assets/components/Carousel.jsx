@@ -1,6 +1,10 @@
 import { useState, useEffect } from "react";
 
-const Carousel = ({ children, autoslide = false, autoslideinterval = 5000 }) => {
+const Carousel = ({
+  children,
+  autoslide = false,
+  autoslideinterval = 5000,
+}) => {
   // State to keep track of the current slide index
   const [currentSlide, setCurrentSlide] = useState(0);
 

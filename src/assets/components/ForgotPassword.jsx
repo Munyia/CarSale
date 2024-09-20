@@ -29,7 +29,9 @@ const ForgotPassword = () => {
         setError(""); // Clear any previous error messages
       } else {
         // If the request failed, display an error message from the response
-        setError(data.message || "Failed to request password reset. Please try again.");
+        setError(
+          data.message || "Failed to request password reset. Please try again."
+        );
         setMessage(""); // Clear any success messages
       }
     } catch (err) {
@@ -44,26 +46,29 @@ const ForgotPassword = () => {
       {/* Container with shadow and styling for the form */}
       <div className="relative shadow-2xl shadow-slate-900 bg-pry px-4 py-3 bg--600 mx-8 md:mx-0 rounded-3xl sm:p-10 sm:max-w-xl">
         <div className="max-w-md mx-auto">
-          
           {/* Page title */}
           <h1 className="text-2xl font-bold text-but mb-6 text-center">
             Forgot Password
           </h1>
-          
+
           {/* Instruction text */}
           <div className="text-sm font-normal mb-4 text-center">
             Enter your email to receive a password reset link.
           </div>
 
           {/* Success message, if any */}
-          {message && <p className="text-green-500 text-center mb-4">{message}</p>}
-          
+          {message && (
+            <p className="text-green-500 text-center mb-4">{message}</p>
+          )}
+
           {/* Error message, if any */}
           {error && <p className="text-red-500 text-center mb-4">{error}</p>}
 
           {/* Form to submit email */}
-          <form onSubmit={handleResetRequest} className="grid grid-cols-1 gap-2">
-            
+          <form
+            onSubmit={handleResetRequest}
+            className="grid grid-cols-1 gap-2"
+          >
             {/* Email input field */}
             <div>
               <label
@@ -98,10 +103,7 @@ const ForgotPassword = () => {
             <div className="mt-5 text-center">
               <p className="text-sm text-but">
                 Remembered your password?{" "}
-                <Link
-                  className="text-but hover:underline"
-                  to="/login"
-                >
+                <Link className="text-but hover:underline" to="/login">
                   Log In
                 </Link>
               </p>

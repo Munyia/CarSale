@@ -1,5 +1,5 @@
 // src/context/CartContext.jsx
-import React, { createContext, useState, useContext } from 'react';
+import React, { createContext, useState, useContext } from "react";
 
 // Create a Context for the cart
 const CartContext = createContext();
@@ -15,7 +15,7 @@ const CartProvider = ({ children }) => {
 
   // Function to remove an item from the cart by id
   const removeFromCart = (id) => {
-    setCartItems((prevItems) => prevItems.filter(item => item.id !== id)); // Filter out the item with the specified id
+    setCartItems((prevItems) => prevItems.filter((item) => item.id !== id)); // Filter out the item with the specified id
   };
 
   // Function to get the current cart items
@@ -26,7 +26,9 @@ const CartProvider = ({ children }) => {
 
   return (
     // Provide the cart functionalities to children components
-    <CartContext.Provider value={{ getCartItems, addToCart, removeFromCart, getItemCount }}>
+    <CartContext.Provider
+      value={{ getCartItems, addToCart, removeFromCart, getItemCount }}
+    >
       {children} {/* Render children components */}
     </CartContext.Provider>
   );

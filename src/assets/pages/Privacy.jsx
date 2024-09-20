@@ -1,20 +1,20 @@
-import React, { useEffect, useState } from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import { Link } from "react-router-dom";
 
 const Privacy = () => {
-  const [isTitleVisible, setIsTitleVisible] = useState(false); // Title animation
-  const [isContentVisible, setIsContentVisible] = useState(false); // Slide-in animation
+  const [isTitleVisible, setIsTitleVisible] = useState(false); // State for title visibility
+  const [isContentVisible, setIsContentVisible] = useState(false); // State for content visibility
 
   useEffect(() => {
-    document.title = 'Privacy Policy';
+    document.title = "Privacy Policy"; // Setting the document title
 
-    // Set animation for title and content
+    // Delay to start animations after component mounts
     setTimeout(() => {
-      setIsTitleVisible(true); // Trigger title animation
-      setIsContentVisible(true); // Trigger content slide-in
-    }, 100); // Slight delay to start animations after component mounts
+      setIsTitleVisible(true); // Trigger title fade-in animation
+      setIsContentVisible(true); // Trigger content slide-in animation
+    }, 100);
   }, []);
 
   return (
@@ -25,7 +25,7 @@ const Privacy = () => {
         {/* Title with animation */}
         <h1
           className={`text-3xl sm:text-4xl font-bold text-center mb-8 text-but transition-opacity duration-1000 ${
-            isTitleVisible ? 'opacity-100' : 'opacity-0'
+            isTitleVisible ? "opacity-100" : "opacity-0"
           }`}
         >
           Privacy Policy
@@ -34,7 +34,7 @@ const Privacy = () => {
         {/* Content with slide-in animation */}
         <div
           className={`space-y-6 transform transition-transform duration-1000 ${
-            isContentVisible ? 'translate-x-0' : 'translate-x-full'
+            isContentVisible ? "translate-x-0" : "translate-x-full"
           }`}
         >
           {/* Privacy Policy Sections */}
@@ -43,7 +43,9 @@ const Privacy = () => {
               Information We Collect
             </h2>
             <p className="text-black">
-              We collect various types of information, including personal data provided by users during registration, purchase processes, or interactions with our services.
+              We collect various types of information, including personal data
+              provided by users during registration, purchase processes, or
+              interactions with our services.
             </p>
           </section>
 
@@ -52,7 +54,9 @@ const Privacy = () => {
               How We Use Information
             </h2>
             <p className="text-black">
-              The information we collect is used to provide, maintain, and improve our services, to communicate with users, and for security and legal compliance purposes.
+              The information we collect is used to provide, maintain, and
+              improve our services, to communicate with users, and for security
+              and legal compliance purposes.
             </p>
           </section>
 
@@ -61,7 +65,9 @@ const Privacy = () => {
               Sharing Your Information
             </h2>
             <p className="text-black">
-              We do not share your personal information with third parties except as necessary to provide our services, comply with legal obligations, or with your explicit consent.
+              We do not share your personal information with third parties
+              except as necessary to provide our services, comply with legal
+              obligations, or with your explicit consent.
             </p>
           </section>
 
@@ -70,16 +76,24 @@ const Privacy = () => {
               Your Privacy Rights
             </h2>
             <p className="text-black">
-              You have the right to access, correct, or delete your personal data. You may also object to certain data processing or request data portability.
+              You have the right to access, correct, or delete your personal
+              data. You may also object to certain data processing or request
+              data portability.
             </p>
           </section>
 
           <section className="bg-body shadow-2xl shadow-slate-900 rounded-3xl p-5 transition-all duration-300">
-          <Link to={'/contact'} className="text-lg sm:text-xl hover:black font-medium text-but mb-4">
+            {/* Link to contact page */}
+            <Link
+              to={"/contact"}
+              className="text-lg sm:text-xl hover:black font-medium text-but mb-4"
+            >
               Contact Us
             </Link>
             <p className="text-black">
-              If you have any questions about this Privacy Policy or our data practices, please contact us via the contact information provided on our site.
+              If you have any questions about this Privacy Policy or our data
+              practices, please contact us via the contact information provided
+              on our site.
             </p>
           </section>
         </div>
@@ -90,4 +104,4 @@ const Privacy = () => {
   );
 };
 
-export default Privacy;
+export default Privacy; // Exporting the Privacy component

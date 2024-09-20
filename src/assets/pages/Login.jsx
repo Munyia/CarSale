@@ -1,28 +1,39 @@
-import React, { useEffect } from 'react';
-import { Link } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom"; // Importing Link for navigation
 
 const Login = () => {
+  // Setting the document title when the component mounts
   useEffect(() => {
-    document.title = 'Login';
+    document.title = "Login";
   }, []);
 
   return (
     <div className="w-full h-screen flex items-center justify-center bg-body py-3">
-      <div className="relative shadow-2xl shadow-slate-900 bg-pry px-4 py-3 mx-4 md:mx-0 rounded-3xl sm:p-10 sm:max-w-xl" style={{ width: '80%', height: '70%' }}>
+      {/* Main container for the login form */}
+      <div
+        className="relative shadow-2xl shadow-slate-900 bg-pry px-4 py-3 mx-4 md:mx-0 rounded-3xl sm:p-10 sm:max-w-xl"
+        style={{ width: "80%", height: "70%" }}
+      >
         <div className="max-w-md mx-auto h-full">
-        <div className="mb-1 flex items-center">
-          <Link to="/" className="text-but text-lg hover:text-black transition duration-300">
-            &larr; Back to Home
-          </Link>
-        </div>
+          {/* Link to go back to the home page */}
+          <div className="mb-1 flex items-center">
+            <Link
+              to="/"
+              className="text-but text-lg hover:text-black transition duration-300"
+            >
+              &larr; Back to Home
+            </Link>
+          </div>
           <h1 className="text-2xl font-bold text-but mb-6 text-center">
             Welcome back
           </h1>
           <div className="text-sm font-normal mb-4 text-center">
             Log in to your account
           </div>
+          {/* Login form */}
           <form className="flex flex-col space-y-4">
             <div className="flex flex-col md:flex-row md:space-x-4">
+              {/* Email input field */}
               <div className="flex-1">
                 <label
                   htmlFor="email"
@@ -40,6 +51,7 @@ const Login = () => {
                 />
               </div>
 
+              {/* Password input field */}
               <div className="flex-1">
                 <label
                   htmlFor="password"
@@ -58,15 +70,17 @@ const Login = () => {
               </div>
             </div>
 
+            {/* Login button */}
             <div className="mt-5 justify-center items-center text-center ">
               <button
-                className="py-2 px-4  justify-center bg-but hover:text-black hover:bg-blue-500 focus:ring-blue-200 focus:ring-offset-blue-400 text-white transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
+                className="py-2 px-4 justify-center bg-but hover:text-black hover:bg-blue-500 focus:ring-blue-200 focus:ring-offset-blue-400 text-white transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
                 type="submit"
               >
                 Login
               </button>
             </div>
 
+            {/* Link for password recovery */}
             <div className="mt-5 text-center">
               <Link
                 to="/forgotpassword"
@@ -76,6 +90,7 @@ const Login = () => {
               </Link>
             </div>
 
+            {/* Signup prompt */}
             <div className="flex items-center justify-between mt-4">
               <span className="w-2/5 border-b border-gray-500 md:w-1/4"></span>
               <p className="text-xs px-2 text-but justify-center items-center text-center uppercase dark:text-gray-900">
@@ -84,7 +99,8 @@ const Login = () => {
                   className="flex hover:underline hover:text-black justify-center text-center items-center"
                   to="/register"
                 >
-                  {" "}SignUp
+                  {" "}
+                  SignUp
                 </Link>
               </p>
               <span className="w-2/5 border-b border-gray-500 md:w-1/4"></span>
@@ -96,4 +112,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Login; // Exporting the Login component

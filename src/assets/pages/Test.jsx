@@ -2,63 +2,33 @@ import React, { useState, useEffect } from "react";
 import { useCart } from "../context/CartContext"; // Import context for cart operations
 import cars from "../data/carData"; // Import car data
 import { Link } from "react-router-dom";
-import { FaTrashAlt, FaRegBookmark, FaBookmark  } from "react-icons/fa"; // Icons for like and remove
+import { FaTrashAlt, FaRegBookmark, FaBookmark } from "react-icons/fa"; // Icons for save and remove
 import Header from "./Header";
 
 const Cart = () => {
-  // Destructure functions from CartContext
-  const { getCartItems, removeFromCart } = useCart();
+  const { getCartItems, removeFromCart, saveCar } = useCart(); // Added saveCar to context
   const cartItems = getCartItems();
+
   const [savedCars, setSavedCars] = useState([]);
 
-  // State to manage liked items
-  const [likedItems, setLikedItems] = useState([]);
-
-  // State to manage quantities for removal
-  const [removeQuantities, setRemoveQuantities] = useState({});
-
-  // State to manage selected items for checkout
-  const [selectedItems, setSelectedItems] = useState({});
-
-  // Set the document title when component mounts
   useEffect(() => {
     document.title = "Your Cart | CarSale";
   }, []);
 
- // Function to toggle the save status of a car
- const toggleSave = (itemId) => {
-  setSavedCars((prevSaves) =>
-    prevSaves.includes(itemId)
-      ? prevSaves.filter((id) => id !== itemId) // Remove from saved if already saved
-      : [...prevSaves, itemId] // Add to saved if not saved
-  );
-  saveCar(itemId); // Save car to user profile in context
-};
+  // Function to toggle the save status of a car
+  const toggleSave = (itemId) => {
+    setSavedCars((prevSaves) =>
+      prevSaves.includes(itemId)
+        ? prevSaves.filter((id) => id !== itemId) // Remove from saved if already saved
+        : [...prevSaves, itemId] // Add to saved if not saved
+    );
+    saveCar(itemId); // Save car to user profile in context
+  };
 
   // Function to handle the removal of a car from the cart
   const handleRemove = (itemId) => {
-    console.log(`Removing item with ID: ${itemId}`);
-    const quantity = removeQuantities[itemId] || 1; // Default to 1 if no quantity specified
-    console.log(`Removing quantity: ${quantity} for item ID: ${itemId}`);
-
+    const quantity = 1; // Default to 1 for removal
     removeFromCart(itemId, quantity); // Remove the item from the cart
-
-    // Log removal
-    console.log(`Item with ID: ${itemId} removed.`);
-
-    // Update removal quantities
-    setRemoveQuantities((prev) => {
-      const { [itemId]: _, ...rest } = prev;
-      return rest;
-    });
-  };
-
-  // Function to handle item selection for checkout
-  const handleSelect = (itemId, quantity) => {
-    setSelectedItems((prevSelected) => ({
-      ...prevSelected,
-      [itemId]: quantity,
-    }));
   };
 
   // Function to find car details by ID
@@ -81,18 +51,6 @@ const Cart = () => {
         : 0)
     );
   }, 0);
-
-  // Calculate the total amount for selected items
-  const totalSelectedAmount = Object.entries(selectedItems).reduce(
-    (acc, [itemId, quantity]) => {
-      const car = findCarById(parseInt(itemId, 10));
-      if (car) {
-        return acc + parseFloat(car.price.replace(/[$,]/g, "")) * quantity;
-      }
-      return acc;
-    },
-    0
-  );
 
   return (
     <div className="bg-body h-[100vh]">
@@ -139,14 +97,14 @@ const Cart = () => {
                         </div>
                       </div>
 
-                      {/* Actions: Like, Remove, Select */}
+                      {/* Actions: Save, Remove */}
                       <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4">
-                                {/* Save button */}
-                                <button
+                        {/* Save button */}
+                        <button
                           onClick={() => toggleSave(car?.id)}
                           className={`text-2xl transition-colors ${
                             savedCars.includes(car?.id)
-                              ? "text-but"
+                              ? "text-blue-600"
                               : "text-gray-400"
                           }`}
                         >
@@ -158,33 +116,12 @@ const Cart = () => {
                         </button>
 
                         {/* Remove button */}
-                        <div className="flex items-center space-x-2">
-                          <button
-                            onClick={() => handleRemove(itemId)}
-                            className="text-red-500 hover:text-red-700 transition"
-                          >
-                            <FaTrashAlt className="text-2xl" />
-                          </button>
-                        </div>
-
-                        {/* Select for checkout */}
-                        <div className="flex items-center space-x-2">
-                          <button
-                            onClick={() =>
-                              handleSelect(
-                                car?.id,
-                                selectedItems[car?.id] ? 0 : 1
-                              )
-                            }
-                            className={`w-6 h-6 rounded-full border ${
-                              selectedItems[car?.id]
-                                ? "bg-green-600"
-                                : "bg-gray-300"
-                            } flex items-center justify-center`}
-                          >
-                            {selectedItems[car?.id] ? "✓" : ""}
-                          </button>
-                        </div>
+                        <button
+                          onClick={() => handleRemove(itemId)}
+                          className="text-red-500 hover:text-red-700 transition"
+                        >
+                          <FaTrashAlt className="text-2xl" />
+                        </button>
                       </div>
                     </li>
                   );
@@ -198,15 +135,8 @@ const Cart = () => {
               <p className="text-gray-700">
                 Total Amount: ${totalAmount.toLocaleString()}
               </p>
-              <p className="text-gray-700">
-                Total Selected Amount: ${totalSelectedAmount.toLocaleString()}
-              </p>
               <Link
                 to="/checkout"
-                state={{
-                  totalCost: totalSelectedAmount,
-                  selectedItems: Object.keys(selectedItems),
-                }}
                 className="block mt-4 text-center text-but hover:underline"
               >
                 Proceed to Checkout

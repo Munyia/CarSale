@@ -4,25 +4,26 @@ import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
 
 const About = () => {
-  const [isTitleVisible, setIsTitleVisible] = useState(false); // Title animation
-  const [isContentVisible, setIsContentVisible] = useState(false); // Slide-in animation
+  // State to manage visibility of title and content for animations
+  const [isTitleVisible, setIsTitleVisible] = useState(false); // For title animation
+  const [isContentVisible, setIsContentVisible] = useState(false); // For content slide-in animation
 
   useEffect(() => {
+    // Set the document title to "About Us"
     document.title = 'About Us';
 
-    // Set animation for title and content
+    // Trigger animations shortly after the component mounts
     setTimeout(() => {
-      setIsTitleVisible(true); // Trigger title animation
-      setIsContentVisible(true); // Trigger content slide-in
-    }, 100); // Slight delay to start animations after component mounts
+      setIsTitleVisible(true); // Make the title visible
+      setIsContentVisible(true); // Slide in the content
+    }, 100); // Delay for a smooth effect
   }, []);
 
   return (
     <div className="bg-body min-h-screen">
-      <Header />
+      <Header /> {/* Render the Header component */}
 
       <div className="max-w-4xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
-      
         <h1
           className={`text-3xl sm:text-4xl font-bold text-center mb-8 text-but transition-opacity duration-1000 ${
             isTitleVisible ? 'opacity-100' : 'opacity-0'
@@ -31,13 +32,12 @@ const About = () => {
           About Us
         </h1>
 
-        
         <div
           className={`space-y-6 transform transition-transform duration-1000 ${
             isContentVisible ? 'translate-x-0' : 'translate-x-full'
           }`}
         >
-  
+          {/* Mission Section */}
           <section className="bg-body shadow-2xl shadow-slate-900 rounded-3xl p-5 transition-all duration-300">
             <h2 className="text-lg sm:text-xl font-medium text-but mb-4">
               Our Mission
@@ -47,6 +47,7 @@ const About = () => {
             </p>
           </section>
 
+          {/* Values Section */}
           <section className="bg-body shadow-2xl shadow-slate-900 rounded-3xl p-5 transition-all duration-300">
             <h2 className="text-lg sm:text-xl font-medium text-but mb-4">
               Our Values
@@ -56,6 +57,7 @@ const About = () => {
             </p>
           </section>
 
+          {/* History Section */}
           <section className="bg-body shadow-2xl shadow-slate-900 rounded-3xl p-5 transition-all duration-300">
             <h2 className="text-lg sm:text-xl font-medium text-but mb-4">
               Our History
@@ -65,6 +67,7 @@ const About = () => {
             </p>
           </section>
 
+          {/* Team Section */}
           <section className="bg-body shadow-2xl shadow-slate-900 rounded-3xl p-5 transition-all duration-300">
             <h2 className="text-lg sm:text-xl font-medium text-but mb-4">
               Meet the Team
@@ -74,6 +77,7 @@ const About = () => {
             </p>
           </section>
 
+          {/* Contact Section */}
           <section className="bg-body shadow-2xl shadow-slate-900 rounded-3xl p-5 transition-all duration-300">
             <Link to={'/contact'} className="text-lg sm:text-xl hover:black font-medium text-but mb-4">
               Contact Us
@@ -85,7 +89,7 @@ const About = () => {
         </div>
       </div>
 
-      <Footer />
+      <Footer /> {/* Render the Footer component */}
     </div>
   );
 };

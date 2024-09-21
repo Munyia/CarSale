@@ -47,38 +47,38 @@ const ForgotPassword = () => {
       <div className="relative shadow-2xl shadow-slate-900 bg-pry px-4 py-3 bg--600 mx-8 md:mx-0 rounded-3xl sm:p-10 sm:max-w-xl">
         <div className="max-w-md mx-auto">
           {/* Page title */}
-          <h1 className="text-2xl font-bold text-but mb-6 text-center">
+          <h1 className="text-2xl font-bold font-[roboto] text-but mb-6 text-center">
             Forgot Password
           </h1>
 
           {/* Instruction text */}
-          <div className="text-sm font-normal mb-4 text-center">
+          <div className="text-sm font-[roboto] font-normal mb-4 text-center">
             Enter your email to receive a password reset link.
           </div>
 
           {/* Success message, if any */}
           {message && (
-            <p className="text-green-500 text-center mb-4">{message}</p>
+            <p className="text-green-500 font-[dm] text-center mb-4">{message}</p>
           )}
 
           {/* Error message, if any */}
-          {error && <p className="text-red-500 text-center mb-4">{error}</p>}
+          {error && <p className="text-red-500 font-[dm] text-center mb-4">{error}</p>}
 
           {/* Form to submit email */}
           <form
             onSubmit={handleResetRequest}
-            className="grid grid-cols-1 gap-2"
+            className="grid font-[dm] grid-cols-1 gap-2"
           >
             {/* Email input field */}
             <div>
               <label
                 htmlFor="email"
-                className="font-semibold text-sm text-but pb-1 block"
+                className="font-semibold font-[dm] text-sm text-but pb-1 block"
               >
                 Email
               </label>
               <input
-                className="border rounded-lg px-3 py-2 mt-1 mb-3 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
+                className="border font-[dm] rounded-lg px-3 py-2 mt-1 mb-3 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
                 type="email"
                 id="email"
                 name="email"
@@ -92,7 +92,7 @@ const ForgotPassword = () => {
             {/* Submit button to send reset link */}
             <div className="mt-5">
               <button
-                className="py-2 px-4 bg-but hover:text-black hover:bg-blue-500 focus:ring-blue-200 focus:ring-offset-blue-400 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
+                className="py-2 px-4 bg-but font-[dm] hover:text-black hover:bg-blue-500 focus:ring-blue-200 focus:ring-offset-blue-400 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
                 type="submit"
               >
                 Send Reset Link
@@ -101,7 +101,7 @@ const ForgotPassword = () => {
 
             {/* Link to go back to the login page */}
             <div className="mt-5 text-center">
-              <p className="text-sm text-but">
+              <p className="text-sm font-[dm] text-but">
                 Remembered your password?{" "}
                 <Link className="text-but hover:underline" to="/login">
                   Log In

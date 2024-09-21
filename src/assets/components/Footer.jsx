@@ -40,12 +40,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* Quick Links Section */}
           <div className="flex flex-col">
-            <h4 className="text-lg font-bold mb-4">Quick Links</h4>
+            <h4 className="text-lg font-[roboto] font-bold mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
                 <Link
                   to="/terms"
-                  className="text-white hover:text-black transition duration-300 block"
+                  className="text-white font-[dm] hover:text-black transition duration-300 block"
                 >
                   Terms of Service
                 </Link>
@@ -53,7 +53,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/privacy"
-                  className="text-white hover:text-black transition duration-300 block"
+                  className="text-white font-[dm] hover:text-black transition duration-300 block"
                 >
                   Privacy Policy
                 </Link>
@@ -61,7 +61,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/about"
-                  className="text-white hover:text-black transition duration-300 block"
+                  className="text-white font-[dm] hover:text-black transition duration-300 block"
                 >
                   About Us
                 </Link>
@@ -69,7 +69,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/carlisting"
-                  className="text-white hover:text-black transition duration-300 block"
+                  className="text-white font-[dm] hover:text-black transition duration-300 block"
                 >
                   Car Listing
                 </Link>
@@ -77,7 +77,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/checkout"
-                  className="text-white hover:text-black transition duration-300 block"
+                  className="text-white font-[dm] hover:text-black transition duration-300 block"
                 >
                   Checkout
                 </Link>
@@ -87,7 +87,7 @@ const Footer = () => {
 
           {/* Follow Us Section */}
           <div className="flex flex-col">
-            <h4 className="text-lg font-bold mb-4 text-center lg:text-left">
+            <h4 className="text-lg font-bold font-[roboto] mb-4 text-center lg:text-left">
               Follow Us
             </h4>
             <div className="flex justify-center lg:justify-start space-x-4">
@@ -121,14 +121,14 @@ const Footer = () => {
 
           {/* Contact Us Section */}
           <div className="flex flex-col">
-            <h4 className="text-lg font-bold mb-4">Contact Us</h4>
+            <h4 className="text-lg font-[roboto] font-bold mb-4">Contact Us</h4>
             <ul className="space-y-2">
-              <li className="flex items-center space-x-2 hover:text-black">
+              <li className="flex items-center font-[dm] space-x-2 hover:text-black">
                 <FaPhone className="text-xl" />
                 <span>{contactInfo.phone}</span>
               </li>
-              <li className="flex items-center space-x-2 hover:text-black">
-                <FaEnvelope className="text-xl" />
+              <li className="flex items-center font-[dm] space-x-2 hover:text-black">
+                <FaEnvelope className="text-xl font-[dm]" />
                 <span>{contactInfo.email}</span>
               </li>
               <li>{contactInfo.address}</li>
@@ -137,7 +137,7 @@ const Footer = () => {
         </div>
 
         {/* Footer Bottom Section */}
-        <div className="mt-6 text-center text-gray-300">
+        <div className="mt-6 font-[open] text-center text-gray-300">
           <p>&copy; {new Date().getFullYear()} CarSale. All rights reserved.</p>
         </div>
       </div>

@@ -22,9 +22,9 @@ const About = () => {
   return (
     <div className="bg-body min-h-screen">
       <Header /> {/* Render the Header component */}
-      <div className="max-w-4xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto  pt-4 pb-8 px-4 sm:px-6 lg:px-8">
         <h1
-          className={`text-3xl sm:text-4xl font-bold text-center mb-8 text-but transition-opacity duration-1000 ${
+          className={`text-3xl sm:text-4xl font-[roboto]  font-bold text-center mb-4 text-but transition-opacity duration-1000 ${
             isTitleVisible ? "opacity-100" : "opacity-0"
           }`}
         >
@@ -38,10 +38,10 @@ const About = () => {
         >
           {/* Mission Section */}
           <section className="bg-body shadow-2xl shadow-slate-900 rounded-3xl p-5 transition-all duration-300">
-            <h2 className="text-lg sm:text-xl font-medium text-but mb-4">
+            <h2 className="text-lg font-[open]  sm:text-xl font-medium text-but mb-4">
               Our Mission
             </h2>
-            <p className="text-black">
+            <p className="text-black font-[dm]">
               We are dedicated to providing the best service for our customers,
               focusing on quality, innovation, and efficiency.
             </p>
@@ -49,10 +49,10 @@ const About = () => {
 
           {/* Values Section */}
           <section className="bg-body shadow-2xl shadow-slate-900 rounded-3xl p-5 transition-all duration-300">
-            <h2 className="text-lg sm:text-xl font-medium text-but mb-4">
+            <h2 className="text-lg font-[open] sm:text-xl font-medium text-but mb-4">
               Our Values
             </h2>
-            <p className="text-black">
+            <p className="text-black font-[dm]">
               Integrity, customer satisfaction, and continuous improvement are
               at the core of our business.
             </p>
@@ -60,10 +60,10 @@ const About = () => {
 
           {/* History Section */}
           <section className="bg-body shadow-2xl shadow-slate-900 rounded-3xl p-5 transition-all duration-300">
-            <h2 className="text-lg sm:text-xl font-medium text-but mb-4">
+            <h2 className="text-lg font-[open] sm:text-xl font-medium text-but mb-4">
               Our History
             </h2>
-            <p className="text-black">
+            <p className="text-black font-[dm]">
               Founded in [Year], we have grown to become a leader in our
               industry, offering cutting-edge solutions to customers worldwide.
             </p>
@@ -71,10 +71,10 @@ const About = () => {
 
           {/* Team Section */}
           <section className="bg-body shadow-2xl shadow-slate-900 rounded-3xl p-5 transition-all duration-300">
-            <h2 className="text-lg sm:text-xl font-medium text-but mb-4">
+            <h2 className="text-lg font-[open] sm:text-xl font-medium text-but mb-4">
               Meet the Team
             </h2>
-            <p className="text-black">
+            <p className="text-black font-[dm]">
               Our team of experienced professionals is committed to driving
               innovation and delivering results.
             </p>
@@ -84,11 +84,11 @@ const About = () => {
           <section className="bg-body shadow-2xl shadow-slate-900 rounded-3xl p-5 transition-all duration-300">
             <Link
               to={"/contact"}
-              className="text-lg sm:text-xl hover:black font-medium text-but mb-4"
+              className="text-lg font-[open] sm:text-xl hover:black font-medium text-but mb-4"
             >
               Contact Us
             </Link>
-            <p className="text-black">
+            <p className="text-black font-[dm]">
               Reach out to us for more information or to discuss how we can
               assist you.
             </p>

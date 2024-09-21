@@ -82,7 +82,7 @@ const Auction = () => {
                   Time Remaining: {car.timeRemaining}
                 </p>
                 <button
-                  className="bg-but text-white font-[open] px-6 py-2 rounded-lg hover:bg-white hover:text-but transition duration-300"
+                  className="bg-but text-white font-[open] px-6 py-2 rounded-lg hover:bg-body hover:text-but transition duration-300"
                   onClick={() => handleBidClick(car)} // Handle bid click
                 >
                   Place Bid
@@ -113,7 +113,7 @@ const Auction = () => {
             <div className="flex justify-end mt-4">
               <button
                 onClick={handleSubmitBid} // Handle bid submission
-                className="bg-but font-[open] text-white px-4 py-2 rounded-lg hover:bg-white hover:text-but mr-2"
+                className="bg-but font-[open] text-white px-4 py-2 rounded-lg hover:bg-body hover:text-but mr-2"
               >
                 Submit Bid
               </button>

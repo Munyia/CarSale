@@ -39,7 +39,7 @@ const CheckOut = () => {
   };
 
   return (
-    <div className="bg-body pt-5 dark:bg-gray-900 dark:text-white font-[dm]">
+    <div className="bg-body py-5 dark:bg-gray-900 dark:text-white font-[dm]">
       <div className="max-w-lg dark:bg-gray-800 dark:text-white py-3 mx-auto p-6 shadow-2xl bg-body shadow-slate-900 rounded-3xl sm:max-w-xl lg:max-w-lg">
         <h1 className="text-2xl font-[roboto] font-bold justify-center text-center mb-6 text-but">
           Checkout Form
@@ -49,14 +49,14 @@ const CheckOut = () => {
           <div>
             <label
               htmlFor="fullname"
-              className="block text-sm dark:bg-gray-900 dark:text-white font-semibold text-but mb-2"
+              className="block text-sm  font-semibold text-but mb-2"
             >
               Full Name
             </label>
             <input
               type="text"
               id="fullname"
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border dark:bg-gray-900 dark:text-white dark:border-none border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
             />
           </div>
@@ -72,7 +72,7 @@ const CheckOut = () => {
             <input
               type="email"
               id="email"
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border dark:bg-gray-900 dark:text-white dark:border-none border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
             />
           </div>
@@ -88,7 +88,7 @@ const CheckOut = () => {
             <input
               type="password"
               id="password"
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border dark:bg-gray-900 dark:text-white dark:border-none border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
             />
           </div>
@@ -104,7 +104,7 @@ const CheckOut = () => {
             <input
               type="tel"
               id="phone"
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border dark:bg-gray-900 dark:text-white dark:border-none border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
             />
           </div>
@@ -120,7 +120,7 @@ const CheckOut = () => {
             <input
               type="text"
               id="address"
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border dark:bg-gray-900 dark:text-white dark:border-none border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
             />
           </div>
@@ -135,7 +135,7 @@ const CheckOut = () => {
             </label>
             <select
               id="country"
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border dark:bg-gray-900 dark:text-white dark:border-none border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
             >
               <option value="" disabled selected>
@@ -150,7 +150,7 @@ const CheckOut = () => {
 
           {/* Section for Payment Method */}
           <div className="mt-6">
-            <p className="text-lg font-semibold text-black">Payment Method</p>
+            <p className="text-lg  dark:text-white dark:border-none font-semibold text-black">Payment Method</p>
           </div>
 
           {/* Dropdown for Installment Plan Selection */}
@@ -161,7 +161,7 @@ const CheckOut = () => {
             <select
               id="installment"
               name="installment"
-              className="w-full border border-gray-300 rounded-md px-3 py-2 mt-1 text-gray-700 focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+              className="w-full border dark:bg-gray-900 dark:text-white dark:border-none border-gray-300 rounded-md px-3 py-2 mt-1 text-gray-700 focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
               value={installmentPlan}
               onChange={(e) => {
                 setInstallmentPlan(e.target.value); // Update installment plan
@@ -182,7 +182,7 @@ const CheckOut = () => {
             <div>
               <label
                 htmlFor="downPayment"
-                className="block text-sm font-semibold text-but mb-2"
+                className="block dark:bg-gray-900 dark:text-white dark:border-none text-sm font-semibold text-but mb-2"
               >
                 Down Payment
               </label>
@@ -194,7 +194,7 @@ const CheckOut = () => {
                   setDownPayment(e.target.value); // Update down payment
                   calculateInstallment(installmentPlan, e.target.value); // Recalculate installment
                 }}
-                className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full dark:bg-gray-900 dark:text-white dark:border-none border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="Enter down payment amount"
               />
             </div>
@@ -208,11 +208,11 @@ const CheckOut = () => {
                 id="bankTransfer"
                 name="paymentMethod"
                 value="Bank Transfer"
-                className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300"
+                className="h-4 w-4 dark:bg-gray-900 dark:text-white dark:border-none text-blue-600 focus:ring-blue-500 border-gray-300"
                 onChange={() => setPaymentMethod("Bank Transfer")} // Update selected payment method
                 required
               />
-              <label htmlFor="bankTransfer" className="ml-2 text-gray-700">
+              <label htmlFor="bankTransfer" className="ml-2 dark:text-white  text-gray-700">
                 Bank Transfer
               </label>
             </div>
@@ -222,11 +222,11 @@ const CheckOut = () => {
                 id="crypto"
                 name="paymentMethod"
                 value="Cryptocurrency"
-                className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300"
+                className="h-4 w-4 dark:bg-gray-900 dark:text-white dark:border-none text-blue-600 focus:ring-blue-500 border-gray-300"
                 onChange={() => setPaymentMethod("Cryptocurrency")}
                 required
               />
-              <label htmlFor="crypto" className="ml-2 text-gray-700">
+              <label htmlFor="crypto" className="ml-2 dark:text-white  text-gray-700">
                 Cryptocurrency
               </label>
             </div>
@@ -236,11 +236,11 @@ const CheckOut = () => {
                 id="creditCard"
                 name="paymentMethod"
                 value="Credit Card"
-                className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300"
+                className="h-4 w-4 dark:bg-gray-900 dark:text-white dark:border-none text-blue-600 focus:ring-blue-500 border-gray-300"
                 onChange={() => setPaymentMethod("Credit Card")}
                 required
               />
-              <label htmlFor="creditCard" className="ml-2 text-gray-700">
+              <label htmlFor="creditCard" className="ml-2 dark:text-white  text-gray-700">
                 Credit Card
               </label>
             </div>
@@ -250,11 +250,11 @@ const CheckOut = () => {
                 id="paypal"
                 name="paymentMethod"
                 value="PayPal"
-                className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300"
+                className="h-4 w-4 dark:bg-gray-900 dark:text-white dark:border-none text-blue-600 focus:ring-blue-500 border-gray-300"
                 onChange={() => setPaymentMethod("PayPal")}
                 required
               />
-              <label htmlFor="paypal" className="ml-2 text-gray-700">
+              <label htmlFor="paypal" className="ml-2 dark:text-white  text-gray-700">
                 PayPal
               </label>
             </div>
@@ -262,7 +262,7 @@ const CheckOut = () => {
 
           {/* Section for Delivery Options */}
           <div className="mt-6">
-            <p className="text-lg font-semibold text-black">Delivery Option</p>
+            <p className="text-lg dark:text-white   font-semibold text-black">Delivery Option</p>
             <div className="mt-4 space-y-4">
               <div className="flex items-center">
                 <input
@@ -274,7 +274,7 @@ const CheckOut = () => {
                   onChange={() => setDeliveryOption("Home Delivery")}
                   required
                 />
-                <label htmlFor="homeDelivery" className="ml-2 text-gray-700">
+                <label htmlFor="homeDelivery" className="ml-2 dark:text-white  text-gray-700">
                   Home Delivery
                 </label>
               </div>
@@ -288,7 +288,7 @@ const CheckOut = () => {
                   onChange={() => setDeliveryOption("Pickup")}
                   required
                 />
-                <label htmlFor="pickup" className="ml-2 text-gray-700">
+                <label htmlFor="pickup" className="ml-2 dark:text-white  text-gray-700">
                   Pickup
                 </label>
               </div>
@@ -310,7 +310,7 @@ const CheckOut = () => {
             <button
               type="button"
               onClick={handlePayment} // Handle payment process on click
-              className="px-6 py-2 font-[open] bg-blue-600 text-white rounded-lg"
+              className="px-6 py-2 font-[open] bg-but hover:bg-body hover:text-but text-white rounded-lg"
             >
               Confirm Order
             </button>

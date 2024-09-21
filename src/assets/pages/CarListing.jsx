@@ -148,89 +148,88 @@ const CarListing = () => {
           <h2 className="text-xl font-[roboto] font-semibold mb-4">Car Listing</h2>
         </div>
         {/* <h2 className="text-xl justify-center text-center font-semibold mb-4">Filter By</h2> */}
-        <div className="mb-4 justify-center text-center font-[open] bg-body dark:bg-gray-800 dark:text-white p-4 rounded-2xl shadow-2xl shadow-slate-900  flex gap-4 flex-wrap">
-          {/* Brand Filter */}
-          <div className="relative font-[open] group w-48">
-        <button className="w-full text-sm font-semibold hover:rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-but dark:hover:text-gray-300 text-black dark:text-gray-200 bg-but dark:bg-gray-900 dark:rounded-lg dark:border-none p-3 rounded-lg focus:outline-none">
-        Brand
-  </button>
-  <div className="absolute top-full left-0 mt-2 w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg shadow-lg transition-transform transform scale-0 group-hover:scale-100 group-hover:translate-y-1">
-    <ul className="p-2">
-      <li>
-        <button
-          onClick={() => setFilters({ ...filters, brand: "" })}
-          className="block w-full text-left px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-but dark:hover:text-white"
-        >
-          All Brands
-        </button>
-      </li>
-      {brands.map((brand) => (
-        <li key={brand}>
+        <div className="mb-4 justify-center text-center font-[open] bg-body dark:bg-gray-800 dark:text-white p-4 rounded-2xl shadow-2xl shadow-slate-900 flex gap-4 flex-wrap">
+  {/* Brand Filter */}
+  <div className="relative font-[open] group w-48">
+    <button className="w-full text-sm font-semibold hover:rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-but dark:hover:text-gray-300 text-black dark:text-gray-200 bg-but dark:bg-gray-900 dark:rounded-lg dark:border-none p-3 rounded-lg focus:outline-none">
+      Brand
+    </button>
+    <div className="absolute z-50 top-full left-0 mt-2 w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg shadow-lg transition-transform transform scale-0 group-hover:scale-100 group-hover:translate-y-1">
+      <ul className="p-2">
+        <li>
           <button
-            onClick={() => setFilters({ ...filters, brand })}
+            onClick={() => setFilters({ ...filters, brand: "" })}
             className="block w-full text-left px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-but dark:hover:text-white"
           >
-            {brand}
+            All Brands
           </button>
         </li>
-      ))}
-    </ul>
+        {brands.map((brand) => (
+          <li key={brand}>
+            <button
+              onClick={() => setFilters({ ...filters, brand })}
+              className="block w-full text-left px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-but dark:hover:text-white"
+            >
+              {brand}
+            </button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+
+  {/* Model Filter */}
+  <div className="relative font-[open] group w-48">
+    <button className="w-full text-sm font-semibold hover:rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-but dark:hover:text-gray-300 text-black dark:text-gray-200 bg-but dark:bg-gray-900 dark:rounded-lg dark:border-none p-3 rounded-lg focus:outline-none">
+      Model
+    </button>
+    <div className="absolute z-50 top-full left-0 mt-2 w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg shadow-lg transition-transform transform scale-0 group-hover:scale-100 group-hover:translate-y-1">
+      <input
+        type="text"
+        placeholder="Enter model"
+        value={filters.model}
+        onChange={(e) => setFilters({ ...filters, model: e.target.value })}
+        className="block w-full bg-white dark:bg-gray-900 text-left dark:border-none px-4 py-2 text-black dark:text-white border border-gray-300 dark:border-gray-00 hover:bg-gray-200 dark:hover:bg-slate-700 placeholder-gray-500 dark:placeholder-gray-400"
+      />
+    </div>
+  </div>
+
+  {/* Price Range Filter */}
+  <div className="relative font-[open] group w-48">
+    <button className="w-full text-sm font-semibold hover:rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-but dark:hover:text-gray-300 text-black dark:text-gray-200 bg-but dark:bg-gray-900 dark:rounded-lg dark:border-none p-3 rounded-lg focus:outline-none">
+      Price Range
+    </button>
+    <div className="absolute z-50 top-full left-0 mt-2 w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg shadow-lg transition-transform transform scale-0 group-hover:scale-100 group-hover:translate-y-1">
+      <div className="p-2">
+        <input
+          type="number"
+          placeholder="Min Price"
+          value={filters.minPrice}
+          onChange={(e) =>
+            setFilters({
+              ...filters,
+              minPrice: parseFloat(e.target.value) || 0,
+            })
+          }
+          className="block w-full dark:bg-gray-900 dark:border-none dark:text-gray-200 text-left px-4 py-2 hover:bg-gray-500 dark:hover:bg-gray-700 hover:text-but dark:hover:text-grey-200"
+        />
+        <input
+          type="number"
+          placeholder="Max Price"
+          value={filters.maxPrice}
+          onChange={(e) =>
+            setFilters({
+              ...filters,
+              maxPrice: parseFloat(e.target.value) || 50000,
+            })
+          }
+          className="block dark:bg-gray-900 dark:text-gray-200 w-full text-left px-4 py-2 hover:bg-gray-500 dark:hover:bg-gray-700 hover:text-but dark:hover:text-grey-200"
+        />
+      </div>
+    </div>
   </div>
 </div>
 
-
-          {/* Model Filter */}
-          <div className="relative font-[open] group w-48">
-          <button className="w-full text-sm font-semibold hover:rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-but dark:hover:text-gray-300 text-black dark:text-gray-200 bg-but dark:bg-gray-900 dark:rounded-lg dark:border-none p-3 rounded-lg focus:outline-none">
-          Model
-            </button>
-            <div className="absolute top-full left-0 mt-2 w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg shadow-lg transition-transform transform scale-0 group-hover:scale-100 group-hover:translate-y-1">
-            <input
-  type="text"
-  placeholder="Enter model"
-  value={filters.model}
-  onChange={(e) => setFilters({ ...filters, model: e.target.value })}
-  className="block w-full bg-white dark:bg-gray-900 text-left dark:border-none px-4 py-2 text-black dark:text-white border border-gray-300 dark:border-gray-00 hover:bg-gray-200 dark:hover:bg-slate-700 placeholder-gray-500 dark:placeholder-gray-400"
-/>
-
-            </div>
-          </div>
-
-          {/* Price Range Filter */}
-          <div className="relative font-[open] group w-48">
-          <button className="w-full text-sm font-semibold hover:rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-but dark:hover:text-gray-300 text-black dark:text-gray-200 bg-but dark:bg-gray-900 dark:rounded-lg dark:border-none p-3 rounded-lg focus:outline-none">
-          Price Range
-            </button>
-            <div className="absolute top-full left-0 mt-2 w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg shadow-lg transition-transform transform scale-0 group-hover:scale-100 group-hover:translate-y-1">
-            <div className="p-2">
-                <input
-                  type="number"
-                  placeholder="Min Price"
-                  value={filters.minPrice}
-                  onChange={(e) =>
-                    setFilters({
-                      ...filters,
-                      minPrice: parseFloat(e.target.value) || 0,
-                    })
-                  }
-                  className="block w-full dark:bg-gray-900 dark:border-none dark:text-gray-200 text-left px-4 py-2 hover:bg-gray-500 dark:hover:bg-gray-700 hover:text-but dark:hover:text-grey-200"
-             />
-                <input
-                  type="number"
-                  placeholder="Max Price"
-                  value={filters.maxPrice}
-                  onChange={(e) =>
-                    setFilters({
-                      ...filters,
-                      maxPrice: parseFloat(e.target.value) || 50000,
-                    })
-                  }
-                  className="block dark:bg-gray-900 dark:text-gray-200 w-full text-left px-4 py-2 hover:bg-gray-500 dark:hover:bg-gray-700 hover:text-but dark:hover:text-grey-200"
-                  />
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
       {/* Sorting Options */}
       <div className="mb-4 font-[open] px-4 dark:bg-gray-900 dark:text-gray-200 ">
@@ -285,7 +284,7 @@ const CarListing = () => {
                 </div>
                 <Link
                   to={`cardetail/${car.id}`}
-                  className="p-2 bg-but font-[open] text-white  rounded-lg hover:bg-but hover:text-black  hover:underline"
+                  className="p-2 bg-but font-[open] text-white  rounded-lg hover:bg-buthover:bg-body hover:text-but  hover:underline"
                 >
                   View Details
                 </Link>
@@ -300,7 +299,7 @@ const CarListing = () => {
         <button
           onClick={() => setCurrentPage(Math.max(currentPage - 1, 1))}
           disabled={currentPage === 1}
-          className="px-4 py-2 bg-but text-white rounded-lg hover:text-black hover:bg-blue-700 disabled:opacity-50"
+          className="px-4 py-2 bg-but text-white rounded-lg hover:bg-body hover:text-but disabled:opacity-50"
         >
           Previous
         </button>
@@ -310,7 +309,7 @@ const CarListing = () => {
         <button
           onClick={() => setCurrentPage(Math.min(currentPage + 1, totalPages))}
           disabled={currentPage === totalPages}
-          className="px-4 py-2  bg-but text-white rounded-lg hover:text-black hover:bg-blue-700 disabled:opacity-50"
+          className="px-4 py-2  bg-but text-white rounded-lg hover:bg-body hover:text-butdisabled:opacity-50"
         >
           Next
         </button>

@@ -137,14 +137,14 @@ const CarDetail = () => {
                 </h1>
               </div>
               <button
-                className="px-4 py-2 bg-but font-[open] hover:text-black text-white rounded-lg flex items-center justify-center"
+                className="px-4 py-2 bg-but font-[open] hover:bg-body hover:text-but text-white rounded-lg flex items-center justify-center"
                 onClick={handleAddToCart} // Add car to cart on click
               >
                 Add to Cart
               </button>
               <Link
                 to="/request"
-                className="px-4 py-2 bg-but font-[open] hover:text-black text-white rounded-lg flex items-center justify-center"
+                className="px-4 py-2 bg-but font-[open] hover:bg-body hover:text-but text-white rounded-lg flex items-center justify-center"
               >
                 Request More Info
               </Link>
@@ -174,7 +174,7 @@ const CarDetail = () => {
                 <p>Price: ${relatedCar.price.toLocaleString()}</p>
                 <Link
                   to={`/cars/${relatedCar.id}`}
-                  className="text-white hover:bg-but hover:text-black p-2 rounded-lg font-[open] bg-but hover:underline mt-1 block"
+                  className="text-white  hover:bg-body hover:text-but p-2 rounded-lg font-[open] bg-but hover:underline mt-1 block"
                 >
                   View Details
                 </Link>

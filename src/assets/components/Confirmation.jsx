@@ -82,7 +82,7 @@ const Confirmation = () => {
           </p>
 
           {/* Button to download the invoice */}
-          <button className="mt-1 py-1 px-3 font-[roboto] bg-but hover:text-black hover:bg-blue-500 focus:ring-blue-200 focus:ring-offset-blue-400 text-white transition ease-in duration-150 text-center text-sm font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-md">
+          <button className="mt-1 py-1 px-3 font-[roboto] bg-but hover:bg-body hover:text-but focus:ring-blue-200 focus:ring-offset-blue-400 text-white transition ease-in duration-150 text-center text-sm font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-md">
             Download Invoice
           </button>
         </div>
@@ -91,13 +91,13 @@ const Confirmation = () => {
         <div className="flex font-[roboto] flex-col sm:flex-row justify-between mt-3">
           <Link
             to="/"
-            className="py-1 px-3 bg-but hover:text-black hover:bg-blue-500 text-white transition ease-in duration-150 text-center text-sm font-semibold rounded-md mb-2 sm:mb-0"
+            className="py-1 px-3 bg-but hover:bg-body hover:text-but text-white transition ease-in duration-150 text-center text-sm font-semibold rounded-md mb-2 sm:mb-0"
           >
             Return to Home
           </Link>
           <Link
             to="/orders"
-            className="py-1 px-3 bg-but hover:text-black hover:bg-blue-500 text-white transition ease-in duration-150 text-center text-sm font-semibold rounded-md"
+            className="py-1 px-3 bg-but hover:bg-body hover:text-but text-white transition ease-in duration-150 text-center text-sm font-semibold rounded-md"
           >
             View My Orders
           </Link>

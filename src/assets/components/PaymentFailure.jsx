@@ -61,14 +61,14 @@ const PaymentFailure = () => {
           {/* Link to return to the home page */}
           <Link
             to="/"
-            className="py-1 px-3 bg-but font-[open] hover:text-black hover:bg-blue-500 text-white transition ease-in duration-150 text-center text-sm font-semibold rounded-md mb-2 sm:mb-0"
+            className="py-1 px-3 bg-but font-[open] hover:bg-body hover:text-but text-white transition ease-in duration-150 text-center text-sm font-semibold rounded-md mb-2 sm:mb-0"
           >
             Return to Home
           </Link>
           {/* Link to contact support */}
           <Link
             to="/contact"
-            className="py-1 px-3 font-[open] bg-but hover:text-black hover:bg-blue-500 text-white transition ease-in duration-150 text-center text-sm font-semibold rounded-md"
+            className="py-1 px-3 font-[open] bg-but hover:bg-body hover:text-but text-white transition ease-in duration-150 text-center text-sm font-semibold rounded-md"
           >
             Contact Support
           </Link>

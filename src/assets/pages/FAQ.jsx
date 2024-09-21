@@ -46,14 +46,13 @@ const FAQ = () => {
   };
 
   return (
-    <div className="bg-body font-[dm] min-h-screen">
+    <div className="bg-body py-5  dark:bg-gray-900 dark:text-white dark:border-none  font-[dm] min-h-screen">
       {" "}
       {/* Main container with a background and full height */}
-      <Header /> {/* Header component for the page */}
-      <div className="max-w-4xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl dark:bg-gray-800 rounded-3xl dark:text-white mx-auto py-8 px-4 sm:px-6 lg:px-8">
         {" "}
         {/* Container for FAQs */}
-        <h1 className="text-3xl sm:text-4xl font-bold text-center mb-5 text-but">
+        <h1 className="text-3xl sm:text-4xl  dark:border-none  font-bold text-center mb-5 text-but">
           Frequently Asked Questions
         </h1>{" "}
         {/* FAQ title */}
@@ -63,29 +62,29 @@ const FAQ = () => {
           {faqs.map((faq, index) => (
             <div
               key={index} // Unique key for each FAQ item
-              className="bg-body shadow-2xl shadow-slate-900 rounded-3xl p-5 transition-all duration-300" // Container for individual FAQ
+              className="bg-body dark:bg-gray-900 dark:text-white shadow-2xl shadow-slate-900 rounded-3xl p-5 transition-all duration-300" // Container for individual FAQ
             >
               <div
-                className="flex justify-between items-center cursor-pointer" // Flexbox for question and toggle icon
+                className="flex justify-between dark:text-white  items-center cursor-pointer" // Flexbox for question and toggle icon
                 onClick={() => toggleAnswer(index)} // Click event to toggle answer
               >
-                <h2 className="text-lg sm:text-xl font-medium text-black">
+                <h2 className="text-lg sm:text-xl  dark:text-white font-medium text-black">
                   {faq.question}
                 </h2>{" "}
                 {/* FAQ question */}
-                <span className="text-xl sm:text-2xl text-but">
+                <span className="text-xl dark:text-white  sm:text-2xl text-but">
                   {openIndex === index ? "-" : "+"}{" "}
                   {/* Toggle icon for open/close state */}
                 </span>
               </div>
               <div
-                className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                className={`overflow-hidden dark:text-white  transition-all duration-300 ease-in-out ${
                   openIndex === index
                     ? "max-h-96 opacity-100"
                     : "max-h-0 opacity-0"
                 }`} // Transition for the answer visibility
               >
-                <div className="mt-3 text-gray-700">
+                <div className="mt-3 dark:text-gray-400  text-gray-700">
                   {" "}
                   {/* Answer container */}
                   <p>{faq.answer}</p> {/* FAQ answer */}
@@ -95,7 +94,6 @@ const FAQ = () => {
           ))}
         </div>
       </div>
-      <Footer /> {/* Footer component for the page */}
     </div>
   );
 };

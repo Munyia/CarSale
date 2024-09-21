@@ -29,7 +29,7 @@ const Carousel = ({
     <div className="relative w-full dark:bg-gray-900 dark:text-white h-full overflow-hidden">
       {/* Container for all the slides, transforms based on the current slide */}
       <div
-        className="flex transition-transform ease-in-out duration-500"
+        className="flex  transition-transform ease-in-out duration-500"
         style={{ transform: `translateX(-${currentSlide * 100}%)` }}
       >
         {/* Map over children (slides) and render each slide */}
@@ -41,7 +41,7 @@ const Carousel = ({
       </div>
 
       {/* Optional navigation dots for manual slide navigation */}
-      <div className="absolute bottom-5 left-0 right-0 flex justify-center">
+      <div className="absolute  bottom-5 left-0 right-0 flex justify-center">
         {children.map((_, index) => (
           <button
             key={index}

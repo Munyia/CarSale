@@ -62,16 +62,15 @@ const Home = () => {
   ];
 
   return (
-    <div className="font-[dm]">
-      <Header /> {/* Header component for the page */}
+    <div className="font-[dm]  dark:bg-gray-900 dark:text-white py-5">
       {/* Carousel for featured slides */}
-      <div className="flex w-full h-screen  overflow-hidden object-cover relative  sm:px-8">
+      <div className="flex w-full  py-5  h-screen  overflow-hidden object-cover relative  sm:px-8">
         <div className="w-full m-0 p-0 flex h-auto ">
           <Carousel autoslide={true} autoslideinterval={5000}>
             {slides.map((slide, index) => (
               <div
                 key={index} // Unique key for each slide
-                className="relative w-full h-screen bg-cover bg-center flex items-center justify-center text-center"
+                className="relative w-full  h-screen bg-cover bg-center flex items-center justify-center text-center"
                 style={{ backgroundImage: `url(${slide.image})` }} // Background image for each slide
               >
                 <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center">
@@ -102,26 +101,26 @@ const Home = () => {
         </div>
       </div>
       {/* Section for searching and browsing cars */}
-      <section className="bg-body py-8  sm:px-8">
+      <section className="bg-body dark:bg-gray-800 dark:text-white py-8  sm:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl font-[open] font-bold text-but mb-4">
             Find Your Perfect Car
           </h2>
 
           {/* Search Bar */}
-          <form className="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-4xl mx-auto mb-8">
+          <form className="grid grid-cols-1  md:grid-cols-4 gap-4 max-w-4xl mx-auto mb-8">
             <input
               type="text"
               placeholder="Search by Model"
-              className="px-4 py-2 rounded-lg border"
+              className="px-4 py-2 dark:bg-gray-900 dark:text-white dark:border-none rounded-lg border"
             />
-            <select className="px-4 py-2 rounded-lg border">
+            <select className="px-4 dark:bg-gray-900 dark:text-white dark:border-none py-2 rounded-lg border">
               <option>All Brands</option>
               <option>Toyota</option>
               <option>Tesla</option>
               <option>BMW</option>
             </select>
-            <select className="px-4 py-2 rounded-lg border">
+            <select className="px-4 dark:bg-gray-900 dark:text-white dark:border-none py-2 rounded-lg border">
               <option>All Prices</option>
               <option>Under $20,000</option>
               <option>$20,000 - $40,000</option>
@@ -138,9 +137,9 @@ const Home = () => {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Category Card for Sedans */}
-            <div className="category-card bg-white p-6 rounded-lg shadow hover:shadow-lg">
+            <div className="category-card dark:bg-gray-900 dark:text-white dark:border-none bg-white p-6 rounded-lg shadow hover:shadow-lg">
               <h3 className="text-xl font-semibold text-but mb-4">Sedans</h3>
-              <p className="text-gray-600 mb-4">
+              <p className="text-gray-600 dark:text-white mb-4">
                 Comfort and affordability for your daily drive.
               </p>
               <a
@@ -152,9 +151,9 @@ const Home = () => {
             </div>
 
             {/* Category Card for SUVs */}
-            <div className="category-card bg-white p-6 rounded-lg shadow hover:shadow-lg">
+            <div className="category-card dark:bg-gray-900 dark:text-white dark:border-none bg-white p-6 rounded-lg shadow hover:shadow-lg">
               <h3 className="text-xl font-semibold text-but mb-4">SUVs</h3>
-              <p className="text-gray-600 mb-4">
+              <p className="text-gray-600 dark:text-white mb-4">
                 Powerful and versatile for any terrain.
               </p>
               <a
@@ -166,11 +165,11 @@ const Home = () => {
             </div>
 
             {/* Category Card for Electric Cars */}
-            <div className="category-card bg-white p-6 rounded-lg shadow hover:shadow-lg">
+            <div className="category-card dark:bg-gray-900 dark:text-white dark:border-none bg-white p-6 rounded-lg shadow hover:shadow-lg">
               <h3 className="text-xl font-[open] font-semibold text-but mb-4">
                 Electric Cars
               </h3>
-              <p className="text-gray-600 mb-4">
+              <p className="text-gray-600 dark:text-white mb-4">
                 Eco-friendly and cost-efficient electric vehicles.
               </p>
               <a
@@ -184,14 +183,14 @@ const Home = () => {
         </div>
       </section>
       {/* Testimonials section */}
-      <section className="bg-body py-12  sm:px-8">
+      <section className="bg-body py-12  dark:bg-gray-800 dark:text-white sm:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl font-[open] font-bold text-but mb-8">
             What Our Customers Say
           </h2>
 
           {/* Carousel for testimonials */}
-          <div className="w-full">
+          <div className="w-full py-5 rounded-3xl dark:bg-gray-900">
             <Carousel autoslide={true} autoslideinterval={5000}>
               {testimonials.map((testimonial) => (
                 <div
@@ -203,7 +202,7 @@ const Home = () => {
                     alt={`Customer ${testimonial.name}`}
                     className="w-16 h-16 object-cover overflow-hidden rounded-full mb-4 shadow-md" // Customer image
                   />
-                  <p className="text-lg italic text-black">
+                  <p className="text-lg italic dark:text-white text-black">
                     "{testimonial.quote}"
                   </p>{" "}
                   {/* Customer quote */}
@@ -217,7 +216,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <Footer /> {/* Footer component for the page */}
     </div>
   );
 };

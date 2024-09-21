@@ -146,7 +146,7 @@ const CarListing = () => {
       {/* <h1 className="text-3xl text-but bg-white font-bold text-center mb-6">Car Listings</h1> */}
 
       {/* Filters */}
-      <div className="mb-4  shadow-2xl bg--600 shadow-slate-500  bg-white p-4 rounded-2xl ">
+      <div className="mb-4  shadow-2xl bg--600 shadow-slate-500  bg-body p-4 rounded-2xl ">
         <div className="flex justify-center text-center bg-body ">
           <h2 className="text-xl font-semibold mb-4">Car Listing</h2>
         </div>

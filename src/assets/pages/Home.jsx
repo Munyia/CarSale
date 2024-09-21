@@ -65,7 +65,7 @@ const Home = () => {
     <div>
       <Header /> {/* Header component for the page */}
       {/* Carousel for featured slides */}
-      <div className="flex w-full h-screen overflow-hidden object-cover relative">
+      <div className="flex w-full h-screen  overflow-hidden object-cover relative  sm:px-8">
         <div className="w-full m-0 p-0 flex h-auto ">
           <Carousel autoslide={true} autoslideinterval={5000}>
             {slides.map((slide, index) => (
@@ -102,7 +102,7 @@ const Home = () => {
         </div>
       </div>
       {/* Section for searching and browsing cars */}
-      <section className="bg-body py-8">
+      <section className="bg-body py-8  sm:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-but mb-4">
             Find Your Perfect Car
@@ -184,7 +184,7 @@ const Home = () => {
         </div>
       </section>
       {/* Testimonials section */}
-      <section className="bg-body py-12">
+      <section className="bg-body py-12  sm:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-but mb-8">
             What Our Customers Say

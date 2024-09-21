@@ -1,130 +1,109 @@
 import React from "react";
 import { Link } from "react-router-dom"; // Importing Link for navigation
 import Header from "../components/Header"; // Importing Header component
+import Footer from "../components/Footer"; // Importing Footer component
 
-// Contact component definition
 const Contact = () => {
   return (
-    <div className="bg-body">
-      {" "}
-      {/* Main container with background */}
+    <div>
       <Header /> {/* Header component for the page */}
-      <div className="max-w-lg my-3 mx-auto bg--600 bg-pry p-6 shadow-2xl bg-body shadow-slate-900 rounded-3xl">
-        {/* Container for the contact form */}
-        <h1 className="text-2xl font-bold text-center mb-6 text-but">
-          Contact Form
-        </h1>
-        {/* Form header */}
+      <div className="max-w-7xl bg-body shadow-2xl shadow-slate-900  mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-12">
+        <h1 className="text-3xl bg-body font-bold text-but  text-center">Contact Us</h1>
 
-        <form className="space-y-4">
-          {" "}
-          {/* Form with space between elements */}
-          {/* Name input field */}
-          <div>
-            <label
-              htmlFor="name"
-              className="block text-sm font-semibold text-but mb-2"
-            >
-              Name
-            </label>
+        {/* Contact Information Section */}
+        <div className="grid bg-body shadow-slate-900 shadow-2xl  grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <div className="bg-body p-6 rounded-lg shadow-md">
+            <h2 className="text-xl font-semibold text-but mb-4">Get in Touch</h2>
+            <p className="text-gray-600 mb-2">
+              <strong>Phone:</strong> +1 234 567 890
+            </p>
+            <p className="text-gray-600 mb-2">
+              <strong>Email:</strong> info@carsale.com
+            </p>
+            <p className="text-gray-600 mb-2">
+              <strong>Address:</strong> 123 Car Sale St, New York, NY 10001
+            </p>
+            <p className="text-gray-600">
+              Our team is here to assist you with any inquiries you may have.
+            </p>
+          </div>
+
+          <div className="bg-body  p-6 rounded-lg shadow-md">
+            <h2 className="text-xl font-semibold text-but mb-4">Follow Us</h2>
+            <p className="text-gray-600 mb-2">Stay connected with us on social media:</p>
+            <div className="flex space-x-4">
+              <Link to="#" className="text-gray-900 hover:text-but transition duration-300">
+                Facebook
+              </Link>
+              <Link to="#" className="text-gray-900 hover:text-but transition duration-300">
+                Twitter
+              </Link>
+              <Link to="#" className="text-gray-900 hover:text-but transition duration-300">
+                Instagram
+              </Link>
+              <Link to="#" className="text-gray-900 hover:text-but transition duration-300">
+                LinkedIn
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Contact Form Section */}
+        <div className="bg-body shadow-slate-900 shadow-2xl  p-6 rounded-lg mb-12">
+          <h2 className="text-xl font-semibold text-but mb-4">Send Us a Message</h2>
+          <form>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <input
+                type="text"
+                placeholder="Your Name"
+                className="px-4 py-2 rounded-lg border shadow-slate-900 shadow-2xl focus:outline-none focus:ring-2 focus:ring-but"
+                required
+              />
+              <input
+                type="email"
+                placeholder="Your Email"
+                className="px-4 py-2 rounded-lg border shadow-slate-900 shadow-2xl focus:outline-none focus:ring-2 focus:ring-but"
+                required
+              />
+            </div>
             <input
               type="text"
-              id="name"
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="Subject"
+              className="w-full px-4 py-2 shadow-slate-900 shadow-2xl rounded-lg border focus:outline-none focus:ring-2 focus:ring-but mt-4"
               required
             />
-          </div>
-          {/* Email input field */}
-          <div>
-            <label
-              htmlFor="email"
-              className="block text-sm font-semibold text-but mb-2"
-            >
-              Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-              required
-            />
-          </div>
-          {/* Subject input field */}
-          <div>
-            <label
-              htmlFor="subject"
-              className="block text-sm font-semibold text-but mb-2"
-            >
-              Subject
-            </label>
-            <input
-              type="text"
-              id="subject"
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-              required
-            />
-          </div>
-          {/* Message textarea */}
-          <div>
-            <label
-              htmlFor="message"
-              className="block text-sm font-semibold text-but mb-2"
-            >
-              Message
-            </label>
             <textarea
-              id="message"
+              placeholder="Your Message"
+              className="w-full px-4 py-2 shadow-slate-900 shadow-2xl rounded-lg border focus:outline-none focus:ring-2 focus:ring-but mt-4"
               rows="4"
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
             ></textarea>
-          </div>
-          {/* Support information section */}
-          <div className="mt-6 border-t border-gray-600 pt-4">
-            <div className="text-lg font-semibold text-but">
-              Contact our support team
-            </div>
-            <div className="mt-4 space-y-4">
-              {/* Customer Support Phone Number */}
-              <div className="flex items-center">
-                <span className="text-but font-semibold mr-2">
-                  Customer Support:
-                </span>
-                <Link to={""} className="text-but hover:underline">
-                  +1 **********
-                </Link>
-              </div>
-
-              {/* Support Email */}
-              <div className="flex items-center">
-                <span className="text-black font-semibold mr-2">Email:</span>
-                <Link to={""} className="text-but hover:underline">
-                  support@example.com
-                </Link>
-              </div>
-
-              {/* Live Chat option */}
-              <div className="flex items-center">
-                <span className="text-black font-semibold mr-2">
-                  Live Chat:
-                </span>
-                <Link to={""} className="text-but hover:underline">
-                  Start Live Chat
-                </Link>
-              </div>
-            </div>
-          </div>
-          {/* Submit button */}
-          <div>
             <button
               type="submit"
-              className="w-full py-2 bg-but hover:text-black text-white rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="bg-but text-white  shadow-slate-900 shadow-2xlpx-6 p-2 rounded-lg hover:bg-body hover:text-but transition duration-300 mt-4"
             >
-              Submit Inquiry
+              Send Message
             </button>
+          </form>
+        </div>
+
+        {/* Map Section */}
+        <div className="bg-body  p-6 rounded-lg shadow-slate-900 shadow-2xl">
+          <h2 className="text-xl font-semibold text-but mb-4">Our Location</h2>
+          <div className="h-64">
+            <iframe
+              title="Google Map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.123456789012!2d-74.0060!3d40.7128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a1a2b3c4d5f%3A0x1234567890abcdef!2sCar%20Sale%20Location!5e0!3m2!1sen!2sus!4v1611234567890"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+            ></iframe>
           </div>
-        </form>
+        </div>
       </div>
+      <Footer /> {/* Footer component for the page */}
     </div>
   );
 };

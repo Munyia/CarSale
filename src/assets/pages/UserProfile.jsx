@@ -73,32 +73,32 @@ const UserProfile = () => {
           </div>
 
           {/* Order History */}
-          <div className="bg-white p-6 rounded-lg shadow-2xl shadow-slate-900">
-            <h2 className="text-xl font-semibold font-[open] mb-4 text-gray-800 flex items-center">
+          <div className="bg-white dark:bg-gray-800 dark:text-white p-6 rounded-lg shadow-2xl shadow-slate-900">
+            <h2 className="text-xl dark:text-white font-semibold font-[open] mb-4 text-gray-800 flex items-center">
               <FaCar className="text-but mr-2" />
               Order History
             </h2>
             <ul className="space-y-4">
               {userData.orderHistory.map((order, index) => (
                 <li key={index} className="flex justify-between items-center border-b border-gray-500 pb-2">
-                  <span className="text-black">Purchased: {order.car}</span>
-                  <span className="text-gray-500">Date: {order.date}</span>
+                  <span className="text-black dark:text-white">Purchased: {order.car}</span>
+                  <span className="text-gray-500 dark:text-white">Date: {order.date}</span>
                 </li>
               ))}
             </ul>
           </div>
 
           {/* Saved Cars */}
-          <div className="bg-white p-6 rounded-lg shadow-2xl shadow-slate-900">
+          <div className="bg-white p-6 dark:bg-gray-800 dark:text-white rounded-lg shadow-2xl shadow-slate-900">
             <h2 className="text-xl font-[open] font-semibold mb-4 text-gray-800 flex items-center">
               <FaHeart className="text-red-700 mr-2" />
               Saved Cars
             </h2>
             <ul className="space-y-4">
               {userData.savedCars.map((car, index) => (
-                <li key={index} className="flex justify-between items-center border-b border-gray-500 pb-2">
-                  <span className="text-black">{car.car}</span>
-                  <span className="text-gray-500">Price: {car.price}</span>
+                <li key={index} className="flex justify-between dark:text-white items-center border-b border-gray-500 pb-2">
+                  <span className="text-black dark:text-white">{car.car}</span>
+                  <span className="text-gray-500 dark:text-white">Price: {car.price}</span>
                 </li>
               ))}
             </ul>

@@ -8,22 +8,15 @@ const Login = () => {
   }, []);
 
   return (
-    <div className="w-full  h-screen font-[dm] flex items-center justify-center bg-body py-3">
+    <div className="w-full dark:bg-gray-900 dark:text-white h-screen font-[dm] flex items-center justify-center bg-body py-3">
       {/* Main container for the login form */}
       <div
-        className="relative shadow-2xl shadow-slate-900 bg-pry px-4 py-3 mx-4 md:mx-0 rounded-3xl sm:p-10 sm:max-w-xl"
+        className="relative shadow-2xl dark:bg-gray-800 dark:text-white shadow-slate-900 bg-pry px-4 py-3 mx-4 md:mx-0 rounded-3xl sm:p-10 sm:max-w-xl"
         style={{ width: "80%", height: "70%" }}
       >
         <div className="max-w-md mx-auto h-full">
           {/* Link to go back to the home page */}
-          <div className="mb-1 flex items-center">
-            <Link
-              to="/"
-              className="text-but font-[roboto] text-lg hover:text-black transition duration-300"
-            >
-              &larr; Back to Home
-            </Link>
-          </div>
+        
           <h1 className="text-2xl font-[roboto] font-bold text-but mb-6 text-center">
             Welcome back
           </h1>
@@ -37,12 +30,12 @@ const Login = () => {
               <div className="flex-1">
                 <label
                   htmlFor="email"
-                  className="font-semibold text-sm text-but pb-1 block"
+                  className="font-semibold  text-sm text-but pb-1 block"
                 >
                   Email
                 </label>
                 <input
-                  className="border rounded-lg px-3 py-2 mt-1 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
+                  className="border dark:bg-gray-900 dark:text-white dark:border-none rounded-lg px-3 py-2 mt-1 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
                   type="email"
                   id="email"
                   name="email"
@@ -55,12 +48,12 @@ const Login = () => {
               <div className="flex-1">
                 <label
                   htmlFor="password"
-                  className="font-semibold text-sm text-but pb-1 block"
+                  className="font-semibold  text-sm text-but pb-1 block"
                 >
                   Password
                 </label>
                 <input
-                  className="border rounded-lg px-3 py-2 mt-1 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
+                  className="border dark:bg-gray-900 dark:text-white dark:border-none rounded-lg px-3 py-2 mt-1 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
                   type="password"
                   id="password"
                   name="password"
@@ -93,10 +86,10 @@ const Login = () => {
             {/* Signup prompt */}
             <div className="flex items-center justify-between mt-4">
               <span className="w-2/5 border-b border-gray-500 md:w-1/4"></span>
-              <p className="text-xs px-2 text-but justify-center items-center text-center uppercase dark:text-gray-900">
+              <p className="text-xs px-2  dark:text-white  text-but justify-center items-center text-center uppercase ">
                 Don’t have an account yet?
                 <Link
-                  className="flex font-[roboto] hover:underline hover:text-black justify-center text-center items-center"
+                  className="flex font-[roboto] dark:text-white  hover:underline hover:text-black justify-center text-center items-center"
                   to="/register"
                 >
                   {" "}

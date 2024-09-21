@@ -8,20 +8,12 @@ const Register = () => {
   }, []);
 
   return (
-    <div className="w-full font-[dm] min-h-screen flex items-center justify-center bg-body py-3">
+    <div className="w-full font-[dm] dark:bg-gray-900 dark:text-white min-h-screen flex items-center justify-center bg-body py-3">
       <div
-        className="relative shadow-2xl shadow-slate-900 bg-pry px-4 py-1 mx-4 md:mx-0 rounded-3xl sm:p-10 sm:max-w-xl"
+        className="relative shadow-2xl dark:bg-gray-800 dark:text-white shadow-slate-900 bg-pry px-4 py-1 mx-4 md:mx-0 rounded-3xl sm:p-10 sm:max-w-xl"
         style={{ width: "80%", height: "70%" }}
       >
         <div className="max-w-md rounded-2xl mx-auto">
-          <div className="mb-1 flex items-center">
-            <Link
-              to="/"
-              className="text-but font-[roboto] text-lg hover:text-black transition duration-300"
-            >
-              &larr; Back to Home
-            </Link>
-          </div>
           <h1 className="text-2xl font-[roboto] font-bold text-but mb-1 text-center">
             Register
           </h1>
@@ -29,7 +21,7 @@ const Register = () => {
             <div className="relative z-0 flex flex-col min-w-0 break-words border-0 shadow-soft-xl rounded-2xl bg-clip-border">
               <div className="flex flex-wrap px-3 -mx-3 sm:px-6 xl:px-12">
                 <div className="px-1 flex-0">
-                  <Link className="social-icon inline-block w-full px-4 py-2 mb-1 font-bold text-center text-gray-200 uppercase align-middle transition-all transform duration-300 ease-in-out bg-transparent border border-black border-solid rounded-lg shadow-none cursor-pointer hover:scale-110 hover:z-10 hover:shadow-xl group-hover:blur-sm hover:!blur-none">
+                  <Link className="social-icon dark:bg-gray-900 dark:text-white inline-block w-full px-4 py-2 mb-1 font-bold text-center text-gray-200 uppercase align-middle transition-all transform duration-300 ease-in-out bg-transparent border border-black border-solid rounded-lg shadow-none cursor-pointer hover:scale-110 hover:z-10 hover:shadow-xl group-hover:blur-sm hover:!blur-none">
                     <svg
                       xmlns:xlink="http://www.w3.org/1999/xlink"
                       xmlns="http://www.w3.org/2000/svg"
@@ -70,7 +62,7 @@ const Register = () => {
                   </Link>
                 </div>
                 <div className="px-1 ml-auto flex-0">
-                  <Link className="social-icon inline-block w-full px-4 py-2 mb-1 font-bold text-center text-gray-200 uppercase align-middle transition-all transform duration-300 ease-in-out bg-transparent border border-black border-solid rounded-lg shadow-none cursor-pointer hover:scale-110 hover:z-10 hover:shadow-xl group-hover:blur-sm hover:!blur-none">
+                  <Link className="social-icon dark:bg-gray-900 dark:text-white inline-block w-full px-4 py-2 mb-1 font-bold text-center text-gray-200 uppercase align-middle transition-all transform duration-300 ease-in-out bg-transparent border border-black border-solid rounded-lg shadow-none cursor-pointer hover:scale-110 hover:z-10 hover:shadow-xl group-hover:blur-sm hover:!blur-none">
                     <svg
                       xmlns:xlink="http://www.w3.org/1999/xlink"
                       xmlns="http://www.w3.org/2000/svg"
@@ -110,7 +102,7 @@ const Register = () => {
                   Full Name
                 </label>
                 <input
-                  className="border rounded-lg px-3 py-2 mt-1 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
+                  className="border dark:bg-gray-900 dark:text-white dark:border-none rounded-lg px-3 py-2 mt-1 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
                   type="text"
                   id="fullname"
                   name="fullName"
@@ -126,7 +118,7 @@ const Register = () => {
                   Email
                 </label>
                 <input
-                  className="border rounded-lg px-3 py-2 mt-1 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
+                  className="border dark:bg-gray-900 dark:text-white dark:border-none rounded-lg px-3 py-2 mt-1 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
                   type="email"
                   id="email"
                   name="email"
@@ -146,7 +138,7 @@ const Register = () => {
                   Password
                 </label>
                 <input
-                  className="border rounded-lg px-3 py-2 mt-1 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
+                  className="border dark:bg-gray-900 dark:text-white dark:border-none rounded-lg px-3 py-2 mt-1 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
                   type="password"
                   id="password"
                   name="password"
@@ -162,7 +154,7 @@ const Register = () => {
                   Confirm Password
                 </label>
                 <input
-                  className="border rounded-lg px-3 py-2 mt-1 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
+                  className="border dark:bg-gray-900 dark:text-white dark:border-none rounded-lg px-3 py-2 mt-1 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
                   type="password"
                   id="confirmpassword"
                   name="Confirmpassword"
@@ -173,16 +165,16 @@ const Register = () => {
             </div>
 
             {/* Row 3 */}
-            <div className="flex flex-col md:flex-row md:space-x-4">
+            <div className="flex   dark:border-noneflex-col md:flex-row md:space-x-4">
               <div className="flex-1">
                 <label
                   htmlFor="dob"
-                  className="font-semibold text-sm text-but pb-1 block"
+                  className="font-semibold  text-sm text-but pb-1 block"
                 >
                   Date of Birth
                 </label>
                 <input
-                  className="border rounded-lg px-3 py-2 mt-1 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
+                  className="border dark:bg-gray-900 dark:text-white dark:border-none rounded-lg px-3 py-2 mt-1 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
                   type="date"
                   id="dob"
                   name="dob"
@@ -197,7 +189,7 @@ const Register = () => {
                   Phone Number
                 </label>
                 <input
-                  className="border rounded-lg px-3 py-2 mt-1 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
+                  className="border dark:bg-gray-900 dark:text-white dark:border-none rounded-lg px-3 py-2 mt-1 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
                   type="tel"
                   id="phonenumber"
                   name="phonenumber"
@@ -217,7 +209,7 @@ const Register = () => {
                   Address
                 </label>
                 <input
-                  className="border rounded-lg px-3 py-2 mt-1 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
+                  className="border dark:bg-gray-900 dark:text-white dark:border-none rounded-lg px-3 py-2 mt-1 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
                   type="text"
                   id="address"
                   name="address"
@@ -233,7 +225,7 @@ const Register = () => {
                   Country
                 </label>
                 <select
-                  className="border rounded-lg px-3 py-2 mt-1 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-but"
+                  className="border dark:bg-gray-900 dark:text-white dark:border-none rounded-lg px-3 py-2 mt-1 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-but"
                   name="country"
                   required
                 >
@@ -300,10 +292,10 @@ const Register = () => {
             {/* Login Link */}
             <div className="flex items-center justify-between mt-4">
               <span className="w-1/5 border-b border-gray-500 md:w-1/4"></span>
-              <p className="text-xs px-2 text-but justify-center items-center text-center uppercase dark:text-gray-900">
+              <p className="text-xs px-2  text-but justify-center items-center text-center uppercase dark:text-white">
                 Have an account?
                 <Link
-                  className="flex font-[roboto] hover:underline hover:text-black justify-center text-center items-center"
+                  className="flex dark:text-white  font-[roboto] hover:underline hover:text-black justify-center text-center items-center"
                   to="/login"
                 >
                   {" "}

@@ -3,10 +3,9 @@ import Header from "../components/Header";
 
 const Request = () => {
   return (
-    <div>
-      <Header />
-      <div className="w-full min-h-screen font-[dm] flex items-center justify-center bg-body py-3">
-        <div className="relative w-1/3 shadow-2xl shadow-slate-900 bg-pry px-4 py-3 mx-8 md:mx-0 rounded-3xl sm:p-10 sm:max-w-1/2">
+    <div className="">
+      <div className="w-full dark:bg-gray-900 dark:text-white min-h-screen font-[dm] flex items-center justify-center bg-body py-3">
+        <div className="relative w-1/3 shadow-2xl dark:bg-gray-800 dark:text-white shadow-slate-900 bg-pry px-4 py-3 mx-8 md:mx-0 rounded-3xl sm:p-10 sm:max-w-1/2">
           <div className="max-w-md mx-auto">
             <h2 className="text-2xl font-bold font-[roboto] text-but mb-6 text-center">
               Request Form
@@ -22,7 +21,7 @@ const Request = () => {
                   id="fullname"
                   name="fullname"
                   placeholder="Full Name"
-                  className="w-full border border-gray-300 rounded-md px-3 py-2 mt-1 text-gray-700 focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                  className="w-full dark:bg-gray-900 dark:text-white dark:border-none border border-gray-300 rounded-md px-3 py-2 mt-1 text-gray-700 focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
                   required
                 />
               </div>

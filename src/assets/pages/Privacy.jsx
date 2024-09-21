@@ -18,10 +18,9 @@ const Privacy = () => {
   }, []);
 
   return (
-    <div className="bg-body min-h-screen font-[dm]">
-      <Header />
+    <div className="bg-body dark:bg-gray-900 py-5  dark:text-white min-h-screen font-[dm]">
 
-      <div className="max-w-4xl mx-auto pt-4 pb-8 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl dark:bg-gray-800 mb-5 rounded-3xl dark:text-white mx-auto pt-4 pb-8 px-4 sm:px-6 lg:px-8">
         {/* Title with animation */}
         <h1
           className={`text-3xl sm:text-4xl font-[roboto] font-bold text-center mb-4 text-but transition-opacity duration-1000 ${
@@ -38,51 +37,51 @@ const Privacy = () => {
           }`}
         >
           {/* Privacy Policy Sections */}
-          <section className="bg-body shadow-2xl shadow-slate-900 rounded-3xl p-5 transition-all duration-300">
+          <section className="bg-body dark:bg-gray-900 dark:text-white shadow-2xl shadow-slate-900 rounded-3xl p-5 transition-all duration-300">
             <h2 className="text-lg sm:text-xl font-[open] font-medium text-but mb-4">
               Information We Collect
             </h2>
-            <p className="text-black">
+            <p className="text-black dark:text-white">
               We collect various types of information, including personal data
               provided by users during registration, purchase processes, or
               interactions with our services.
             </p>
           </section>
 
-          <section className="bg-body shadow-2xl shadow-slate-900 rounded-3xl p-5 transition-all duration-300">
+          <section className="bg-body shadow-2xl dark:bg-gray-900 dark:text-white shadow-slate-900 rounded-3xl p-5 transition-all duration-300">
             <h2 className="text-lg sm:text-xl font-[open] font-medium text-but mb-4">
               How We Use Information
             </h2>
-            <p className="text-black">
+            <p className="text-black dark:text-white">
               The information we collect is used to provide, maintain, and
               improve our services, to communicate with users, and for security
               and legal compliance purposes.
             </p>
           </section>
 
-          <section className="bg-body shadow-2xl shadow-slate-900 rounded-3xl p-5 transition-all duration-300">
+          <section className="bg-body shadow-2xl dark:bg-gray-900 dark:text-white shadow-slate-900 rounded-3xl p-5 transition-all duration-300">
             <h2 className="text-lg sm:text-xl font-[open] font-medium text-but mb-4">
               Sharing Your Information
             </h2>
-            <p className="text-black">
+            <p className="text-black dark:text-white">
               We do not share your personal information with third parties
               except as necessary to provide our services, comply with legal
               obligations, or with your explicit consent.
             </p>
           </section>
 
-          <section className="bg-body shadow-2xl shadow-slate-900 rounded-3xl p-5 transition-all duration-300">
+          <section className="bg-body shadow-2xl dark:bg-gray-900 dark:text-white shadow-slate-900 rounded-3xl p-5 transition-all duration-300">
             <h2 className="text-lg sm:text-xl font-[open] font-medium text-but mb-4">
               Your Privacy Rights
             </h2>
-            <p className="text-black">
+            <p className="text-black dark:text-white">
               You have the right to access, correct, or delete your personal
               data. You may also object to certain data processing or request
               data portability.
             </p>
           </section>
 
-          <section className="bg-body shadow-2xl shadow-slate-900 rounded-3xl p-5 transition-all duration-300">
+          <section className="bg-body shadow-2xl dark:bg-gray-900 dark:text-white shadow-slate-900 rounded-3xl p-5 transition-all duration-300">
             {/* Link to contact page */}
             <Link
               to={"/contact"}
@@ -90,7 +89,7 @@ const Privacy = () => {
             >
               Contact Us
             </Link>
-            <p className="text-black">
+            <p className="text-black dark:text-white pt-3">
               If you have any questions about this Privacy Policy or our data
               practices, please contact us via the contact information provided
               on our site.

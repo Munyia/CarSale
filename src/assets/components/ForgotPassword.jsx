@@ -42,9 +42,9 @@ const ForgotPassword = () => {
   };
 
   return (
-    <div className="w-full min-h-screen flex items-center justify-center bg-body py-3">
+    <div className="w-full min-h-screen dark:bg-gray-900 dark:text-white  flex items-center justify-center bg-body py-3">
       {/* Container with shadow and styling for the form */}
-      <div className="relative shadow-2xl shadow-slate-900 bg-pry px-4 py-3 bg--600 mx-8 md:mx-0 rounded-3xl sm:p-10 sm:max-w-xl">
+      <div className="relative shadow-2xl dark:bg-gray-800 dark:text-white  shadow-slate-900 bg-pry px-4 py-3 bg--600 mx-8 md:mx-0 rounded-3xl sm:p-10 sm:max-w-xl">
         <div className="max-w-md mx-auto">
           {/* Page title */}
           <h1 className="text-2xl font-bold font-[roboto] text-but mb-6 text-center">
@@ -78,7 +78,7 @@ const ForgotPassword = () => {
                 Email
               </label>
               <input
-                className="border font-[dm] rounded-lg px-3 py-2 mt-1 mb-3 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
+                className="border font-[dm] dark:bg-gray-900 dark:placeholder-gray-400 dark:border-none  rounded-lg px-3 py-2 mt-1 mb-3 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
                 type="email"
                 id="email"
                 name="email"

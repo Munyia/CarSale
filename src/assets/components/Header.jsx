@@ -16,7 +16,7 @@ const Header = ({ title }) => {
   }, [title]);
 
   return (
-    <nav className="bg-white dark:bg-black dark:text-white sticky font-[roboto] top-0 z-50"> {/* Sticky header for always-visible navigation */}
+    <nav className="bg-white dark:bg-gray-800 dark:text-white sticky font-[roboto] top-0 z-50"> {/* Sticky header for always-visible navigation */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
         
         {/* Logo Section */}
@@ -32,7 +32,7 @@ const Header = ({ title }) => {
       </button>
 
         {/* Mobile Menu and Icons (Visible on smaller screens) */}
-        <div className="md:hidden dark:bg-black dark:text-white  flex items-center space-x-4">
+        <div className="md:hidden dark:bg-gray-800 dark:text-white  flex items-center space-x-4">
           {/* Toggle Mobile Search Bar */}
           <button onClick={() => setIsSearchOpen(!isSearchOpen)}>
             <FaSearch className="text-xl text-gray-800" /> {/* Search icon */}
@@ -82,11 +82,11 @@ const Header = ({ title }) => {
 
         {/* Mobile Search Bar (Visible when isSearchOpen is true) */}
         {isSearchOpen && (
-          <div className="absolute top-16 left-0 w-ful  dark:bg-black dark:text-white bg-white shadow-md p-4 md:hidden">
+          <div className="absolute top-16 left-0 w-ful   dark:text-white bg-white shadow-md p-4 md:hidden">
             <input
               type="text"
               placeholder="Search by model, brand..."
-              className="w-full px-4 py-2 rounded-lg border  dark:bg-black dark:text-white border-gray-700 bg-gray-800 text-white placeholder-gray-400 shadow-sm focus:outline-none focus:ring-2 focus:ring-but"
+              className="w-full px-4 py-2 rounded-lg border   dark:text-white border-gray-700 bg-gray-800 text-white placeholder-gray-400 shadow-sm focus:outline-none focus:ring-2 focus:ring-but"
             />
           </div>
         )}
@@ -95,25 +95,25 @@ const Header = ({ title }) => {
         <div className="hidden font-[roboto] md:flex space-x-12">
           <NavLink
             to="/"
-            className="text-black font-[roboto] dark:bg-black dark:text-white dark:hover:text-but dark:hover:bg-p-2  text-lg font-semibold hover:text-but transition duration-300"
+            className="text-black font-[roboto]  dark:text-white dark:hover:text-but dark:hover:bg-p-2  text-lg font-semibold hover:text-but transition duration-300"
           >
             Home
           </NavLink>
           <Link
             to="/carlisting"
-            className="text-black font-dm text-lg  dark:bg-black dark:text-white dark:hover:text-but font-semibold hover:text-but transition duration-300"
+            className="text-black font-dm text-lg   dark:text-white dark:hover:text-but font-semibold hover:text-but transition duration-300"
           >
             Car Listing
           </Link>
           <Link
             to="/faq"
-            className="text-black text-lg  dark:bg-black dark:hover:text-but dark:text-white font-semibold hover:text-but transition duration-300"
+            className="text-black text-lg   dark:hover:text-but dark:text-white font-semibold hover:text-but transition duration-300"
           >
             FAQ
           </Link>
           <Link
             to="/contact"
-            className="text-black  dark:bg-black dark:hover:text-but dark:text-white text-lg font-semibold hover:text-but transition duration-300"
+            className="text-black   dark:hover:text-but dark:text-white text-lg font-semibold hover:text-but transition duration-300"
           >
             Contact
           </Link>
@@ -135,7 +135,7 @@ const Header = ({ title }) => {
           <div className="flex items-center space-x-7">
             <Link
               to="/userprofile"
-              className="text-black  dark:bg-black dark:text-white transition duration-300"
+              className="text-black dark:text-white transition duration-300"
             >
               <FaUserCircle className="text-2xl" /> {/* Profile icon */}
             </Link>

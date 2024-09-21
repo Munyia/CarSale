@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 // The Confirmation component displays a payment confirmation page after a successful purchase.
 const Confirmation = () => {
   return (
-    <div className="min-h-screen flex items-center  justify-center bg-body p-5">
+    <div className="min-h-screen dark:bg-gray-900 dark:text-white  flex items-center  justify-center bg-body p-5">
       {/* Main container for the confirmation content, with styling for background, shadow, and padding */}
-      <div className="relative bg--600 shadow-md shadow-slate-900 bg-pry px-4 py-3 max-w-md w-full mx-auto rounded-3xl sm:px-4 sm:py-4">
+      <div className="relative dark:bg-gray-800 dark:text-white  bg--600 shadow-md shadow-slate-900 bg-pry px-4 py-3 max-w-md w-full mx-auto rounded-3xl sm:px-4 sm:py-4">
         {/* Title for the confirmation page */}
         <h1 className="text-lg font-[roboto] font-bold text-but mb-2 text-center">
           Payment Confirmation

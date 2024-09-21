@@ -52,9 +52,8 @@ const Auction = () => {
   };
 
   return (
-    <div>
-      <Header /> {/* Render the header component */}
-      <section className="bg-body shadow-2xl shadow-slate-900 py-5 px-4 md:px-8">
+    <div className="dark:bg-gray-800 dark:text-white">
+      <section className="bg-body dark:bg-gray-900 dark:text-white shadow-2xl  shadow-slate-900 py-5 px-4 md:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl font-[roboto] font-bold text-but mb-4">Car Auctions</h2>
 
@@ -62,7 +61,7 @@ const Auction = () => {
             {cars.map((car) => (
               <div
                 key={car.id}
-                className="bg-white font-[dm] shadow-2xl shadow-slate-900 p-6 rounded-3xl  hover:shadow-lg"
+                className="bg-white dark:bg-gray-800 dark:text-white  font-[dm] shadow-2xl shadow-slate-900 p-6 rounded-3xl  hover:shadow-lg"
               >
                 <img
                   src={car.image}
@@ -72,14 +71,14 @@ const Auction = () => {
                 <h3 className="text-xl font-semibold mb-2">
                   {car.make} {car.model}
                 </h3>
-                <p className="text-gray-700 mb-2">Year: {car.year}</p>
-                <p className="text-gray-700 mb-2">
+                <p className="text-gray-700 dark:text-white mb-2">Year: {car.year}</p>
+                <p className="text-gray-700 dark:text-white mb-2">
                   Starting Bid: ${car.startingBid}
                 </p>
-                <p className="text-gray-700 mb-4">
+                <p className="text-gray-700 dark:text-white mb-4">
                   Current Bid: ${car.currentBid}
                 </p>
-                <p className="text-gray-700 mb-4">
+                <p className="text-gray-700 dark:text-white mb-4">
                   Time Remaining: {car.timeRemaining}
                 </p>
                 <button
@@ -128,7 +127,6 @@ const Auction = () => {
           </div>
         </div>
       )}
-      <Footer /> {/* Render the footer component */}
     </div>
   );
 };

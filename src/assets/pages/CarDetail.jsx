@@ -47,9 +47,9 @@ const CarDetail = () => {
   );
 
   return (
-    <div className="font-[dm] bg-body">
+    <div className="font-[dm] dark:bg-gray-900 dark:text-white bg-body">
       <div className="bg-white">
-        <div className="shadow-3xl py-4 bg-body px-4 lg:px-10 bg--600 shadow-slate-900 grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="shadow-3xl py-4 dark:bg-gray-900 dark:text-white bg-body px-4 lg:px-10 bg--600 shadow-slate-900 grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* Image Gallery */}
           <div className="relative">
             <img
@@ -73,7 +73,7 @@ const CarDetail = () => {
           </div>
 
           {/* Car Specifications Section */}
-          <div className="bg-body p-3 shadow-2xl shadow-slate-900 rounded-3xl">
+          <div className="bg-body dark:bg-gray-800 dark:text-white p-3 shadow-2xl shadow-slate-900 rounded-3xl">
             <h1 className="text-lg font-[roboto] font-bold mb-4">
               {car.make} {car.model} ({car.year}) {/* Display car details */}
             </h1>
@@ -113,7 +113,7 @@ const CarDetail = () => {
                 id="months"
                 value={installmentMonths} // Controlled component for installment months
                 onChange={(e) => setInstallmentMonths(e.target.value)} // Update state on change
-                className="p-2 border border-but rounded"
+                className="p-2 border dark:bg-gray-900 dark:text-white border-but rounded"
               >
                 <option value="">Select Plan</option>
                 <option value="1">1 Month</option>
@@ -130,7 +130,7 @@ const CarDetail = () => {
             </div>
 
             {/* Action Buttons */}
-            <div className="mt-6 flex gap-4 items-center">
+            <div className="mt-6  flex gap-4 items-center">
               <div className="flex flex-grow items-center">
                 <h1 className="text-xl font-[roboto] font-bold">
                   {car.make} {car.model}
@@ -153,7 +153,7 @@ const CarDetail = () => {
         </div>
 
         {/* Related Cars Section */}
-        <div className=" py-4 px-4 font-[dm] bg-gray-400">
+        <div className=" py-4 dark:bg-gray-900 dark:text-white px-4 font-[dm] bg-gray-400">
           <h2 className="text-2xl text-white font-[roboto] font-semibold mb-2">
             Related Cars
           </h2>
@@ -161,7 +161,7 @@ const CarDetail = () => {
             {relatedCars.map((relatedCar) => (
               <div
                 key={relatedCar.id}
-                className="bg-body p-4 rounded-2xl shadow-2xl shadow-slate-900 flex flex-col items-center"
+                className="bg-body dark:bg-gray-800 dark:text-white p-4 rounded-2xl shadow-2xl shadow-slate-900 flex flex-col items-center"
               >
                 <img
                   src={relatedCar.images[0]} // Display the first image of the related car

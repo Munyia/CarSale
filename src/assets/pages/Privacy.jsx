@@ -18,7 +18,7 @@ const Privacy = () => {
   }, []);
 
   return (
-    <div className="bg-body min-h-screen">
+    <div className="bg-body min-h-screen ">
       <Header />
 
       <div className="max-w-4xl mx-auto py-8 px-4 sm:px-6 lg:px-8">

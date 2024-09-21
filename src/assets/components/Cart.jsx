@@ -96,25 +96,26 @@ const Cart = () => {
   );
 
   return (
-    <div className="bg-body h-[100vh]">
+    <div className="bg-body  shadow-2xl shadow-slate-900  h-[100vh]">
       <Header />
-      <div className="w-full md:w-[75%] mx-auto p-6 bg-white mt-5 rounded-xl shadow-lg">
-        <h1 className="text-3xl font-semibold text-center mb-6">Your Cart</h1>
+      <div className="w-full  md:w-[75%] mx-auto p-6 bg-white mt-5 rounded-xl  shadow-2xl shadow-slate-900 ">
+        <h1 className="text-3xl font-[dm] font-semibold text-center text-but mb-6">Your Cart</h1>
         {Object.keys(cartSummary).length === 0 ? (
-          <p className="text-center text-gray-500 text-lg">
+          <p className="text-center font-[dm]
+           text-gray-500 text-lg">
             Your cart is empty
           </p>
         ) : (
-          <div className="flex flex-col md:flex-row gap-6">
+          <div className="flex font-[open] flex-col md:flex-row gap-6">
             {/* Car Information Section */}
-            <div className="flex-grow bg-body p-4 rounded-lg shadow-lg">
+            <div className="flex-grow bg-body font-[open] p-4 rounded-lg  shadow-2xl shadow-slate-900 ">
               <ul className="space-y-4">
                 {Object.entries(cartSummary).map(([itemId, quantity]) => {
                   const car = findCarById(parseInt(itemId, 10));
                   return (
                     <li
                       key={itemId}
-                      className="bg-white p-4 rounded-lg shadow flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 md:space-x-6"
+                      className="bg-white  shadow-2xl shadow-slate-900  p-4 rounded-lg  flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 md:space-x-6"
                     >
                       <div className="flex items-center space-x-4">
                         {/* Image of the car */}
@@ -192,7 +193,7 @@ const Cart = () => {
             </div>
 
             {/* Payment Section */}
-            <div className="bg-white p-4 rounded-lg shadow-lg mt-6 md:mt-0 flex-shrink-0 w-full md:w-1/3">
+            <div className="bg-body  shadow-2xl shadow-slate-900  p-4 rounded-lg mt-6 md:mt-0 flex-shrink-0 w-full md:w-1/3">
               <h2 className="text-xl font-semibold mb-4">Payment Summary</h2>
               <p className="text-gray-700">
                 Total Amount: ${totalAmount.toLocaleString()}

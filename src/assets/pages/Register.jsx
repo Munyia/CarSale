@@ -8,7 +8,7 @@ const Register = () => {
   }, []);
 
   return (
-    <div className="w-full min-h-screen flex items-center justify-center bg-body py-3">
+    <div className="w-full font-[dm] min-h-screen flex items-center justify-center bg-body py-3">
       <div
         className="relative shadow-2xl shadow-slate-900 bg-pry px-4 py-1 mx-4 md:mx-0 rounded-3xl sm:p-10 sm:max-w-xl"
         style={{ width: "80%", height: "70%" }}
@@ -17,12 +17,12 @@ const Register = () => {
           <div className="mb-1 flex items-center">
             <Link
               to="/"
-              className="text-but text-lg hover:text-black transition duration-300"
+              className="text-but font-[roboto] text-lg hover:text-black transition duration-300"
             >
               &larr; Back to Home
             </Link>
           </div>
-          <h1 className="text-2xl font-bold text-but mb-1 text-center">
+          <h1 className="text-2xl font-[roboto] font-bold text-but mb-1 text-center">
             Register
           </h1>
           <div className="w-full max-w-full justify-center items-center px-3 mx-auto mt-0 md:flex-0 shrink-0">
@@ -290,7 +290,7 @@ const Register = () => {
             {/* Submit Button */}
             <div className="mt-2">
               <button
-                className="py-1 px-2 hover:text-black bg-but hover:bg-blue-500 focus:ring-blue-200 focus:ring-offset-blue-400 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
+                className="py-1 px-2 font-[open] hover:text-black bg-but hover:bg-blue-500 focus:ring-blue-200 focus:ring-offset-blue-400 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
                 type="submit"
               >
                 Sign up
@@ -303,7 +303,7 @@ const Register = () => {
               <p className="text-xs px-2 text-but justify-center items-center text-center uppercase dark:text-gray-900">
                 Have an account?
                 <Link
-                  className="flex hover:underline hover:text-black justify-center text-center items-center"
+                  className="flex font-[roboto] hover:underline hover:text-black justify-center text-center items-center"
                   to="/login"
                 >
                   {" "}

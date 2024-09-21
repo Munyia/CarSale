@@ -278,7 +278,7 @@ const CarListing = () => {
                 <p className="text-gray-800 font-bold mt-2">{car.price}</p>
                 <div className="mt-4">
                   <h3 className="font-semibold text-but">Installment Plans:</h3>
-                  <ul className="list-disc pl-5">
+                  <ul className="list-disc pl-5 pb-4">
                     {car.installmentPlans.map((plan, index) => (
                       <li key={index} className="text-black">
                         {plan}
@@ -288,7 +288,7 @@ const CarListing = () => {
                 </div>
                 <Link
                   to={`cardetail/${car.id}`}
-                  className="block bg-but font-[open] text-white p-2 hover:bg-but hover:text-black mt-4 hover:underline"
+                  className="p-2 bg-but font-[open] text-white  rounded-lg hover:bg-but hover:text-black  hover:underline"
                 >
                   View Details
                 </Link>

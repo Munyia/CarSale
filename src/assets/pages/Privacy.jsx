@@ -18,13 +18,13 @@ const Privacy = () => {
   }, []);
 
   return (
-    <div className="bg-body min-h-screen ">
+    <div className="bg-body min-h-screen font-[dm]">
       <Header />
 
-      <div className="max-w-4xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto pt-4 pb-8 px-4 sm:px-6 lg:px-8">
         {/* Title with animation */}
         <h1
-          className={`text-3xl sm:text-4xl font-bold text-center mb-8 text-but transition-opacity duration-1000 ${
+          className={`text-3xl sm:text-4xl font-[roboto] font-bold text-center mb-4 text-but transition-opacity duration-1000 ${
             isTitleVisible ? "opacity-100" : "opacity-0"
           }`}
         >
@@ -39,7 +39,7 @@ const Privacy = () => {
         >
           {/* Privacy Policy Sections */}
           <section className="bg-body shadow-2xl shadow-slate-900 rounded-3xl p-5 transition-all duration-300">
-            <h2 className="text-lg sm:text-xl font-medium text-but mb-4">
+            <h2 className="text-lg sm:text-xl font-[open] font-medium text-but mb-4">
               Information We Collect
             </h2>
             <p className="text-black">
@@ -50,7 +50,7 @@ const Privacy = () => {
           </section>
 
           <section className="bg-body shadow-2xl shadow-slate-900 rounded-3xl p-5 transition-all duration-300">
-            <h2 className="text-lg sm:text-xl font-medium text-but mb-4">
+            <h2 className="text-lg sm:text-xl font-[open] font-medium text-but mb-4">
               How We Use Information
             </h2>
             <p className="text-black">
@@ -61,7 +61,7 @@ const Privacy = () => {
           </section>
 
           <section className="bg-body shadow-2xl shadow-slate-900 rounded-3xl p-5 transition-all duration-300">
-            <h2 className="text-lg sm:text-xl font-medium text-but mb-4">
+            <h2 className="text-lg sm:text-xl font-[open] font-medium text-but mb-4">
               Sharing Your Information
             </h2>
             <p className="text-black">
@@ -72,7 +72,7 @@ const Privacy = () => {
           </section>
 
           <section className="bg-body shadow-2xl shadow-slate-900 rounded-3xl p-5 transition-all duration-300">
-            <h2 className="text-lg sm:text-xl font-medium text-but mb-4">
+            <h2 className="text-lg sm:text-xl font-[open] font-medium text-but mb-4">
               Your Privacy Rights
             </h2>
             <p className="text-black">
@@ -86,7 +86,7 @@ const Privacy = () => {
             {/* Link to contact page */}
             <Link
               to={"/contact"}
-              className="text-lg sm:text-xl hover:black font-medium text-but mb-4"
+              className="text-lg sm:text-xl font-[open] p-2 bg-but rounded-xl text-white hover:bg-body hover hover:text-black font-medium  mb-4"
             >
               Contact Us
             </Link>

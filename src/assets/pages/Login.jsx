@@ -8,7 +8,7 @@ const Login = () => {
   }, []);
 
   return (
-    <div className="w-full h-screen flex items-center justify-center bg-body py-3">
+    <div className="w-full h-screen font-[dm] flex items-center justify-center bg-body py-3">
       {/* Main container for the login form */}
       <div
         className="relative shadow-2xl shadow-slate-900 bg-pry px-4 py-3 mx-4 md:mx-0 rounded-3xl sm:p-10 sm:max-w-xl"
@@ -19,12 +19,12 @@ const Login = () => {
           <div className="mb-1 flex items-center">
             <Link
               to="/"
-              className="text-but text-lg hover:text-black transition duration-300"
+              className="text-but font-[roboto] text-lg hover:text-black transition duration-300"
             >
               &larr; Back to Home
             </Link>
           </div>
-          <h1 className="text-2xl font-bold text-but mb-6 text-center">
+          <h1 className="text-2xl font-[roboto] font-bold text-but mb-6 text-center">
             Welcome back
           </h1>
           <div className="text-sm font-normal mb-4 text-center">
@@ -73,7 +73,7 @@ const Login = () => {
             {/* Login button */}
             <div className="mt-5 justify-center items-center text-center ">
               <button
-                className="py-2 px-4 justify-center bg-but hover:text-black hover:bg-blue-500 focus:ring-blue-200 focus:ring-offset-blue-400 text-white transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
+                className="py-2 px-4 font-[open] justify-center bg-but hover:text-black hover:bg-blue-500 focus:ring-blue-200 focus:ring-offset-blue-400 text-white transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
                 type="submit"
               >
                 Login
@@ -84,7 +84,7 @@ const Login = () => {
             <div className="mt-5 text-center">
               <Link
                 to="/forgotpassword"
-                className="py-2 px-4 bg-but text-white hover:text-black hover:bg-blue-500 focus:ring-blue-200 focus:ring-offset-blue-400 transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
+                className="py-2 px-4 font-[open] bg-but text-white hover:text-black hover:bg-blue-500 focus:ring-blue-200 focus:ring-offset-blue-400 transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
               >
                 Forgot your password?
               </Link>
@@ -96,7 +96,7 @@ const Login = () => {
               <p className="text-xs px-2 text-but justify-center items-center text-center uppercase dark:text-gray-900">
                 Don’t have an account yet?
                 <Link
-                  className="flex hover:underline hover:text-black justify-center text-center items-center"
+                  className="flex font-[roboto] hover:underline hover:text-black justify-center text-center items-center"
                   to="/register"
                 >
                   {" "}

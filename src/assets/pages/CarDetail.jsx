@@ -47,7 +47,7 @@ const CarDetail = () => {
   );
 
   return (
-    <div>
+    <div className="font-[dm]">
       <Header /> {/* Render the Header component */}
       <div className="bg-white">
         <div className="shadow-3xl py-4 bg-body px-4 lg:px-10 bg--600 shadow-slate-900 grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -75,7 +75,7 @@ const CarDetail = () => {
 
           {/* Car Specifications Section */}
           <div className="bg-body p-3 shadow-2xl shadow-slate-900 rounded-3xl">
-            <h1 className="text-lg font-bold mb-4">
+            <h1 className="text-lg font-[roboto] font-bold mb-4">
               {car.make} {car.model} ({car.year}) {/* Display car details */}
             </h1>
             <ul className="space-y-1">
@@ -104,7 +104,7 @@ const CarDetail = () => {
 
             {/* Installment Calculator */}
             <div className="mt-6">
-              <h2 className="text-lg font-semibold mb-1">
+              <h2 className="text-lg font-[roboto] font-semibold mb-1">
                 Installment Calculator
               </h2>
               <label htmlFor="months" className="block mb-1">
@@ -133,19 +133,19 @@ const CarDetail = () => {
             {/* Action Buttons */}
             <div className="mt-6 flex gap-4 items-center">
               <div className="flex flex-grow items-center">
-                <h1 className="text-xl font-bold">
+                <h1 className="text-xl font-[roboto] font-bold">
                   {car.make} {car.model}
                 </h1>
               </div>
               <button
-                className="px-4 py-2 bg-but hover:text-black text-white rounded-lg flex items-center justify-center"
+                className="px-4 py-2 bg-but font-[open] hover:text-black text-white rounded-lg flex items-center justify-center"
                 onClick={handleAddToCart} // Add car to cart on click
               >
                 Add to Cart
               </button>
               <Link
                 to="/request"
-                className="px-4 py-2 bg-but hover:text-black text-white rounded-lg flex items-center justify-center"
+                className="px-4 py-2 bg-but font-[open] hover:text-black text-white rounded-lg flex items-center justify-center"
               >
                 Request More Info
               </Link>
@@ -154,8 +154,8 @@ const CarDetail = () => {
         </div>
 
         {/* Related Cars Section */}
-        <div className="mt-2 py-4 px-4 bg-but">
-          <h2 className="text-2xl text-white font-semibold mb-2">
+        <div className="mt-2 py-4 px-4 font-[dm] bg-but">
+          <h2 className="text-2xl text-white font-[roboto] font-semibold mb-2">
             Related Cars
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -175,7 +175,7 @@ const CarDetail = () => {
                 <p>Price: ${relatedCar.price.toLocaleString()}</p>
                 <Link
                   to={`/cars/${relatedCar.id}`}
-                  className="text-but hover:underline mt-1 block"
+                  className="text-white hover:bg-but hover:text-black p-2 rounded-lg font-[open] bg-but hover:underline mt-1 block"
                 >
                   View Details
                 </Link>

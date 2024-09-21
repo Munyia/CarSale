@@ -39,10 +39,10 @@ const CheckOut = () => {
   };
 
   return (
-    <div className="bg-body">
+    <div className="bg-body font-[dm]">
       <Header />
       <div className="max-w-lg my-3 mx-auto p-6 shadow-2xl bg-body shadow-slate-900 rounded-3xl sm:max-w-xl lg:max-w-lg">
-        <h1 className="text-2xl font-bold justify-center text-center mb-6 text-but">
+        <h1 className="text-2xl font-[roboto] font-bold justify-center text-center mb-6 text-but">
           Checkout Form
         </h1>
         <form className="space-y-4">
@@ -311,7 +311,7 @@ const CheckOut = () => {
             <button
               type="button"
               onClick={handlePayment} // Handle payment process on click
-              className="px-6 py-2 bg-blue-600 text-white rounded-lg"
+              className="px-6 py-2 font-[open] bg-blue-600 text-white rounded-lg"
             >
               Confirm Order
             </button>

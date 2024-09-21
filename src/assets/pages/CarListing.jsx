@@ -141,17 +141,17 @@ const CarListing = () => {
   const totalPages = Math.ceil(sortedCars.length / carsPerPage);
 
   return (
-    <div className=" bg-body">
+    <div className=" bg-body font-[dm]">
       <Header />
       {/* <h1 className="text-3xl text-but bg-white font-bold text-center mb-6">Car Listings</h1> */}
 
       {/* Filters */}
       <div className="mb-4  shadow-2xl bg--600 shadow-slate-500  bg-body p-4 rounded-2xl ">
         <div className="flex justify-center text-center bg-body ">
-          <h2 className="text-xl font-semibold mb-4">Car Listing</h2>
+          <h2 className="text-xl font-[roboto] font-semibold mb-4">Car Listing</h2>
         </div>
         {/* <h2 className="text-xl justify-center text-center font-semibold mb-4">Filter By</h2> */}
-        <div className="mb-4 justify-center text-center bg-body p-4 rounded-2xl shadow-2xl shadow-slate-900  flex gap-4 flex-wrap">
+        <div className="mb-4 justify-center text-center font-[open] bg-body p-4 rounded-2xl shadow-2xl shadow-slate-900  flex gap-4 flex-wrap">
           {/* Brand Filter */}
           <div className="relative group bg-white w-48">
             <button className="w-full text-sm font-semibold hover:rounded-lg hover:bg-white hover:text-but text-white bg-but p-3 rounded-lg focus:outline-none">
@@ -182,7 +182,7 @@ const CarListing = () => {
           </div>
 
           {/* Model Filter */}
-          <div className="relative group w-48">
+          <div className="relative font-[open] group w-48">
             <button className="w-full text-sm font-semibold hover:rounded-lg hover:bg-white hover:text-but text-white bg-but p-3 rounded-lg focus:outline-none">
               Model
             </button>
@@ -200,7 +200,7 @@ const CarListing = () => {
           </div>
 
           {/* Price Range Filter */}
-          <div className="relative group w-48">
+          <div className="relative font-[open] group w-48">
             <button className="w-full text-sm font-semibold hover:rounded-lg hover:bg-white hover:text-but text-white bg-but p-3 rounded-lg focus:outline-none">
               Price Range
             </button>
@@ -236,7 +236,7 @@ const CarListing = () => {
         </div>
       </div>
       {/* Sorting Options */}
-      <div className="mb-4 px-4">
+      <div className="mb-4 font-[open] px-4">
         <label htmlFor="sort" className="mr-2 font-semibold">
           Sort By:
         </label>
@@ -288,7 +288,7 @@ const CarListing = () => {
                 </div>
                 <Link
                   to={`cardetail/${car.id}`}
-                  className="block text-but mt-4 hover:underline"
+                  className="block bg-but font-[open] text-white p-2 hover:bg-but hover:text-black mt-4 hover:underline"
                 >
                   View Details
                 </Link>
@@ -299,7 +299,7 @@ const CarListing = () => {
       </div>
 
       {/* Pagination */}
-      <div className="my-6 px-4 flex justify-between">
+      <div className="my-6 px-4 flex font-[roboto] justify-between">
         <button
           onClick={() => setCurrentPage(Math.max(currentPage - 1, 1))}
           disabled={currentPage === 1}

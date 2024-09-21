@@ -50,23 +50,23 @@ const UserProfile = () => {
           </div>
           <div>
             <h1 className="text-3xl font-[roboto] font-bold text-but">Welcome, {userData.name}</h1>
-            <p className="text-black">Your account summary and details</p>
+            <p className="text-black dark:text-white">Your account summary and details</p>
           </div>
         </div>
         
         {/* Dashboard Sections */}
-        <div className="grid shadow-2xl shadow-slate-900 grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid shadow-2xl dark:bg-gray-900 dark:text-white p-5 rounded-3xl shadow-slate-900 grid-cols-1 md:grid-cols-3 gap-6">
           {/* Ongoing Installment Plans */}
-          <div className="bg-white shadow-2xl shadow-slate-900 p-6 rounded-lg">
-            <h2 className="text-xl font-semibold font-[open] mb-4 text-black flex items-center">
+          <div className="bg-white shadow-2xl  dark:bg-gray-800 dark:text-white shadow-slate-900 p-6 rounded-lg">
+            <h2 className="text-xl font-semibold font-[open] mb-4 text-black dark:text-white flex items-center">
               <FaCalendarAlt className="text-but mr-2 " />
               Ongoing Installment Plans
             </h2>
             <ul className="space-y-4">
               {userData.installmentPlans.map((plan, index) => (
                 <li key={index} className="flex justify-between items-center border-b border-gray-500 pb-2">
-                  <span className="text-black">{plan.car}</span>
-                  <span className="text-gray-500">Monthly: {plan.monthly}</span>
+                  <span className="text-black dark:text-white">{plan.car}</span>
+                  <span className="text-gray-500 dark:text-white">Monthly: {plan.monthly}</span>
                 </li>
               ))}
             </ul>

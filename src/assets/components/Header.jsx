@@ -59,7 +59,7 @@ const Header = ({ title }) => {
 
           {/* Mobile Hamburger Menu for navigation links */}
           <button
-            className="text-gray-800 focus:outline-none"
+            className="text-gray-800  dark:bg-black dark:text-white focus:outline-none"
             onClick={() => setIsMenuOpen(!isMenuOpen)} // Toggle mobile menu visibility
           >
             {/* Hamburger icon */}
@@ -82,11 +82,11 @@ const Header = ({ title }) => {
 
         {/* Mobile Search Bar (Visible when isSearchOpen is true) */}
         {isSearchOpen && (
-          <div className="absolute top-16 left-0 w-full bg-white shadow-md p-4 md:hidden">
+          <div className="absolute top-16 left-0 w-ful  dark:bg-black dark:text-white bg-white shadow-md p-4 md:hidden">
             <input
               type="text"
               placeholder="Search by model, brand..."
-              className="w-full px-4 py-2 rounded-lg border border-gray-700 bg-gray-800 text-white placeholder-gray-400 shadow-sm focus:outline-none focus:ring-2 focus:ring-but"
+              className="w-full px-4 py-2 rounded-lg border  dark:bg-black dark:text-white border-gray-700 bg-gray-800 text-white placeholder-gray-400 shadow-sm focus:outline-none focus:ring-2 focus:ring-but"
             />
           </div>
         )}
@@ -95,25 +95,25 @@ const Header = ({ title }) => {
         <div className="hidden font-[roboto] md:flex space-x-12">
           <NavLink
             to="/"
-            className="text-black font-[roboto] dark:bg-black dark:text-white dark:hover:bg-but dark:hover:bg-p-2  text-lg font-semibold hover:text-but transition duration-300"
+            className="text-black font-[roboto] dark:bg-black dark:text-white dark:hover:text-but dark:hover:bg-p-2  text-lg font-semibold hover:text-but transition duration-300"
           >
             Home
           </NavLink>
           <Link
             to="/carlisting"
-            className="text-black font-dm text-lg font-semibold hover:text-but transition duration-300"
+            className="text-black font-dm text-lg  dark:bg-black dark:text-white dark:hover:text-but font-semibold hover:text-but transition duration-300"
           >
             Car Listing
           </Link>
           <Link
             to="/faq"
-            className="text-black text-lg font-semibold hover:text-but transition duration-300"
+            className="text-black text-lg  dark:bg-black dark:hover:text-but dark:text-white font-semibold hover:text-but transition duration-300"
           >
             FAQ
           </Link>
           <Link
             to="/contact"
-            className="text-black text-lg font-semibold hover:text-but transition duration-300"
+            className="text-black  dark:bg-black dark:hover:text-but dark:text-white text-lg font-semibold hover:text-but transition duration-300"
           >
             Contact
           </Link>
@@ -135,7 +135,7 @@ const Header = ({ title }) => {
           <div className="flex items-center space-x-7">
             <Link
               to="/userprofile"
-              className="text-black hover:text-but transition duration-300"
+              className="text-black  dark:bg-black dark:text-white transition duration-300"
             >
               <FaUserCircle className="text-2xl" /> {/* Profile icon */}
             </Link>
@@ -158,12 +158,12 @@ const Header = ({ title }) => {
 
         {/* Mobile Dropdown Menu (Visible when isMenuOpen is true) */}
         {isMenuOpen && (
-          <div className="absolute top-16 right-0 w-full bg-white shadow-md md:hidden">
+          <div className="absolute dark:bg-gray-900 dark:hover:text-but dark:text-gray-200 top-16 right-0 w-full bg-white shadow-md md:hidden">
             <ul className="space-y-4 p-4">
               <li>
                 <NavLink
                   to="/"
-                  className="text-black text-lg font-semibold hover:text-but transition duration-300"
+                  className="text-black dark:bg-gray-900 dark:hover:text-but dark:text-white text-lg font-semibold hover:text-but transition duration-300"
                 >
                   Home
                 </NavLink>
@@ -171,7 +171,7 @@ const Header = ({ title }) => {
               <li>
                 <Link
                   to="/carlisting"
-                  className="text-black text-lg font-semibold hover:text-but transition duration-300"
+                  className="text-black text-lg dark:bg-gray-900 dark:hover:text-but dark:text-white font-semibold hover:text-but transition duration-300"
                 >
                   Car Listing
                 </Link>
@@ -179,7 +179,7 @@ const Header = ({ title }) => {
               <li>
                 <Link
                   to="/faq"
-                  className="text-black text-lg font-semibold hover:text-but transition duration-300"
+                  className="text-black text-lg dark:bg-gray-900 dark:hover:text-but dark:text-white font-semibold hover:text-but transition duration-300"
                 >
                   FAQ
                 </Link>
@@ -187,7 +187,7 @@ const Header = ({ title }) => {
               <li>
                 <Link
                   to="/contact"
-                  className="text-black text-lg font-semibold hover:text-but transition duration-300"
+                  className="text-black text-lg dark:bg-gray-900 dark:hover:text-but dark:text-white font-semibold hover:text-but transition duration-300"
                 >
                   Contact
                 </Link>
@@ -195,7 +195,7 @@ const Header = ({ title }) => {
               <li>
                 <Link
                   to="/login"
-                  className="text-black text-lg font-semibold hover:text-but transition duration-300"
+                  className="text-black text-lg dark:bg-gray-900 dark:hover:text-but dark:text-white font-semibold hover:text-but transition duration-300"
                 >
                   Login
                 </Link>

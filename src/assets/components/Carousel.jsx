@@ -26,7 +26,7 @@ const Carousel = ({
   }, [autoslide, autoslideinterval]); // Effect depends on autoslide and autoslideinterval props
 
   return (
-    <div className="relative w-full h-full overflow-hidden">
+    <div className="relative w-full dark:bg-gray-900 dark:text-white h-full overflow-hidden">
       {/* Container for all the slides, transforms based on the current slide */}
       <div
         className="flex transition-transform ease-in-out duration-500"

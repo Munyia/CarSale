@@ -42,37 +42,38 @@ function App() {
 
   return (
     <>
-    <div className='{`app ${theme}`}'>
- <CartProvider>
- <BrowserRouter>
- <Routes>
-   <Route path="/" element={<Home/>} />
-        <Route path="/register" element={<Register/>} />
-        <Route path="/login" element={<Login/>} />
-        <Route path="/forgotpassword" element={<ForgotPassword/>} />
-        <Route path="/checkout" element={<CheckOut/>} />
-        <Route path="/request" element={<Request/>} />
-        <Route path="/confirmation" element={<Confirmation/>} />
-        <Route path="/paymentfailure" element={<PaymentFailure/>} />
-        <Route path="/contact" element={<Contact/>} />
-        <Route path="/faq" element={<FAQ/>} />
+  <div className={`app ${theme}`}>
+  <CartProvider>
+    <BrowserRouter>
+      <Header /> {/* Header at the top */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/forgotpassword" element={<ForgotPassword />} />
+        <Route path="/checkout" element={<CheckOut />} />
+        <Route path="/request" element={<Request />} />
+        <Route path="/confirmation" element={<Confirmation />} />
+        <Route path="/paymentfailure" element={<PaymentFailure />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/faq" element={<FAQ />} />
         <Route path="/carlisting/cardetail/:carId" element={<CarDetail />} />
         <Route path="/carlisting" element={<CarListing />} />
         <Route path="/cars/:carId" element={<CarDetail />} />
-        <Route path="/header" element={<Header/>} />
-        <Route path="/footer" element={<Footer/>} />
-        <Route path="/userprofile" element={<UserProfile/>} />
-        <Route path="/cart" element={<Cart/>} />
-        <Route path="/auction" element={<Auction/>} />
-        <Route path="/loader" element={<Loader/>} />
-        <Route path="/terms" element={<Terms/>} />
-        <Route path="/about" element={<About/>} />
-        <Route path="/privacy" element={<Privacy/>} />
-        <Route path="/savedcars" element={<SavedCars/>} />
- </Routes>
- </BrowserRouter>
- </CartProvider>
- </div>
+        <Route path="/userprofile" element={<UserProfile />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/auction" element={<Auction />} />
+        <Route path="/loader" element={<Loader />} />
+        <Route path="/terms" element={<Terms />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/privacy" element={<Privacy />} />
+        <Route path="/savedcars" element={<SavedCars />} />
+      </Routes>
+      <Footer /> {/* Footer at the bottom */}
+    </BrowserRouter>
+  </CartProvider>
+</div>
+
     </>
   )
 }

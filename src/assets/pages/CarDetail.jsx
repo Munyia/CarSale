@@ -47,8 +47,7 @@ const CarDetail = () => {
   );
 
   return (
-    <div className="font-[dm]">
-      <Header /> {/* Render the Header component */}
+    <div className="font-[dm] bg-body">
       <div className="bg-white">
         <div className="shadow-3xl py-4 bg-body px-4 lg:px-10 bg--600 shadow-slate-900 grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* Image Gallery */}
@@ -154,7 +153,7 @@ const CarDetail = () => {
         </div>
 
         {/* Related Cars Section */}
-        <div className="mt-2 py-4 px-4 font-[dm] bg-but">
+        <div className=" py-4 px-4 font-[dm] bg-gray-400">
           <h2 className="text-2xl text-white font-[roboto] font-semibold mb-2">
             Related Cars
           </h2>

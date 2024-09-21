@@ -142,20 +142,17 @@ const CarListing = () => {
 
   return (
     <div className=" bg-body dark:bg-gray-900 dark:text-white font-[dm]">
-      <Header />
-      {/* <h1 className="text-3xl text-but bg-white font-bold text-center mb-6">Car Listings</h1> */}
-
       {/* Filters */}
-      <div className="mb-4 dark:bg-gray-900 dark:text-white shadow-2xl bg--600 shadow-slate-500  bg-body p-4 rounded-2xl ">
+      <div className="pb-4 dark:bg-gray-900 dark:text-white shadow-2xl bg--600 shadow-slate-500  bg-body p-4  ">
         <div className="flex dark:bg-gray-900 dark:text-white justify-center text-center bg-body ">
           <h2 className="text-xl font-[roboto] font-semibold mb-4">Car Listing</h2>
         </div>
         {/* <h2 className="text-xl justify-center text-center font-semibold mb-4">Filter By</h2> */}
-        <div className="mb-4 justify-center text-center font-[open] bg-body dark:bg-gray-900 dark:text-white p-4 rounded-2xl shadow-2xl shadow-slate-900  flex gap-4 flex-wrap">
+        <div className="mb-4 justify-center text-center font-[open] bg-body dark:bg-gray-800 dark:text-white p-4 rounded-2xl shadow-2xl shadow-slate-900  flex gap-4 flex-wrap">
           {/* Brand Filter */}
-        <div className="relative group bg-white dark:bg-gray-900 dark:text-white w-48">
-  <button className="w-full text-sm font-semibold hover:rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-but dark:hover:text-gray-300 text-black dark:text-gray-200 bg-but dark:bg-gray-800 p-3 rounded-lg focus:outline-none">
-    Brand
+          <div className="relative font-[open] group w-48">
+        <button className="w-full text-sm font-semibold hover:rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-but dark:hover:text-gray-300 text-black dark:text-gray-200 bg-but dark:bg-gray-900 dark:rounded-lg dark:border-none p-3 rounded-lg focus:outline-none">
+        Brand
   </button>
   <div className="absolute top-full left-0 mt-2 w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg shadow-lg transition-transform transform scale-0 group-hover:scale-100 group-hover:translate-y-1">
     <ul className="p-2">
@@ -184,7 +181,7 @@ const CarListing = () => {
 
           {/* Model Filter */}
           <div className="relative font-[open] group w-48">
-          <button className="w-full text-sm font-semibold hover:rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-but dark:hover:text-gray-300 text-black dark:text-gray-200 bg-but dark:bg-gray-800 p-3 rounded-lg focus:outline-none">
+          <button className="w-full text-sm font-semibold hover:rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-but dark:hover:text-gray-300 text-black dark:text-gray-200 bg-but dark:bg-gray-900 dark:rounded-lg dark:border-none p-3 rounded-lg focus:outline-none">
           Model
             </button>
             <div className="absolute top-full left-0 mt-2 w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg shadow-lg transition-transform transform scale-0 group-hover:scale-100 group-hover:translate-y-1">
@@ -193,7 +190,7 @@ const CarListing = () => {
   placeholder="Enter model"
   value={filters.model}
   onChange={(e) => setFilters({ ...filters, model: e.target.value })}
-  className="block w-full bg-white dark:bg-gray-800 text-left px-4 py-2 text-black dark:text-white border border-gray-300 dark:border-gray-700 hover:bg-gray-200 dark:hover:bg-slate-700 placeholder-gray-500 dark:placeholder-gray-400"
+  className="block w-full bg-white dark:bg-gray-900 text-left dark:border-none px-4 py-2 text-black dark:text-white border border-gray-300 dark:border-gray-00 hover:bg-gray-200 dark:hover:bg-slate-700 placeholder-gray-500 dark:placeholder-gray-400"
 />
 
             </div>
@@ -201,7 +198,7 @@ const CarListing = () => {
 
           {/* Price Range Filter */}
           <div className="relative font-[open] group w-48">
-          <button className="w-full text-sm font-semibold hover:rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-but dark:hover:text-gray-300 text-black dark:text-gray-200 bg-but dark:bg-gray-800 p-3 rounded-lg focus:outline-none">
+          <button className="w-full text-sm font-semibold hover:rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-but dark:hover:text-gray-300 text-black dark:text-gray-200 bg-but dark:bg-gray-900 dark:rounded-lg dark:border-none p-3 rounded-lg focus:outline-none">
           Price Range
             </button>
             <div className="absolute top-full left-0 mt-2 w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg shadow-lg transition-transform transform scale-0 group-hover:scale-100 group-hover:translate-y-1">
@@ -216,7 +213,7 @@ const CarListing = () => {
                       minPrice: parseFloat(e.target.value) || 0,
                     })
                   }
-                  className="block w-full dark:bg-gray-800 dark:text-gray-200 text-left px-4 py-2 hover:bg-gray-500 dark:hover:bg-gray-700 hover:text-but dark:hover:text-grey-200"
+                  className="block w-full dark:bg-gray-900 dark:border-none dark:text-gray-200 text-left px-4 py-2 hover:bg-gray-500 dark:hover:bg-gray-700 hover:text-but dark:hover:text-grey-200"
              />
                 <input
                   type="number"
@@ -228,7 +225,7 @@ const CarListing = () => {
                       maxPrice: parseFloat(e.target.value) || 50000,
                     })
                   }
-                  className="block dark:bg-gray-800 dark:text-gray-200 w-full text-left px-4 py-2 hover:bg-gray-500 dark:hover:bg-gray-700 hover:text-but dark:hover:text-grey-200"
+                  className="block dark:bg-gray-900 dark:text-gray-200 w-full text-left px-4 py-2 hover:bg-gray-500 dark:hover:bg-gray-700 hover:text-but dark:hover:text-grey-200"
                   />
               </div>
             </div>
@@ -236,7 +233,7 @@ const CarListing = () => {
         </div>
       </div>
       {/* Sorting Options */}
-      <div className="mb-4 font-[open] px-4">
+      <div className="mb-4 font-[open] px-4 dark:bg-gray-900 dark:text-gray-200 ">
         <label htmlFor="sort" className="mr-2 font-semibold">
           Sort By:
         </label>
@@ -244,7 +241,7 @@ const CarListing = () => {
           id="sort"
           value={sortOption}
           onChange={(e) => setSortOption(e.target.value)}
-          className="p-2 border  border-gray-300 rounded-lg"
+          className="p-2 border dark:bg-gray-800 dark:border-none mt-2 dark:border-gray-800 dark:text-gray-200  border-gray-300 rounded-lg"
         >
           <option value="price">Price</option>
           <option className=" hover:bg-but hover:text-white" value="popularity">
@@ -257,12 +254,12 @@ const CarListing = () => {
       </div>
 
       {/* Car Listings */}
-      <div className="grid px-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 ">
+      <div className="grid px-5  dark:bg-gray-900 dark:text-gray-200 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 ">
         {currentCars.map((car) => (
           <Link to={`cardetail/${car.id}`}>
             <div
               key={car.id}
-              className="bg-white border rounded-2xl shadow-2xl shadow-slate-900 overflow-hidden"
+              className="bg-white  dark:bg-gray-800 dark:border-none pb-2 dark:text-gray-200 border rounded-2xl shadow-2xl shadow-slate-900 overflow-hidden"
             >
               {/* Placeholder image source */}
               <img
@@ -271,16 +268,16 @@ const CarListing = () => {
                 className="w-full bg-white h-48 object-cover"
               />
               <div className="p-4">
-                <h2 className="text-xl text-but font-semibold">
+                <h2 className="text-xl dark:bg-gray-800 dark:text-gray-200 text-but font-semibold">
                   {car.make} {car.model}
                 </h2>
-                <p className="text-gray-600">Year: {car.year}</p>
-                <p className="text-gray-800 font-bold mt-2">{car.price}</p>
-                <div className="mt-4">
-                  <h3 className="font-semibold text-but">Installment Plans:</h3>
+                <p className="text-gray-600 dark:bg-gray-800 dark:text-gray-400 ">Year: {car.year}</p>
+                <p className="text-gray-800 dark:bg-gray-800 dark:text-gray-200 font-bold mt-2">{car.price}</p>
+                <div className="mt-4 ">
+                  <h3 className="font-semibold dark:bg-gray-800 dark:text-gray-200 text-but">Installment Plans:</h3>
                   <ul className="list-disc pl-5 pb-4">
                     {car.installmentPlans.map((plan, index) => (
-                      <li key={index} className="text-black">
+                      <li key={index} className="text-black dark:bg-gray-800 dark:text-gray-400">
                         {plan}
                       </li>
                     ))}
@@ -299,7 +296,7 @@ const CarListing = () => {
       </div>
 
       {/* Pagination */}
-      <div className="my-6 px-4 flex font-[roboto] justify-between">
+      <div className="py-6 dark:bg-gray-900  px-4 flex font-[roboto] justify-between">
         <button
           onClick={() => setCurrentPage(Math.max(currentPage - 1, 1))}
           disabled={currentPage === 1}
@@ -318,7 +315,6 @@ const CarListing = () => {
           Next
         </button>
       </div>
-      <Footer />
     </div>
   );
 };

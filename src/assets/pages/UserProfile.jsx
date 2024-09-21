@@ -36,14 +36,8 @@ const UserProfile = () => {
 
   return (
       <div>
-    <div className="bg-body font-[dm] min-h-screen py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl bg--600 bg-pry shadow-2xl shadow-slate-900 mx-auto bg-white rounded-lg p-6">
-        {/* Home Link */}
-        <div className="mb-8 flex items-center">
-          <Link to="/" className="text-but text-lg hover:text-black transition duration-300">
-            &larr; Back to Home
-          </Link>
-        </div>
+    <div className="bg-body dark:bg-gray-900 dark:text-white font-[dm] min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl bg--600 dark:bg-gray-800 dark:text-white bg-pry shadow-2xl shadow-slate-900 mx-auto bg-white rounded-lg p-6">
         
         {/* Profile Header */}
         <div className="flex items-center font-[dm] space-x-4 mb-8">

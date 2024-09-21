@@ -36,7 +36,7 @@ const Request = () => {
                   id="email"
                   name="email"
                   placeholder="Email"
-                  className="w-full border border-gray-300 rounded-md px-3 py-2 mt-1 text-gray-700 focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                  className="w-full dark:bg-gray-900 dark:text-white dark:border-none border border-gray-300 rounded-md px-3 py-2 mt-1 text-gray-700 focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
                   required
                 />
               </div>
@@ -51,7 +51,7 @@ const Request = () => {
                   id="phone"
                   name="phone"
                   placeholder="Phone Number"
-                  className="w-full border border-gray-300 rounded-md px-3 py-2 mt-1 text-gray-700 focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                  className="w-full dark:bg-gray-900 dark:text-white dark:border-none border border-gray-300 rounded-md px-3 py-2 mt-1 text-gray-700 focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
                   required
                 />
               </div>
@@ -66,7 +66,7 @@ const Request = () => {
                   name="message"
                   rows="4"
                   placeholder="Your message here..."
-                  className="w-full border border-gray-300 rounded-md px-3 py-2 mt-1 text-gray-700 focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                  className="w-full dark:bg-gray-900 dark:text-white dark:border-none border border-gray-300 rounded-md px-3 py-2 mt-1 text-gray-700 focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
                   required
                 />
               </div>

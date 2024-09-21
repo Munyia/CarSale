@@ -2,11 +2,13 @@ import { Link, NavLink } from "react-router-dom"; // Import Link and NavLink for
 import { FaUserCircle, FaSearch, FaShoppingCart } from "react-icons/fa"; // Import FontAwesome icons for user, search, and cart
 import { useCart } from "../context/CartContext"; // Custom hook to get cart item count
 import { useState, useEffect } from "react";
+import { useTheme } from "../context/Themecontext";
 
 const Header = ({ title }) => {
   const { getItemCount } = useCart(); // Access cart item count from context
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State to toggle mobile menu visibility
   const [isSearchOpen, setIsSearchOpen] = useState(false); // State to toggle mobile search bar visibility
+  const { theme, toggleTheme } = useTheme();
 
   // Update the document title based on the passed title prop
   useEffect(() => {
@@ -14,7 +16,7 @@ const Header = ({ title }) => {
   }, [title]);
 
   return (
-    <nav className="bg-white sticky font-[roboto] top-0 z-50"> {/* Sticky header for always-visible navigation */}
+    <nav className="bg-white dark:bg-black dark:text-white sticky font-[roboto] top-0 z-50"> {/* Sticky header for always-visible navigation */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
         
         {/* Logo Section */}
@@ -25,9 +27,12 @@ const Header = ({ title }) => {
             className="h-12 rounded-full" // Styling the logo with a circular appearance
           />
         </Link>
+        <button onClick={toggleTheme} className="bg-but  dark:bg-black dark:text-white  text-white p-2 rounded">
+        {theme === 'dark' ? 'Light Mode' : 'Dark Mode'}
+      </button>
 
         {/* Mobile Menu and Icons (Visible on smaller screens) */}
-        <div className="md:hidden flex items-center space-x-4">
+        <div className="md:hidden dark:bg-black dark:text-white  flex items-center space-x-4">
           {/* Toggle Mobile Search Bar */}
           <button onClick={() => setIsSearchOpen(!isSearchOpen)}>
             <FaSearch className="text-xl text-gray-800" /> {/* Search icon */}
@@ -90,7 +95,7 @@ const Header = ({ title }) => {
         <div className="hidden font-[roboto] md:flex space-x-12">
           <NavLink
             to="/"
-            className="text-black font-[roboto] text-lg font-semibold hover:text-but transition duration-300"
+            className="text-black font-[roboto] dark:bg-black dark:text-white dark:hover:bg-but dark:hover:bg-p-2  text-lg font-semibold hover:text-but transition duration-300"
           >
             Home
           </NavLink>

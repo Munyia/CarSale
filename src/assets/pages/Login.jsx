@@ -8,7 +8,7 @@ const Login = () => {
   }, []);
 
   return (
-    <div className="w-full h-screen font-[dm] flex items-center justify-center bg-body py-3">
+    <div className="w-full  h-screen font-[dm] flex items-center justify-center bg-body py-3">
       {/* Main container for the login form */}
       <div
         className="relative shadow-2xl shadow-slate-900 bg-pry px-4 py-3 mx-4 md:mx-0 rounded-3xl sm:p-10 sm:max-w-xl"

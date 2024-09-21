@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import { FaTrashAlt, FaRegBookmark, FaBookmark  } from "react-icons/fa"; // Icons for like and remove
 import Header from "./Header";
 
+
+
 const Cart = () => {
   // Destructure functions from CartContext
   const { getCartItems, removeFromCart } = useCart();

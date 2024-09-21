@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import Register from './assets/pages/Register'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
@@ -24,13 +24,25 @@ import Terms from './assets/pages/Terms.jsx';
 import About from './assets/pages/About.jsx';
 import Privacy from './assets/pages/Privacy.jsx';
 import SavedCars from './assets/pages/SavedCars.jsx';
+import { ThemeProvider, useTheme  } from './assets/context/Themecontext.jsx';
 
 
 function App() {
   const [count, setCount] = useState(0)
+  const { theme } = useTheme(); // Get the current theme from context
+
+  
+
+  useEffect(() => {
+    if (theme) {
+      document.body.className = ''; // Clear any previous theme classes
+      document.body.classList.add(theme); // Apply the new theme class
+    }
+  }, [theme]); // Runs every time the theme changes
 
   return (
     <>
+    <div className='{`app ${theme}`}'>
  <CartProvider>
  <BrowserRouter>
  <Routes>
@@ -60,8 +72,14 @@ function App() {
  </Routes>
  </BrowserRouter>
  </CartProvider>
+ </div>
     </>
   )
 }
+const AppWrapper = () => (
+  <ThemeProvider>
+    <App />
+  </ThemeProvider>
+);
 
-export default App
+export default AppWrapper;

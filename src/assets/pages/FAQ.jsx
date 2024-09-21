@@ -46,7 +46,7 @@ const FAQ = () => {
   };
 
   return (
-    <div className="bg-body min-h-screen">
+    <div className="bg-body font-[dm] min-h-screen">
       {" "}
       {/* Main container with a background and full height */}
       <Header /> {/* Header component for the page */}

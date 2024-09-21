@@ -62,7 +62,7 @@ const Home = () => {
   ];
 
   return (
-    <div>
+    <div className="font-[dm]">
       <Header /> {/* Header component for the page */}
       {/* Carousel for featured slides */}
       <div className="flex w-full h-screen  overflow-hidden object-cover relative  sm:px-8">
@@ -75,16 +75,16 @@ const Home = () => {
                 style={{ backgroundImage: `url(${slide.image})` }} // Background image for each slide
               >
                 <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center">
-                  <h1 className="text-white text-5xl font-open font-bold mb-4">
+                  <h1 className="text-white text-5xl font-[open] font-open font-bold mb-4">
                     {slide.heading} {/* Slide heading */}
                   </h1>
                   <p className="text-white text-lg mb-6">
                     {slide.subtext} {/* Slide subtext */}
                   </p>
-                  <div className="space-x-4">
+                  <div className="space-x-4 font-[open]">
                     <Link
                       to={"/carlisting"}
-                      className="bg-but text-white px-6 py-3 rounded-lg hover:bg-body hover:text-but"
+                      className="bg-but  text-white px-6 py-3 rounded-lg hover:bg-body hover:text-but"
                     >
                       Shop Now {/* Link to car listing page */}
                     </Link>
@@ -104,7 +104,7 @@ const Home = () => {
       {/* Section for searching and browsing cars */}
       <section className="bg-body py-8  sm:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-but mb-4">
+          <h2 className="text-3xl font-[open] font-bold text-but mb-4">
             Find Your Perfect Car
           </h2>
 
@@ -127,13 +127,13 @@ const Home = () => {
               <option>$20,000 - $40,000</option>
               <option>Above $40,000</option>
             </select>
-            <button className="bg-but text-white px-6 py-2 rounded-lg hover:bg-white hover:text-but">
+            <button className="bg-but font-[open] text-white px-6 py-2 rounded-lg hover:bg-white hover:text-but">
               Search
             </button>
           </form>
 
           {/* Car Categories */}
-          <h2 className="text-3xl text-but font-bold mb-3 mt-8">
+          <h2 className="text-3xl font-[open] text-but font-bold mb-3 mt-8">
             Browse by Category
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -145,7 +145,7 @@ const Home = () => {
               </p>
               <a
                 href="/category/sedans"
-                className="bg-but text-white px-4 py-2 rounded-lg hover:bg-white hover:text-but inline-block"
+                className="bg-but font-[open] text-white px-4 py-2 rounded-lg hover:bg-white hover:text-but inline-block"
               >
                 Explore Sedans
               </a>
@@ -159,7 +159,7 @@ const Home = () => {
               </p>
               <a
                 href="/category/suvs"
-                className="bg-but text-white px-4 py-2 rounded-lg hover:bg-white hover:text-but inline-block"
+                className="bg-but text-white font-[open] px-4 py-2 rounded-lg hover:bg-white hover:text-but inline-block"
               >
                 Explore SUVs
               </a>
@@ -167,7 +167,7 @@ const Home = () => {
 
             {/* Category Card for Electric Cars */}
             <div className="category-card bg-white p-6 rounded-lg shadow hover:shadow-lg">
-              <h3 className="text-xl font-semibold text-but mb-4">
+              <h3 className="text-xl font-[open] font-semibold text-but mb-4">
                 Electric Cars
               </h3>
               <p className="text-gray-600 mb-4">
@@ -186,7 +186,7 @@ const Home = () => {
       {/* Testimonials section */}
       <section className="bg-body py-12  sm:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-but mb-8">
+          <h2 className="text-3xl font-[open] font-bold text-but mb-8">
             What Our Customers Say
           </h2>
 

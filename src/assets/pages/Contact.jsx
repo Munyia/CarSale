@@ -7,13 +7,13 @@ const Contact = () => {
   return (
     <div>
       <Header /> {/* Header component for the page */}
-      <div className="max-w-7xl bg-body shadow-2xl shadow-slate-900  mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-12">
-        <h1 className="text-3xl bg-body font-bold text-but  text-center">Contact Us</h1>
+      <div className="max-w-7xl bg-body font-[dm] shadow-2xl shadow-slate-900  mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-12">
+        <h1 className="text-3xl bg-body font-[roboto] font-bold text-but  text-center">Contact Us</h1>
 
         {/* Contact Information Section */}
         <div className="grid bg-body shadow-slate-900 shadow-2xl  grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           <div className="bg-body p-6 rounded-lg shadow-md">
-            <h2 className="text-xl font-semibold text-but mb-4">Get in Touch</h2>
+            <h2 className="text-xl font-[open] font-semibold text-but mb-4">Get in Touch</h2>
             <p className="text-gray-600 mb-2">
               <strong>Phone:</strong> +1 234 567 890
             </p>
@@ -29,7 +29,7 @@ const Contact = () => {
           </div>
 
           <div className="bg-body  p-6 rounded-lg shadow-md">
-            <h2 className="text-xl font-semibold text-but mb-4">Follow Us</h2>
+            <h2 className="text-xl font-[open] font-semibold text-but mb-4">Follow Us</h2>
             <p className="text-gray-600 mb-2">Stay connected with us on social media:</p>
             <div className="flex space-x-4">
               <Link to="#" className="text-gray-900 hover:text-but transition duration-300">
@@ -50,7 +50,7 @@ const Contact = () => {
 
         {/* Contact Form Section */}
         <div className="bg-body shadow-slate-900 shadow-2xl  p-6 rounded-lg mb-12">
-          <h2 className="text-xl font-semibold text-but mb-4">Send Us a Message</h2>
+          <h2 className="text-xl font-[open] font-semibold text-but mb-4">Send Us a Message</h2>
           <form>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <input
@@ -80,7 +80,7 @@ const Contact = () => {
             ></textarea>
             <button
               type="submit"
-              className="bg-but text-white  shadow-slate-900 shadow-2xlpx-6 p-2 rounded-lg hover:bg-body hover:text-but transition duration-300 mt-4"
+              className="bg-but text-white font-[open] shadow-slate-900 shadow-2xlpx-6 p-2 rounded-lg hover:bg-body hover:text-but transition duration-300 mt-4"
             >
               Send Message
             </button>
@@ -89,7 +89,7 @@ const Contact = () => {
 
         {/* Map Section */}
         <div className="bg-body  p-6 rounded-lg shadow-slate-900 shadow-2xl">
-          <h2 className="text-xl font-semibold text-but mb-4">Our Location</h2>
+          <h2 className="text-xl font-[open] font-semibold text-but mb-4">Our Location</h2>
           <div className="h-64">
             <iframe
               title="Google Map"

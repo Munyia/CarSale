@@ -3,6 +3,7 @@ import { FaUserCircle, FaSearch, FaShoppingCart } from "react-icons/fa"; // Impo
 import { useCart } from "../context/CartContext"; // Custom hook to get cart item count
 import { useState, useEffect } from "react";
 import { useTheme } from "../context/Themecontext";
+import { FaSun, FaMoon } from 'react-icons/fa';
 
 const Header = ({ title }) => {
   const { getItemCount } = useCart(); // Access cart item count from context
@@ -27,9 +28,15 @@ const Header = ({ title }) => {
             className="h-12 rounded-full" // Styling the logo with a circular appearance
           />
         </Link>
-        <button onClick={toggleTheme} className="bg-but  dark:bg-black dark:text-white  text-white p-2 rounded">
-        {theme === 'dark' ? 'Light Mode' : 'Dark Mode'}
-      </button>
+        <button
+      onClick={toggleTheme}
+      className="bg-but dark:bg-black dark:text-white text-white p-2 rounded-full flex items-center"
+    >
+      {theme === 'dark' ? <FaSun /> : <FaMoon />}
+      <span className="">
+        {theme === 'dark' ? '' : ''}
+      </span>
+    </button>
 
         {/* Mobile Menu and Icons (Visible on smaller screens) */}
         <div className="md:hidden dark:bg-gray-800 dark:text-white  flex items-center space-x-4">

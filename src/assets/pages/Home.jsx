@@ -62,7 +62,7 @@ const Home = () => {
   ];
 
   return (
-    <div className="font-[dm]  dark:bg-gray-900 dark:text-white py-5">
+    <div className="font-[dm] bg-body  dark:bg-gray-900 dark:text-white py-5">
       {/* Carousel for featured slides */}
       <div className="flex w-full  py-5  h-screen  overflow-hidden object-cover relative  sm:px-8">
         <div className="w-full m-0 p-0 flex h-auto ">

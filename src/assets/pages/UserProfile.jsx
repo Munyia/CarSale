@@ -37,27 +37,27 @@ const UserProfile = () => {
   return (
       <div>
     <div className="bg-body dark:bg-gray-900 dark:text-white font-[dm] min-h-screen py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl bg--600 dark:bg-gray-800 dark:text-white bg-pry shadow-2xl shadow-slate-900 mx-auto bg-white rounded-lg p-6">
+      <div className="max-w-4xl flex gap-10 bg--600 dark:bg-gray-800 dark:text-white bg-pry  mx-auto bg-white rounded-lg">
         
         {/* Profile Header */}
-        <div className="flex items-center font-[dm] space-x-4 mb-8">
-          <div className="w-24 h-24 bg-body shadow-2xl shadow-slate-500 rounded-full flex-shrink-0">
+        <div className="flex flex-col text-cente items-center  border border-gray-500 p-6 rounded-2xl font-[dm] space-x-4 ">
+          <div className="w-24 h-24 bg-body   rounded-full flex-shrink-0">
             <img 
               src="https://www.w3schools.com/w3images/avatar2.png" 
               alt="User Avatar" 
-              className="w-full h-full object-cover rounded-full" 
+              className="w-full h-full items-center object-cover rounded-full" 
             />
           </div>
           <div>
-            <h1 className="text-3xl font-[roboto] font-bold text-but">Welcome, {userData.name}</h1>
-            <p className="text-black dark:text-white">Your account summary and details</p>
+            <h1 className="text-3xl font-[roboto] font-bold ">Welcome, {userData.name}</h1>
           </div>
+            <p className="text-black dark:text-white">Your account summary and details</p>
         </div>
         
         {/* Dashboard Sections */}
-        <div className="grid shadow-2xl dark:bg-gray-900 dark:text-white p-5 rounded-3xl shadow-slate-900 grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid border border-gray-500 dark:bg-gray-900 dark:text-white p-5 rounded-3xl  grid-cols-1 md:grid-cols-3 gap-6">
           {/* Ongoing Installment Plans */}
-          <div className="bg-white shadow-2xl  dark:bg-gray-800 dark:text-white shadow-slate-900 p-6 rounded-lg">
+          <div className="bg-white  dark:bg-gray-800 dark:text-white  p-6 rounded-lg">
             <h2 className="text-xl font-semibold font-[open] mb-4 text-black dark:text-white flex items-center">
               <FaCalendarAlt className="text-but mr-2 " />
               Ongoing Installment Plans
@@ -73,7 +73,7 @@ const UserProfile = () => {
           </div>
 
           {/* Order History */}
-          <div className="bg-white dark:bg-gray-800 dark:text-white p-6 rounded-lg shadow-2xl shadow-slate-900">
+          <div className="bg-white dark:bg-gray-800 dark:text-white p-6 rounded-lg ">
             <h2 className="text-xl dark:text-white font-semibold font-[open] mb-4 text-gray-800 flex items-center">
               <FaCar className="text-but mr-2" />
               Order History
@@ -89,7 +89,7 @@ const UserProfile = () => {
           </div>
 
           {/* Saved Cars */}
-          <div className="bg-white p-6 dark:bg-gray-800 dark:text-white rounded-lg shadow-2xl shadow-slate-900">
+          <div className="bg-white p-6 dark:bg-gray-800 dark:text-white rounded-lg ">
             <h2 className="text-xl font-[open] font-semibold mb-4 text-gray-800 flex items-center">
               <FaHeart className="text-red-700 mr-2" />
               Saved Cars

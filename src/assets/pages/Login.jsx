@@ -8,7 +8,7 @@ const Login = () => {
   }, []);
 
   return (
-    <div className="w-full dark:bg-gray-900 dark:text-white h-screen font-[dm] flex items-center justify-center bg-body py-3">
+    <div className="w-full dark:bg-gray-900 dark:text-white h-screen font-[roboto] flex items-center justify-center bg-body py-3">
       {/* Main container for the login form */}
       <div
         className="relative shadow-2xl dark:bg-gray-800 dark:text-white shadow-slate-900 bg-pry px-4 py-3 mx-4 md:mx-0 rounded-3xl sm:p-10 sm:max-w-xl"
@@ -89,7 +89,7 @@ const Login = () => {
               <p className="text-xs px-2  dark:text-white  text-but justify-center items-center text-center uppercase ">
                 Don’t have an account yet?
                 <Link
-                  className="flex font-[roboto] dark:text-white  hover:underline hover:text-black justify-center text-center items-center"
+                  className="flex font-[roboto] dark:text-white text-lg  hover:underline hover:text-black justify-center text-center items-center"
                   to="/register"
                 >
                   {" "}

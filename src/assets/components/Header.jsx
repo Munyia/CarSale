@@ -30,7 +30,7 @@ const Header = ({ title }) => {
         </Link>
         <button
       onClick={toggleTheme}
-      className="bg-but dark:bg-black dark:text-white text-white p-2 rounded-full flex items-center"
+      className="bg-gray-300 dark:bg-black dark:text-white text-white p-2 rounded-full flex items-center"
     >
       {theme === 'dark' ? <FaSun /> : <FaMoon />}
       <span className="">
@@ -124,22 +124,31 @@ const Header = ({ title }) => {
           >
             Contact
           </Link>
+          <Link
+            to="/auction"
+            className="text-black   dark:hover:text-but dark:text-white text-lg font-semibold hover:text-but transition duration-300"
+          >
+            Auctions
+          </Link>
+          <Link
+            to="/financing"
+            className="text-black   dark:hover:text-but dark:text-white text-lg font-semibold hover:text-but transition duration-300"
+          >
+            Financing
+          </Link>
         </div>
 
         {/* Search, Profile, Cart, and Login (Larger screens) */}
         <div className="hidden md:flex items-center space-x-4">
-          {/* Search bar */}
-          <div className="relative">
-            <input
-              type="text"
-              placeholder="Search by model, brand..."
-              className="px-4 py-2 rounded-lg border border-gray-700 bg-gray-800 text-white placeholder-gray-400 shadow-sm focus:outline-none focus:ring-2 focus:ring-but pl-10"
-            />
-            <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-200" /> {/* Search icon inside input */}
-          </div>
 
           {/* Profile, Cart, and Login */}
           <div className="flex items-center space-x-7">
+          <Link
+              to="/register"
+              className=" px-4 py-2 rounded-lg hover:bg-white hover:text-but transition duration-300"
+            >
+              Signup
+            </Link>
             <Link
               to="/userprofile"
               className="text-black dark:text-white transition duration-300"
@@ -153,12 +162,6 @@ const Header = ({ title }) => {
                   {getItemCount()} {/* Number of items in cart */}
                 </span>
               )}
-            </Link>
-            <Link
-              to="/login"
-              className="bg-but text-white px-4 py-2 rounded-lg shadow-md hover:bg-white hover:text-but transition duration-300"
-            >
-              Login
             </Link>
           </div>
         </div>
@@ -199,13 +202,29 @@ const Header = ({ title }) => {
                   Contact
                 </Link>
               </li>
-              <li>
+                <li>
                 <Link
-                  to="/login"
-                  className="text-black text-lg dark:bg-gray-900 dark:hover:text-but dark:text-white font-semibold hover:text-but transition duration-300"
-                >
-                  Login
-                </Link>
+            to="/auction"
+            className="text-black   dark:hover:text-but dark:text-white text-lg font-semibold hover:text-but transition duration-300"
+          >
+            Auctions
+          </Link>
+                </li>
+                <li>
+                <Link
+            to="/financing"
+            className="text-black   dark:hover:text-but dark:text-white text-lg font-semibold hover:text-but transition duration-300"
+          >
+            Financing
+          </Link>
+                </li>
+              <li>
+              <Link
+              to="/register"
+              className=" px-4 py-2 rounded-lg hover:bg-white hover:text-but transition duration-300"
+            >
+              Signup
+            </Link>
               </li>
             </ul>
           </div>

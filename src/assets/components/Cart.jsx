@@ -100,7 +100,7 @@ const Cart = () => {
   return (
     <div className="bg-body dark:bg-gray-900 dark:text-white pt-7 shadow-2xl shadow-slate-900  h-[100vh]">
       <div className="w-full  md:w-[75%] dark:text-white dark:bg-gray-700 mx-auto p-6  bg-white pt-5 rounded-xl  shadow-2xl shadow-slate-900 ">
-        <h1 className="text-3xl font-[dm] font-semibold dark:text-white text-center text-but mb-6">Your Cart</h1>
+        <h1 className="text-3xl font-[dm] font-semibold dark:text-white text-center  mb-6">Your Cart</h1>
         {Object.keys(cartSummary).length === 0 ? (
           <p className="text-center font-[dm]
            text-gray-500 text-lg">

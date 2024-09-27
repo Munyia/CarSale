@@ -8,7 +8,7 @@ export default {
   theme: {
     extend: {
       colors:{
-        'body': '#ddd',
+        'body': '#ffff',
         'but': '#673de6',
         fontFamily: {
           roboto: ['Roboto', 'sans-serif'],

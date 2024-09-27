@@ -148,10 +148,10 @@ const CarListing = () => {
           <h2 className="text-xl font-[roboto] font-semibold mb-4">Car Listing</h2>
         </div>
         {/* <h2 className="text-xl justify-center text-center font-semibold mb-4">Filter By</h2> */}
-        <div className="mb-4 justify-center text-center font-[open] bg-body dark:bg-gray-800 dark:text-white p-4 rounded-2xl shadow-2xl shadow-slate-900 flex gap-4 flex-wrap">
+        <div className="mb-4 justify-center text-center font-[open] bg-body dark:bg-gray-800 dark:text-white p-4 rounded-2xl  flex gap-4 flex-wrap">
   {/* Brand Filter */}
   <div className="relative font-[open] group w-48">
-    <button className="w-full text-sm font-semibold hover:rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-but dark:hover:text-gray-300 text-black dark:text-gray-200 bg-but dark:bg-gray-900 dark:rounded-lg dark:border-none p-3 rounded-lg focus:outline-none">
+    <button className="w-full text-sm hover:text-but font-semibold hover:rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 dark:hover:text-gray-300 text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-900 dark:rounded-lg dark:border-none p-3 rounded-lg focus:outline-none">
       Brand
     </button>
     <div className="absolute z-50 top-full left-0 mt-2 w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg shadow-lg transition-transform transform scale-0 group-hover:scale-100 group-hover:translate-y-1">
@@ -180,7 +180,7 @@ const CarListing = () => {
 
   {/* Model Filter */}
   <div className="relative font-[open] group w-48">
-    <button className="w-full text-sm font-semibold hover:rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-but dark:hover:text-gray-300 text-black dark:text-gray-200 bg-but dark:bg-gray-900 dark:rounded-lg dark:border-none p-3 rounded-lg focus:outline-none">
+    <button className="w-full text-sm font-semibold hover:rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-but dark:hover:text-gray-300 text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-900 dark:rounded-lg dark:border-none p-3 rounded-lg focus:outline-none">
       Model
     </button>
     <div className="absolute z-50 top-full left-0 mt-2 w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg shadow-lg transition-transform transform scale-0 group-hover:scale-100 group-hover:translate-y-1">
@@ -196,7 +196,7 @@ const CarListing = () => {
 
   {/* Price Range Filter */}
   <div className="relative font-[open] group w-48">
-    <button className="w-full text-sm font-semibold hover:rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-but dark:hover:text-gray-300 text-black dark:text-gray-200 bg-but dark:bg-gray-900 dark:rounded-lg dark:border-none p-3 rounded-lg focus:outline-none">
+    <button className="w-full text-sm font-semibold hover:rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-but dark:hover:text-gray-300 text-black dark:text-gray-200 bg-gray-200 dark:bg-gray-900 dark:rounded-lg dark:border-none p-3 rounded-lg focus:outline-none">
       Price Range
     </button>
     <div className="absolute z-50 top-full left-0 mt-2 w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg shadow-lg transition-transform transform scale-0 group-hover:scale-100 group-hover:translate-y-1">
@@ -211,7 +211,7 @@ const CarListing = () => {
               minPrice: parseFloat(e.target.value) || 0,
             })
           }
-          className="block w-full dark:bg-gray-900 dark:border-none dark:text-gray-200 text-left px-4 py-2 hover:bg-gray-500 dark:hover:bg-gray-700 hover:text-but dark:hover:text-grey-200"
+          className="block w-full dark:bg-gray-900 dark:border-none dark:text-gray-200 text-left px-4 py-2  dark:hover:bg-gray-700 hover:text-but dark:hover:text-grey-200"
         />
         <input
           type="number"
@@ -223,7 +223,7 @@ const CarListing = () => {
               maxPrice: parseFloat(e.target.value) || 50000,
             })
           }
-          className="block dark:bg-gray-900 dark:text-gray-200 w-full text-left px-4 py-2 hover:bg-gray-500 dark:hover:bg-gray-700 hover:text-but dark:hover:text-grey-200"
+          className="block dark:bg-gray-900 dark:text-gray-200 w-full text-left px-4 py-2  dark:hover:bg-gray-700 hover:text-but dark:hover:text-grey-200"
         />
       </div>
     </div>
@@ -253,12 +253,12 @@ const CarListing = () => {
       </div>
 
       {/* Car Listings */}
-      <div className="grid px-5  dark:bg-gray-900 dark:text-gray-200 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 ">
+      <div className="grid px-5  dark:bg-gray-900 dark:text-gray-200 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 ">
         {currentCars.map((car) => (
           <Link to={`cardetail/${car.id}`}>
             <div
               key={car.id}
-              className="bg-white  dark:bg-gray-800 dark:border-none pb-2 dark:text-gray-200 border rounded-2xl shadow-2xl shadow-slate-900 overflow-hidden"
+              className="bg-white  dark:bg-gray-800 dark:border-none pb-2 dark:text-gray-200 border rounded-2xl  overflow-hidden"
             >
               {/* Placeholder image source */}
               <img

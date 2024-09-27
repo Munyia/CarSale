@@ -49,7 +49,7 @@ const CarDetail = () => {
   return (
     <div className="font-[dm] dark:bg-gray-900 dark:text-white bg-body">
       <div className="bg-white">
-        <div className="shadow-3xl py-4 dark:bg-gray-900 dark:text-white bg-body px-4 lg:px-10 bg--600 shadow-slate-900 grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="shadow-3xl py-4 dark:bg-gray-900 dark:text-white bg-body px-4 lg:px-10 bg--600 shadow-slate-500 grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* Image Gallery */}
           <div className="relative">
             <img
@@ -60,20 +60,20 @@ const CarDetail = () => {
             {/* Navigation buttons for the image gallery */}
             <button
               onClick={handlePrevImage}
-              className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-but hover:bg-white px-2 py-1 rounded-full"
+              className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-gray-500 hover:bg-white px-2 py-1 rounded-full"
             >
               &#8249; {/* Left arrow */}
             </button>
             <button
               onClick={handleNextImage}
-              className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-but hover:bg-white px-2 py-1 rounded-full"
+              className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-500 hover:bg-white px-2 py-1 rounded-full"
             >
               &#8250; {/* Right arrow */}
             </button>
           </div>
 
           {/* Car Specifications Section */}
-          <div className="bg-body dark:bg-gray-800 dark:text-white p-3 shadow-2xl shadow-slate-900 rounded-3xl">
+          <div className="bg-body dark:bg-gray-800 dark:text-white p-3 shadow-2xl shadow-slate-500 rounded-3xl">
             <h1 className="text-lg font-[roboto] font-bold mb-4">
               {car.make} {car.model} ({car.year}) {/* Display car details */}
             </h1>
@@ -153,34 +153,35 @@ const CarDetail = () => {
         </div>
 
         {/* Related Cars Section */}
-        <div className=" py-4 dark:bg-gray-900 dark:text-white px-4 font-[dm] bg-gray-400">
-          <h2 className="text-2xl text-white font-[roboto] font-semibold mb-2">
+        <div className=" py-4 dark:bg-gray-900 dark:text-white px-4 font-[dm]">
+          <h2 className="text-2xl  font-[roboto] font-semibold mb-2">
             Related Cars
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {relatedCars.map((relatedCar) => (
-              <div
-                key={relatedCar.id}
-                className="bg-body dark:bg-gray-800 dark:text-white p-4 rounded-2xl shadow-2xl shadow-slate-900 flex flex-col items-center"
-              >
-                <img
-                  src={relatedCar.images[0]} // Display the first image of the related car
-                  alt={`Car ${relatedCar.make} ${relatedCar.model}`} // Alt text for accessibility
-                  className="w-full h-32 sm:h-40 md:h-48 object-cover rounded-3xl mb-2"
-                />
-                <h3 className="text-lg font-semibold">
-                  {relatedCar.make} {relatedCar.model} ({relatedCar.year})
-                </h3>
-                <p>Price: ${relatedCar.price.toLocaleString()}</p>
-                <Link
-                  to={`/cars/${relatedCar.id}`}
-                  className="text-white  hover:bg-body hover:text-but p-2 rounded-lg font-[open] bg-but hover:underline mt-1 block"
-                >
-                  View Details
-                </Link>
-              </div>
-            ))}
-          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+  {relatedCars.map((relatedCar) => (
+    <div
+      key={relatedCar.id}
+      className="bg-body dark:bg-gray-800 dark:text-white p-4 rounded-2xl flex flex-col items-center transform transition duration-300 ease-in-out hover:scale-105"
+    >
+      <img
+        src={relatedCar.images[0]} // Display the first image of the related car
+        alt={`Car ${relatedCar.make} ${relatedCar.model}`} // Alt text for accessibility
+        className="w-full h-32 sm:h-40 md:h-48 object-cover rounded-3xl mb-2 transition duration-300 ease-in-out hover:scale-110"
+      />
+      <h3 className="text-lg font-semibold">
+        {relatedCar.make} {relatedCar.model} ({relatedCar.year})
+      </h3>
+      <p>Price: ${relatedCar.price.toLocaleString()}</p>
+      <Link
+        to={`/cars/${relatedCar.id}`}
+        className="text-white hover:bg-body hover:text-but p-2 rounded-lg font-[open] bg-but hover:underline mt-1 block"
+      >
+        View Details
+      </Link>
+    </div>
+  ))}
+</div>
+
         </div>
       </div>
     </div>

@@ -98,8 +98,8 @@ const Cart = () => {
   );
 
   return (
-    <div className="bg-body dark:bg-gray-900 dark:text-white pt-7 shadow-2xl shadow-slate-900  h-[100vh]">
-      <div className="w-full  md:w-[75%] dark:text-white dark:bg-gray-700 mx-auto p-6  bg-white pt-5 rounded-xl  shadow-2xl shadow-slate-900 ">
+    <div className="bg-body dark:bg-gray-900 dark:text-white pt-7   h-[100vh]">
+      <div className="w-full  md:w-[75%] dark:text-white dark:bg-gray-700 mx-auto p-6  bg-white pt-5 rounded-xl   ">
         <h1 className="text-3xl font-[dm] font-semibold dark:text-white text-center  mb-6">Your Cart</h1>
         {Object.keys(cartSummary).length === 0 ? (
           <p className="text-center font-[dm]
@@ -109,14 +109,14 @@ const Cart = () => {
         ) : (
           <div className="flex font-[open] flex-col md:flex-row gap-6">
             {/* Car Information Section */}
-            <div className="flex-grow bg-body font-[open] dark:bg-gray-800 dark:text-white  p-4 rounded-lg  shadow-2xl shadow-slate-900 ">
+            <div className="flex-grow bg-body font-[open] dark:bg-gray-800 dark:text-white  p-4 rounded-lg  shadow-2xl  ">
               <ul className="space-y-4">
                 {Object.entries(cartSummary).map(([itemId, quantity]) => {
                   const car = findCarById(parseInt(itemId, 10));
                   return (
                     <li
                       key={itemId}
-                      className="bg-white  shadow-2xl shadow-slate-900 dark:bg-gray-900 dark:text-white  p-4 rounded-lg  flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 md:space-x-6"
+                      className="bg-white   dark:bg-gray-900 dark:text-white  p-4 rounded-lg  flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 md:space-x-6"
                     >
                       <div className="flex items-center  space-x-4">
                         {/* Image of the car */}
@@ -194,7 +194,7 @@ const Cart = () => {
             </div>
 
             {/* Payment Section */}
-            <div className="bg-body dark:bg-gray-900 dark:text-white  shadow-2xl shadow-slate-900  p-4 rounded-lg mt-6 md:mt-0 flex-shrink-0 w-full md:w-1/3">
+            <div className="bg-body dark:bg-gray-900 dark:text-white  shadow-2xl shadow-slate-500  p-4 rounded-lg mt-6 md:mt-0 flex-shrink-0 w-full md:w-1/3">
               <h2 className="text-xl font-semibold mb-4">Payment Summary</h2>
               <p className="text-gray-700 dark:bg-gray-900 dark:text-gray-300">
                 Total Amount: ${totalAmount.toLocaleString()}

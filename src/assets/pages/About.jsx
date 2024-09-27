@@ -23,7 +23,7 @@ const About = () => {
     <div className="bg-body dark:bg-gray-900 dark:text-white  min-h-screen">
       <div className="max-w-4xl mx-auto dark:bg-gray-900 dark:text-white   pt-4 pb-8 px-4 sm:px-6 lg:px-8">
         <h1
-          className={`text-3xl sm:text-4xl font-[roboto]  font-bold text-center mb-4 text-but transition-opacity duration-1000 ${
+          className={`text-3xl sm:text-4xl font-[roboto]  font-bold text-center mb-4 transition-opacity duration-1000 ${
             isTitleVisible ? "opacity-100" : "opacity-0"
           }`}
         >
@@ -36,7 +36,7 @@ const About = () => {
           }`}
         >
           {/* Mission Section */}
-          <section className="bg-body shadow-2xl dark:bg-gray-800 dark:text-white  shadow-slate-900 rounded-3xl p-5 transition-all duration-300">
+          <section className="bg-body shadow-2xl dark:bg-gray-800 dark:text-white  shadow-slate-500 rounded-3xl p-5 transition-all duration-300">
             <h2 className="text-lg font-[open]  sm:text-xl font-medium text-but mb-4">
               Our Mission
             </h2>
@@ -47,7 +47,7 @@ const About = () => {
           </section>
 
           {/* Values Section */}
-          <section className="bg-body shadow-2xl dark:bg-gray-800  shadow-slate-900 rounded-3xl p-5 transition-all duration-300">
+          <section className="bg-body shadow-2xl dark:bg-gray-800  shadow-slate-500 rounded-3xl p-5 transition-all duration-300">
             <h2 className="text-lg font-[open] sm:text-xl font-medium text-but mb-4">
               Our Values
             </h2>
@@ -58,7 +58,7 @@ const About = () => {
           </section>
 
           {/* History Section */}
-          <section className="bg-body shadow-2xl dark:bg-gray-800  shadow-slate-900 rounded-3xl p-5 transition-all duration-300">
+          <section className="bg-body shadow-2xl dark:bg-gray-800  shadow-slate-500 rounded-3xl p-5 transition-all duration-300">
             <h2 className="text-lg font-[open] sm:text-xl font-medium text-but mb-4">
               Our History
             </h2>
@@ -69,7 +69,7 @@ const About = () => {
           </section>
 
           {/* Team Section */}
-          <section className="bg-body shadow-2xl dark:bg-gray-800  shadow-slate-900 rounded-3xl p-5 transition-all duration-300">
+          <section className="bg-body shadow-2xl dark:bg-gray-800  shadow-slate-500 rounded-3xl p-5 transition-all duration-300">
             <h2 className="text-lg font-[open] sm:text-xl font-medium text-but mb-4">
               Meet the Team
             </h2>
@@ -80,7 +80,7 @@ const About = () => {
           </section>
 
           {/* Contact Section */}
-          <section className="bg-body shadow-2xl dark:bg-gray-800  shadow-slate-900 rounded-3xl p-5 transition-all duration-300">
+          <section className="bg-body shadow-2xl dark:bg-gray-800  shadow-slate-500 rounded-3xl p-5 transition-all duration-300">
             <Link
               to={"/contact"}
               className="text-lg font-[open] sm:text-xl hover:black font-medium text-but mb-4"

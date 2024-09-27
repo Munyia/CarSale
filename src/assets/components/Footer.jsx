@@ -35,8 +35,8 @@ const Footer = () => {
   }
 
   return (
-    <footer className="bg-but dark:bg-gray-800 dark:text-white  py-4 text-white p-4">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer className="bg-white dark:bg-gray-800 dark:text-white  py-4 text-black p-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* Quick Links Section */}
           <div className="flex flex-col">
@@ -45,7 +45,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/terms"
-                  className="text-white font-[dm] hover:text-black transition duration-300 block"
+                  className="text-black font-[dm] hover:text-but transition duration-300 block"
                 >
                   Terms of Service
                 </Link>
@@ -53,32 +53,32 @@ const Footer = () => {
               <li>
                 <Link
                   to="/privacy"
-                  className="text-white font-[dm] hover:text-black transition duration-300 block"
-                >
+                  className="text-black font-[dm] hover:text-but transition duration-300 block"
+                  >
                   Privacy Policy
                 </Link>
               </li>
               <li>
                 <Link
                   to="/about"
-                  className="text-white font-[dm] hover:text-black transition duration-300 block"
-                >
+                  className="text-black font-[dm] hover:text-but transition duration-300 block"
+              >
                   About Us
                 </Link>
               </li>
               <li>
                 <Link
                   to="/carlisting"
-                  className="text-white font-[dm] hover:text-black transition duration-300 block"
-                >
+                  className="text-black font-[dm] hover:text-but transition duration-300 block"
+                  >
                   Car Listing
                 </Link>
               </li>
               <li>
                 <Link
                   to="/checkout"
-                  className="text-white font-[dm] hover:text-black transition duration-300 block"
-                >
+                  className="text-black font-[dm] hover:text-but transition duration-300 block"
+              >
                   Checkout
                 </Link>
               </li>
@@ -137,7 +137,7 @@ const Footer = () => {
         </div>
 
         {/* Footer Bottom Section */}
-        <div className="mt-6 font-[open] text-center text-gray-300">
+        <div className="mt-6 font-[open] text-center text-gray-700">
           <p>&copy; {new Date().getFullYear()} CarSale. All rights reserved.</p>
         </div>
       </div>

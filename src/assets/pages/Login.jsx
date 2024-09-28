@@ -17,7 +17,7 @@ const Login = () => {
         <div className="max-w-md mx-auto h-full">
           {/* Link to go back to the home page */}
         
-          <h1 className="text-2xl font-[roboto] font-bold text-but mb-6 text-center">
+          <h1 className="text-2xl font-[roboto] font-bold text-black mb-6 text-center">
             Welcome back
           </h1>
           <div className="text-sm font-normal mb-4 text-center">
@@ -30,7 +30,7 @@ const Login = () => {
               <div className="flex-1">
                 <label
                   htmlFor="email"
-                  className="font-semibold  text-sm text-but pb-1 block"
+                  className="font-semibold  text-sm text-black pb-1 block"
                 >
                   Email
                 </label>
@@ -48,7 +48,7 @@ const Login = () => {
               <div className="flex-1">
                 <label
                   htmlFor="password"
-                  className="font-semibold  text-sm text-but pb-1 block"
+                  className="font-semibold  text-sm text-black pb-1 block"
                 >
                   Password
                 </label>
@@ -86,7 +86,7 @@ const Login = () => {
             {/* Signup prompt */}
             <div className="flex items-center justify-between mt-4">
               <span className="w-2/5 border-b border-gray-500 md:w-1/4"></span>
-              <p className="text-xs px-2  dark:text-white  text-but justify-center items-center text-center uppercase ">
+              <p className="text-xs px-2  dark:text-white  text-black justify-center items-center text-center uppercase ">
                 Don’t have an account yet?
                 <Link
                   className="flex font-[roboto] dark:text-white text-lg  hover:underline hover:text-black justify-center text-center items-center"

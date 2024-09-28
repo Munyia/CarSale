@@ -25,6 +25,8 @@ import About from './assets/pages/About.jsx';
 import Privacy from './assets/pages/Privacy.jsx';
 import SavedCars from './assets/pages/SavedCars.jsx';
 import { ThemeProvider, useTheme  } from './assets/context/Themecontext.jsx';
+import Financing from './assets/pages/Financing.jsx';
+import Popular from './assets/components/Popular.jsx';
 
 
 function App() {
@@ -68,6 +70,8 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/savedcars" element={<SavedCars />} />
+        <Route path="/financing" element={<Financing />} />
+        <Route path="/popular" element={<Popular />} />
       </Routes>
       <Footer /> {/* Footer at the bottom */}
     </BrowserRouter>

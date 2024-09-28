@@ -3,6 +3,7 @@ import Footer from "../components/Footer"; // Importing Footer component
 import Header from "../components/Header"; // Importing Header component
 import Carousel from "../components/Carousel"; // Importing Carousel component
 import { Link } from "react-router-dom"; // Importing Link for navigation
+import Popular from "../components/Popular";
 
 const Home = () => {
   // Array of slides for the carousel
@@ -61,6 +62,28 @@ const Home = () => {
     },
   ];
 
+  const categoryData = [
+    {
+      title: "Sedans",
+      description: "Comfort and affordability for your daily drive.",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLzVP0r6KyOW0dbvIQnmDU--z1JHnHz2ml4w&s", // Add your image path here
+      link: "/category/sedans",
+    },
+    {
+      title: "SUVs",
+      description: "Powerful and versatile for any terrain.",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkTyyAuoTUQfBQveMwScPGtgPTam-8k2BNLg&s", // Add your image path here
+      link: "/category/suvs",
+    },
+    {
+      title: "Electric Cars",
+      description: "Eco-friendly and cost-efficient electric vehicles.",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUSxXu8ogj81ZsYA404CxiS-ATB_2jW5UIfQ&s", // Add your image path here
+      link: "/category/electric",
+    },
+  ];
+  
+
   return (
     <div className="font-[dm] bg-body  dark:bg-gray-900 dark:text-white py-5">
       {/* Carousel for featured slides */}
@@ -103,7 +126,7 @@ const Home = () => {
       {/* Section for searching and browsing cars */}
       <section className="bg-body dark:bg-gray-800 dark:text-white py-8  sm:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl font-[open] font-bold text-but mb-4">
+          <h2 className="text-3xl font-[open] font-bold text-black mb-4">
             Find Your Perfect Car
           </h2>
 
@@ -132,60 +155,38 @@ const Home = () => {
           </form>
 
           {/* Car Categories */}
-          <h2 className="text-3xl font-[open] text-but font-bold mb-3 mt-8">
+          <h2 className="text-3xl font-[open] text-black font-bold mb-3 mt-8">
             Browse by Category
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Category Card for Sedans */}
-            <div className="category-card dark:bg-gray-900 dark:text-white dark:border-none bg-white p-6 rounded-lg shadow hover:shadow-lg">
-              <h3 className="text-xl font-semibold text-but mb-4">Sedans</h3>
-              <p className="text-gray-600 dark:text-white mb-4">
-                Comfort and affordability for your daily drive.
-              </p>
-              <a
-                href="/category/sedans"
-                className="bg-but font-[open] text-white px-4 py-2 rounded-lg hover:bg-white hover:text-but inline-block"
-              >
-                Explore Sedans
-              </a>
-            </div>
-
-            {/* Category Card for SUVs */}
-            <div className="category-card dark:bg-gray-900 dark:text-white dark:border-none bg-white p-6 rounded-lg shadow hover:shadow-lg">
-              <h3 className="text-xl font-semibold text-but mb-4">SUVs</h3>
-              <p className="text-gray-600 dark:text-white mb-4">
-                Powerful and versatile for any terrain.
-              </p>
-              <a
-                href="/category/suvs"
-                className="bg-but text-white font-[open] px-4 py-2 rounded-lg hover:bg-white hover:text-but inline-block"
-              >
-                Explore SUVs
-              </a>
-            </div>
-
-            {/* Category Card for Electric Cars */}
-            <div className="category-card dark:bg-gray-900 dark:text-white dark:border-none bg-white p-6 rounded-lg shadow hover:shadow-lg">
-              <h3 className="text-xl font-[open] font-semibold text-but mb-4">
-                Electric Cars
-              </h3>
-              <p className="text-gray-600 dark:text-white mb-4">
-                Eco-friendly and cost-efficient electric vehicles.
-              </p>
-              <a
-                href="/category/electric"
-                className="bg-but text-white px-4 py-2 rounded-lg hover:bg-white hover:text-but inline-block"
-              >
-                Explore Electric Cars
-              </a>
-            </div>
-          </div>
+      {categoryData.map((category, index) => (
+        <div
+          key={index}
+          className="category-card bg-white dark:bg-gray-900 dark:text-white p-6 rounded-lg shadow hover:shadow-lg transition-transform transform hover:scale-105 duration-300"
+        >
+          <img
+            src={category.image}
+            alt={category.title}
+            className="w-full h-32 object-cover rounded-t-lg mb-4"
+          />
+          <h3 className="text-xl font-semibold text-black mb-4">{category.title}</h3>
+          <p className="text-gray-600 dark:text-white mb-4">{category.description}</p>
+          <Link
+            to={category.link}
+            className="bg-but text-white px-4 py-2 rounded-lg hover:bg-white hover:text-but inline-block transition-colors duration-300"
+          >
+            Explore {category.title}
+          </Link>
+        </div>
+      ))}
+    </div>
+    <Popular/>
         </div>
       </section>
       {/* Testimonials section */}
-      <section className="bg-body py-12  dark:bg-gray-800 dark:text-white sm:px-8">
+      <section className="bg-body pb-12  dark:bg-gray-800 dark:text-white sm:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl font-[open] font-bold text-but mb-8">
+          <h2 className="text-3xl font-[open] font-bold text-black mb-8">
             What Our Customers Say
           </h2>
 

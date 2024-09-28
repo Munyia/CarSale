@@ -52,7 +52,7 @@ const FAQ = () => {
       <div className="max-w-4xl dark:bg-gray-800 rounded-3xl dark:text-white mx-auto py-8 px-4 sm:px-6 lg:px-8">
         {" "}
         {/* Container for FAQs */}
-        <h1 className="text-3xl sm:text-4xl  dark:border-none  font-bold text-center mb-5 text-but">
+        <h1 className="text-3xl sm:text-4xl  dark:border-none  font-bold text-center mb-5 text-black">
           Frequently Asked Questions
         </h1>{" "}
         {/* FAQ title */}

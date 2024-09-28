@@ -22,7 +22,7 @@ const Terms = () => {
       <div className="max-w-4xl dark:bg-gray-800 rounded-3xl dark:text-white mx-auto pt-4 pb-8 px-4 sm:px-6 lg:px-8">
         {/* Title with animation */}
         <h1
-          className={`text-3xl sm:text-4xl font-[roboto] font-bold text-center mb-8 text-but transition-opacity duration-1000 ${
+          className={`text-3xl sm:text-4xl font-[roboto] font-bold text-center mb-8 text-black transition-opacity duration-1000 ${
             isTitleVisible ? "opacity-100" : "opacity-0"
           }`}
         >
@@ -37,7 +37,7 @@ const Terms = () => {
         >
           {/* Section: Introduction */}
           <section className="bg-body dark:bg-gray-900 dark:text-white shadow-2xl shadow-slate-900 rounded-3xl p-5 transition-all duration-300">
-            <h2 className="text-lg sm:text-xl font-[open] font-medium text-but mb-4">
+            <h2 className="text-lg sm:text-xl font-[open] font-medium text-black mb-4">
               1. Introduction
             </h2>
             <p className="text-black dark:text-white">
@@ -47,7 +47,7 @@ const Terms = () => {
 
           {/* Section: Intellectual Property Rights */}
           <section className="bg-body dark:bg-gray-900 dark:text-white shadow-2xl shadow-slate-900 rounded-3xl p-5 transition-all duration-300">
-            <h2 className="text-lg sm:text-xl font-[open] font-medium text-but mb-4">
+            <h2 className="text-lg sm:text-xl font-[open] font-mediumtext-blackmb-4">
               2. Intellectual Property Rights
             </h2>
             <p className="text-black dark:text-white">
@@ -57,7 +57,7 @@ const Terms = () => {
 
           {/* Section: Restrictions */}
           <section className="bg-body dark:bg-gray-900 dark:text-white shadow-2xl shadow-slate-900 rounded-3xl p-5 transition-all duration-300">
-            <h2 className="text-lg sm:text-xl font-[open] font-medium text-but mb-4">
+            <h2 className="text-lg sm:text-xl font-[open] font-medium text-black mb-4">
               3. Restrictions
             </h2>
             <p className="text-black dark:text-white">
@@ -67,7 +67,7 @@ const Terms = () => {
 
           {/* Section: Limitation of Liability */}
           <section className="bg-body dark:bg-gray-900 dark:text-white shadow-2xl shadow-slate-900 rounded-3xl p-5 transition-all duration-300">
-            <h2 className="text-lg sm:text-xl font-[open] font-medium text-but mb-4">
+            <h2 className="text-lg sm:text-xl font-[open] font-medium text-black mb-4">
               4. Limitation of Liability
             </h2>
             <p className="text-black dark:text-white">
@@ -77,7 +77,7 @@ const Terms = () => {
 
           {/* Section: Governing Law */}
           <section className="bg-body dark:bg-gray-900 dark:text-white shadow-2xl shadow-slate-900 rounded-3xl p-5 transition-all duration-300">
-            <h2 className="text-lg sm:text-xl font-[open] font-medium text-but mb-4">
+            <h2 className="text-lg sm:text-xl font-[open] font-medium text-black mb-4">
               5. Governing Law
             </h2>
             <p className="text-black dark:text-white">

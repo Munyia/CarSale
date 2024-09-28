@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "../components/Header";
+
 
 const Request = () => {
   return (
@@ -7,13 +7,13 @@ const Request = () => {
       <div className="w-full dark:bg-gray-900 dark:text-white min-h-screen font-[dm] flex items-center justify-center bg-body py-3">
         <div className="relative w-1/3 shadow-2xl dark:bg-gray-800 dark:text-white shadow-slate-900 bg-pry px-4 py-3 mx-8 md:mx-0 rounded-3xl sm:p-10 sm:max-w-1/2">
           <div className="max-w-md mx-auto">
-            <h2 className="text-2xl font-bold font-[roboto] text-but mb-6 text-center">
+            <h2 className="text-2xl font-bold font-[roboto] text-black mb-6 text-center">
               Request Form
             </h2>
             <form className="space-y-6">
               {/* Full Name Field */}
               <div>
-                <label htmlFor="fullname" className="block text-but">
+                <label htmlFor="fullname" className="block text-black">
                   Full Name
                 </label>
                 <input
@@ -28,7 +28,7 @@ const Request = () => {
 
               {/* Email Field */}
               <div>
-                <label htmlFor="email" className="block text-but">
+                <label htmlFor="email" className="block text-black">
                   Email
                 </label>
                 <input
@@ -43,7 +43,7 @@ const Request = () => {
 
               {/* Phone Number Field */}
               <div>
-                <label htmlFor="phone" className="block text-but">
+                <label htmlFor="phone" className="block text-black">
                   Phone Number
                 </label>
                 <input
@@ -58,7 +58,7 @@ const Request = () => {
 
               {/* Message Field */}
               <div>
-                <label htmlFor="message" className="block text-but">
+                <label htmlFor="message" className="block text-black">
                   Message
                 </label>
                 <textarea

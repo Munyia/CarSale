@@ -81,13 +81,13 @@ const About = () => {
 
           {/* Contact Section */}
           <section className="bg-body shadow-2xl dark:bg-gray-800  shadow-slate-500 rounded-3xl p-5 transition-all duration-300">
-            <Link
+          <Link
               to={"/contact"}
-              className="text-lg font-[open] sm:text-xl hover:black font-medium text-but mb-4"
+              className="text-lg sm:text-xl font-[open] p-2 bg-but rounded-xl text-white hover:bg-body hover hover:text-black font-medium  mb-4"
             >
               Contact Us
             </Link>
-            <p className="text-black  dark:text-white  font-[dm]">
+            <p className="text-black  dark:text-white pt-2  font-[dm]">
               Reach out to us for more information or to discuss how we can
               assist you.
             </p>

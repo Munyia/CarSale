@@ -23,7 +23,7 @@ const Privacy = () => {
       <div className="max-w-4xl dark:bg-gray-800 mb-5 rounded-3xl dark:text-white mx-auto pt-4 pb-8 px-4 sm:px-6 lg:px-8">
         {/* Title with animation */}
         <h1
-          className={`text-3xl sm:text-4xl font-[roboto] font-bold text-center mb-4 text-but transition-opacity duration-1000 ${
+          className={`text-3xl sm:text-4xl font-[roboto] font-bold text-center mb-4 text-black transition-opacity duration-1000 ${
             isTitleVisible ? "opacity-100" : "opacity-0"
           }`}
         >
@@ -38,7 +38,7 @@ const Privacy = () => {
         >
           {/* Privacy Policy Sections */}
           <section className="bg-body dark:bg-gray-900 dark:text-white shadow-2xl shadow-slate-900 rounded-3xl p-5 transition-all duration-300">
-            <h2 className="text-lg sm:text-xl font-[open] font-medium text-but mb-4">
+            <h2 className="text-lg sm:text-xl font-[open] font-medium text-black mb-4">
               Information We Collect
             </h2>
             <p className="text-black dark:text-white">
@@ -49,7 +49,7 @@ const Privacy = () => {
           </section>
 
           <section className="bg-body shadow-2xl dark:bg-gray-900 dark:text-white shadow-slate-900 rounded-3xl p-5 transition-all duration-300">
-            <h2 className="text-lg sm:text-xl font-[open] font-medium text-but mb-4">
+            <h2 className="text-lg sm:text-xl font-[open] font-medium text-black mb-4">
               How We Use Information
             </h2>
             <p className="text-black dark:text-white">
@@ -60,7 +60,7 @@ const Privacy = () => {
           </section>
 
           <section className="bg-body shadow-2xl dark:bg-gray-900 dark:text-white shadow-slate-900 rounded-3xl p-5 transition-all duration-300">
-            <h2 className="text-lg sm:text-xl font-[open] font-medium text-but mb-4">
+            <h2 className="text-lg sm:text-xl font-[open] font-medium text-black mb-4">
               Sharing Your Information
             </h2>
             <p className="text-black dark:text-white">
@@ -71,7 +71,7 @@ const Privacy = () => {
           </section>
 
           <section className="bg-body shadow-2xl dark:bg-gray-900 dark:text-white shadow-slate-900 rounded-3xl p-5 transition-all duration-300">
-            <h2 className="text-lg sm:text-xl font-[open] font-medium text-but mb-4">
+            <h2 className="text-lg sm:text-xl font-[open] font-medium text-black mb-4">
               Your Privacy Rights
             </h2>
             <p className="text-black dark:text-white">

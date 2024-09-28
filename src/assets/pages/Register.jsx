@@ -14,7 +14,7 @@ const Register = () => {
         style={{ width: "80%", height: "70%" }}
       >
         <div className="max-w-md rounded-2xl mx-auto">
-          <h1 className="text-2xl font-[roboto] font-bold text-but mb-1 text-center">
+          <h1 className="text-2xl font-[roboto] font-bold text-black mb-1 text-center">
             Register
           </h1>
           <div className="w-full max-w-full justify-center items-center px-3 mx-auto mt-0 md:flex-0 shrink-0">
@@ -97,7 +97,7 @@ const Register = () => {
               <div className="flex-1">
                 <label
                   htmlFor="fullname"
-                  className="font-semibold text-sm text-but pb-1 block"
+                  className="font-semibold text-sm text-black pb-1 block"
                 >
                   Full Name
                 </label>
@@ -113,7 +113,7 @@ const Register = () => {
               <div className="flex-1">
                 <label
                   htmlFor="email"
-                  className="font-semibold text-sm text-but pb-1 block"
+                  className="font-semibold text-sm text-black pb-1 block"
                 >
                   Email
                 </label>
@@ -133,7 +133,7 @@ const Register = () => {
               <div className="flex-1">
                 <label
                   htmlFor="password"
-                  className="font-semibold text-sm text-but pb-1 block"
+                  className="font-semibold text-sm text-black pb-1 block"
                 >
                   Password
                 </label>
@@ -149,7 +149,7 @@ const Register = () => {
               <div className="flex-1">
                 <label
                   htmlFor="confirmpassword"
-                  className="font-semibold text-sm text-but pb-1 block"
+                  className="font-semibold text-sm text-black pb-1 block"
                 >
                   Confirm Password
                 </label>
@@ -169,7 +169,7 @@ const Register = () => {
               <div className="flex-1">
                 <label
                   htmlFor="dob"
-                  className="font-semibold  text-sm text-but pb-1 block"
+                  className="font-semibold  text-sm text-black pb-1 block"
                 >
                   Date of Birth
                 </label>
@@ -184,7 +184,7 @@ const Register = () => {
               <div className="flex-1">
                 <label
                   htmlFor="phonenumber"
-                  className="font-semibold text-sm text-but pb-1 block"
+                  className="font-semibold text-sm text-black pb-1 block"
                 >
                   Phone Number
                 </label>
@@ -204,7 +204,7 @@ const Register = () => {
               <div className="flex-1">
                 <label
                   htmlFor="address"
-                  className="font-semibold text-sm text-but pb-1 block"
+                  className="font-semibold text-sm text-black pb-1 block"
                 >
                   Address
                 </label>
@@ -220,7 +220,7 @@ const Register = () => {
               <div className="flex-1">
                 <label
                   htmlFor="country"
-                  className="font-semibold text-sm text-but pb-1 block"
+                  className="font-semibold text-sm text-black pb-1 block"
                 >
                   Country
                 </label>
@@ -239,7 +239,7 @@ const Register = () => {
 
             {/* Gender Selection */}
             <div className="gender-box mb-1">
-              <label className="block text-but justify-center text-center">
+              <label className="block text-black justify-center text-center">
                 Gender
               </label>
               <div className="flex justify-center gap-4 mt-1">
@@ -292,10 +292,10 @@ const Register = () => {
             {/* Login Link */}
             <div className="flex items-center justify-between mt-4">
               <span className="w-1/5 border-b border-gray-500 md:w-1/4"></span>
-              <p className="text-xs px-2  text-but justify-center items-center text-center uppercase dark:text-white">
+              <p className="text-xs px-2  text-black justify-center items-center text-center uppercase dark:text-white">
                 Have an account?
                 <Link
-                  className="flex dark:text-white  font-[roboto] hover:underline hover:text-black justify-center text-center items-center"
+                  className="flex dark:text-white text-lg  font-[roboto] hover:underline hover:text-black justify-center text-center items-center"
                   to="/login"
                 >
                   {" "}

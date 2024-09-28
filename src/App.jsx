@@ -27,6 +27,7 @@ import SavedCars from './assets/pages/SavedCars.jsx';
 import { ThemeProvider, useTheme  } from './assets/context/Themecontext.jsx';
 import Financing from './assets/pages/Financing.jsx';
 import Popular from './assets/components/Popular.jsx';
+import MouseTrail from './assets/components/MouseTrail.jsx';
 
 
 function App() {
@@ -47,6 +48,7 @@ function App() {
   <div className={`app ${theme}`}>
   <CartProvider>
     <BrowserRouter>
+    <MouseTrail />
       <Header /> {/* Header at the top */}
       <Routes>
         <Route path="/" element={<Home />} />

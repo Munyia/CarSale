@@ -188,30 +188,31 @@ const Popular= () => {
 
     {/* Car Grid */}
     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 mt-6">
-        {filteredCars.map((car) => (
-            <div
-                key={car.id}
-                className={`border shadow-md hover:shadow-xl rounded-lg p-4 group transition ${
-                    selectedType === car.condition ? 'bg-black text-white' : 'bg-white'
-                }`}
+    {filteredCars.map((car) => (
+        <div
+            key={car.id}
+            className={`border shadow-md rounded-lg p-4 group transition-transform duration-300 ease-in-out transform ${
+                selectedType === car.condition ? 'bg-black text-white' : 'bg-white'
+            } hover:scale-105`} // Add hover scale for pop-out effect
+        >
+            <img
+                src={car.image} // Use the correct property for the image
+                alt={`${car.make} ${car.model}`} // Descriptive alt text
+                className="w-full h-32 object-cover mb-2"
+            />
+            <h3 className="text-lg font-semibold">
+                {car.make} {car.model} ({car.year})
+            </h3>
+            <Link
+                to={`/shop/${car.id}`}
+                className="mt-2 text-but transition group-hover:underline group-hover:underline-offset-4 group-hover:decoration-2 group-hover:decoration-but"
             >
-                <img
-                    src={car.image} // Use the correct property for the image
-                    alt={`${car.make} ${car.model}`} // Descriptive alt text
-                    className="w-full h-32 object-cover mb-2"
-                />
-                <h3 className="text-lg font-semibold">
-                    {car.make} {car.model} ({car.year})
-                </h3>
-                <Link
-                    to={`/shop/${car.id}`}
-                    className="mt-2 text-but transition group-hover:underline group-hover:underline-offset-4 group-hover:decoration-2 group-hover:decoration-but"
-                >
-                    View Details
-                </Link>
-            </div>
-        ))}
-    </div>
+                View Details
+            </Link>
+        </div>
+    ))}
+</div>
+
     
     <div className="flex pt-5 underline text-lg items-center">
         <Link to={'/carlisting'} className="mx-2">See more Cars</Link>

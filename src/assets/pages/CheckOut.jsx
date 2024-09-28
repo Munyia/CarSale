@@ -41,7 +41,7 @@ const CheckOut = () => {
   return (
     <div className="bg-body py-5 dark:bg-gray-900 dark:text-white font-[dm]">
       <div className="max-w-lg dark:bg-gray-800 dark:text-white py-3 mx-auto p-6 shadow-2xl bg-body shadow-slate-900 rounded-3xl sm:max-w-xl lg:max-w-lg">
-        <h1 className="text-2xl font-[roboto] font-bold justify-center text-center mb-6 text-but">
+        <h1 className="text-2xl font-[roboto] font-bold justify-center text-center mb-6 text-black">
           Checkout Form
         </h1>
         <form className="space-y-4">
@@ -49,7 +49,7 @@ const CheckOut = () => {
           <div>
             <label
               htmlFor="fullname"
-              className="block text-sm  font-semibold text-but mb-2"
+              className="block text-sm  font-semibold text-blackmb-2"
             >
               Full Name
             </label>
@@ -65,7 +65,7 @@ const CheckOut = () => {
           <div>
             <label
               htmlFor="email"
-              className="block text-sm font-semibold text-but mb-2"
+              className="block text-sm font-semibold text-black mb-2"
             >
               Email
             </label>
@@ -81,7 +81,7 @@ const CheckOut = () => {
           <div>
             <label
               htmlFor="password"
-              className="block text-sm font-semibold text-but mb-2"
+              className="block text-sm font-semibold text-black mb-2"
             >
               Password
             </label>
@@ -97,7 +97,7 @@ const CheckOut = () => {
           <div>
             <label
               htmlFor="phone"
-              className="block text-sm font-semibold text-but mb-2"
+              className="block text-sm font-semibold text-black mb-2"
             >
               Phone Number
             </label>
@@ -113,7 +113,7 @@ const CheckOut = () => {
           <div>
             <label
               htmlFor="address"
-              className="block text-sm font-semibold text-but mb-2"
+              className="block text-sm font-semibold text-black mb-2"
             >
               Address
             </label>
@@ -129,7 +129,7 @@ const CheckOut = () => {
           <div>
             <label
               htmlFor="country"
-              className="block text-sm font-semibold text-but mb-2"
+              className="block text-sm font-semibold text-black mb-2"
             >
               Country
             </label>
@@ -155,7 +155,7 @@ const CheckOut = () => {
 
           {/* Dropdown for Installment Plan Selection */}
           <div>
-            <label htmlFor="installment" className="block text-but">
+            <label htmlFor="installment" className="block text-black">
               Installment Plan
             </label>
             <select

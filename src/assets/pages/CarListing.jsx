@@ -106,7 +106,7 @@ const CarListing = () => {
   });
   const [sortOption, setSortOption] = useState("price");
   const [currentPage, setCurrentPage] = useState(1);
-  const carsPerPage = 3;
+  const carsPerPage = 8;
 
   // Filter and sorting logic
   const filteredCars = cars.filter((car) => {
@@ -253,46 +253,46 @@ const CarListing = () => {
       </div>
 
       {/* Car Listings */}
-      <div className="grid px-5  dark:bg-gray-900 dark:text-gray-200 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 ">
-        {currentCars.map((car) => (
-          <Link to={`cardetail/${car.id}`}>
-            <div
-              key={car.id}
-              className="bg-white  dark:bg-gray-800 dark:border-none pb-2 dark:text-gray-200 border rounded-2xl  overflow-hidden"
-            >
-              {/* Placeholder image source */}
-              <img
-                src={car.image}
-                alt={`${car.make} ${car.model}`}
-                className="w-full bg-white h-48 object-cover"
-              />
-              <div className="p-4">
-                <h2 className="text-xl dark:bg-gray-800 dark:text-gray-200 text-but font-semibold">
-                  {car.make} {car.model}
-                </h2>
-                <p className="text-gray-600 dark:bg-gray-800 dark:text-gray-400 ">Year: {car.year}</p>
-                <p className="text-gray-800 dark:bg-gray-800 dark:text-gray-200 font-bold mt-2">{car.price}</p>
-                <div className="mt-4 ">
-                  <h3 className="font-semibold dark:bg-gray-800 dark:text-gray-200 text-but">Installment Plans:</h3>
-                  <ul className="list-disc pl-5 pb-4">
-                    {car.installmentPlans.map((plan, index) => (
-                      <li key={index} className="text-black dark:bg-gray-800 dark:text-gray-400">
-                        {plan}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <Link
-                  to={`cardetail/${car.id}`}
-                  className="p-2 bg-but font-[open] text-white  rounded-lg hover:bg-buthover:bg-body hover:text-but  hover:underline"
-                >
-                  View Details
-                </Link>
-              </div>
-            </div>
+      <div className="grid px-5 dark:bg-gray-900 dark:text-gray-200 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 ">
+  {currentCars.map((car) => (
+    <Link to={`cardetail/${car.id}`} key={car.id}>
+      <div
+        className="bg-white dark:bg-gray-800 dark:border-none pb-2 dark:text-gray-200 border rounded-2xl overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-lg"
+      >
+        {/* Placeholder image source */}
+        <img
+          src={car.image}
+          alt={`${car.make} ${car.model}`}
+          className="w-full bg-white h-48 object-cover transform transition-transform duration-300 hover:scale-110"
+        />
+        <div className="p-4">
+          <h2 className="text-xl dark:bg-gray-800 dark:text-gray-200 text-but font-semibold">
+            {car.make} {car.model}
+          </h2>
+          <p className="text-gray-600 dark:bg-gray-800 dark:text-gray-400">Year: {car.year}</p>
+          <p className="text-gray-800 dark:bg-gray-800 dark:text-gray-200 font-bold mt-2">{car.price}</p>
+          <div className="mt-4">
+            <h3 className="font-semibold dark:bg-gray-800 dark:text-gray-200 text-but">Installment Plans:</h3>
+            <ul className="list-disc pl-5 pb-4">
+              {car.installmentPlans.map((plan, index) => (
+                <li key={index} className="text-black dark:bg-gray-800 dark:text-gray-400">
+                  {plan}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <Link
+            to={`cardetail/${car.id}`}
+            className="p-2 bg-but font-[open] text-white rounded-lg hover:bg-body hover:text-but hover:underline transition-colors duration-300"
+          >
+            View Details
           </Link>
-        ))}
+        </div>
       </div>
+    </Link>
+  ))}
+</div>
+
 
       {/* Pagination */}
       <div className="py-6 dark:bg-gray-900  px-4 flex font-[roboto] justify-between">

@@ -45,7 +45,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/terms"
-                  className="text-black font-[dm] hover:text-but transition duration-300 block"
+                  className="text-black dark:text-white dark:hover:text-but font-[dm] hover:text-but transition duration-300 block"
                 >
                   Terms of Service
                 </Link>
@@ -53,7 +53,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/privacy"
-                  className="text-black font-[dm] hover:text-but transition duration-300 block"
+                  className="text-black font-[dm] dark:text-white dark:hover:text-but hover:text-but transition duration-300 block"
                   >
                   Privacy Policy
                 </Link>
@@ -61,7 +61,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/about"
-                  className="text-black font-[dm] hover:text-but transition duration-300 block"
+                  className="text-black font-[dm] dark:text-white dark:hover:text-but hover:text-but transition duration-300 block"
               >
                   About Us
                 </Link>
@@ -69,7 +69,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/carlisting"
-                  className="text-black font-[dm] hover:text-but transition duration-300 block"
+                  className="text-black font-[dm] dark:text-white dark:hover:text-but hover:text-but transition duration-300 block"
                   >
                   Car Listing
                 </Link>
@@ -77,7 +77,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/checkout"
-                  className="text-black font-[dm] hover:text-but transition duration-300 block"
+                  className="text-black font-[dm] dark:text-white dark:hover:text-but hover:text-but transition duration-300 block"
               >
                   Checkout
                 </Link>
@@ -137,7 +137,7 @@ const Footer = () => {
         </div>
 
         {/* Footer Bottom Section */}
-        <div className="mt-6 font-[open] text-center text-gray-700">
+        <div className="mt-6 font-[open] dark:text-white  text-center text-gray-700">
           <p>&copy; {new Date().getFullYear()} CarSale. All rights reserved.</p>
         </div>
       </div>

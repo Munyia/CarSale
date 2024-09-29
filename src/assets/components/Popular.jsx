@@ -143,10 +143,10 @@ const Popular= () => {
 
   return ( 
         <div>
-   <div className="w-full bg-white px-6 pt-6 relative">
+   <div className="w-full dark:bg-gray-800 dark:text-white bg-white px-6 pt-6 relative">
     {/* Header */}
     <div className="flex justify-between items-center mb-4">
-        <h2 className="text-2xl font-bold">Popular Categories</h2>
+        <h2 className="text-2xl font-bold">Categories</h2>
     </div>
 
     {/* Navigation arrows */}
@@ -170,14 +170,14 @@ const Popular= () => {
     {/* Horizontal Scrollable Car Types */}
     <div
         ref={scrollRef}
-        className="flex overflow-x-auto no-scrollbar gap-4"
+        className="flex  overflow-x-auto no-scrollbar gap-4"
         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }} // For Firefox and IE
     >
         {carTypesData.map((carType) => (
             <div
                 key={carType.id}
                 onClick={() => setSelectedType(carType.name)}
-                className={`flex-shrink-0 p-3 bg-gray-200 rounded-2xl text-center flex items-center justify-center cursor-pointer transition duration-300 ease-in-out hover:bg-black hover:text-white ${
+                className={`flex-shrink-0 p-3 dark:bg-gray-500 dark:text-white bg-gray-200 rounded-2xl text-center flex items-center justify-center cursor-pointer transition duration-300 ease-in-out hover:bg-black hover:text-white ${
                     selectedType === carType.name ? 'bg-black text-white' : ''
                 }`}
             >
@@ -187,11 +187,11 @@ const Popular= () => {
     </div>
 
     {/* Car Grid */}
-    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 mt-6">
+    <div className="grid grid-cols-2  sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 mt-6">
     {filteredCars.map((car) => (
         <div
             key={car.id}
-            className={`border shadow-md rounded-lg p-4 group transition-transform duration-300 ease-in-out transform ${
+            className={`border shadow-md rounded-2xl dark:bg-gray-800 dark:text-white dark:border-none p-4 group transition-transform duration-300 ease-in-out transform ${
                 selectedType === car.condition ? 'bg-black text-white' : 'bg-white'
             } hover:scale-105`} // Add hover scale for pop-out effect
         >

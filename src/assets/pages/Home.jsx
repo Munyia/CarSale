@@ -156,7 +156,7 @@ const Home = () => {
 
           {/* Car Categories */}
           <h2 className="text-3xl font-[open] text-black font-bold mb-3 mt-8">
-            Browse by Category
+            Popular Category
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
       {categoryData.map((category, index) => (

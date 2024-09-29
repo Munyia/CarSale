@@ -44,8 +44,8 @@ function App() {
   }, [theme]); // Runs every time the theme changes
 
   return (
-    <>
-  <div className={`app ${theme}`}>
+    <div className='dark:bg-gray-800'>
+  <div className={`app ${theme} w-[90%] dark:bg-gray-800 items-center text-center justify-center mx-auto`}>
   <CartProvider>
     <BrowserRouter>
     <MouseTrail />
@@ -80,7 +80,7 @@ function App() {
   </CartProvider>
 </div>
 
-    </>
+    </div>
   )
 }
 const AppWrapper = () => (

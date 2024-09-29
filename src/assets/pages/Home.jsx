@@ -207,7 +207,7 @@ const Home = () => {
                     "{testimonial.quote}"
                   </p>{" "}
                   {/* Customer quote */}
-                  <p className="font-semibold pb-10 text-but">
+                  <p className="font-semibold pb-10 text-gray-400">
                     {testimonial.name}, {testimonial.location}
                   </p>{" "}
                   {/* Customer name and location */}

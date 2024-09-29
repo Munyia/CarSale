@@ -39,7 +39,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* Quick Links Section */}
-          <div className="flex flex-col">
+          <div className="flex flex-col justify-start text-left items-start">
             <h4 className="text-lg font-[roboto] font-bold mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
@@ -85,59 +85,59 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Follow Us Section */}
-          <div className="flex flex-col">
-            <h4 className="text-lg font-bold font-[roboto] mb-4 text-center lg:text-left">
-              Follow Us
-            </h4>
-            <div className="flex justify-center lg:justify-start space-x-4">
-              {/* Social media icons */}
-              <Link
-                to="#"
-                className="text-black hover:text-white transition duration-300"
-              >
-                <FaFacebookF className="text-2xl hover:scale-150 transition-transform duration-300" />
-              </Link>
-              <Link
-                to="#"
-                className="text-black hover:text-white transition duration-300"
-              >
-                <FaTwitter className="text-2xl hover:scale-150 transition-transform duration-300" />
-              </Link>
-              <Link
-                to="#"
-                className="text-black hover:text-white transition duration-300"
-              >
-                <FaInstagram className="text-2xl hover:scale-150 transition-transform duration-300" />
-              </Link>
-              <Link
-                to="#"
-                className="text-black hover:text-white transition duration-300"
-              >
-                <FaLinkedin className="text-2xl hover:scale-150 transition-transform duration-300" />
-              </Link>
-            </div>
-          </div>
-
-          {/* Contact Us Section */}
-          <div className="flex flex-col">
+   {/* Contact Us Section */}
+   <div className="flex flex-col">
             <h4 className="text-lg font-[roboto] font-bold mb-4">Contact Us</h4>
             <ul className="space-y-2">
               <li className="flex items-center font-[dm] space-x-2 hover:text-black">
                 <FaPhone className="text-xl" />
                 <span>{contactInfo.phone}</span>
               </li>
-              <li className="flex items-center font-[dm] space-x-2 hover:text-black">
+              <li className="flex font-[dm] space-x-2 hover:text-black">
                 <FaEnvelope className="text-xl font-[dm]" />
                 <span>{contactInfo.email}</span>
               </li>
-              <li>{contactInfo.address}</li>
+              <li className="flex font-[dm] space-x-2 hover:text-black">
+                <span>{contactInfo.address} </span>
+                </li>
             </ul>
           </div>
+          {/* Follow Us Section */}
+
+       
         </div>
 
         {/* Footer Bottom Section */}
         <div className="mt-6 font-[open] dark:text-white  text-center text-gray-700">
+        <div className="flex flex-col text-center justify-center items-center">
+            <div className="flex justify-center lg:justify-start space-x-4">
+              {/* Social media icons */}
+              <Link
+                to="#"
+                className="text-black hover:text-but transition duration-300"
+              >
+                <FaFacebookF className="text-2xl hover:scale-150 transition-transform duration-300" />
+              </Link>
+              <Link
+                to="#"
+                className="text-black hover:text-but transition duration-300"
+              >
+                <FaTwitter className="text-2xl hover:scale-150 transition-transform duration-300" />
+              </Link>
+              <Link
+                to="#"
+                className="text-black hover:text-but transition duration-300"
+              >
+                <FaInstagram className="text-2xl hover:scale-150 transition-transform duration-300" />
+              </Link>
+              <Link
+                to="#"
+                className="text-black hover:text-but transition duration-300"
+              >
+                <FaLinkedin className="text-2xl hover:scale-150 transition-transform duration-300" />
+              </Link>
+            </div>
+          </div>
           <p>&copy; {new Date().getFullYear()} CarSale. All rights reserved.</p>
         </div>
       </div>

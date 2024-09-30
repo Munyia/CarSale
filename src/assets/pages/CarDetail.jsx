@@ -47,15 +47,15 @@ const CarDetail = () => {
   );
 
   return (
-    <div className="font-[dm] dark:bg-gray-900 dark:text-white bg-body">
+    <div className="font-[verdana] dark:bg-gray-900 dark:text-white bg-body">
       <div className="bg-white">
-        <div className="shadow-3xl py-4 dark:bg-gray-900 dark:text-white bg-body px-4 lg:px-10 bg--600 shadow-slate-500 grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="shadow-3xl py-4 h-[70%] dark:bg-gray-900 dark:text-white bg-body px-4 lg:px-10 grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* Image Gallery */}
-          <div className="relative">
+          <div className="relative justify-center items-center text-center h-full">
             <img
               src={car.images[currentImage]} // Display the current image
               alt={`Car ${car.make} ${car.model}`} // Alt text for accessibility
-              className="w-full object-cover shadow-2xl shadow-slate-900 rounded-2xl"
+              className=" object-cover justify-center items-center text-center min-h-full rounded-2xl"
             />
             {/* Navigation buttons for the image gallery */}
             <button
@@ -73,7 +73,7 @@ const CarDetail = () => {
           </div>
 
           {/* Car Specifications Section */}
-          <div className="bg-body dark:bg-gray-800 dark:text-white p-3 shadow-2xl shadow-slate-500 rounded-3xl">
+          <div className="bg-body h-full dark:bg-gray-800 dark:text-white p-3 justify-start text-left rounded-3xl">
             <h1 className="text-lg font-[roboto] font-bold mb-4">
               {car.make} {car.model} ({car.year}) {/* Display car details */}
             </h1>
@@ -113,7 +113,7 @@ const CarDetail = () => {
                 id="months"
                 value={installmentMonths} // Controlled component for installment months
                 onChange={(e) => setInstallmentMonths(e.target.value)} // Update state on change
-                className="p-2 border dark:bg-gray-900 dark:text-white border-but rounded"
+                className="p-2 border dark:bg-gray-900 dark:text-white border-black rounded"
               >
                 <option value="">Select Plan</option>
                 <option value="1">1 Month</option>
@@ -137,14 +137,14 @@ const CarDetail = () => {
                 </h1>
               </div>
               <button
-                className="px-4 py-2 bg-but font-[open] hover:bg-body hover:text-but text-white rounded-lg flex items-center justify-center"
+                className="px-4 py-2 bg-gray-800 font-[open] hover:bg-body hover:text-black text-white rounded-lg flex items-center justify-center"
                 onClick={handleAddToCart} // Add car to cart on click
               >
                 Add to Cart
               </button>
               <Link
                 to="/request"
-                className="px-4 py-2 bg-but font-[open] hover:bg-body hover:text-but text-white rounded-lg flex items-center justify-center"
+                className="px-4 py-2  bg-gray-800 font-[open] hover:bg-body hover:text-black text-white rounded-lg flex items-center justify-center"
               >
                 Request More Info
               </Link>
@@ -153,8 +153,8 @@ const CarDetail = () => {
         </div>
 
         {/* Related Cars Section */}
-        <div className=" py-4 dark:bg-gray-900 dark:text-white px-4 font-[dm]">
-          <h2 className="text-2xl  font-[roboto] font-semibold mb-2">
+        <div className=" py-8 dark:bg-gray-900 dark:text-white px-4 font-[verdana]">
+          <h2 className="text-2xl justify-start text-left font-[verdana] font-semibold mb-2">
             Related Cars
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
@@ -174,7 +174,7 @@ const CarDetail = () => {
       <p>Price: ${relatedCar.price.toLocaleString()}</p>
       <Link
         to={`/cars/${relatedCar.id}`}
-        className="text-white hover:bg-body hover:text-but p-2 rounded-lg font-[open] bg-but hover:underline mt-1 block"
+        className="text-white hover:bg-body hover:text-black p-2 rounded-lg font-[verdana]  bg-gray-800 hover:underline mt-1 block"
       >
         View Details
       </Link>

@@ -39,7 +39,7 @@ const CheckOut = () => {
   };
 
   return (
-    <div className="bg-body py-5 dark:bg-gray-900 dark:text-white font-[dm]">
+    <div className="bg-body py-5 dark:bg-gray-900 dark:text-white font-[verdana]">
       <div className="max-w-lg dark:bg-gray-800 dark:text-white py-3 mx-auto p-6 shadow-2xl bg-body shadow-slate-900 rounded-3xl sm:max-w-xl lg:max-w-lg">
         <h1 className="text-2xl font-[roboto] font-bold justify-center text-center mb-6 text-black">
           Checkout Form
@@ -49,7 +49,7 @@ const CheckOut = () => {
           <div>
             <label
               htmlFor="fullname"
-              className="block text-sm  font-semibold text-blackmb-2"
+              className="block text-sm justify-start text-left font-semibold text-blackmb-2"
             >
               Full Name
             </label>
@@ -65,7 +65,7 @@ const CheckOut = () => {
           <div>
             <label
               htmlFor="email"
-              className="block text-sm font-semibold text-black mb-2"
+              className="block justify-start text-left  text-sm font-semibold text-black mb-2"
             >
               Email
             </label>
@@ -81,7 +81,7 @@ const CheckOut = () => {
           <div>
             <label
               htmlFor="password"
-              className="block text-sm font-semibold text-black mb-2"
+              className="block justify-start text-left  text-sm font-semibold text-black mb-2"
             >
               Password
             </label>
@@ -97,7 +97,7 @@ const CheckOut = () => {
           <div>
             <label
               htmlFor="phone"
-              className="block text-sm font-semibold text-black mb-2"
+              className="block justify-start text-left  text-sm font-semibold text-black mb-2"
             >
               Phone Number
             </label>
@@ -113,7 +113,7 @@ const CheckOut = () => {
           <div>
             <label
               htmlFor="address"
-              className="block text-sm font-semibold text-black mb-2"
+              className="block justify-start text-left  text-sm font-semibold text-black mb-2"
             >
               Address
             </label>
@@ -129,7 +129,7 @@ const CheckOut = () => {
           <div>
             <label
               htmlFor="country"
-              className="block text-sm font-semibold text-black mb-2"
+              className="block justify-start text-left  text-sm font-semibold text-black mb-2"
             >
               Country
             </label>
@@ -149,13 +149,13 @@ const CheckOut = () => {
           </div>
 
           {/* Section for Payment Method */}
-          <div className="mt-6">
+          <div className="mt-6 ">
             <p className="text-lg  dark:text-white dark:border-none font-semibold text-black">Payment Method</p>
           </div>
 
           {/* Dropdown for Installment Plan Selection */}
           <div>
-            <label htmlFor="installment" className="block text-black">
+            <label htmlFor="installment" className="block justify-start text-left text-black">
               Installment Plan
             </label>
             <select
@@ -310,7 +310,7 @@ const CheckOut = () => {
             <button
               type="button"
               onClick={handlePayment} // Handle payment process on click
-              className="px-6 py-2 font-[open] bg-but hover:bg-body hover:text-but text-white rounded-lg"
+              className="px-6 py-2 font-[open] bg-gray-800 hover:bg-body hover:text-black text-white rounded-lg"
             >
               Confirm Order
             </button>

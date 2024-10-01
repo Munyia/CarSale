@@ -44,41 +44,41 @@ const ForgotPassword = () => {
   return (
     <div className="w-full min-h-screen dark:bg-gray-900 dark:text-white  flex items-center justify-center bg-body py-3">
       {/* Container with shadow and styling for the form */}
-      <div className="relative shadow-2xl dark:bg-gray-800 dark:text-white  shadow-slate-900 bg-pry px-4 py-3 bg--600 mx-8 md:mx-0 rounded-3xl sm:p-10 sm:max-w-xl">
+      <div className="relative border border-gray-300 dark:bg-gray-800 dark:text-white  bg-pry px-4 py-3 bg--600 mx-8 md:mx-0 rounded-3xl sm:p-10 sm:max-w-xl">
         <div className="max-w-md mx-auto">
           {/* Page title */}
-          <h1 className="text-2xl font-bold font-[roboto] text-but mb-6 text-center">
+          <h1 className="text-2xl font-bold font-[verdana] mb-6 text-center">
             Forgot Password
           </h1>
 
           {/* Instruction text */}
-          <div className="text-sm font-[roboto] font-normal mb-4 text-center">
+          <div className="text-sm font-[verdana] font-normal mb-4 text-center">
             Enter your email to receive a password reset link.
           </div>
 
           {/* Success message, if any */}
           {message && (
-            <p className="text-green-500 font-[dm] text-center mb-4">{message}</p>
+            <p className="text-green-500 font-[verdana] text-center mb-4">{message}</p>
           )}
 
           {/* Error message, if any */}
-          {error && <p className="text-red-500 font-[dm] text-center mb-4">{error}</p>}
+          {error && <p className="text-red-500 font-[verdana] text-center mb-4">{error}</p>}
 
           {/* Form to submit email */}
           <form
             onSubmit={handleResetRequest}
-            className="grid font-[dm] grid-cols-1 gap-2"
+            className="grid font-[verdana] grid-cols-1 gap-2"
           >
             {/* Email input field */}
             <div>
               <label
                 htmlFor="email"
-                className="font-semibold font-[dm] text-sm text-but pb-1 block"
+                className="font-semibold font-[verdana] text-sm pb-1 block"
               >
                 Email
               </label>
               <input
-                className="border font-[dm] dark:bg-gray-900 dark:placeholder-gray-400 dark:border-none  rounded-lg px-3 py-2 mt-1 mb-3 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
+                className="border font-[verdana] dark:bg-gray-900 dark:placeholder-gray-400 dark:border-none  rounded-lg px-3 py-2 mt-1 mb-3 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
                 type="email"
                 id="email"
                 name="email"
@@ -92,7 +92,7 @@ const ForgotPassword = () => {
             {/* Submit button to send reset link */}
             <div className="mt-5">
               <button
-                className="py-2 px-4 bg-but font-[dm] hover:bg-body hover:text-but focus:ring-blue-200 focus:ring-offset-blue-400 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
+                className="py-2  bg-gray-800 font-[verdana] hover:text-white hover:bg-gradient-to-r from-p1 via-p3 to-pk focus:ring-blue-200 focus:ring-offset-blue-400 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
                 type="submit"
               >
                 Send Reset Link
@@ -101,9 +101,9 @@ const ForgotPassword = () => {
 
             {/* Link to go back to the login page */}
             <div className="mt-5 text-center">
-              <p className="text-sm font-[dm] text-but">
+              <p className="text-sm font-[verdana] ">
                 Remembered your password?{" "}
-                <Link className="text-but hover:underline" to="/login">
+                <Link className="text-b hover:underline" to="/login">
                   Log In
                 </Link>
               </p>

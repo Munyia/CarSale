@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <div className="dark:bg-gray-900 py-5 pb-5  dark:text-white">
       <div className="max-w-7xl dark:bg-gray-800 py-5 rounded-3xl dark:text-white bg-body font-[verdana] mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-12">
-        <h1 className="text-3xl  font-[roboto] font-bold text-black text-center">Contact Us</h1>
+        <h1 className="text-3xl  font-[roboto] font-bold text-white text-center">Contact Us</h1>
 
         {/* Contact Information Section */}
         <div className="grid bg-body p-5 rounded-lg dark:bg-gray-900 dark:text-white  grid-cols-1 md:grid-cols-2 gap-8 mb-12">
@@ -27,7 +27,7 @@ const Contact = () => {
           </div>
 
           <div className="bg-body dark:bg-gray-800 dark:text-white p-6 rounded-lg border">
-            <h2 className="text-xl font-[verdana] font-semibold text-black mb-4">Follow Us</h2>
+            <h2 className="text-xl font-[verdana] font-semibold text-white mb-4">Follow Us</h2>
             <p className="text-gray-600 dark:text-white mb-2">Stay connected with us on social media:</p>
             <div className="flex space-x-4">
               <Link to="#" className="text-gray-900 dark:text-white dark:hover:text-but hover:text-but transition duration-300">
@@ -48,13 +48,13 @@ const Contact = () => {
 
         {/* Contact Form Section */}
         <div className="bg-body dark:bg-gray-900 dark:text-white border border-gray-300 p-6 rounded-lg mb-12">
-          <h2 className="text-xl font-[verdana] font-semibold text-black mb-4">Send Us a Message</h2>
+          <h2 className="text-xl font-[verdana] font-semibold text-white mb-4">Send Us a Message</h2>
           <form>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <input
                 type="text"
                 placeholder="Your Name"
-                className="px-4 py-2 dark:bg-gray-800 dark:text-white dark:border-none rounded-lg border  focus:outline-none focus:ring-2 focus:ring-but"
+                className="px-4 py-2 dark:bg-gray-800  dark:text-white dark:border-none rounded-lg border  focus:outline-none focus:ring-2 focus:ring-but"
                 required
               />
               <input
@@ -87,7 +87,7 @@ const Contact = () => {
 
         {/* Map Section */}
         <div className="bg-body dark:bg-gray-900 dark:text-white dark:border-none  p-6 rounded-3xl l">
-          <h2 className="text-xl font-[verdana] font-semibold text-black mb-4">Our Location</h2>
+          <h2 className="text-xl font-[verdana] font-semibold text-white mb-4">Our Location</h2>
           <div className="h-64 ">
             <iframe
               title="Google Map"

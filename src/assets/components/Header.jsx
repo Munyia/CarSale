@@ -17,7 +17,7 @@ const Header = ({ title }) => {
   }, [title]);
 
   return (
-    <nav className="bg-white dark:bg-gray-800 dark:text-white sticky font-[roboto] top-0 z-50"> {/* Sticky header for always-visible navigation */}
+    <nav className="bg-white dark:bg-gray-800 dark:text-white sticky font-[verdana] top-0 z-50"> {/* Sticky header for always-visible navigation */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
         
         {/* Logo Section */}
@@ -99,10 +99,10 @@ const Header = ({ title }) => {
         )}
 
         {/* Navigation Links (Visible on larger screens) */}
-        <div className="hidden font-[roboto] md:flex space-x-12">
+        <div className="hidden font-[verdana] md:flex space-x-12">
           <NavLink
             to="/"
-            className="text-black font-[roboto]  dark:text-white dark:hover:text-but dark:hover:bg-p-2  text-lg font-semibold hover:text-but transition duration-300"
+            className="text-black font-[verdana]  dark:text-white dark:hover:text-but dark:hover:bg-p-2  text-lg font-semibold hover:text-but transition duration-300"
           >
             Home
           </NavLink>

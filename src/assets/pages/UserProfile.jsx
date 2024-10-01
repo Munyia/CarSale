@@ -37,7 +37,7 @@ const UserProfile = () => {
   return (
       <div>
     <div className="bg-body dark:bg-gray-900 dark:text-white font-[verdana] min-h-screen py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl flex gap-10 bg--600 dark:bg-gray-800 dark:text-white bg-pry  mx-auto bg-white rounded-lg">
+      <div className="max-w-5xl flex gap-10 bg--600 dark:bg-gray-800 dark:text-white bg-pry  mx-auto bg-white rounded-lg">
         
         {/* Profile Header */}
         <div className="flex flex-col text-center items-center  border border-gray-500 p-6 rounded-2xl font-[verdana] space-x-4 ">
@@ -57,7 +57,7 @@ const UserProfile = () => {
         {/* Dashboard Sections */}
         <div className="grid border border-gray-500 dark:bg-gray-900 dark:text-white p-5 rounded-3xl  grid-cols-1 md:grid-cols-3 gap-6">
           {/* Ongoing Installment Plans */}
-          <div className="bg-white  dark:bg-gray-800 border-r-2 dark:text-white  p-6 rounded-lg">
+          <div className="bg-white  dark:bg-gray-800  dark:text-white  p-6 rounded-lg">
             <h2 className="text-xl font-semibold font-[verdana] mb-4 text-black dark:text-white flex items-center">
               <FaCalendarAlt className="text-but mr-2 " />
               Ongoing Installment Plans
@@ -73,7 +73,7 @@ const UserProfile = () => {
           </div>
 
           {/* Order History */}
-          <div className="bg-white dark:bg-gray-800 border-r-2 dark:text-white p-6 rounded-lg ">
+          <div className="bg-white dark:bg-gray-800 border-r-2 border-l-2 dark:text-white p-6 rounded-lg ">
             <h2 className="text-xl dark:text-white font-semibold font-[verdana] mb-4 text-gray-800 flex items-center">
               <FaCar className="text-but mr-2" />
               Order History

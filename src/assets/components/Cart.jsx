@@ -100,16 +100,16 @@ const Cart = () => {
   return (
     <div className="bg-body dark:bg-gray-900 dark:text-white pt-7   h-[100vh]">
       <div className="w-full  md:w-[75%] dark:text-white dark:bg-gray-700 mx-auto p-6  bg-white pt-5 rounded-xl   ">
-        <h1 className="text-3xl font-[dm] font-semibold dark:text-white text-center  mb-6">Your Cart</h1>
+        <h1 className="text-3xl font-[verdana] font-semibold dark:text-white text-center  mb-6">Your Cart</h1>
         {Object.keys(cartSummary).length === 0 ? (
-          <p className="text-center font-[dm]
+          <p className="text-center font-[verdana]
            text-gray-500 text-lg">
             Your cart is empty
           </p>
         ) : (
-          <div className="flex font-[open] flex-col md:flex-row gap-6">
+          <div className="flex font-[verdana] flex-col md:flex-row gap-6">
             {/* Car Information Section */}
-            <div className="flex-grow bg-body font-[open] dark:bg-gray-800 dark:text-white  p-4 rounded-lg  shadow-2xl  ">
+            <div className="flex-grow bg-body font-[verdana] dark:bg-gray-800 dark:text-white  p-4 rounded-lg  shadow-2xl  ">
               <ul className="space-y-4">
                 {Object.entries(cartSummary).map(([itemId, quantity]) => {
                   const car = findCarById(parseInt(itemId, 10));
@@ -148,7 +148,7 @@ const Cart = () => {
                                 <button
         onClick={() => toggleSave(car)}
         className={`text-2xl transition-colors ${
-          isSaved ? "text-but" : "text-gray-400"
+          isSaved ? "text-black" : "text-white"
         }`}
       >
         {isSaved ? <FaBookmark /> : <FaRegBookmark />}
@@ -208,7 +208,7 @@ const Cart = () => {
                   totalCost: totalSelectedAmount,
                   selectedItems: Object.keys(selectedItems),
                 }}
-                className="block dark:text-white mt-4 text-center text-but hover:underline"
+                className="block dark:text-white mt-4 text-center text-black hover:underline"
               >
                 Proceed to Checkout
               </Link>

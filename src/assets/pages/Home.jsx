@@ -89,7 +89,7 @@ const Home = () => {
       {/* Carousel for featured slides */}
       <div className="flex w-full  py-5  h-screen  overflow-hidden object-cover relative  sm:px-8">
         <div className="w-full m-0 p-0 flex h-auto ">
-          <Carousel autoslide={true} autoslideinterval={5000}>
+          <Carousel autoslide={true} autoslideinterval={7000}>
             {slides.map((slide, index) => (
               <div
                 key={index} // Unique key for each slide

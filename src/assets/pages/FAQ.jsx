@@ -46,15 +46,15 @@ const FAQ = () => {
   };
 
   return (
-    <div className="bg-body py-5  dark:bg-gray-900 dark:text-white dark:border-none  font-[dm] min-h-screen">
+    <div className="bg-body py-5  dark:bg-gray-900 dark:text-white dark:border-none  font-[verdana] min-h-screen">
       {" "}
       {/* Main container with a background and full height */}
       <div className="max-w-4xl dark:bg-gray-800 rounded-3xl dark:text-white mx-auto py-8 px-4 sm:px-6 lg:px-8">
         {" "}
         {/* Container for FAQs */}
-        <h1 className="text-3xl sm:text-4xl  dark:border-none  font-bold text-center mb-5 text-black">
+        <h3 className="text-3xl sm:text-4xl  dark:border-none  font-bold text-center mb-5 text-black">
           Frequently Asked Questions
-        </h1>{" "}
+        </h3>{" "}
         {/* FAQ title */}
         <div className="space-y-6">
           {" "}
@@ -62,17 +62,17 @@ const FAQ = () => {
           {faqs.map((faq, index) => (
             <div
               key={index} // Unique key for each FAQ item
-              className="bg-body dark:bg-gray-900 dark:text-white shadow-2xl shadow-slate-900 rounded-3xl p-5 transition-all duration-300" // Container for individual FAQ
+              className="bg-body dark:bg-gray-900 dark:text-white border border-gray-200 rounded-3xl p-5 transition-all duration-300" // Container for individual FAQ
             >
               <div
-                className="flex justify-between dark:text-white  items-center cursor-pointer" // Flexbox for question and toggle icon
+                className="flex justify-between dark:text-white  cursor-pointer" // Flexbox for question and toggle icon
                 onClick={() => toggleAnswer(index)} // Click event to toggle answer
               >
                 <h2 className="text-lg sm:text-xl  dark:text-white font-medium text-black">
                   {faq.question}
                 </h2>{" "}
                 {/* FAQ question */}
-                <span className="text-xl dark:text-white  sm:text-2xl text-but">
+                <span className="text-xl dark:text-white  sm:text-2xl text-black">
                   {openIndex === index ? "-" : "+"}{" "}
                   {/* Toggle icon for open/close state */}
                 </span>
@@ -84,7 +84,7 @@ const FAQ = () => {
                     : "max-h-0 opacity-0"
                 }`} // Transition for the answer visibility
               >
-                <div className="mt-3 dark:text-gray-400  text-gray-700">
+                <div className="mt-3 text-left dark:text-gray-400  text-gray-700">
                   {" "}
                   {/* Answer container */}
                   <p>{faq.answer}</p> {/* FAQ answer */}

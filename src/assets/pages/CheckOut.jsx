@@ -40,7 +40,7 @@ const CheckOut = () => {
 
   return (
     <div className="bg-body py-5 dark:bg-gray-900 dark:text-white font-[verdana]">
-      <div className="max-w-lg dark:bg-gray-800 dark:text-white py-3 mx-auto p-6 shadow-2xl bg-body shadow-slate-900 rounded-3xl sm:max-w-xl lg:max-w-lg">
+      <div className="max-w-lg dark:bg-gray-800 dark:text-white border py-3 mx-auto p-6  bg-body rounded-3xl sm:max-w-xl lg:max-w-lg">
         <h1 className="text-2xl font-[roboto] font-bold justify-center text-center mb-6 text-black">
           Checkout Form
         </h1>

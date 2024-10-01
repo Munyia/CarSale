@@ -21,19 +21,22 @@ const LoanCalculator = () => {
 
 const FinancingInfo = () => {
   return (
-    <div className="bg-white dark:text-white dark:bg-gray-800 p-6 rounded-lg shadow-lg mt-6">
+    <div className="bg-white text-left  dark:text-white dark:bg-gray-800 p-6 rounded-lg  mt-6">
+      <div className="border mb-5 rounded-3xl p-5">
       <h2 className="text-xl font-semibold mb-4">What You Should Know Before Purchasing a Car</h2>
-      <ul className="list-disc pl-5 space-y-2">
+      <ul className="list-disc  pl-5 space-y-2">
         <li>Understand your budget and how much you can afford.</li>
         <li>Explore available financing options such as installment plans.</li>
         <li>Consider the total cost of ownership, including insurance and maintenance.</li>
         <li>Research the car's market value and compare prices.</li>
         <li>Check your credit score as it affects financing rates.</li>
-      </ul>
+      </ul> 
+      </div>
 
+      <div className="border mb-5 rounded-3xl p-5">
       <h2 className="text-xl font-semibold mb-4 mt-6">Available Options</h2>
       <p>Our platform offers various options to make car purchasing easier:</p>
-      <ul className="list-disc pl-5 space-y-2">
+      <ul className="list-disc border pl-5 space-y-2">
         <li>
           <strong>Installment Plans:</strong> Flexible payment options tailored to fit your budget.
         </li>
@@ -43,8 +46,10 @@ const FinancingInfo = () => {
         <li>
           <strong>Financing Assistance:</strong> Get help from our experts to choose the best financing plan.
         </li>
-      </ul>
+      </ul>   
+      </div>
 
+      <div className="border mb-5 rounded-3xl p-5">
       <h2 className="text-xl font-semibold mb-4 mt-6">After Purchase</h2>
       <p>
         After purchasing your car, consider these tips:
@@ -54,6 +59,7 @@ const FinancingInfo = () => {
         <li>Follow up on your installment plan payments to avoid penalties.</li>
         <li>Regularly maintain your car to keep it in good condition.</li>
       </ul>
+    </div>
     </div>
   );
 };

@@ -9,7 +9,11 @@ export default {
     extend: {
       colors:{
         'body': '#ffff',
-        'but': '#673de6',
+        'but': '#9754E6',
+        'p1': '#9754E6',
+        'p2': '#9853E2',
+        'p3': '#9B52DD',
+        'pk': '#B545A7',
         fontFamily: {
             verdana: ['verdana', 'sans-serif'], // Fallback font
         },

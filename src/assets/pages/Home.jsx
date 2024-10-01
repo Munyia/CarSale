@@ -85,7 +85,7 @@ const Home = () => {
   
 
   return (
-    <div className="font-[dm] bg-body  dark:bg-gray-900 dark:text-white py-5">
+    <div className="font-[verdana] bg-body  dark:bg-gray-900 dark:text-white py-5">
       {/* Carousel for featured slides */}
       <div className="flex w-full  py-5  h-screen  overflow-hidden object-cover relative  sm:px-8">
         <div className="w-full m-0 p-0 flex h-auto ">
@@ -97,22 +97,22 @@ const Home = () => {
                 style={{ backgroundImage: `url(${slide.image})` }} // Background image for each slide
               >
                 <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center">
-                  <h1 className="text-white text-5xl font-[open] font-open font-bold mb-4">
+                  <h1 className="text-white text-5xl font-[verdana]  font-bold mb-4">
                     {slide.heading} {/* Slide heading */}
                   </h1>
                   <p className="text-white text-lg mb-6">
                     {slide.subtext} {/* Slide subtext */}
                   </p>
-                  <div className="space-x-4 font-[open]">
+                  <div className="space-x-4 font-[verdana]">
                     <Link
                       to={"/carlisting"}
-                      className="bg-but  text-white px-6 py-3 rounded-lg hover:bg-body hover:text-but"
+                      className="bg-gray-800  text-white px-6 py-3 rounded-lg hover:bg-gradient-to-r from-p1  via-p3 to-pk hover:text-white"
                     >
                       Shop Now {/* Link to car listing page */}
                     </Link>
                     <Link
                       to={"/auction"}
-                      className="bg-but text-white px-6 py-3 rounded-lg hover:bg-body hover:text-but"
+                      className="bg-gray-800 text-white px-6 py-3 rounded-lg hover:bg-gradient-to-r from-p1  via-p3 to-pk hover:text-white"
                     >
                       Auctions {/* Link to auctions page */}
                     </Link>
@@ -126,7 +126,7 @@ const Home = () => {
       {/* Section for searching and browsing cars */}
       <section className="bg-body dark:bg-gray-800 dark:text-white py-8  sm:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl font-[open] font-bold text-black mb-4">
+          <h2 className="text-3xl font-[verdana] font-bold text-black mb-4">
             Find Your Perfect Car
           </h2>
 
@@ -149,13 +149,13 @@ const Home = () => {
               <option>$20,000 - $40,000</option>
               <option>Above $40,000</option>
             </select>
-            <button className="bg-but font-[open] text-white px-6 py-2 rounded-lg hover:bg-white hover:text-but">
+            <button className="bg-but font-[verdana] text-white px-6 py-2 rounded-lg hover:bg-gradient-to-r from-p1  via-p3 to-pk hover:text-white">
               Search
             </button>
           </form>
 
           {/* Car Categories */}
-          <h2 className="text-3xl font-[open] text-black font-bold mb-3 mt-8">
+          <h2 className="text-3xl font-[verdana] text-black font-bold mb-3 mt-8">
             Popular Category
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -173,7 +173,7 @@ const Home = () => {
           <p className="text-gray-600 dark:text-white mb-4">{category.description}</p>
           <Link
             to={category.link}
-            className="bg-but text-white px-4 py-2 rounded-lg hover:bg-white hover:text-but inline-block transition-colors duration-300"
+            className="bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-white hover:text-black inline-block transition-colors duration-300"
           >
             Explore {category.title}
           </Link>
@@ -186,7 +186,7 @@ const Home = () => {
       {/* Testimonials section */}
       <section className="bg-body pb-12  dark:bg-gray-800 dark:text-white sm:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl font-[open] font-bold text-black mb-8">
+          <h2 className="text-3xl font-[verdana] font-bold text-black mb-8">
             What Our Customers Say
           </h2>
 

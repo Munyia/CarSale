@@ -205,7 +205,7 @@ const Popular= () => {
             </h3>
             <Link
                 to={`/shop/${car.id}`}
-                className="mt-2 text-but transition group-hover:underline group-hover:underline-offset-4 group-hover:decoration-2 group-hover:decoration-but"
+                className="mt-2 text-gray-800 transition group-hover:underline group-hover:underline-offset-4 group-hover:decoration-2 group-hover:decoration"
             >
                 View Details
             </Link>

@@ -4,8 +4,8 @@ import React from "react";
 const Request = () => {
   return (
     <div className="">
-      <div className="w-full dark:bg-gray-900 dark:text-white min-h-screen font-[dm] flex items-center justify-center bg-body py-3">
-        <div className="relative w-1/3 shadow-2xl dark:bg-gray-800 dark:text-white shadow-slate-900 bg-pry px-4 py-3 mx-8 md:mx-0 rounded-3xl sm:p-10 sm:max-w-1/2">
+      <div className="w-full dark:bg-gray-900 dark:text-white min-h-screen font-[verdana] flex items-center justify-center bg-body py-3">
+        <div className="relative w-1/3 border border-gray-300 dark:bg-gray-800 dark:text-white bg-pry px-4 py-3 mx-8 md:mx-0 rounded-3xl sm:p-10 sm:max-w-1/2">
           <div className="max-w-md mx-auto">
             <h2 className="text-2xl font-bold font-[roboto] text-black mb-6 text-center">
               Request Form
@@ -75,7 +75,7 @@ const Request = () => {
               <div className="mt-6 justify-center items-center text-center">
                 <button
                   type="submit"
-                  className="py-2 px-4 justify-center items-center bg-but font-[open] hover:text-black hover:bg-blue-500 focus:ring-blue-200 focus:ring-offset-blue-400 text-white transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
+                  className="py-2 px-4 justify-center items-center bg-gray-800 font-[verdana] hover:text-white hover:bg-gradient-to-r from-p1 via-p3 to-pk focus:ring-blue-200 focus:ring-offset-blue-400 text-white transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
                 >
                   Send Request
                 </button>

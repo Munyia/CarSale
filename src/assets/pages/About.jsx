@@ -21,9 +21,9 @@ const About = () => {
 
   return (
     <div className="bg-body dark:bg-gray-900 dark:text-white  min-h-screen">
-      <div className="max-w-4xl mx-auto dark:bg-gray-900 dark:text-white   pt-4 pb-8 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto dark:bg-gray-900 dark:text-white border border-gray-300 rounded-3xl   pt-4 pb-8 px-4 sm:px-6 lg:px-8">
         <h1
-          className={`text-3xl sm:text-4xl font-[roboto]  font-bold text-center mb-4 transition-opacity duration-1000 ${
+          className={`text-3xl sm:text-4xl font-[verdana]  font-bold text-center mb-4 transition-opacity duration-1000 ${
             isTitleVisible ? "opacity-100" : "opacity-0"
           }`}
         >
@@ -36,60 +36,60 @@ const About = () => {
           }`}
         >
           {/* Mission Section */}
-          <section className="bg-body shadow-2xl dark:bg-gray-800 dark:text-white  shadow-slate-500 rounded-3xl p-5 transition-all duration-300">
-            <h2 className="text-lg font-[open]  sm:text-xl font-medium text-but mb-4">
+          <section className="bg-body  dark:bg-gray-800 dark:text-white  rounded-3xl p-5 transition-all duration-300">
+            <h2 className="text-lg font-[verdana]  sm:text-xl font-medium  mb-4">
               Our Mission
             </h2>
-            <p className="text-black  dark:text-white  font-[dm]">
+            <p className="text-black justify-start text-left border-b-2  dark:text-white  font-[verdana]">
               We are dedicated to providing the best service for our customers,
               focusing on quality, innovation, and efficiency.
             </p>
           </section>
 
           {/* Values Section */}
-          <section className="bg-body shadow-2xl dark:bg-gray-800  shadow-slate-500 rounded-3xl p-5 transition-all duration-300">
-            <h2 className="text-lg font-[open] sm:text-xl font-medium text-but mb-4">
+          <section className="bg-body  dark:bg-gray-800 rounded-3xl p-5 transition-all duration-300">
+            <h2 className="text-lg font-[verdana] sm:text-xl font-medium  mb-4">
               Our Values
             </h2>
-            <p className="text-black  dark:text-white  font-[dm]">
+            <p className="text-black justify-start text-left border-b-2  dark:text-white  font-[verdana]">
               Integrity, customer satisfaction, and continuous improvement are
               at the core of our business.
             </p>
           </section>
 
           {/* History Section */}
-          <section className="bg-body shadow-2xl dark:bg-gray-800  shadow-slate-500 rounded-3xl p-5 transition-all duration-300">
-            <h2 className="text-lg font-[open] sm:text-xl font-medium text-but mb-4">
+          <section className="bg-body dark:bg-gray-800  rounded-3xl p-5 transition-all duration-300">
+            <h2 className="text-lg font-[verdana] sm:text-xl font-medium  mb-4">
               Our History
             </h2>
-            <p className="text-black  dark:text-white  font-[dm]">
+            <p className="text-black justify-start text-left border-b-2  dark:text-white  font-[verdana]">
               Founded in [Year], we have grown to become a leader in our
               industry, offering cutting-edge solutions to customers worldwide.
             </p>
           </section>
 
           {/* Team Section */}
-          <section className="bg-body shadow-2xl dark:bg-gray-800  shadow-slate-500 rounded-3xl p-5 transition-all duration-300">
-            <h2 className="text-lg font-[open] sm:text-xl font-medium text-but mb-4">
+          <section className="bg-body  dark:bg-gray-800  rounded-3xl p-5 transition-all duration-300">
+            <h2 className="text-lg font-[verdana] sm:text-xl font-medium mb-4">
               Meet the Team
             </h2>
-            <p className="text-black  dark:text-white  font-[dm]">
+            <p className="text-black justify-start text-left border-b-2  dark:text-white  font-[verdana]">
               Our team of experienced professionals is committed to driving
               innovation and delivering results.
             </p>
           </section>
 
           {/* Contact Section */}
-          <section className="bg-body shadow-2xl dark:bg-gray-800  shadow-slate-500 rounded-3xl p-5 transition-all duration-300">
-          <Link
-              to={"/contact"}
-              className="text-lg sm:text-xl font-[open] p-2 bg-but rounded-xl text-white hover:bg-body hover hover:text-black font-medium  mb-4"
+          <section className="bg-body  dark:bg-gray-800   rounded-3xl p-5 transition-all duration-300">
+          <p
+              className="text-lg sm:text-xl font-[verdana] p-2  rounded-xl text-black font-medium  mb-4"
             >
               Contact Us
-            </Link>
-            <p className="text-black  dark:text-white pt-2  font-[dm]">
+            </p>
+            <p className="text-black justify-start text-left border-b-2  dark:text-white font-[verdana]">
               Reach out to us for more information or to discuss how we can
               assist you.
+              <Link to="/contact" className="underline pl-2">Contact</Link>.
             </p>
           </section>
         </div>

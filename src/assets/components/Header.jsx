@@ -145,7 +145,7 @@ const Header = ({ title }) => {
           <div className="flex items-center space-x-7">
           <Link
               to="/register"
-              className=" px-4 py-2 rounded-lg hover:bg-white hover:text-but transition duration-300"
+              className=" px-4 py-2 text-white rounded-lg hover:bg-white bg-but  hover:bg-gradient-to-r from-p1  via-p3 to-pk transition duration-300"
             >
               Signup
             </Link>

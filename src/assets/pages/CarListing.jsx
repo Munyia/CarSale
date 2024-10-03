@@ -143,7 +143,7 @@ const CarListing = () => {
   return (
     <div className=" bg-body dark:bg-gray-900 dark:text-white font-[verdana]">
       {/* Filters */}
-      <div className="pb-4 dark:bg-gray-900 dark:text-white shadow-2xl bg--600 shadow-slate-500  bg-body p-4  ">
+      <div className="pb-4 dark:bg-gray-900 dark:text-white shadow-2xl bg--600 shadow-slate-200  bg-body p-4  ">
         <div className="flex dark:bg-gray-900 dark:text-white justify-center text-center bg-body ">
           <h2 className="text-xl font-[verdana] font-semibold mb-4">Car Listing</h2>
         </div>
@@ -256,39 +256,46 @@ const CarListing = () => {
       <div className="grid px-5 dark:bg-gray-900 dark:text-gray-200 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 ">
   {currentCars.map((car) => (
     <Link to={`cardetail/${car.id}`} key={car.id}>
-      <div
-        className="bg-white dark:bg-gray-800 dark:border-none pb-2 dark:text-gray-200 border rounded-2xl overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-lg"
-      >
-        {/* Placeholder image source */}
-        <img
-          src={car.image}
-          alt={`${car.make} ${car.model}`}
-          className="w-full bg-white h-48 object-cover transform transition-transform duration-300 hover:scale-110"
-        />
-        <div className="p-4">
-          <h2 className="text-xl dark:bg-gray-800 dark:text-gray-200 text-black font-semibold">
-            {car.make} {car.model}
-          </h2>
-          <p className="text-gray-600 dark:bg-gray-800 dark:text-gray-400">Year: {car.year}</p>
-          <p className="text-gray-800 dark:bg-gray-800 dark:text-gray-200 font-bold mt-2">{car.price}</p>
-          <div className="mt-4">
-            <h3 className="font-semibold dark:bg-gray-800 dark:text-gray-200 text-black">Installment Plans:</h3>
-            <ul className="list-disc pl-5 pb-4">
-              {car.installmentPlans.map((plan, index) => (
-                <li key={index} className="text-gray-600 dark:bg-gray-800 dark:text-gray-400">
-                  {plan}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <Link
-            to={`cardetail/${car.id}`}
-            className="p-2 bg-gray-800 font-[verdana] text-white rounded-lg hover:bg-body hover:text-black hover:underline transition-colors duration-300"
-          >
-            View Details
-          </Link>
-        </div>
-      </div>
+ <div
+  className="bg-white dark:bg-gray-800 dark:border-none pb-2 dark:text-gray-200 border rounded-2xl overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-lg"
+>
+  {/* Placeholder image source */}
+  <div className="relative">
+    <img
+      src={car.image}
+      alt={`${car.make} ${car.model}`}
+      className="w-full bg-white h-48 object-cover transform transition-transform duration-300 hover:scale-110"
+    />
+    <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 p-2 text-white text-center">
+      <h2 className="text-lg font-semibold">
+        {car.make} {car.model}
+      </h2>
+      <p className="text-white dark:bg-gray-800 justify-start text-left dark:text-gray-400">Year: {car.year}</p>
+    <p className="text-white dark:bg-gray-800 justify-start text-left dark:text-gray-200 font-bold mt-2">{car.price}</p>
+   
+    </div>
+  </div>
+
+  <div className="p-4">
+    <div className="mt-4">
+      <h3 className="font-semibold justify-start text-left dark:bg-gray-800 dark:text-gray-200 text-black">Installment Plans:</h3>
+      <ul className="list-disc pl-5 pb-4">
+        {car.installmentPlans.map((plan, index) => (
+          <li key={index} className="text-gray-600 justify-start text-left dark:bg-gray-800 dark:text-gray-400">
+            {plan}
+          </li>
+        ))}
+      </ul>
+    </div>
+    <Link
+      to={`cardetail/${car.id}`}
+      className="p-2 bg-gray-800 font-[verdana] text-white rounded-lg hover:bg-body hover:text-black hover:underline transition-colors duration-300"
+    >
+      View Details
+    </Link>
+  </div>
+</div>
+
     </Link>
   ))}
 </div>

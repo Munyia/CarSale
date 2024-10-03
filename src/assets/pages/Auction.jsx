@@ -46,12 +46,12 @@ const Auction = () => {
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl font-[verdana] font-bold mb-4">Car Auctions</h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-6">
             {cars.map((car) => (
               <div
                 key={car.id}
                 onClick={() => handleBidClick(car)}
-                className="bg-white dark:bg-gray-800 dark:text-white font-[verdana] p-6 rounded-3xl transform transition-transform duration-300 hover:scale-105 hover:shadow-lg cursor-pointer"
+                className="bg-white dark:bg-gray-800 border border-b-gray-400 dark:text-white font-[verdana] p-6 rounded-3xl transform transition-transform duration-300 hover:scale-105 hover:shadow-lg cursor-pointer"
               >
                 <img
                   src={car.image}

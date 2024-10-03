@@ -8,13 +8,13 @@ const MouseTrail = () => {
       const trail = document.createElement('div');
       trail.className = 'trail';
       trail.style.position = 'absolute';
-      trail.style.width = '15px'; // Increased size to make the shadow more visible
-      trail.style.height = '15px';
+      trail.style.width = '10px';
+      trail.style.height = '10px';
       trail.style.borderRadius = '50%';
       trail.style.pointerEvents = 'none';
 
-      // Add shadow effect instead of color
-      trail.style.boxShadow = '0px 0px 10px 6px rgba(0, 0, 0, 0.5)'; // Shadow effect
+      // Lighter grey shadow effect
+      trail.style.boxShadow = '0px 0px 10px 6px rgba(128, 128, 128, 0.5)'; 
       trail.style.left = `${e.pageX}px`;
       trail.style.top = `${e.pageY}px`;
 
@@ -25,7 +25,7 @@ const MouseTrail = () => {
       setTimeout(() => {
         trail.remove();
         trails.shift();
-      }, 500); // Adjust to control how long the shadow remains
+      }, 500);
     };
 
     // Add event listener to track mouse movement

@@ -8,7 +8,7 @@ const Login = () => {
   }, []);
 
   return (
-    <div className="w-full dark:bg-gray-900 dark:text-white h-screen font-[dm] flex items-center justify-center bg-body ">
+    <div className="w-full dark:bg-gray-900 dark:text-white h-screen font-[verdana] flex items-center justify-center bg-body ">
       {/* Main container for the login form */}
       <div
         className="relative dark:bg-gray-800 dark:text-white border px-4 mx-4 md:mx-0 rounded-3xl sm:p-10 sm:max-w-xl"
@@ -17,7 +17,7 @@ const Login = () => {
         <div className="max-w-md mx-auto h-full">
           {/* Link to go back to the home page */}
         
-          <h1 className="text-2xl font-[roboto] font-bold text-but mb-6 text-center">
+          <h1 className="text-2xl font-[verdana] font-bold  mb-6 text-center">
             Welcome back
           </h1>
           <div className="text-sm font-normal mb-4 text-center">
@@ -30,7 +30,7 @@ const Login = () => {
               <div className="flex-1">
                 <label
                   htmlFor="email"
-                  className="font-semibold  text-sm text-but pb-1 block"
+                  className="font-semibold  text-sm pb-1 block"
                 >
                   Email
                 </label>
@@ -48,7 +48,7 @@ const Login = () => {
               <div className="flex-1">
                 <label
                   htmlFor="password"
-                  className="font-semibold  text-sm text-but pb-1 block"
+                  className="font-semibold  text-sm pb-1 block"
                 >
                   Password
                 </label>

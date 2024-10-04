@@ -296,18 +296,18 @@ const Register = () => {
                </label>
              </div>
            </div>
-           <div className="flex items-center  justify-center border-t-2 pt-4 mt-4">
-              <p className=" px-2 text-sm  justify-center pb-5 items-center text-center uppercase dark:text-white">
-                Have an account?
-                <Link
-                  className="flex dark:text-white text-lg hover:text-but font-[verdana] hover:underline justify-center text-center items-center"
-                  to="/login"
-                >
-                  {" "}
-                  Login
-                </Link>
-              </p>      
-            </div>
+           <div className="flex flex-col items-center justify-center border-t-2 pt-4 mt-4">
+  <p className="text-sm uppercase dark:text-white text-center">
+    Have an account?
+  </p>
+  <Link
+    className="mt-2 py-2 px-4 font-[verdana] bg-gray-800 hover:bg-gradient-to-r from-p1  via-p3 to-pk focus:ring-blue-200 focus:ring-offset-but text-white transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
+    to="/login"
+  >
+    Login
+  </Link>
+</div>
+
          </div>
           )}
   

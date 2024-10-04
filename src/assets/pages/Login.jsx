@@ -8,11 +8,11 @@ const Login = () => {
   }, []);
 
   return (
-    <div className="w-full dark:bg-gray-900 dark:text-white h-screen font-[verdana] flex items-center justify-center bg-body ">
+    <div className="w-full dark:bg-gray-900 dark:text-white  h-screen font-[verdana] flex items-center justify-center bg-body ">
       {/* Main container for the login form */}
       <div
-        className="relative dark:bg-gray-800 dark:text-white border px-4 mx-4 md:mx-0 rounded-3xl sm:p-10 sm:max-w-xl"
-        style={{ width: "80%", height: "60%" }}
+        className="relative dark:bg-gray-800 dark:text-white  border  px-4 mx-4 md:mx-0 rounded-3xl sm:p-10 sm:max-w-xl"
+        style={{ width: "80%", height: "85%" }}
       >
         <div className="max-w-md mx-auto h-full">
           {/* Link to go back to the home page */}
@@ -25,17 +25,16 @@ const Login = () => {
           </div>
           {/* Login form */}
           <form className="flex flex-col space-y-4">
-            <div className="flex flex-col md:flex-row md:space-x-4">
               {/* Email input field */}
               <div className="flex-1">
                 <label
                   htmlFor="email"
-                  className="font-semibold  text-sm pb-1 block"
+                  className="font-semibold justify-start text-left text-sm pb-1 block"
                 >
                   Email
                 </label>
                 <input
-                  className="border dark:bg-gray-900 dark:text-white dark:border-none rounded-lg px-3 py-2 mt-1 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
+                  className="border dark:bg-gray-900 dark:text-white dark:border-none rounded-lg px-3 py-2 mt-1 text-sm w-full focus:border-but focus:ring-but"
                   type="email"
                   id="email"
                   name="email"
@@ -48,12 +47,12 @@ const Login = () => {
               <div className="flex-1">
                 <label
                   htmlFor="password"
-                  className="font-semibold  text-sm pb-1 block"
-                >
+                  className="font-semibold justify-start text-left  text-sm pb-1 block"
+                  >
                   Password
                 </label>
                 <input
-                  className="border dark:bg-gray-900 dark:text-white dark:border-none rounded-lg px-3 py-2 mt-1 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
+                  className="border dark:bg-gray-900 dark:text-white dark:border-none rounded-lg px-3 py-2 mt-1 text-sm w-full focus:border-but focus:ring-but"
                   type="password"
                   id="password"
                   name="password"
@@ -61,12 +60,12 @@ const Login = () => {
                   placeholder="Enter your password"
                 />
               </div>
-            </div>
+          
 
             {/* Login button */}
             <div className="mt-5 justify-center items-center text-center ">
               <button
-                className="py-2 px-4 font-[open] justify-center bg-but hover:text-black hover:bg-blue-500 focus:ring-blue-200 focus:ring-offset-blue-400 text-white transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
+                className="py-2 px-4 font-[verdana] justify-center bg-gray-800 hover:text-white hover:bg-gradient-to-r from-p1  via-p3 to-pk focus:ring-blue-200 focus:ring-offset-but text-white transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
                 type="submit"
               >
                 Login
@@ -77,27 +76,28 @@ const Login = () => {
             <div className="mt-5 text-center">
               <Link
                 to="/forgotpassword"
-                className="py-2 px-4 font-[open] bg-but text-white hover:text-black hover:bg-blue-500 focus:ring-blue-200 focus:ring-offset-blue-400 transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
+                className="py-2 px-4 font-[verdana]  text-white bg-gray-800 hover:text-white hover:bg-gradient-to-r from-p1  via-p3 to-pk focus:ring-blue-200 focus:ring-offset-but transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
               >
                 Forgot your password?
               </Link>
             </div>
 
             {/* Signup prompt */}
-            <div className="flex items-center justify-between mt-4">
-              <span className="w-2/5 border-b border-gray-500 md:w-1/4"></span>
-              <p className="text-xs px-2  dark:text-white  text-but justify-center items-center text-center uppercase ">
-                Don’t have an account yet?
-                <Link
-                  className="flex font-[roboto] dark:text-white  hover:underline hover:text-black justify-center text-center items-center"
-                  to="/register"
-                >
-                  {" "}
-                  SignUp
-                </Link>
-              </p>
-              <span className="w-2/5 border-b border-gray-500 md:w-1/4"></span>
-            </div>
+       
+            <div className="flex flex-col items-center justify-center pt-4 mt-4">
+         
+  <p className="text-sm uppercase dark:text-white text-center">
+  Don’t have an account yet?
+  </p>
+  <Link
+    className="mt-2 py-2 px-4 font-[verdana] bg-gray-800 hover:bg-gradient-to-r from-p1  via-p3 to-pk focus:ring-blue-200 focus:ring-offset-but text-white transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
+    to="/register"
+    >
+      {" "}
+      SignUp
+    </Link>
+ 
+</div>
           </form>
         </div>
       </div>

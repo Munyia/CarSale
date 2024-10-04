@@ -1,20 +1,34 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import ProgressBar from "../components/ProgressBar"; // Ensure ProgressBar is correctly imported
 import { Link } from "react-router-dom";
-import Header from "../components/Header";
 
 const Register = () => {
   useEffect(() => {
     document.title = "Registration";
   }, []);
 
-  return (
-    <div className="w-full font-[verdana] dark:bg-gray-900 dark:text-white min-h-screen flex items-center justify-center bg-body py-3">
-      <div
-        className="relative border border-gray-300 dark:bg-gray-800 dark:text-white shadow-slate-900 bg-pry px-4 py-1 mx-4 md:mx-0 rounded-3xl sm:p-10 sm:max-w-xl"
-        style={{ width: "80%", height: "70%" }}
-      >
-        <div className="max-w-md rounded-2xl mx-auto">
-          <h1 className="text-2xl font-[verdana] font-bold text-black mb-1 text-center">
+  const FormWizard = () => {
+    const [currentStep, setCurrentStep] = useState(0);
+    const totalSteps = 5; // Example, adjust based on your steps
+  
+    const nextStep = () => {
+      if (currentStep < totalSteps - 1) {
+        setCurrentStep((prevStep) => prevStep + 1);
+      }
+    };
+  
+    const prevStep = () => {
+      if (currentStep > 0) {
+        setCurrentStep((prevStep) => prevStep - 1);
+      }
+    };
+
+    return (
+      <div className="form-container max-w-xl font-[verdana] mx-auto p-6">
+        <ProgressBar currentStep={currentStep} totalSteps={totalSteps} />
+  
+        <form className="space-y-4">
+        <h1 className="text-2xl font-[verdana] font-bold  mb-1 text-center">
             Register
           </h1>
           <div className="w-full max-w-full justify-center items-center px-3 mx-auto mt-0 md:flex-0 shrink-0">
@@ -91,34 +105,34 @@ const Register = () => {
               </div>
             </div>
           </div>
-          <form className="flex flex-col space-y-4 px-4 sm:px-6 md:px-0">
-            {/* Row 1 */}
-            <div className="flex flex-col md:flex-row md:space-x-4">
+          {currentStep === 0 && (
+                <div>
               <div className="flex-1">
-                <label
-                  htmlFor="fullname"
-                  className="font-semibold text-sm text-black pb-1 block"
-                >
-                  Full Name
-                </label>
-                <input
-                  className="border dark:bg-gray-900 dark:text-white dark:border-none rounded-lg px-3 py-2 mt-1 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
-                  type="text"
-                  id="fullname"
-                  name="fullName"
-                  required
-                  placeholder="Enter your name"
-                />
-              </div>
-              <div className="flex-1">
+            <label
+              htmlFor="fullname"
+              className="font-semibold text-left justify-start text-sm  pb-1 block"
+            >
+              Full Name
+            </label>
+            <input
+              className="border  dark:bg-gray-900 dark:text-white dark:border-none rounded-lg px-3 py-2 mt-1 text-sm w-full focus:border-but focus:ring-2 focus:ring-but"
+              type="text"
+              id="fullname"
+              name="fullName"
+              required
+              placeholder="Enter your name"
+            />
+          </div>
+          <div className="flex-1">
                 <label
                   htmlFor="email"
-                  className="font-semibold text-sm text-black pb-1 block"
+                  className="font-semibold text-left justify-start text-sm  pb-1 block"
+        
                 >
                   Email
                 </label>
                 <input
-                  className="border dark:bg-gray-900 dark:text-white dark:border-none rounded-lg px-3 py-2 mt-1 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
+                  className="border  dark:bg-gray-900 dark:text-white dark:border-none rounded-lg px-3 py-2 mt-1 text-sm w-full focus:border-but focus:ring-2 focus:ring-but"
                   type="email"
                   id="email"
                   name="email"
@@ -126,19 +140,20 @@ const Register = () => {
                   placeholder="Enter your email"
                 />
               </div>
-            </div>
-
-            {/* Row 2 */}
-            <div className="flex flex-col md:flex-row md:space-x-4">
-              <div className="flex-1">
+          </div>
+          
+          )}
+          {currentStep === 1 && (
+            <div>
+               <div className="flex-1">
                 <label
                   htmlFor="password"
-                  className="font-semibold text-sm text-black pb-1 block"
+                      className="font-semibold text-left justify-start text-sm  pb-1 block"
                 >
                   Password
                 </label>
                 <input
-                  className="border dark:bg-gray-900 dark:text-white dark:border-none rounded-lg px-3 py-2 mt-1 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
+                  className="border dark:bg-gray-900 dark:text-white dark:border-none rounded-lg px-3 py-2 mt-1 text-sm w-full focus:border-but focus:ring-2 focus:ring-but"
                   type="password"
                   id="password"
                   name="password"
@@ -149,12 +164,12 @@ const Register = () => {
               <div className="flex-1">
                 <label
                   htmlFor="confirmpassword"
-                  className="font-semibold text-sm text-black pb-1 block"
+                     className="font-semibold text-left justify-start text-sm  pb-1 block"
                 >
                   Confirm Password
                 </label>
                 <input
-                  className="border dark:bg-gray-900 dark:text-white dark:border-none rounded-lg px-3 py-2 mt-1 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
+                  className="border dark:bg-gray-900 dark:text-white dark:border-none rounded-lg px-3 py-2 mt-1 text-sm w-full focus:border-but focus:ring-2 focus:ring-but"
                   type="password"
                   id="confirmpassword"
                   name="Confirmpassword"
@@ -163,18 +178,19 @@ const Register = () => {
                 />
               </div>
             </div>
-
-            {/* Row 3 */}
-            <div className="flex   dark:border-noneflex-col md:flex-row md:space-x-4">
+          )}
+          {currentStep === 2 && (
+            <div>
+              {/* Step 3 Fields */}
               <div className="flex-1">
                 <label
                   htmlFor="dob"
-                  className="font-semibold  text-sm text-black pb-1 block"
-                >
+                  className="font-semibold text-left justify-start text-sm  pb-1 block"
+                  >
                   Date of Birth
                 </label>
                 <input
-                  className="border dark:bg-gray-900 dark:text-white dark:border-none rounded-lg px-3 py-2 mt-1 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
+                  className="border dark:bg-gray-900 dark:text-white dark:border-none rounded-lg px-3 py-2 mt-1 text-sm w-full focus:border-but focus:ring-2 focus:ring-but"
                   type="date"
                   id="dob"
                   name="dob"
@@ -184,12 +200,12 @@ const Register = () => {
               <div className="flex-1">
                 <label
                   htmlFor="phonenumber"
-                  className="font-semibold text-sm text-black pb-1 block"
-                >
+                  className="font-semibold text-left justify-start text-sm  pb-1 block"
+                  >
                   Phone Number
                 </label>
                 <input
-                  className="border dark:bg-gray-900 dark:text-white dark:border-none rounded-lg px-3 py-2 mt-1 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
+                  className="border dark:bg-gray-900 dark:text-white dark:border-none rounded-lg px-3 py-2 mt-1 text-sm w-full focus:border-but focus:ring-2 focus:ring-but"
                   type="tel"
                   id="phonenumber"
                   name="phonenumber"
@@ -198,18 +214,19 @@ const Register = () => {
                 />
               </div>
             </div>
-
-            {/* Row 4 */}
-            <div className="flex flex-col md:flex-row md:space-x-4">
+          )}
+          {currentStep === 3 && (
+            <div>
+              {/* Step 4 Fields */}
               <div className="flex-1">
                 <label
                   htmlFor="address"
-                  className="font-semibold text-sm text-black pb-1 block"
-                >
+                  className="font-semibold text-left justify-start text-sm  pb-1 block"
+                  >
                   Address
                 </label>
                 <input
-                  className="border dark:bg-gray-900 dark:text-white dark:border-none rounded-lg px-3 py-2 mt-1 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-blue-500"
+                  className="border dark:bg-gray-900 dark:text-white dark:border-none rounded-lg px-3 py-2 mt-1 text-sm w-full focus:border-but focus:ring-2 focus:ring-but"
                   type="text"
                   id="address"
                   name="address"
@@ -220,12 +237,12 @@ const Register = () => {
               <div className="flex-1">
                 <label
                   htmlFor="country"
-                  className="font-semibold text-sm text-black pb-1 block"
-                >
+                  className="font-semibold text-left justify-start text-sm  pb-1 block"
+                  >
                   Country
                 </label>
                 <select
-                  className="border dark:bg-gray-900 dark:text-white dark:border-none rounded-lg px-3 py-2 mt-1 text-sm w-full focus:border-blue-500 focus:ring-2 focus:ring-but"
+                  className="border dark:bg-gray-900 dark:text-white dark:border-none rounded-lg px-3 py-2 mt-1 text-sm w-full focus:border-but focus:ring-2 focus:ring-but"
                   name="country"
                   required
                 >
@@ -236,79 +253,89 @@ const Register = () => {
                 </select>
               </div>
             </div>
-
-            {/* Gender Selection */}
-            <div className="gender-box mb-1">
-              <label className="block text-black justify-center text-center">
-                Gender
-              </label>
-              <div className="flex justify-center gap-4 mt-1">
-                <div>
-                  <input
-                    type="radio"
-                    name="gender"
-                    id="male"
-                    className="cursor-pointer"
-                  />
-                  <label htmlFor="male" className="ml-1">
-                    Male
-                  </label>
-                </div>
-                <div>
-                  <input
-                    type="radio"
-                    name="gender"
-                    id="female"
-                    className="cursor-pointer"
-                  />
-                  <label htmlFor="female" className="ml-1">
-                    Female
-                  </label>
-                </div>
-                <div>
-                  <input
-                    type="radio"
-                    name="gender"
-                    id="other"
-                    className="cursor-pointer"
-                  />
-                  <label htmlFor="other" className="ml-1">
-                    Other
-                  </label>
-                </div>
-              </div>
-            </div>
-
-            {/* Submit Button */}
-            <div className="mt-2">
-              <button
-               className="py-2 px-4 font-[verdana] justify-center bg-gray-800 hover:text-white hover:bg-gradient-to-r from-p1 via-p3 to-pk focus:ring-blue-200 focus:ring-offset-blue-400 text-white transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
-               type="submit"
-              >
-                Sign up
-              </button>
-            </div>
-
-            {/* Login Link */}
-            <div className="flex items-center justify-between mt-4">
-              <span className="w-1/5 border-b border-gray-500 md:w-1/4"></span>
-              <p className="text-xs px-2  text-black justify-center items-center text-center uppercase dark:text-white">
+          )}
+  
+          {currentStep === 4 && (
+           <div>
+           {/* Step 4 Fields */}
+           <label className="font-semibold text-center justify-center text-sm  pb-1 block">
+             Gender
+           </label>
+           <div className="flex justify-center gap-4 mt-1">
+             <div>
+               <input
+                 type="radio"
+                 name="gender"
+                 id="male"
+                 className="cursor-pointer"
+               />
+               <label htmlFor="male" className="ml-1">
+                 Male
+               </label>
+             </div>
+             <div>
+               <input
+                 type="radio"
+                 name="gender"
+                 id="female"
+                 className="cursor-pointer"
+               />
+               <label htmlFor="female" className="ml-1">
+                 Female
+               </label>
+             </div>
+             <div>
+               <input
+                 type="radio"
+                 name="gender"
+                 id="other"
+                 className="cursor-pointer"
+               />
+               <label htmlFor="other" className="ml-1">
+                 Other
+               </label>
+             </div>
+           </div>
+           <div className="flex items-center  justify-center border-t-2 pt-4 mt-4">
+              <p className=" px-2 text-sm  justify-center pb-5 items-center text-center uppercase dark:text-white">
                 Have an account?
                 <Link
-                  className="flex dark:text-white text-lg  font-[verdana] hover:underline hover:text-black justify-center text-center items-center"
+                  className="flex dark:text-white text-lg hover:text-but font-[verdana] hover:underline justify-center text-center items-center"
                   to="/login"
                 >
                   {" "}
                   Login
                 </Link>
-              </p>
-              <span className="w-1/5 border-b  border-gray-500 md:w-1/4"></span>
+              </p>      
             </div>
-          </form>
-        </div>
+         </div>
+          )}
+  
+          <div className="flex justify-between pb-8">
+            {currentStep > 0 && (
+              <button
+                type="button"
+                onClick={prevStep}
+                className="py-2 px-4 bg-gray-400 hover:bg-gradient-to-r from-p1  via-p3 to-pk text-black rounded-lg"
+              >
+                Previous
+              </button>
+            )}
+  
+            <button
+              type="button"
+              onClick={nextStep}
+              className="py-2 px-4 bg-gray-800 hover:bg-gradient-to-r from-p1  via-p3 to-pk text-white rounded-lg ml-auto"
+            >
+              {currentStep < totalSteps - 1 ? 'Next' : 'Submit'}
+            </button>
+          </div>
+        </form>
       </div>
-    </div>
-  );
+    );
+  };
+
+  return <FormWizard />; // Call FormWizard to render it
 };
 
 export default Register;

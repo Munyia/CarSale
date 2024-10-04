@@ -8,16 +8,16 @@ const Login = () => {
   }, []);
 
   return (
-    <div className="w-full dark:bg-gray-900 dark:text-white h-screen font-[verdana] flex items-center justify-center bg-body py-3">
+    <div className="w-full dark:bg-gray-900 dark:text-white h-screen font-[dm] flex items-center justify-center bg-body ">
       {/* Main container for the login form */}
       <div
-        className="relative border border-gray-300 dark:bg-gray-800 dark:text-white shadow-slate-900 bg-pry px-4 py-3 mx-4 md:mx-0 rounded-3xl sm:p-10 sm:max-w-xl"
-        style={{ width: "80%", height: "70%" }}
+        className="relative dark:bg-gray-800 dark:text-white border px-4 mx-4 md:mx-0 rounded-3xl sm:p-10 sm:max-w-xl"
+        style={{ width: "80%", height: "60%" }}
       >
         <div className="max-w-md mx-auto h-full">
           {/* Link to go back to the home page */}
         
-          <h1 className="text-2xl font-[verdana] font-bold text-black mb-6 text-center">
+          <h1 className="text-2xl font-[roboto] font-bold text-but mb-6 text-center">
             Welcome back
           </h1>
           <div className="text-sm font-normal mb-4 text-center">
@@ -30,7 +30,7 @@ const Login = () => {
               <div className="flex-1">
                 <label
                   htmlFor="email"
-                  className="font-semibold  text-sm text-black pb-1 block"
+                  className="font-semibold  text-sm text-but pb-1 block"
                 >
                   Email
                 </label>
@@ -48,7 +48,7 @@ const Login = () => {
               <div className="flex-1">
                 <label
                   htmlFor="password"
-                  className="font-semibold  text-sm text-black pb-1 block"
+                  className="font-semibold  text-sm text-but pb-1 block"
                 >
                   Password
                 </label>
@@ -66,7 +66,7 @@ const Login = () => {
             {/* Login button */}
             <div className="mt-5 justify-center items-center text-center ">
               <button
-                className="py-2 px-4 font-[verdana] justify-center bg-gray-800 hover:text-white hover:bg-gradient-to-r from-p1 via-p3 to-pk focus:ring-blue-200 focus:ring-offset-blue-400 text-white transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
+                className="py-2 px-4 font-[open] justify-center bg-but hover:text-black hover:bg-blue-500 focus:ring-blue-200 focus:ring-offset-blue-400 text-white transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
                 type="submit"
               >
                 Login
@@ -77,8 +77,8 @@ const Login = () => {
             <div className="mt-5 text-center">
               <Link
                 to="/forgotpassword"
-                className="py-2 px-4 font-[verdana] justify-center bg-gray-800 hover:text-white hover:bg-gradient-to-r from-p1 via-p3 to-pk focus:ring-blue-200 focus:ring-offset-blue-400 text-white transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
-                >
+                className="py-2 px-4 font-[open] bg-but text-white hover:text-black hover:bg-blue-500 focus:ring-blue-200 focus:ring-offset-blue-400 transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-lg"
+              >
                 Forgot your password?
               </Link>
             </div>
@@ -86,10 +86,10 @@ const Login = () => {
             {/* Signup prompt */}
             <div className="flex items-center justify-between mt-4">
               <span className="w-2/5 border-b border-gray-500 md:w-1/4"></span>
-              <p className="text-xs px-2  dark:text-white  text-black justify-center items-center text-center uppercase ">
+              <p className="text-xs px-2  dark:text-white  text-but justify-center items-center text-center uppercase ">
                 Don’t have an account yet?
                 <Link
-                  className="flex font-[verdana] dark:text-white text-lg  hover:underline hover:text-black justify-center text-center items-center"
+                  className="flex font-[roboto] dark:text-white  hover:underline hover:text-black justify-center text-center items-center"
                   to="/register"
                 >
                   {" "}

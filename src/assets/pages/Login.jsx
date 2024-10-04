@@ -11,7 +11,7 @@ const Login = () => {
     <div className="w-full dark:bg-gray-900 dark:text-white  h-screen font-[verdana] flex items-center justify-center bg-body ">
       {/* Main container for the login form */}
       <div
-        className="relative dark:bg-gray-800 dark:text-white  border  px-4 mx-4 md:mx-0 rounded-3xl sm:p-10 sm:max-w-xl"
+        className="relative dark:bg-gray-800 font-[verdana]  dark:text-white  border  px-4 mx-4 md:mx-0 rounded-3xl sm:p-10 sm:max-w-xl"
         style={{ width: "80%", height: "85%" }}
       >
         <div className="max-w-md mx-auto h-full">
